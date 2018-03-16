@@ -1,0 +1,34 @@
+{
+    "header": [
+        true,
+        "common/headerTpl.vm"
+    ],
+    "navigator": [
+        true,
+        "common/navigatorTpl.vm"
+    ],
+    "footer": [
+        true,
+        "common/footerTpl.vm"
+    ],
+    "lufaxPublicCss": [
+        true,
+        "common/cssTpl.vm"
+    ],
+    "lufaxPublicJs": [
+        true,
+        "common/jsTpl.vm"
+    ],
+    "echartsMapCss": [
+        true,
+        "list/cssEchartsMapTpl.vm"
+    ],
+    "echartsMapJs": [
+        true,
+        "list/jsEchartsMapTpl.vm"
+    ],
+    "statistic": [
+        true,
+        "common/statisticTpl.vm"
+    ]
+}

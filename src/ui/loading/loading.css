@@ -1,0 +1,40 @@
+.loadingWrapper {
+    position: absolute;
+    z-index: 99999;
+    filter: alpha(opacity = 80);
+    -moz-opacity: 0.8;
+    -webkit-opacity: 0.8;
+    opacity: 0.8;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    cursor: default;
+    width: 200px;
+    height: 90px;
+    text-align: center;
+}
+
+.loadingPic {
+    background: url(img/loading_20090.gif) no-repeat center center;
+    width: 80px;
+    height: 32px;
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.loadingTips {
+    display: block;
+}
+
+.loadingSmall {
+    border: none;
+    width: 48px;
+    height: 48px;
+    background: transparent;
+}
+
+.loadingSmall .loadingPic {
+    background-image: url(img/loading_4848.gif);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}

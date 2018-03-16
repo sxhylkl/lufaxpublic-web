@@ -1,0 +1,22 @@
+[DEP]
+    无
+
+[DB1]
+    无
+
+[DB2]
+    无
+
+[NOTIFY]
+    fangxiao483@pingan.com.cn
+    huangjunyan873@pingan.com.cn
+    wangdongqiang334@pingan.com.cn
+    liangwenqi221@pingan.com.cn
+    wangyaqiong553@pingan.com.cn
+
+[ADVICE]
+    无
+
+[STATEMENT]
+     WEBDEV-18  【密码】输入登录/交易密码时提示大写开启
+     WEBDEV-1020 公共系统头尾（子系统与首页通用）

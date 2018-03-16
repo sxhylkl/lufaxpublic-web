@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="http://static.lufaxcdn.com/config/css/main_1018.css"/>
+    <script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="../../lufax.js"></script>
+    <script type="text/javascript" src="../ui.js"></script>
+    <script type="text/javascript" src="captcha.js"></script>
+    <link rel="stylesheet" type="text/css" href="captcha.css"/>
+</head>
+
+<body>
+<form class="form-horizontal" id="loginForm" method="post">
+
+    <div class="control-group control-group-large" id="captcha">
+
+    </div>
+    <div class="control-group">
+        <label class="control-label"></label>
+
+        <div class="controls">
+            <a class="btns btn-xlarge loginSubmit" href="javascript:void(0);" id="loginBtn"><span>登&emsp;录</span></a>
+        </div>
+    </div>
+
+</form>
+<div id="ddf"></div>
+<script type="text/javascript">
+    $(function () {
+        var captcha= new lufax.ui.Captcha($('#captcha'), {xhr: 'pre-check.json', src: 'https://user.lufax.com/user/captcha/captcha.jpg',source:'login',isPreCheck:'no'});
+        captcha.init();
+        $('.loginSubmit').click(function(){
+            captcha.preCheck();
+        });
+    })
+</script>
+</body>
+</html>

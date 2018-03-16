@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>datagrid</title>
+<link rel="stylesheet" type="text/css" href="../mainCss/main.css" />
+<link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+<link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+</head>
+
+<body style="padding:20px;">
+
+<div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 表格控件</div>
+<div class="tabs">
+    <a href="javascript:void(0)"><b>原型文档</b></a>
+    <a href="javascript:void(0)"><b>视觉稿</b></a>
+    <a href="javascript:void(0)"><b>前端代码</b></a>
+    <a href="javascript:void(0)"><b>必要样式</b></a>
+    <a href="javascript:void(0)"><b>必要脚本</b></a>
+    <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+</div>
+<div class="tab_cons">
+    <div class="tab_con">
+        表格控件-原型文档
+    </div>
+    <div class="tab_con">
+        <img src="../widget_resource/images/visual_image/grid.png" />
+    </div>
+    <div class="tab_con">
+      <pre>
+</pre>
+      <p>&lt;h4&gt;第一种：产品列表，有排序的效果，例：用在SME及金盈通首页产品中&lt;/h4&gt;<br />
+  &lt;div class=&quot;grid_yellow_sort_wrap&quot;&gt;<br />
+  &lt;table class=&quot;ui_grid_yellow_sort&quot;&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;th&gt;项目名称&lt;/th&gt;<br />
+  &lt;th class=&quot;sort&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;&lt;span&gt;&lt;label&gt;投资起点&lt;/label&gt;（元）&lt;/span&gt;&lt;/a&gt;&lt;/th&gt;<br />
+  &lt;th class=&quot;sort&quot; width=&quot;90&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;&lt;span&gt;&lt;label&gt;期限&lt;/label&gt;（天）&lt;/span&gt;&lt;/a&gt;&lt;/th&gt;<br />
+  &lt;th class=&quot;sort&quot;&gt;&lt;a href=&quot;javascript:;&quot; class=&quot;asc selected&quot;&gt;&lt;span&gt;&lt;label&gt;预期年化收益率&lt;/label&gt;&lt;/span&gt;&lt;/a&gt;&lt;/th&gt;<br />
+  &lt;th width=&quot;96&quot;&gt;预约状态&lt;/th&gt;<br />
+  &lt;th class=&quot;sort&quot; width=&quot;140&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;&lt;span&gt;&lt;label&gt;剩余可投资金额&lt;/label&gt;（元）&lt;/span&gt;&lt;/a&gt;&lt;/th&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;&lt;a href=&quot;#&quot;&gt;万穗12期&lt;/a&gt;&lt;/td&gt;<br />
+  &lt;td&gt;10,000.00&lt;/td&gt;<br />
+  &lt;td&gt;180&lt;/td&gt;<br />
+  &lt;td class=&quot;orange_word&quot;&gt;8%&lt;/td&gt;<br />
+  &lt;td class=&quot;orange_word&quot;&gt;正在接受预约&lt;/td&gt;<br />
+  &lt;td&gt;96,000.00&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr class=&quot;even&quot;&gt;<br />
+  &lt;td&gt;&lt;a href=&quot;#&quot;&gt;万穗2期&lt;/a&gt;&lt;/td&gt;<br />
+  &lt;td&gt;10,000.00&lt;/td&gt;<br />
+  &lt;td&gt;180&lt;/td&gt;<br />
+  &lt;td class=&quot;green_word&quot;&gt;8%&lt;/td&gt;<br />
+  &lt;td class=&quot;green_word&quot;&gt;正在接受预约&lt;/td&gt;<br />
+  &lt;td&gt;96,000.00&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr class=&quot;disabled&quot;&gt;<br />
+  &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;disabled&quot;&gt;万穗15期&lt;/a&gt;&lt;/td&gt;<br />
+  &lt;td&gt;10,000.00&lt;/td&gt;<br />
+  &lt;td&gt;180&lt;/td&gt;<br />
+  &lt;td&gt;8%&lt;/td&gt;<br />
+  &lt;td&gt;已结束&lt;/td&gt;<br />
+  &lt;td&gt;0&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr class=&quot;even disabled&quot;&gt;<br />
+  &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;disabled&quot;&gt;万穗15期&lt;/a&gt;&lt;/td&gt;<br />
+  &lt;td&gt;10,000.00&lt;/td&gt;<br />
+  &lt;td&gt;180&lt;/td&gt;<br />
+  &lt;td&gt;8%&lt;/td&gt;<br />
+  &lt;td&gt;已结束&lt;/td&gt;<br />
+  &lt;td&gt;0&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;<br />
+  &lt;/div&gt;<br />
+  &lt;br&gt;&lt;br&gt;&lt;br&gt;<br />
+  &lt;h4&gt;第二种：内容介绍及购买流程中使用，灰色表格为常见表格&lt;/h4&gt;<br />
+  &lt;div class=&quot;grid_gray_wrap&quot;&gt;<br />
+  &lt;table class=&quot;ui_grid_gray&quot;&gt;<br />
+  &lt;tr class=&quot;first&quot;&gt;<br />
+  &lt;th width=&quot;74&quot;&gt;示例&lt;/th&gt;<br />
+  &lt;th width=&quot;140&quot;&gt;借款人确认合同时间&lt;/th&gt;<br />
+  &lt;th width=&quot;100&quot;&gt;借款发放之日&lt;/th&gt;<br />
+  &lt;th width=&quot;90&quot;&gt;起息日&lt;/th&gt;<br />
+  &lt;th width=&quot;94&quot;&gt;结息日&lt;/th&gt;<br />
+  &lt;th width=&quot;&quot;&gt;还款期限&lt;/th&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;示例一&lt;/td&gt;<br />
+  &lt;td&gt;2012-3-7&lt;/td&gt;<br />
+  &lt;td&gt;2012-3-7&lt;/td&gt;<br />
+  &lt;td&gt;2012-3-10&lt;/td&gt;<br />
+  &lt;td&gt;每个月9日&lt;/td&gt;<br />
+  &lt;td&gt;2012年3月7日—2014年3月9日&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;示例二&lt;/td&gt;<br />
+  &lt;td&gt;2012-8-16&lt;/td&gt;<br />
+  &lt;td&gt;2012-8-16&lt;/td&gt;<br />
+  &lt;td&gt;2012-8-19&lt;/td&gt;<br />
+  &lt;td&gt;每个月18日&lt;/td&gt;<br />
+  &lt;td&gt;2012年8月16日—2014年8月18日&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;<br />
+  &lt;/div&gt;<br />
+  &lt;br&gt;&lt;br&gt;&lt;br&gt;</p>
+      <p> &lt;h4&gt;第三种：内容介绍中出现两级层级时使用&lt;/h4&gt;<br />
+  &lt;div class=&quot;grid_yellow_wrap&quot;&gt;<br />
+  &lt;table class=&quot;ui_grid_yellow&quot;&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;th width=&quot;130&quot;&gt;全额提前还款&lt;/th&gt;<br />
+  &lt;th colspan=&quot;4&quot;&gt;赵先生（出借人）&lt;/th&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td class=&quot;title&quot;&gt;逾期还款&lt;/td&gt;<br />
+  &lt;td class=&quot;title&quot; colspan=&quot;2&quot;&gt;本息收入（元）&lt;/td&gt;<br />
+  &lt;td class=&quot;title&quot; colspan=&quot;2&quot;&gt;罚息（元）&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;2012年3月5日&lt;br&gt;（0-5个月提前还款）&lt;/td&gt;<br />
+  &lt;td&gt;73885.37&lt;/td&gt;<br />
+  &lt;td&gt;573.23*5/30=95.54&lt;/td&gt;<br />
+  &lt;td&gt;73885.37*1.5%=1108.28&lt;/td&gt;<br />
+  &lt;td&gt;75089.19&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;2012年9月5日&lt;br&gt;（6-11个月提前还款）&lt;/td&gt;<br />
+  &lt;td&gt;54964.03&lt;/td&gt;<br />
+  &lt;td&gt;426.43*6/30=85.29&lt;/td&gt;<br />
+  &lt;td&gt;54964.03*1%=549.64&lt;/td&gt;<br />
+  &lt;td&gt;55598.96&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;2013年3月5日&lt;br&gt;（12-23个月提前还款）&lt;/td&gt;<br />
+  &lt;td&gt;35144.65&lt;/td&gt;<br />
+  &lt;td&gt;272.66*5/30=45.44&lt;/td&gt;<br />
+  &lt;td&gt;35144.65*0.5%=175.72&lt;/td&gt;<br />
+  &lt;td&gt;35365.82&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;<br />
+  &lt;/div&gt;<br />
+  &lt;br&gt;&lt;br&gt;&lt;br&gt;</p>
+      <p> &lt;h4&gt;第四种：首页产品列表，有排序效果，无详情产品中使用，例：稳盈-安e 贷&lt;/h4&gt;<br />
+  &lt;div class=&quot;grid_gray_wrap&quot;&gt;<br />
+  &lt;table class=&quot;ui_grid_gray&quot;&gt;<br />
+  &lt;tr class=&quot;first&quot;&gt;<br />
+  &lt;th width=&quot;120&quot;&gt;&lt;span&gt;项目编号&lt;/span&gt;&lt;/th&gt;<br />
+  &lt;th width=&quot;110&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;&lt;span&gt;投资金额&lt;/span&gt;&lt;/a&gt;&lt;/th&gt;<br />
+  &lt;th width=&quot;86&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;&lt;span&gt;还款期限&lt;/span&gt;&lt;/a&gt;&lt;/th&gt;<br />
+  &lt;th width=&quot;90&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;&lt;span&gt;年化利率&lt;/span&gt;&lt;/a&gt;&lt;/th&gt;<br />
+  &lt;th&gt;&lt;a href=&quot;javascript:;&quot;&gt;&lt;span&gt;发布时间&lt;/span&gt;&lt;/a&gt;&lt;/th&gt;<br />
+  &lt;th width=&quot;180&quot;&gt;&lt;span&gt;操作&lt;/span&gt;&lt;/th&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;12042400001&lt;/td&gt;<br />
+  &lt;td&gt;60,000.00 元&lt;/td&gt;<br />
+  &lt;td&gt;36个月&lt;/td&gt;<br />
+  &lt;td class=&quot;orange_word&quot;&gt;9.5%&lt;/td&gt;<br />
+  &lt;td&gt;2012-11-21&lt;/td&gt;<br />
+  &lt;td class=&quot;grid_invest&quot;&gt;<br />
+  &lt;a href=&quot;#&quot; class=&quot;income_link&quot;&gt;查看收益&lt;/a&gt;<br />
+  &lt;a class=&quot;darkGrayBtn_7028 grid_invest_btn&quot; href=&quot;#&quot;&gt;投资&lt;/a&gt;<br />
+  &lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;12042400001&lt;/td&gt;<br />
+  &lt;td&gt;60,000.00 元&lt;/td&gt;<br />
+  &lt;td&gt;36个月&lt;/td&gt;<br />
+  &lt;td class=&quot;orange_word&quot;&gt;9.5%&lt;/td&gt;<br />
+  &lt;td&gt;2012-11-21&lt;/td&gt;<br />
+  &lt;td class=&quot;grid_invest&quot;&gt;<br />
+  &lt;a href=&quot;#&quot; class=&quot;income_link&quot;&gt;查看收益&lt;/a&gt;<br />
+  &lt;a class=&quot;darkGrayBtn_7028 grid_invest_btn&quot; href=&quot;#&quot;&gt;投资&lt;/a&gt;<br />
+  &lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;<br />
+  &lt;/div&gt;<br />
+  &lt;br&gt;&lt;br&gt;&lt;br&gt;</p>
+      <p> &lt;h4&gt;第五种：在我的账户中的综合产品列表中使用,翻页按钮为专用。不使用通用的样式&lt;/h4&gt;<br />
+  &lt;div class=&quot;grid_account_grid_wrap&quot;&gt;<br />
+  &lt;div class=&quot;ui_grid_account_head_wrap clearfix&quot;&gt;<br />
+  &lt;div class=&quot;anyidai_title&quot;&gt;&lt;/div&gt;<br />
+  &lt;div class=&quot;amount&quot;&gt;(&lt;span class=&quot;spe_word&quot;&gt;4&lt;/span&gt;)&lt;/div&gt;<br />
+  &lt;div class=&quot;ppagination&quot;&gt;<br />
+  &lt;span class=&quot;pspan&quot;&gt;1/1&lt;/span&gt;<br />
+  &lt;span class=&quot;pspan_btn&quot;&gt;<br />
+  &lt;a class=&quot;disGraBtn_2322 png&quot; href=&quot;#&quot;&gt;&amp;nbsp;&lt;/a&gt;&amp;nbsp;<br />
+  &lt;a class=&quot;disGraBtn_6121 png&quot; href=&quot;#&quot;&gt;下一页&lt;/a&gt;<br />
+  &lt;/span&gt;<br />
+  &lt;/div&gt;<br />
+  &lt;/div&gt;<br />
+  &lt;table class=&quot;ui_grid_account&quot;&gt;<br />
+  &lt;tr class=&quot;title&quot;&gt;<br />
+  &lt;th&gt;申请时间&lt;/th&gt;<br />
+  &lt;th&gt;申请号&lt;/th&gt;<br />
+  &lt;th class=&quot;amount&quot;&gt;投资金额（元）&lt;/th&gt;<br />
+  &lt;th&gt;预期年化利率&lt;/th&gt;<br />
+  &lt;th width=&quot;110&quot; class=&quot;amount&quot;&gt;预期收益（元）&lt;/th&gt;<br />
+  &lt;th&gt;状态&lt;/th&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr class=&quot;first&quot;&gt;<br />
+  &lt;td&gt;2011-1 19:00&lt;/td&gt;<br />
+  &lt;td&gt;&lt;a href=&quot;#&quot;&gt;1111071231230002&lt;/a&gt;&lt;/td&gt;<br />
+  &lt;td class=&quot;amount&quot;&gt;30,000.00&lt;/td&gt;<br />
+  &lt;td&gt;9.70%&lt;/td&gt;<br />
+  &lt;td class=&quot;amount&quot;&gt;32,800.00&lt;/td&gt;<br />
+  &lt;td&gt;等待合同确认&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;2011-1 19:00&lt;/td&gt;<br />
+  &lt;td&gt;&lt;a href=&quot;#&quot;&gt;1111071231230002&lt;/a&gt;&lt;/td&gt;<br />
+  &lt;td class=&quot;amount&quot;&gt;30,000.00&lt;/td&gt;<br />
+  &lt;td&gt;9.70%&lt;/td&gt;<br />
+  &lt;td class=&quot;amount&quot;&gt;32,800.00&lt;/td&gt;<br />
+  &lt;td&gt;等待合同确认&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;<br />
+  &lt;/div&gt;</p>
+      <pre>
+      </pre>
+</div>
+    <div class="tab_con">
+        <a href="../widget_resource/css/common_layout.css">../widget_resource/css/common_layout.css</a>
+    </div>
+    <div class="tab_con">
+        无
+    </div>
+    <div class="tab_con current">
+        <h4>第一种：<span>产品列表，有排序的效果，例：用在SME及金盈通首页产品中</span></h4><br/>
+        <div class="grid_yellow_sort_wrap">
+            <table class="ui_grid_yellow_sort">
+                <tr>
+                    <th>项目名称</th>
+                    <th class="sort"><a href="javascript:;"><span><label>投资起点</label>（元）</span></a></th>
+                    <th class="sort" width="90"><a href="javascript:;"><span><label>期限</label>（天）</span></a></th>
+                    <th class="sort"><a href="javascript:;" class="asc selected"><span><label>预期年化收益率</label></span></a></th>
+                    <th width="96">预约状态</th>
+                    <th class="sort" width="140"><a href="javascript:;"><span><label>剩余可投资金额</label>（元）</span></a></th>
+                </tr>
+                <tr>
+                    <td><a href="#">万穗12期</a></td>
+                    <td>10,000.00</td>
+                    <td>180</td>
+                    <td class="orange_word">8%</td>
+                    <td class="orange_word">正在接受预约</td>
+                    <td>96,000.00</td>
+                </tr>
+                <tr class="even">
+                    <td><a href="#">万穗2期</a></td>
+                    <td>10,000.00</td>
+                    <td>180</td>
+                    <td class="green_word">8%</td>
+                    <td class="green_word">正在接受预约</td>
+                    <td>96,000.00</td>
+                </tr>
+                <tr class="disabled">
+                    <td><a href="#" class="disabled">万穗15期</a></td>
+                    <td>10,000.00</td>
+                    <td>180</td>
+                    <td>8%</td>
+                    <td>已结束</td>
+                    <td>0</td>
+                </tr>
+                <tr class="even disabled">
+                    <td><a href="#" class="disabled">万穗15期</a></td>
+                    <td>10,000.00</td>
+                    <td>180</td>
+                    <td>8%</td>
+                    <td>已结束</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+        <h4>第二种：<span>内容介绍及购买流程中使用，灰色表格为常见表格</span></h4><br/>
+        <div class="grid_gray_wrap">
+            <table class="ui_grid_gray">
+                <tr class="first">
+                    <th width="74">示例</th>
+                    <th width="140">借款人确认合同时间</th>
+                    <th width="100">借款发放之日</th>
+                    <th width="90">起息日</th>
+                    <th width="94">结息日</th>
+                    <th width="">还款期限</th>
+                </tr>
+                <tr>
+                    <td>示例一</td>
+                    <td>2012-3-7</td>
+                    <td>2012-3-7</td>
+                    <td>2012-3-10</td>
+                    <td>每个月9日</td>
+                    <td>2012年3月7日—2014年3月9日</td>
+                </tr>
+                <tr>
+                    <td>示例二</td>
+                    <td>2012-8-16</td>
+                    <td>2012-8-16</td>
+                    <td>2012-8-19</td>
+                    <td>每个月18日</td>
+                    <td>2012年8月16日—2014年8月18日</td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+
+        <h4>第三种：<span>内容介绍中出现两级层级时使用</span></h4><br/>
+        <div class="grid_yellow_wrap">
+            <table class="ui_grid_yellow">
+                <tr>
+                    <th width="130">全额提前还款</th>
+                    <th colspan="4">赵先生（出借人）</th>
+                </tr>
+                <tr>
+                    <td class="title">逾期还款</td>
+                    <td class="title" colspan="2">本息收入（元）</td>
+                    <td class="title" colspan="2">罚息（元）</td>
+                </tr>
+                <tr>
+                    <td>2012年3月5日<br>（0-5个月提前还款）</td>
+                    <td>73885.37</td>
+                    <td>573.23*5/30=95.54</td>
+                    <td>73885.37*1.5%=1108.28</td>
+                    <td>75089.19</td>
+                </tr>
+                <tr>
+                    <td>2012年9月5日<br>（6-11个月提前还款）</td>
+                    <td>54964.03</td>
+                    <td>426.43*6/30=85.29</td>
+                    <td>54964.03*1%=549.64</td>
+                    <td>55598.96</td>
+                </tr>
+                <tr>
+                    <td>2013年3月5日<br>（12-23个月提前还款）</td>
+                    <td>35144.65</td>
+                    <td>272.66*5/30=45.44</td>
+                    <td>35144.65*0.5%=175.72</td>
+                    <td>35365.82</td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+
+        <h4>第四种：<span>首页产品列表，有排序效果，无详情产品中使用，例：稳盈-安e 贷</span></h4><br/>
+        <div class="grid_gray_wrap">
+            <table class="ui_grid_gray">
+                <tr class="first">
+                    <th width="120"><span>项目编号</span></th>
+                    <th width="110"><a href="javascript:;"><span>投资金额</span></a></th>
+                    <th width="86"><a href="javascript:;"><span>还款期限</span></a></th>
+                    <th width="90"><a href="javascript:;"><span>年化利率</span></a></th>
+                    <th><a href="javascript:;"><span>发布时间</span></a></th>
+                    <th width="180"><span>操作</span></th>
+                </tr>
+                <tr>
+                    <td>12042400001</td>
+                    <td>60,000.00 元</td>
+                    <td>36个月</td>
+                    <td class="orange_word">9.5%</td>
+                    <td>2012-11-21</td>
+                    <td class="grid_invest">
+                        <a href="#" class="income_link">查看收益</a>
+                        <a class="darkGrayBtn_7028 grid_invest_btn" href="#">投资</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12042400001</td>
+                    <td>60,000.00 元</td>
+                    <td>36个月</td>
+                    <td class="orange_word">9.5%</td>
+                    <td>2012-11-21</td>
+                    <td class="grid_invest">
+                        <a href="#" class="income_link">查看收益</a>
+                        <a class="darkGrayBtn_7028 grid_invest_btn" href="#">投资</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+
+        <h4>第五种：<span>在我的账户中的综合产品列表中使用,翻页按钮为专用。不使用通用的样式</span></h4><br/>
+        <div class="grid_account_grid_wrap">
+            <div class="ui_grid_account_head_wrap clearfix">
+                <div class="anyidai_title"></div>
+                <div class="amount">(<span class="spe_word">4</span>)</div>
+                <div class="ppagination">
+                    <span class="pspan">1/1</span>
+                        <span class="pspan_btn">
+                            <a class="disGraBtn_2322 png" href="#">&nbsp;</a>&nbsp;
+<a class="disGraBtn_6121 png" href="#">下一页</a>
+                        </span>
+                </div>
+            </div>
+            <table class="ui_grid_account">
+                <tr class="title">
+                    <th class="h38">申请时间</th>
+                    <th>申请号</th>
+                    <th class="amount">投资金额（元）</th>
+                    <th>预期年化利率</th>
+                    <th width="110" class="amount">预期收益（元）</th>
+                    <th>状态</th>
+                </tr>
+                <tr class="first">
+                    <td class="h50">2011-1 19:00</td>
+                    <td><a href="#">1111071231230002</a></td>
+                    <td class="amount">30,000.00</td>
+                    <td>9.70%</td>
+                    <td class="amount">32,800.00</td>
+                    <td>等待合同确认</td>
+                </tr>
+                <tr>
+                    <td class="h50">2011-1 19:00</td>
+                    <td><a href="#">1111071231230002</a></td>
+                    <td class="amount">30,000.00</td>
+                    <td>9.70%</td>
+                    <td class="amount">32,800.00</td>
+                    <td>等待合同确认</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../mainJs/common_layout.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".tabs>a").each(function(i){
+            $(this).click(function(){
+                $(this).addClass("current").siblings().removeClass("current")
+                        .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+            })
+        })
+    })
+</script>
+<!--[if IE 6]>
+<script src="../app_js/ui30/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+    DD_belatedPNG.fix('.png');
+</script>
+<![endif]-->
+</body>
+</html>

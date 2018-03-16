@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>栅格化-50-20-14 - 平安陆金所</title>
+    <meta name="keywords" content="融资平台,投资平台,网上投资平台,小额投资平台,小额投资,个人小额投资,网上小额投资,小额投资理财,网上投资理财,投资好项目"/>
+    <meta name="description" content="中国平安陆金所官方网站,是中国平安保险集团股份有限公司旗下成员,在健全的风险管控体系基础上,为中小企业及个人客户提供专业,可信赖的投融资服务,助您财富实现增值!"/>
+    <link rel="stylesheet" type="text/css" href="http://www.lufax.com/activity/app_css/layout.simple.activity-1.0.css"/>
+    <style type="text/css">
+        .activityWrap{
+            width: 960px;
+            text-shadow: 1px 1px 1px #cdcdcd;
+        }
+        .grid{
+            float: left;
+            background-color: #f5f5f5;
+            margin: 10px 20px 10px 0;
+            height: 30px;
+            width: 100%;
+            border-width: 1px 0 1px 0;
+            border-style: dashed;
+            border-color: #20B2AA;
+        }
+        .grid1{
+            width: 50px;
+        }
+        .grid2{
+            width: 120px;
+        }
+        .grid3{
+            width: 190px;
+        }
+        .grid4{
+            width: 260px;
+        }
+        .grid5{
+            width: 330px;
+        }
+        .grid6{
+            width: 400px;
+        }
+        .grid7{
+            width: 470px;
+        }
+        .grid8{
+            width: 540px;
+        }
+        .grid9{
+            width: 610px;
+        }
+        .grid10{
+            width: 680px;
+        }
+        .grid11{
+            width: 750px;
+        }
+        .grid12{
+            width: 820px;
+        }
+        .grid13{
+            width: 890px;
+        }
+        .grid14{
+            width: 960px;
+        }
+        .grid.last{
+            margin-right: 0;
+        }
+
+        .title{
+            margin: 20px 0;
+            border-bottom: 2px solid #e6551d;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 180%;
+        }
+        .ruleArgs{
+            margin: 10px 0 0 50px;
+            padding: 5px 0 5px 10px;
+            border-left: 3px solid #f5f5f5;
+        }
+        .tips{
+            border-left: 3px solid #cdcdcd;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="header"></div>
+<!--	head end	-->
+
+<div class="activityWrap clearfix">
+    <div class="title">
+        <h2>栅格规则</h2>
+        <p>公式：pageWidth = (W &plus; R) &times; N &minus; R</p>
+        <p>当前规格：</p>
+        <p class="ruleArgs">W=50px;</p>
+        <p class="ruleArgs">R=20px;</p>
+        <p class="ruleArgs">N=14;</p>
+        <p class="ruleArgs">pageWidth=960px;</p>
+
+        <div style="margin-top: 20px;">
+            <h3>基于以上规则，计算某一个grid的宽度。</h3>
+            <p>公式：gridN = (W + R) x N &minus; R</p>
+            <p>例：grid3 = (50 + 20) x 3 &minus; 20 = 190px</p>
+        </div>
+
+        <div style="margin-top: 20px">
+            <h3>优点：</h3>
+            <ol style="margin-left: 50px;">
+                <li>完美切合960px，充分使用可用空间</li>
+                <li>和lufax.com系列页面吻合度较好</li>
+            </ol>
+            <h3>缺点：</h3>
+            <ol style="margin-left: 50px;">
+                <li>灵活度受限：最右侧的grid必须额外添加class="last"，清掉margin-right:20px;属性</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="clearfix">
+        <div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1">grid1</div>
+            <div class="grid grid1 last">grid1</div>
+        </div>
+        <div>
+            <div class="grid grid2">grid2</div>
+            <div class="grid grid2">grid2</div>
+            <div class="grid grid2">grid2</div>
+            <div class="grid grid2">grid2</div>
+            <div class="grid grid2">grid2</div>
+            <div class="grid grid2">grid2</div>
+            <div class="grid grid2 last">grid2</div>
+        </div>
+
+        <div>
+            <div class="grid grid3">grid3</div>
+            <div class="grid grid3">grid3</div>
+            <div class="grid grid3">grid3</div>
+            <div class="grid grid3">grid3</div>
+            <div class="grid grid2 last">grid2</div>
+        </div>
+
+        <div>
+            <div class="grid grid4">grid4</div>
+            <div class="grid grid4">grid4</div>
+            <div class="grid grid4">grid4</div>
+            <div class="grid grid2 last">grid2</div>
+        </div>
+
+        <div>
+            <div class="grid grid5">grid5</div>
+            <div class="grid grid5">grid5</div>
+            <div class="grid grid4 last">grid4</div>
+        </div>
+
+        <div>
+            <div class="grid grid6">grid6</div>
+            <div class="grid grid6">grid6</div>
+            <div class="grid grid2 last">grid2</div>
+        </div>
+
+        <div>
+            <div class="grid grid7">grid7</div>
+            <div class="grid grid7 last">grid7</div>
+        </div>
+
+        <div>
+            <div class="grid grid8">grid8</div>
+            <div class="grid grid6 last">grid6</div>
+        </div>
+
+        <div>
+            <div class="grid grid9">grid9</div>
+            <div class="grid grid5 last">grid5</div>
+        </div>
+
+        <div>
+            <div class="grid grid10">grid10</div>
+            <div class="grid grid4 last">grid4</div>
+        </div>
+
+        <div>
+            <div class="grid grid11">grid11</div>
+            <div class="grid grid3 last">grid3</div>
+        </div>
+
+        <div>
+            <div class="grid grid12">grid12</div>
+            <div class="grid grid2 last">grid2</div>
+        </div>
+
+        <div>
+            <div class="grid grid13">grid13</div>
+            <div class="grid grid1 last">grid1</div>
+        </div>
+
+        <div>
+            <div class="grid grid14">grid14</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px; padding: 20px 0; border-top: 2px solid #e6551d" class="clearfix">
+        <h2>常用组合</h2>
+        <div class="title" style="margin-top: 0px">
+            <p>小规律：</p>
+            <p class="tips">grid14= grid2 + grid12  (grid12 + grid2);</p>
+            <p class="tips">grid14= grid3 + grid11  (grid11 + grid3);</p>
+            <p class="tips">grid14= grid4 + grid10  (grid10 + grid4);</p>
+            <p class="tips">grid14= grid3 + grid7 + grid4;</p>
+            <p class="tips">grid14= grid2 + grid8 + grid4;</p>
+        </div>
+
+        <div>
+            <div class="grid grid2">grid2</div>
+            <div class="grid grid12 last">grid12</div>
+        </div>
+        <div>
+            <div class="grid grid3">grid3</div>
+            <div class="grid grid11 last">grid11</div>
+        </div>
+        <div>
+            <div class="grid grid11">grid11</div>
+            <div class="grid grid3 last">grid3</div>
+        </div>
+
+        <div>
+            <div class="grid grid4">grid4</div>
+            <div class="grid grid10 last">grid10</div>
+        </div>
+        <div>
+            <div class="grid grid10">grid10</div>
+            <div class="grid grid4 last">grid4</div>
+        </div>
+
+        <div>
+            <div class="grid grid3">grid3</div>
+            <div class="grid grid7">grid7</div>
+            <div class="grid grid4 last">grid4</div>
+        </div>
+
+        <div>
+            <div class="grid grid2">grid2</div>
+            <div class="grid grid8">grid8</div>
+            <div class="grid grid4 last">grid4</div>
+        </div>
+    </div>
+</div>
+
+<!--	foot begin	-->
+<div class="footer"></div>
+
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="http://www.lufax.com/activity/js/layout.simple.activity-1.0.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".grid").each(function(){
+            var width = $(this).width();
+            $(this).append("<br/>width:"+width);
+        });
+    });
+</script>
+</body>
+</html>

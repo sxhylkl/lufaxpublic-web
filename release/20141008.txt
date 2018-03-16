@@ -1,0 +1,20 @@
+[DEP]
+    list-app dev_20141008
+
+[DB1]
+    无
+
+[DB2]
+	无
+
+[NOTIFY]
+    fangxiao483@pingan.com.cn
+    huangjunyan873@pingan.com.cn
+    wangdongqiang334@pingan.com.cn
+    liangwenqi221@pingan.com.cn
+
+[ADVICE]
+	无
+
+[STATEMENT]
+    ecr7405【票据产品】安盈票据---展示和投资流程

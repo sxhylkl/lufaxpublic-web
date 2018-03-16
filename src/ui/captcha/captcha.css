@@ -1,0 +1,30 @@
+.form-horizontal .input-wrap.input-small .inputs {
+    width: 98px;
+}
+.form-horizontal .change-captcha-src {
+    margin-left: 5px;
+}
+.form-horizontal .form-error .errorPanel {
+    display: inline-block;
+}
+.form-horizontal .validate-input i.captcha-valid-icon {
+    width: 12px;
+    height: 12px;
+}
+.form-horizontal .form-error .validate-input i.captcha-valid-icon {
+    background-position: -112px -14px;
+}
+.form-horizontal .form-success .validate-input i.captcha-valid-icon {
+    background-position: -112px -42px;
+}
+
+.form-horizontal .validate-input .captcha-valid-icon {
+    bottom: 12px;
+    position: absolute;
+    right: 5px;
+}
+.form-horizontal .captcha-valid-img-wrap {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}

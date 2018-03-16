@@ -1,0 +1,165 @@
+{
+    "base-config": {
+        "js": "src/lufax.js,src/util/util.js, src/com/com.js, src/ui/ui.js"
+    },
+    "jquery": {
+        "js": "src/lib/jquery-1.7.2.min.js"
+    },
+    "require": {
+        "js": "src/lib/require.js"
+    },
+    "third-part": {
+        "js": "src/lib/jquery.blockUI.js, src/lib/template.js, src/lib/log.min.js, src/lib/lazy.data.min.js, src/lib/jquery.ui.custom.js"
+    },
+    "com-log": {
+        "depend": "base-config",
+		"js":"src/com/log/log.js,src/com/log/time.js,src/com/log/error.js"
+	},
+    "com": {
+        "depend": "base-config",
+        "js":"src/com/checkin/checkin.js,src/com/activationLufaxCoin/activationLufaxCoin.js",
+        "css": "src/lufax.css,src/com/checkin/checkin.css"
+    },
+    "com-echarts": {
+        "depend": "base-config",
+        "js":"src/com/echarts-map/echarts-map.js",
+        "css": "src/lufax.css,src/com/echarts-map/echarts-map.css"
+    },
+    "echarts-line": {
+        "depend": "base-config",
+        "js":"src/com/echarts-line/js/dist/echarts-all.js"
+    },
+
+
+    "ui": {
+        "depend": "base-config",
+        "js":"src/ui/step/numberstep.js,src/ui/captcha/captcha.js,src/ui/tabset/tabset.js,src/ui/slider/slider.js,src/ui/top/top.js,src/ui/form/form.js,src/ui/detectCapsLock/detectCapsLock.js,src/ui/tradePassword/tradePassword.js",
+        "css": "src/lufax.css,src/ui/ui.css,src/ui/step/numberstep.css,src/ui/slider/slider.css,src/ui/bank/bank.css,src/ui/top/top.css,src/ui/form/form.css,src/ui/detectCapsLock/detectCapsLock.css"
+    },
+
+	"util": {
+        "depend": "base-config",
+		"js":"src/util/decodeUserName.js,src/util/NumSeparate/NumSeparate.js"
+	},
+
+    "site": {
+        "depend": "third-part, util"
+    },
+
+    "datepicker": {
+        "js": "src/ui/datepicker/datepicker.js",
+        "css": "src/ui/datepicker/datepicker.css"
+    },
+
+    "zepto": {
+        "js": "src/lib/zepto/zepto.js,src/lib/zepto/ajax.js,src/lib/zepto/assets.js,src/lib/zepto/callbacks.js,src/lib/zepto/data.js,src/lib/zepto/deferred.js,src/lib/zepto/detect.js,src/lib/zepto/event.js,src/lib/zepto/form.js,src/lib/zepto/fx.js,src/lib/zepto/fx_methods.js,src/lib/zepto/gesture.js,src/lib/zepto/ie.js,src/lib/zepto/selector.js,src/lib/zepto/stack.js,src/lib/zepto/touch.js"
+    },
+    "lufax-base":{
+        "depend": "util,ui",
+        "js": "src/util/env.config.js,src/lib/jquery.blockUI.js,src/ui/popup/popup.js,src/lib/template.js,src/util/templateMerge/templateMerge.js,src/util/numFormat/numFormat.js,src/util/cookie/cookie.js,src/com/head/layout.p2p.new.js"
+    },
+    "lufax-trading-base":{
+        "depend": "ui",
+        "js": "src/util/env.config.js,src/lib/jquery.blockUI.js,src/ui/popup/popup.js,src/lib/template.js,src/util/templateMerge/templateMerge.js,src/util/numFormat/numFormat.js,src/util/cookie/cookie.js,src/com/head/layout.p2p.new.js"
+    },
+    "list-public":{
+        "depend": "base-config",
+        "js": "src/util/autoScroll.js,src/lib/lazy.data.min.js,src/util/pageCount/pageCount.js,src/util/limitText/limitText.js,src/util/countDown/countDown.js,src/ui/mouseTips/mouseTips.js,src/ui/pagination/pagination.js,src/ui/loading/loading.js"
+    },
+    "jQUI": {
+        "js": "src/lib/jquery.ui.custom.js"
+    },
+    "jQValidate": {
+        "js": "src/lib/jquery.validate.js"
+    },
+    "cashier-head": {
+        "depend": "base-config",
+        "js": "src/com/lufaxlib/lufax.lib.js, src/util/env.config.js"
+    },
+    "cashier-public": {
+        "js": "src/lib/jquery.blockUI.js, src/util/cookie/cookie.js,src/ui/popup/popup.js, src/com/form/validation.js, src/com/mod/mod.otp.js, src/lib/jquery.ui.custom.js, src/lib/template.js, src/com/head/layout.p2p.new.js"
+    },
+    "mobile-public": {
+        "depend": "base-config",
+        "js": "src/util/countDown/countDown.js"
+    },
+    "form": {
+        "js":"src/com/form/form.js"
+    },
+    "user-base": {
+        "depend": "base-config",
+        "js": "src/com/lufaxlib/lufax.lib.js, src/util/env.config.js"
+    },
+    "user-public": {
+        "js": "src/lib/jquery.blockUI.js, src/util/cookie/cookie.js,src/ui/popup/popup.js, src/com/head/layout.p2p.new.js, src/com/form/form.js, src/com/form/validation.js, src/lib/jquery.ui.custom.js, src/com/mod/mod.otp.js"
+    },
+    "user-public1": {
+        "js": "src/lib/jquery.blockUI.js, src/com/head/layout.simply.js, src/com/form/form.js, src/com/form/validation.js, src/com/mod/mod.otp.js"
+    },
+    "user-public2": {
+        "js": "src/lib/jquery.blockUI.js, src/util/cookie/cookie.js,src/ui/popup/popup.js, src/com/head/layout.p2p.new.js, src/com/form/validation.js, src/com/mod/mod.otp.js"
+    },
+    "user-single": {
+        "js": "src/com/form/form.js, src/com/mod/mod.otp.js"
+    },
+    "user-single1": {
+        "js": "src/com/head/layout.simply.js, src/com/form/form.js, src/lib/jquery.blockUI.js"
+    },
+    "user-single2": {
+        "js": "src/lib/jquery.blockUI.js, src/com/form/form.js"
+    },
+    "zt-public": {
+        "js": "src/staticTemp/js/lib/jquery-1.7.1.js, src/staticTemp/js/lib/lufax.lib.js"
+    },
+    "zt-public1": {
+        "js": "src/staticTemp/js/lib/jquery-1.7.1.js, src/staticTemp/js/lib/lufax.lib.js, src/staticTemp/js/lib/env.config.js, src/staticTemp/js/lib/form.js, src/staticTemp/js/lib/jquery-ui-1.7.1.js, src/staticTemp/js/lib/pa_ui.js, src/staticTemp/js/lib/jquery.blockUI.js, src/staticTemp/js/lib/jquery.ui.custom.js,src/staticTemp/js/lib/mod.otp.js"
+    },
+
+    "jquery-1.7.1": {
+        "js": "src/staticTemp/js/lib/jquery-1.7.1.js"
+    },
+    "lufaxLib": {
+        "js":"src/staticTemp/js/lib/lufax.lib.js"
+    },
+    "evn-config": {
+        "js": "src/staticTemp/js/lib/env.config.js"
+    },
+    "libForm": {
+        "js": "src/staticTemp/js/lib/form.js"
+    },
+    "jquery-ui-1.7": {
+        "js": "src/staticTemp/js/lib/jquery-ui-1.7.1.js"
+    },
+    "pa-ui": {
+        "js": "src/staticTemp/js/lib/pa_ui.js"
+    },
+    "jquery-blockUI": {
+        "js": "src/staticTemp/js/lib/jquery.blockUI.js"
+    },
+    "ui-custom": {
+        "js": "src/staticTemp/js/lib/jquery.ui.custom.js"
+    },
+    "mod-otp": {
+        "js": "src/com/mod/mod.otp.js"
+    },
+    "static-header": {
+        "js": "src/staticTemp/js/lib/layout.p2p.new.js"
+    },
+    "static-header-simply": {
+        "js": "src/staticTemp/js/lib/layout.simply.js"
+    },
+    "template": {
+        "js": "src/lib/template.js"
+    },
+    "main-css":{
+      "css":"src/tempCss/base.css,src/tempCss/button.css,src/tempCss/font.css,src/tempCss/form.css,src/tempCss/grid.css,src/tempCss/icons.css,src/tempCss/tables.css,src/tempCss/models.css,src/tempCss/layout.css"
+    },
+    "promo-layout": {
+        "js": "src/lib/promo-activity-layout/layout.js",
+        "css": "src/lib/promo-activity-layout/layout.css"
+    },
+    "static-page":{
+        "depend": "base-config",
+        "js": "src/com/lufaxlib/lufax.lib.js,src/lib/jquery.blockUI.js,src/util/env.config.js,src/util/cookie/cookie.js,src/com/head/layout.p2p.new.js,src/lib/template.js"
+    }
+}

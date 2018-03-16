@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>popup - Lufax FE demo</title>
+    <link rel="stylesheet" type="text/css" href="http://static.lufaxcdn.com/config/css/main_1018.css"/>
+</head>
+<body>
+<div class="main-wrap">
+    <p><a id="popup">newIconPopup</a></p>
+    <p><a id="popup2">simplePopup</a></p>
+    <p><a id="popup3">blankPopup</a></p>
+</div>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../../lib/jquery.blockUI.js"></script>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/lufax.lib.js"></script>
+<script type="text/javascript" src="../../lufax.js"></script>
+<script type="text/javascript" src="../ui.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#popup').click(function(){
+            lufax.popup.newIconPopup({
+                popupTitleName: "专业投资人测试问卷",
+                iconClass: "correct-icon",
+                message: "您已通过专业投资人测试，享有投资V8理财项目的特权。",
+                button: "<a class='btns btn_info close' href='javascript:void(0);'>继续投资</a>",
+                onClose: function () {
+                    window.location.reload();
+                }
+            });
+        })
+        $('#popup2').click(function(){
+            lufax.popup.simplePopup({
+                imgClass: "safeExit",
+                title: "您即将安全退出",
+                content: "",
+                button: '<a class="btns btn_large btn_info confirmBtn" href="javascript:void(0);"><span>安全退出</span></a><a class="btns btn_large btn_cancel ml20 close" href="javascript:void(0);"><span>取消</span></a>',
+                onConfirm: function () {
+                    tool.deleteCookie('_tn');
+                    window.location = $('#safe-logout').attr("href");
+                }
+            });
+        })
+
+        lufax.popup.blankPopup({
+            content:'<h2>这里是自定义的html</h2>' +
+                    '<div><span class="">name:</span><input type="text" name="name" value="input name..."/></div>' +
+                    '<p><a class="btns confirmBtn" href="javascript:;">confirm</a>&emsp;<a class="btns btn-cancel cancleBtn" href="javascript:;">cancel</a></p>',
+            onConfirm:function(){
+                console.log("confirm");
+            },
+            onCancel:function(){
+                console.log("cancel");
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+.lufax-header {
+    min-height: 121px;
+    min-width: 1170px;
+}
+
+.lufax-header .top-wrap {
+    height: 40px;
+    border-bottom: 1px solid #f5f5f5;
+    color: #666;
+    background-color: #fafafa;
+}
+
+.lufax-header .top-wrap .top-body {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.lufax-header .top-wrap .top-body .top-login-status {
+    float: left;
+}
+
+.lufax-header .top-wrap .top-login-status li {
+    float: left;
+    margin: 13px 0 0 10px;
+}
+
+.lufax-header .top-wrap .top-login-status li.home-icon {
+    margin: 10px 0 0 0;
+    background: none;
+}
+
+.lufax-header .top-wrap .top-login-status li.home-icon a {
+    background: url(img/icon-head-foot.png) -376px -1px no-repeat;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+}
+
+.lufax-header .top-wrap .top-login-status li.home-icon a:hover {
+    background-position: -330px -37px;
+}
+
+.lufax-header .top-wrap li.service-phone {
+    background: url(img/icon-head-foot.png) no-repeat -280px -73px;
+    border-left: 1px solid #eee;
+    margin-left: 15px;
+    padding-left: 25px;
+}
+
+.lufax-header .top-wrap .top-body .top-login-status .safe-logout-wrap {
+    margin-left: 10px;
+}
+
+.lufax-header .top-wrap .top-body .top-login-status .cookie-name {
+    margin-right: 10px;
+}
+
+.lufax-header .my-msg-status .msg-wrap .icon-msg {
+    background: url(img/icon-head-foot.png) -17px -790px no-repeat;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+
+.lufax-header .my-msg-status .msg-wrap .icon-msg.new-msg {
+    background-position: 0 -791px;
+}
+
+.lufax-header .media-link {
+    float: right;
+    padding: 10px 0 0;
+}
+
+.lufax-header .media-link li {
+    float: left;
+    margin-left: 15px;
+    padding-left: 15px;
+    z-index: 200;
+    border-left: 1px solid #eee;
+}
+
+.lufax-header .media-link li:first-child {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.lufax-header .media-link li.mobile-link,
+.lufax-header .media-link li.weibo-link,
+.lufax-header .media-link li.weixin {
+    padding-left: 0;
+    border-left: none;
+}
+
+.lufax-header .media-link li.weixin:hover {
+    position: relative;
+}
+
+.lufax-header .media-link .weixin p{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: #f8f8f8;
+    border: 1px solid #7a72b2;
+    z-index: 1;
+    top: 35px;
+    right: -30px;
+    opacity: 0.9;
+    display: none;
+}
+
+.lufax-header .media-link .weixin p {
+    top: 27px;
+    right: -10px;
+}
+
+.lufax-header .media-link .weixin p b{
+    background: url("https://static.lufaxcdn.com/config/images/p2p_index/lufax-codes.png") -420px 0 no-repeat;
+    width: 18px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    right: 30px;
+}
+
+.lufax-header .media-link .weixin p b {
+    right: 10px;
+}
+
+.lufax-header .media-link li a {
+    color: #666;
+}
+
+.lufax-header .media-link .icon-weibo,
+.lufax-header .media-link .icon-weixin,
+.lufax-header .media-link .icon-mobile {
+    background: url(img/icon-head-foot.png) 1000px 1000px no-repeat;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+.lufax-header .media-link .icon-mobile {
+    margin-right: 5px;
+    background-position: -252px -102px;
+}
+
+.lufax-header .media-link .icon-weixin {
+    background-position: -205px -138px;
+}
+
+.lufax-header .media-link .icon-weibo {
+    background-position: -162px -173px;
+}
+
+.lufax-header .media-link a:hover .icon-mobile {
+    background-position: -116px -211px;
+}
+
+.lufax-header .media-link a:hover .icon-weixin {
+    background-position: -70px -249px;
+}
+
+.lufax-header .media-link a:hover .icon-weibo {
+    background-position: -26px -288px;
+}
+
+.lufax-header .media-link .weixin:hover p{
+    display: block;
+}
+
+.lufax-header .lufax-code {
+    display: block;
+    background: url("https://static.lufaxcdn.com/config/images/p2p_index/lufax-codes.png") 0 0 no-repeat;
+    width: 140px;
+    height: 140px;
+    margin: 10px 0 0 10px;
+}
+
+.lufax-header .lufax-code.weixin-code {
+    background-position: 0 0;
+}
+
+.lufax-header .media-link .lumi-link a{
+    color: #e6551d;
+}
+
+.lufax-header .lumi-link .icon-ani-new{
+    display: inline-block;
+    background: url(img/icon-ani-new.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 14px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.lufax-header .head-body {
+    height: 90px;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.lufax-header .head-body .logo {
+    float: left;
+    height: 100%;
+}
+
+.lufax-header .head-body .slogan {
+    float: left;
+    margin: 0 0 0 15px;
+}
+
+.lufax-header .head-body .link-logo {
+    float: right;
+    width: 340px;
+    height: 100%;
+}
+
+.lufax-header .head-body .slogan img,
+.lufax-header .head-body .logo img,
+.lufax-header .head-body .link-logo img {
+    vertical-align: middle;
+    height: 100%;
+}
+
+.lufax-header .head-body .link-logo a {
+    display: inline-block;
+    color: #666;
+    background: url(img/icon-head-foot.png) no-repeat -312px -120px;
+}
+
+.lufax-header .head-body .link-logo a:hover {
+    background-position: -192px -210px;
+}
+
+.lufax-header .head-body .link-logo .title {
+    float: left;
+    margin: 25px 12px 0 0;
+    font-size: 14px;
+}
+
+.lufax-header .head-body .logo img {
+    width: 260px;
+}
+
+/*----------------------------------------------division--------------------------------------------------*/
+
+/*简版页头---begin*/
+.lufax-header.header-simple .top-wrap{
+    border-bottom: 1px solid #dedede;
+}
+.lufax-header.header-simple .head-body-wrap{
+    background-color: #f5f5f5;
+}
+.lufax-header.header-simple .head-body-wrap .slogan{
+    float: right;
+    margin: 0 60px 0 0;
+}
+/*简版页头---end*/

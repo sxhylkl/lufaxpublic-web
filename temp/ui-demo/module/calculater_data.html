@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>贷款计算器</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <!--#include virtual="../includeLinks.html"-->
+        <link type="text/css" rel="stylesheet" href="../mainCss/pa_ui.css"/>
+        <style>
+            .loan_calculater_wrap .csearch_wrap .csearch_content_wrap .btn_pos {
+                float: left;
+                margin: 0px 23px 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loan_calculater_wrap">
+            <div class="chead_wrap">
+                <div class="chead_content">贷款计算器</div>
+            </div>
+            <div class="cseperate"></div>
+            <div class="lcontent_wrap">
+                <div class="csearch_wrap">
+                    <div class="csearch_content_wrap cfirst clearfix">
+                        <div class="stitle">起息日</div>
+                        <div class="scal">
+                            <div class="input_cal_div"><input type="text" class="input input_aide calendar" readonly="readonly" pa_ui_name="validator,datepicker" value="2012-1-1"/></div>
+                        </div>
+                        <div class="stitle">贷款期数</div>
+                        <div class="scal">
+                            <div class="input_nor_div"><input type="text" class="input" value="8"/></div>
+                        </div>
+                    </div>
+                    <div class="error_wrap clearfix">
+                        <div class="error_left_wrap">
+                            <div class="econtent">请选择起息日。</div>
+                        </div>
+                        <div class="error_right_wrap">
+                            <div class="econtent">还款年利率只能为数字，且小数点后最多2位。</div>
+                        </div>
+                    </div>
+                    <div class="csearch_content_wrap clearfix">
+                        <div class="stitle">贷款本金</div>
+                        <div class="scal hunit">
+                            <div class="input_nor_div"><input type="text" class="input" value="1000.00"/></div>
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="stitle">还款年利率</div>
+                        <div class="scal hunit">
+                            <div class="input_nor_div"><input type="text" class="input" value="8"/></div>
+                        </div>
+                        <div class="unit">%</div>
+                        <div class="btn_pos">
+                            <a class="btns btn_cancel" href="#">计算</a>&nbsp;&nbsp;
+                            <a class="btns btn_cancel" href="#">重置</a>
+                        </div>
+                    </div>
+                    <div class="error_wrap clearfix">
+                        <div class="error_left_wrap">
+                            <div class="econtent">还款年利率只能为数字，且小数点后最多2位。</div>
+                        </div>
+                        <div class="error_right_wrap">
+                            <div class="econtent">还款年利率只能为数字，且小数点后最多2位。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description"><div class="dcontent">计算结果</div></div>
+                <div class="data_table_wrap">
+                    <div class="title_wrap">
+                        <div class="t_1">期次</div>
+                        <div class="t_2">还款日</div>
+                        <div class="t_3">应还利息（元）</div>
+                        <div class="t_4">应还本金（元）</div>
+                        <div class="t_5">应还利息（元）</div>
+                        <div class="t_6">剩余本金（元）</div>
+                    </div>
+                    <div class="content_wrap">
+                        <div class="d_1">1</div>
+                        <div class="d_2">2012-4-1</div>
+                        <div class="d_3">252.00</div>
+                        <div class="d_4">250.00</div>
+                        <div class="d_5">2.00</div>
+                        <div class="d_6">750.00</div>
+                    </div>
+                    <div class="content_wrap even">
+                        <div class="d_1">2</div>
+                        <div class="d_2">2012-7-1</div>
+                        <div class="d_3">252.00</div>
+                        <div class="d_4">250.00</div>
+                        <div class="d_5">2.00</div>
+                        <div class="d_6">500.00</div>
+                    </div>
+                    <div class="content_wrap">
+                        <div class="d_1">3</div>
+                        <div class="d_2">2012-10-1</div>
+                        <div class="d_3">252.00</div>
+                        <div class="d_4">250.00</div>
+                        <div class="d_5">2.00</div>
+                        <div class="d_6">250.00</div>
+                    </div>
+                    <div class="content_wrap even">
+                        <div class="d_1">4</div>
+                        <div class="d_2">2012-12-31</div>
+                        <div class="d_3">252.00</div>
+                        <div class="d_4">250.00</div>
+                        <div class="d_5">2.00</div>
+                        <div class="d_6">0.00</div>
+                    </div>
+                    <div class="content_wrap">
+                        <div class="a_1">合计</div>
+                        <div class="a_2">1008.00</div>
+                        <div class="a_3">1000.00</div>
+                        <div class="a_4">8.00</div>
+                        <div class="a_5"></div>
+                    </div>
+                </div>
+                <div class="bottom_description first">
+                    此计算器的计算结果仅供参考，陆金所对此结果的准确性不承担任何责任。
+                </div>
+                <div class="bottom_description last">
+                    实际数额以陆金所确认的结果为准。
+                </div>
+            </div>
+            <div class="bottom_wrap"><div class="bottom_bg"></div></div>
+        </div>
+        <script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="../mainJs/jquery-ui-1.7.1.js"></script>
+        <script type="text/javascript" src="../mainJs/pa_ui.js"></script>
+        <!--[if ie]><script type="text/javascript" src="../mainJs/PIE.js"></script><![endif]-->
+    </body>
+</html>

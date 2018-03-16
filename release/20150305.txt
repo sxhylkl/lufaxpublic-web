@@ -1,0 +1,16 @@
+[DEP]
+    无
+
+[DB1]
+    无
+
+[DB2]
+	无
+
+[NOTIFY]
+    fangxiao483@pingan.com.cn
+    wangdongqiang334@pingan.com.cn
+    wangyaqiong553@pingan.com.cn
+
+[ADVICE]
+    WEBDEV-2250 【导航】更改珠江人寿和专享理财起投额

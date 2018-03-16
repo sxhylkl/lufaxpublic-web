@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html ng-app>
+<head>
+    <link href="http://cdn.bootcss.com/angular.js/1.3.0-beta.8/angular-csp.css" rel="stylesheet">
+</head>
+<body>
+
+        <p><a href="javascript:;">javascript:;</a></p>
+        <p><a href="javascript:void(0)">javascript:void(0)</a></p>
+        <p><a href="javascript:void(0);">javascript:void(0);</a></p>
+        <p class="no_href"><a>no href</a></p>
+        <p><a href="#fdsa" target="_blank">#开始</a></p>
+        <p><a href="http://www.lufax.com#fdsa" target="_blank">http://www.lufax.com#fdsa</a></p>
+        <p><a href="fdsa#" target="_blank">含#</a></p>
+        <p><a href="http://www.baidu.com?lufax_ref=123" target="_blank">含lufax_ref=</a></p>
+        <p><a href="http://www.baidu.com?flag=123" target="_blank">含?</a></p>
+        <p><a href="http://www.baidu.com" target="_blank">http://www.baidu.com</a></p>
+        <p><a href="http://fe.dev.lufax.com/lufaxpublic-web/temp/test.html" target="_blank">http://fe.dev.lufax.com/lufaxpublic-web/temp/test.html</a></p>
+
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <!--Sidebar content-->
+
+            Search: <input ng-model="query">
+
+        </div>
+        <div class="span10">
+            <!--Body content-->
+
+            <ul class="phones">
+                <li ng-repeat="phone in phones | filter:query">
+                    {{phone.name}}
+                    <p>{{phone.snippet}}</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="ui-demo/mainJs/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="ui-demo/mainJs/common.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/lufax-public/util/20140905.util.min.js"></script>
+<!--<script type="text/javascript" src="http://static.lufax.com/lufax-public/statistic/20141111.statistic.min.js"></script>-->
+<script type="text/javascript" src="../src/lufax.js"></script>
+<script type="text/javascript" src="../src/util/util.js"></script>
+<script type="text/javascript" src="../src/util/statistics/statistic.js"></script>
+</body>
+</html>

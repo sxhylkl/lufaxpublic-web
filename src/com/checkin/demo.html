@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>sign - Lufax FE demo</title>
+    <link rel="stylesheet" type="text/css" href="http://static.lufaxcdn.com/config/css/main_1018.css"/>
+    <link rel="stylesheet" type="text/css" href="checkin.css"/>
+</head>
+<body>
+<div class="main-wrap">
+    <div id="signIn"></div>
+</div>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../../lib/jquery.blockUI.js"></script>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/lufax.lib.js"></script>
+<script type="text/javascript" src="../../lufax.js"></script>
+<script src= "../com.js"></script>
+<script src= "checkin.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var checkin= new lufax.com.Checkin($('#signIn'), {cls: 'points-checkin-vip-btn'});
+        checkin.init();
+    });
+</script>
+
+</body>
+</html>

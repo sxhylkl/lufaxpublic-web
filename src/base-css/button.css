@@ -1,0 +1,262 @@
+/* !Includes: buttons
+ * author: huangjunyan873@pingan.com.cn
+ * 内含两套button样式
+ */
+/*---------auto adapt button----add by vincent 2012-9-24-----------*/
+.btn_stateTip {
+    display: block;
+    height: 28px;
+    padding: 12px 0 0;
+}
+
+.btn_stateTip .stateTip {
+    background-color: #F6720B;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    cursor: default;
+    font-size: 12px;
+    padding: 0 2px 0 3px;
+    margin: 0px 0px;
+}
+.btns.btn-auction .icon-auction-btn {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(img/icon-v2-0314.png) -151px -125px no-repeat;
+    vertical-align: middle;
+}
+.btns.btn-auction {
+    padding: 3px 11px;
+}
+.btns.btn-auction span {
+    vertical-align: middle;
+}
+/*new css3 button*/
+.btns {
+    display: inline-block;
+    padding: 3px 20px;
+    font-size: 12px;
+    margin-bottom: 0;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    vertical-align: middle;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#ff8400, #e7561c);
+    background: -moz-linear-gradient(#ff8400, #e7561c);
+    background: -ms-linear-gradient(#EEFF99, #66EE33);
+    background: -o-linear-gradient(#ff8400, #e7561c);
+    background: linear-gradient(#ff8400, #e7561c);
+    background-repeat: repeat-x;
+    border-width: 0 1px 1px;
+    border-color: #bbb;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #A6A6A6;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #ff8400;
+}
+
+.btns:hover {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#ff9c00, #ffbb01);
+    background: -moz-linear-gradient(#ff9c00, #ffbb01);
+    background: -ms-linear-gradient(#ff9c00, #ffbb01);
+    background: -o-linear-gradient(#ff9c00, #ffbb01);
+    background: linear-gradient(#ff9c00, #ffbb01);
+    background-color: #ffbb01;
+}
+.btn-info,
+.btn_info {
+    background: -webkit-linear-gradient(#5f9dde, #3a73c0);
+    background: -moz-linear-gradient(#5f9dde, #3a73c0);
+    background: -ms-linear-gradient(#5f9dde, #3a73c0);
+    background: -o-linear-gradient(#5f9dde, #3a73c0);
+    background: linear-gradient(#5f9dde, #3a73c0);
+    background-color: #3b75c1;
+}
+.btn-info:hover,
+.btn_info:hover {
+    background: -webkit-linear-gradient(#4096ee, #4096eb);
+    background: -moz-linear-gradient(#4096ee, #4096eb);
+    background: -ms-linear-gradient(#4096ee, #4096eb);
+    background: -o-linear-gradient(#4096ee, #4096eb);
+    background: linear-gradient(#4096ee, #4096eb);
+    background-color: #5e9cdd;
+}
+
+.btn-page,
+.btn-cancel,
+.btn_page,
+.btn_cancel {
+    color: #333;
+    background: -webkit-linear-gradient(#fbfbfb, #e5e5e5);
+    background: -moz-linear-gradient(#fbfbfb, #e5e5e5);
+    background: -ms-linear-gradient(#fbfbfb, #e5e5e5);
+    background: -o-linear-gradient(#fbfbfb, #e5e5e5);
+    background: linear-gradient(#fbfbfb, #e5e5e5);
+    /*-pie-background: linear-gradient(#fbfbfb, #e5e5e5);*/
+    text-shadow: none;
+    background-color: #fbfbfb;
+    border-color: #d3d3d3 #d3d3d3 #A6A6A6;
+    border-width: 1px;
+}
+
+.btn-page:hover,
+.btn-cancel:hover,
+.btn_page:hover,
+.btn_cancel:hover,
+.btns.disabled {
+    background: -webkit-linear-gradient(#e1e1e1, #cfcfcf);
+    background: -moz-linear-gradient(#e1e1e1, #cfcfcf);
+    background: -ms-linear-gradient(#e1e1e1, #cfcfcf);
+    background: -o-linear-gradient(#e1e1e1, #cfcfcf);
+    background: linear-gradient(#e1e1e1, #cfcfcf);
+    background-color: #e1e1e1;
+}
+
+.btn-page:hover .caret,
+.btn_page:hover .caret {
+    color: #fff
+}
+
+.btns.disabled .caret {
+    color: #adadad;
+}
+
+.btn-xlarge,
+.btn_xlarge {
+    padding: 8px 40px;
+    font-size: 14px;
+}
+
+
+.btn-large,
+.btn_large {
+    padding: 5px 30px;
+    font-size: 14px;
+}
+
+.btn-small,
+.btn_small {
+    padding: 0 6px;
+    font-size: 12px;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+.btn-page,
+.btn_page {
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+.btn-page.first,
+.btn-page.last,
+.btn_page.first,
+.btn_page.last {
+    padding: 0 18px;
+}
+
+.btns.disabled {
+    color: #999;
+    cursor: default;
+    text-shadow: none;
+}
+
+.caret {
+    color: #E6551D;
+    font-weight: bold;
+    vertical-align: baseline;
+    font-family: 'Arial';
+}
+.btnsp {
+    background: url(img/btnsp.png) no-repeat 0 0;
+    display: inline-block;
+}
+
+.btnsp_invest {
+    width: 115px;
+    height: 42px;
+    background-position: -1px -1px;
+}
+
+.btnsp_invest:hover {
+    background-position: -116px -1px;
+}
+
+.btnsp_investLarge {
+    width: 162px;
+    height: 50px;
+    background-position: -163px -44px;
+}
+
+.btnsp_investLarge:hover {
+    background-position: -1px -44px;
+}
+
+.btnsp_question {
+    width: 135px;
+    height: 44px;
+    background-position: -1px -97px;
+}
+
+.btnsp_question:hover {
+    background-position: -136px -97px;
+}
+
+.btnsp_loan {
+    width: 72px;
+    height: 28px;
+    color: #204980;
+    line-height: 28px;
+    text-align: center;
+    background-position: -73px -143px;
+}
+
+.btnsp_loan:hover {
+    background-position: -1px -143px;
+    text-decoration: none;
+}
+
+.btnsp_investSmall {
+    width: 72px;
+    height: 28px;
+    line-height: 28px;
+    color: #7A421D;
+    text-align: center;
+    background-position: -145px -143px;
+}
+
+.btnsp_investSmall:hover {
+    background-position: -217px -143px;
+    text-decoration: none;
+}
+
+.btnsp_claims {
+    width: 48px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-position: -275px -100px;
+}
+
+.btnsp_claims:hover {
+    text-decoration: none;
+}
+
+.btnsp_close {
+    width: 20px;
+    height: 20px;
+    background-position: -275px -120px;
+}
+
+.btnsp_close:hover {
+    background-position: -296px -120px;
+}

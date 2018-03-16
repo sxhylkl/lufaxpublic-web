@@ -1,0 +1,64 @@
+{
+    "base-config": {
+        "js": "src/lufax.js,src/util/util.js, src/com/com.js, src/ui/ui.js"
+    },
+    "jquery": {
+        "js": "src/lib/jquery-1.7.2.min.js"
+    },
+
+    "lufax-lib": {
+        "js":"src/lib/jquery.ui.custom.js,src/lib/jquery.validate.js,src/lib/jquery.blockUI.js,src/lib/template.js,src/lib/lazy.data.min.js,src/lib/require.js,src/ui/datepicker/datepicker.js",
+        "css":"src/ui/datepicker/datepicker.css"
+    },
+
+
+
+    "lufax-base-css":{
+        "css":"src/base-css/base.css,src/base-css/button.css,src/base-css/form.css,src/base-css/icons.css"
+    },
+    "lufax-com": {
+        "js":"src/com/activationLufaxCoin/activationLufaxCoin.js,src/com/lufaxlib/lufax.lib.js,src/com/form/validation.js,src/com/mod/mod.otp.js",
+        "css": "src/com/activationLufaxCoin/iframe.css"
+    },
+    "lufax-ui": {
+        "js":"src/ui/step/numberstep.js,src/ui/tabset/tabset.js,src/ui/slider/slider.js,src/ui/top/top.js,src/ui/form/form.js,src/ui/detectCapsLock/detectCapsLock.js,src/ui/header/header.js,src/ui/footer/footer.js,src/ui/navigator/navigator.js,src/ui/popup/popup.js,src/ui/mouseTips/mouseTips.js,src/ui/pagination/pagination.js,src/ui/loading/loading.js,src/ui/zoomTips/zoomTips.js,src/ui/tradePassword/tradePassword.js",
+        "css": "src/ui/bank/bank.css,src/ui/detectCapsLock/detectCapsLock.css,src/ui/header/header.css,src/ui/footer/footer.css,src/ui/loading/loading.css,src/ui/pagination/pagination.css,src/ui/step/numberstep.css,src/ui/slider/slider.css,src/ui/bank/bank.css,src/ui/top/top.css,src/ui/navigator/navigator.css,src/ui/ui-models/models.css,src/ui/ui-models/tables.css,src/ui/popup/popup.css"
+    },
+
+    "lufax-util": {
+        "js":"src/util/decodeUserName.js,src/util/NumSeparate/NumSeparate.js,src/util/cookie/cookie.js,src/util/numFormat/numFormat.js,src/util/env.config.js,src/util/templateMerge/templateMerge.js,src/util/autoScroll.js,src/util/pageCount/pageCount.js,src/util/limitText/limitText.js,src/util/countDown/countDown.js"
+    },
+    "lufax-public":{
+        "depend":"base-config, lufax-base-css, lufax-util, lufax-com, lufax-ui"
+    },
+
+
+
+    "statistic": {
+        "depend": "base-config",
+        "js":"src/com/log/log.js,src/com/log/error.js,src/util/statistics/statistic.js, src/util/sessionKeep/keepSession.js"
+    },
+    "statistic_sdc": {
+        "depend": "base-config",
+        "js":"src/util/statistics/sdc_lufax.js"
+    },
+
+
+
+    "promo-layout": {
+        "js": "src/lib/promo-activity-layout/layout.js",
+        "css": "src/lib/promo-activity-layout/layout.css"
+    },
+
+
+
+    "com-echarts": {
+        "depend": "base-config",
+        "js":"src/com/echarts-map/echarts-map.js",
+        "css": "src/lufax.css,src/com/echarts-map/echarts-map.css"
+    },
+
+    "zepto": {
+        "js": "src/lib/zepto/zepto.js,src/lib/zepto/ajax.js,src/lib/zepto/assets.js,src/lib/zepto/callbacks.js,src/lib/zepto/data.js,src/lib/zepto/deferred.js,src/lib/zepto/detect.js,src/lib/zepto/event.js,src/lib/zepto/form.js,src/lib/zepto/fx.js,src/lib/zepto/fx_methods.js,src/lib/zepto/gesture.js,src/lib/zepto/ie.js,src/lib/zepto/selector.js,src/lib/zepto/stack.js,src/lib/zepto/touch.js"
+    }
+}

@@ -1,0 +1,730 @@
+/* !Includes: models.css
+ * author: liangwenqi221@pingan.com.cn
+ */
+
+/*-------------seperate line with arrow---------------*/
+.seperateLineRed {
+    width: 100%;
+}
+
+.seperateLineRed .bottomLine {
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    overflow: hidden;
+}
+
+.seperateLineRed .bottomLineShadow {
+    width: 100%;
+    height: 3px;
+    background-color: #f3f3f3;
+    border-top: red solid 1px;
+}
+
+.seperateLineGrayDown {
+    width: 100%;
+}
+
+.seperateLineGrayDown .bottomLine {
+    width: 100%;
+    height: 1px;
+    background-color: #dddddd;
+    overflow: hidden;
+}
+
+.seperateLineGrayDown .triangleGrayDownIcon {
+    margin-top: 0px;
+    float: left;
+}
+
+.seperateLineGray .bottomLineShadow {
+    width: 100%;
+    height: 3px;
+    background-color: #f5f5f5;
+    border-top: #dddddd solid 1px;
+}
+
+/*---------component:
+                prompt-------------*/
+.vw_prompt_wrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 672px;
+    height: auto;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 4px;
+}
+
+.vw_prompt_wrap .prompt_container {
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
+}
+
+.vw_prompt_wrap .prompt_state {
+    text-align: center;
+    color: #106f00;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 30px 0px 20px 0;
+    /*del padding left by huang*/
+}
+
+.vw_prompt_wrap .prompt_title {
+    padding-left: 10px;
+    white-space: nowrap;
+    /*del float left by huang*/
+}
+.vw_prompt_wrap .prompt_state_content{
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 0 60px;
+}
+.vw_prompt_wrap .prompt_state_content .btnWrap{
+    margin-top: 20px;
+    text-align: center;
+}
+.vw_prompt_wrap .prompt_content {
+    padding: 20px 52px;
+    border-top: 1px dotted #a8a8a8;
+}
+.vw_prompt_wrap .prompt_content.simple{
+    padding: 20px 40px 0;
+}
+.vw_prompt_wrap .prompt_content.single{
+    text-align: center;
+}
+
+.vw_prompt_wrap .prompt_content p {
+    text-indent: -12px;
+}
+
+/*  add by vincent 2013-1-11
+    use .prompt_item to replace p
+*/
+.vw_prompt_wrap .prompt_content .prompt_item {
+    text-indent: -12px;
+    line-height: 150%;
+}
+.vw_prompt_wrap .prompt_content.simple .prompt_item{
+    text-indent: 0;
+}
+.vw_prompt_wrap .prompt_tips {
+    background-color: #f5f5f5;
+    text-align: center;
+    height: 58px;
+    line-height: 58px;
+    color: #666;
+}
+
+.vw_prompt_wrap.complex .prompt_state{
+    height: auto;
+    line-height: 150%;
+    color: #333;
+    font-weight: normal;
+}
+.vw_prompt_wrap.complex .icon{
+    vertical-align: middle;
+}
+.vw_prompt_wrap.complex .prompt_title{
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    text-align: left;
+    max-width: 580px;
+}
+
+.ajax_loading {
+    background: url(img/ajax-loading.gif) no-repeat;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/*invest steps*/
+.stepWrap {
+    margin: 0 0 20px 0;
+}
+
+.stepWrap li {
+    float: left;
+    padding-bottom: 10px;
+}
+
+.stepWrap span {
+    border-left: 1px dotted #666;
+    padding: 0 30px;
+    font-size: 14px;
+}
+
+.stepWrap .last {
+    border-right: 1px dotted #666666;
+}
+
+.stepWrap .current {
+    background: url("img/register_step_arrow-53.png") no-repeat center bottom;
+    height: 20px;
+}
+
+.stepWrap .current .selected {
+    color: #E6551D;
+    font-weight: bold;
+}
+
+
+/*new breadcrumb for all pages top under contentWrapper*/
+.breadcrumb {
+    height: 40px;
+    line-height: 40px;
+    margin-top: -20px;
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb li a {
+    color: #333;
+}
+
+.breadcrumb .divider {
+    padding: 0 3px;
+}
+
+.breadcrumb .active {
+    color: #999;
+}
+
+.contentHead {
+    line-height: 27px;
+    margin: -10px 0 0 0;
+}
+
+.contentHead .breadcrumb {
+    height: auto;
+    margin: 0;
+    line-height: 27px;
+}
+
+/* new progress style : pure css, without img. Add by vincent @2012-11-26 */
+/* step wrap */
+.com_step_wrap .step {
+    text-decoration: none;
+    padding: 0 30px;
+    border-right: 1px dotted #666;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+    z-index: 0;
+}
+
+.com_step_wrap .step:first-child {
+    border-left: 1px dotted #666;
+}
+
+.com_step_wrap .step:hover {
+    text-decoration: none;
+}
+
+.com_step_wrap .current {
+    color: #e6551d;
+    font-weight: bold;
+}
+
+.com_step_wrap .current b {
+    border-color: #FFF #FFF #DF4407;
+    border-style: solid;
+    border-width: 4px;
+    bottom: -10px;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    position: absolute;
+    z-index: 0;
+    width: 0;
+    left: 49%;
+}
+
+.com_step_wrap .bottomLineShadow {
+    margin-top: 10px;
+    border-top: 1px solid #f00;
+    height: 3px;
+    background-color: #f3f3f3;
+}
+
+/* slipt line */
+.com_sliptLine {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #ddd;
+    position: relative;
+    z-index: 0;
+}
+
+.com_sliptLine b {
+    border-color: #ddd #FFF #FFF;
+    border-style: solid;
+    border-width: 4px;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    width: 0;
+    position: absolute;
+    z-index: 0;
+    margin-left: 60px;
+}
+
+.split_active {
+    border-top-color: #f00;
+}
+
+.split_active b {
+    border-color: #f00 #FFF #FFF;
+}
+
+/*IE6 test add by vincent 2012-11-30*/
+/* top panel */
+.topIE6 {
+    background-color: #491095;
+    border-bottom: 1px solid #3c057d;
+    padding: 8px 0 2px;
+}
+
+.topIE6 .content {
+    width: 950px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #fff;
+}
+
+.topIE6 .icon {
+    display: inline-block;
+    background: url("img/logo_browser_20100.png") no-repeat 0 -63px;
+    height: 18px;
+    width: 15px;
+    margin-right: 3px;
+}
+
+.topIE6 .leftWrap {
+    float: left;
+}
+
+.topIE6 .rightWrap {
+    float: right;
+}
+
+.topIE6 .suggest {
+    color: #999;
+    padding-right: 5px;
+}
+
+.topIE6 .browser {
+    color: #c0b9f1;
+    padding: 0 6px;
+    font-size: 12px;
+}
+
+.topIE6 .closeBtn {
+    color: #999;
+    font-weight: bolder;
+}
+
+.topIE6 .closeBtn:hover {
+    text-decoration: none;
+}
+
+/* pop panel */
+.popIE6 {
+    border: 3px solid #cdcdcd;
+    height: auto;
+    width: 580px;
+    height: 250px;
+}
+
+.popIE6 .logo {
+    float: left;
+    display: inline;
+    width: 192px;
+    height: 165px;
+    background: url(img/logo_ie6_192165.jpg) no-repeat 0 0;
+    margin: 10px 40px 45px 57px;
+}
+
+.popIE6 .content {
+    float: left;
+    display: inline;
+    padding-right: 60px;
+}
+
+.popIE6 .close {
+    text-align: right;
+    margin: 6px 6px 0 0;
+}
+
+.popIE6 .title {
+    color: #e6551d;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.popIE6 .emphasize {
+    color: #4f89cc;
+    padding-right: 3px;
+}
+
+.popIE6 .suggest {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.popIE6 .availableBrowser {
+    margin: 15px 0;
+}
+
+.popIE6 .browser {
+    display: inline-block;
+    background-image: url(img/logo_browser_20100.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 16px;
+}
+
+.popIE6 .IE7gte {
+    background-position: 0 0;
+}
+
+.popIE6 .firefox {
+    background-position: 0 -20px;
+}
+
+.popIE6 .chrome {
+    background-position: 0 -43px;
+}
+
+/*IE6 test end*/
+
+/*new component : help tips. add by vincent 2012-12-12 */
+.helpWrap {
+    border-top: 1px dashed #ddd;
+    padding-top: 20px;
+}
+
+.helpWrap .prompting_com {
+    padding-left: 30px;
+}
+
+.prompting_com .operationTitle {
+    color: #e6551d;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.prompting_com .head {
+    margin-bottom: 5px;
+}
+
+.prompting_com .head .title {
+    float: left;
+}
+
+.prompting_com .head .helpLink {
+    float: right;
+}
+
+.prompting_com .content {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.prompting_com .head .icon {
+    float: left;
+    margin-top: -1px;
+}
+
+.prompting_com .question {
+    font-weight: bold;
+    margin: 10px 0 5px 20px;
+}
+
+.prompting_com .answer {
+    color: #666;
+    padding-left: 28px;
+    margin-bottom: 5px;
+}
+
+/*noticeQuestion for public*/
+
+.noticeQuestion {
+    border: 1px solid #d9d9d9;
+    margin: 0 0 10px;
+}
+
+.noticeQuestion .head {
+    padding: 0 15px 0 12px;
+    height: 34px;
+    line-height: 34px;
+    background-color: #F5F5F5;
+}
+
+.noticeQuestion .title {
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.noticeQuestion .more {
+    display: inline-block;
+    float: right;
+}
+
+.noticeQuestion .more a {
+    display: inline-block;
+}
+
+.noticeQuestion .more span {
+    font-weight: bold;
+    margin-left: 3px;
+    color: #e6551d;
+}
+
+.noticeQuestion .contentList {
+    margin-top: 10px;
+    padding: 0 0 10px 15px;
+}
+
+.noticeQuestion .contentList li {
+    padding: 3px 0;
+    width: 216px;
+}
+
+.myaccount_usual_problem li b,
+.noticeQuestion .contentList li b {
+    border-color: #fff #fff #fff #4F9114;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    width: 0;
+    margin: 0 2px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.noticeQuestion.notice .contentList li b {
+    border-color: #fff #fff #fff #e6551d;
+}
+
+.myaccount_usual_problem li a,
+.noticeQuestion .contentList li a {
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 94%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.noticeQuestion_horizontal_wrap {
+    width: 820px; /*min-width*/
+    clear: both;
+}
+
+.noticeQuestion_horizontal {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 538px;
+    height: 108px;
+}
+
+.noticeQuestion_horizontal .contentList {
+    margin-top: 0px;
+    overflow: hidden;
+    padding: 0 0 0 15px;
+}
+
+.noticeQuestion_horizontal .contentList  li {
+    float: left;
+    padding: 3px 0;
+    margin-right: 7px;
+    width: 47%;
+}
+
+.noticeQuestion_horizontal_ad {
+    float: right;
+    height: 110px;
+    width: 260px;
+}
+
+.noticeQuestion_horizontal_ad a {
+    text-decoration: none;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.noticeQuestion_horizontal_ad a:hover {
+    text-decoration: none;
+}
+
+.noticeQuestion_horizontal_ad a img {
+    width: 100%;
+    height: 100%;
+}
+
+.mouseTips,
+.toggleTips {
+    position: absolute;
+    padding: 5px;
+    background: #fef3cd;
+    border: 1px solid #fab418;
+    display: none;
+    box-shadow: 2px 2px 2px #bbb;
+    opacity: .9;
+    border-radius: 5px;
+    line-height: 140%;
+}
+
+.mouseTips {
+    z-index: 100;
+}
+
+.zoomTips {
+    position: absolute;
+    background: #f2f4f5;
+    padding: 0 25px 0 5px;
+    font-size: 24px;
+    display: none;
+    z-index: 100;
+    color: #666;
+    border: 1px dashed #c9d0d7;
+    height: 35px;
+    line-height: 35px;
+}
+
+
+.banner .banner-img {
+    display: inline-block;
+    float: left;
+    width: 680px;
+    height: 170px;
+}
+
+.banner .banner-info {
+    display: inline-block;
+    float: left;
+    width: 270px;
+    height: 170px;
+}
+.main-wrap .banner .banner-info {
+    width: 280px;
+}
+
+.carousel-fade {
+    position: relative;
+}
+
+.carousel-fade li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.carousel-fade .focus_ctrl {
+    bottom: 4px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.carousel-fade .focus_ctrl a {
+    color: #8C8C8C;
+    display: inline-block;
+    font-size: 26px;
+    line-height: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    width: 10px;
+}
+
+.carousel-fade .focus_ctrl a.current {
+    color: #E6551D;
+    line-height: 10px;
+}
+
+/*wcm use
+  for vertical ad img
+  no width and height limit
+  add by kika 20130903
+*/
+.ad-img {
+    margin-bottom: 10px;
+}
+
+/*new hot question*/
+.sidebar-panels {
+    margin-bottom: 10px;
+    border: 1px solid #d9d9d9;
+}
+.news-notice .news-notice-head .info {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    float: left;
+}
+
+.news-notice .news-notice-head .more {
+    color: #ea5404;
+    float: right;
+}
+
+.news-notice .news-notice-list li {
+    line-height: 25px;
+}
+.news-notice .news-notice-list li b {
+    border-color: #fff #fff #fff #ea5404;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    width: 0;
+    margin: 0 2px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.news-notice .news-notice-list.faq-list li b {
+    border-color: #fff #fff #fff #389404;
+}
+.news-notice .news-notice-list li a{
+    color: #333;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 235px;
+    display: inline-block;
+}
+.news-notice .news-notice-head {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0 10px 0 15px;
+}
+.news-notice .news-notice-head:hover {
+    text-decoration: none;
+}
+.news-notice .news-notice-body {
+    padding: 15px 0 15px 10px;
+}
+

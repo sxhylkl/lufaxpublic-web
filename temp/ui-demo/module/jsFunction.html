@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS API</title>
+    <!--#include virtual="../modules/includeCss.html"-->
+    <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+</head>
+
+<body style="padding:20px;">
+
+<table class="table-border">
+    <tr>
+        <th>方法</th>
+        <th>示例</th>
+        <th>备注</th>
+    </tr>
+    <tr>
+        <td>$('.tip-dotted').linkTip();</td>
+        <td>
+            <div class="tip-dotted t1" data-link="<a href='http://www.lufax.com' target='_blank'>查看《定向委托投资管理协议》​</a>" data-width="400">委托成功</div>
+            <br/>
+            <br/>
+            <div class="tip-dotted t2" data-link="查看《定向委托投资管理协议》​">委托成功</div>
+        </td>
+        <td>在浮层上显示带link的数据，数据写在data-link中，支持任意数据。<br/>显示框宽度不限，支持传参设置，宽度写在data-width</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<!--#include virtual="../modules/includeJs.html"-->
+<script type="text/javascript">
+    (function ($) {
+        $.fn.linkTip = function (options) {
+            var linkTipTemp = '<span class="linkTips"></span>';
+
+            $(this).each(function(){
+                $(this).append(linkTipTemp);
+            });
+
+            return this.each(function () {
+                var defaultVal = {
+                    flagInfo:$(this).attr("data-link"),
+                    tipsWidth:$(this).attr("data-width"),
+                    topOffset:2,
+                    leftOffset:0
+                };
+                var obj = $.extend(defaultVal, options);
+                var $linkTips = $(this).children('.linkTips');
+
+                $(this).removeAttr("data-link");
+                $(this).removeAttr("data-width");
+
+                $(this).hover(function () {
+                    showTips(this);
+                    $linkTips.show();
+                }, function () {
+                    $linkTips.hide();
+                });
+
+                var showTips = function (el) {
+                    var _offset = $(el).offset();
+                    var _offsetTop = _offset.top;
+                    var _offsetLeft = _offset.left + obj.leftOffset;
+                    var elHeight = $(el).height() + obj.topOffset;
+
+                    $linkTips.css({'left':_offsetLeft,
+                        'top':_offsetTop + elHeight,
+                        'width':obj.tipsWidth,
+                        'background-color':obj.bgColor,
+                        'border-color':obj.borderColor,
+                        'opacity':obj.opacity
+                    }).html(obj.flagInfo);
+                };
+            });
+        }
+    })(jQuery);
+
+    $(function(){
+        $('.tip-dotted').linkTip();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[DEP]
+   无
+
+[DB1]
+    无
+
+[DB2]
+    无
+
+[NOTIFY]
+    fangxiao483@pingan.com.cn
+    huangjunyan873@pingan.com.cn
+    wangdongqiang334@pingan.com.cn
+    liangwenqi221@pingan.com.cn
+    wangyaqiong553@pingan.com.cn
+
+[ADVICE]
+    无
+
+[STATEMENT]
+    ECR6911 “返回顶部”与“问卷反馈”入口优化二期
+
+    ECR6722 新增民生银行
+    ECR6832 新增交通银行
+    ECR6833 中国邮政储蓄银行
+    修改：银行logo优化

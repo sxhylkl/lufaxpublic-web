@@ -1,0 +1,13 @@
+zipFile="static-lufax-public.zip"
+
+
+
+if ! [ -d "build/deploy" ] ; then
+	mkdir -p build/deploy
+fi
+cp -r static-lufax-public lufax-public
+zip $zipFile lufax-public/*
+mv  $zipFile build/deploy/
+rm -rf lufax-public
+
+

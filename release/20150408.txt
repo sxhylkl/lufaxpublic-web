@@ -1,0 +1,19 @@
+[DEP]
+    无
+
+[DB1]
+    #发布前需要运行的脚本
+
+[DB2]
+    无
+
+[NASFILE]
+
+[NOTIFY]
+    fangxiao483@pingan.com.cn
+    huangjunyan873@pingan.com.cn
+    wangyaqiong553@pingan.com.cn
+    wangdongqiang334@pingan.com.cn
+
+[ADVICE]
+    WEBDEV-2799 零活宝开放全站入口

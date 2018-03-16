@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>button</title>
+        <link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/>
+        <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+        <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+    </head>
+
+    <body style="padding:20px;">
+
+        <div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 按钮控件</div>
+        <div class="tabs">
+            <a href="javascript:void(0)"><b>原型文档</b></a>
+            <a href="javascript:void(0)"><b>视觉稿</b></a>
+            <a href="javascript:void(0)"><b>前端代码</b></a>
+            <a href="javascript:void(0)"><b>必要样式</b></a>
+            <a href="javascript:void(0)"><b>必要脚本</b></a>
+            <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+        </div>
+        <div class="tab_cons">
+            <div class="tab_con">
+                按钮控件-原型文档
+            </div>
+            <div class="tab_con">
+                <img src="../widget_resource/images/visual_image/界面控件.png" />
+            </div>
+            <div class="tab_con"><pre></pre> </div>
+
+            <div class="tab_con">	
+                <a href="#">../widget_resource/css/button.css</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="tab_con">
+                无
+            </div>
+            <div class="tab_con current">
+                <h2>css3 button</h2><br/><br/>
+                <h3>常用按钮，无特别说明的情况下使用。高：28px，字体大小：12px，字体加粗：bold</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>class=""</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="btns" href="#">Default</a></td>
+                            <td><code>btns</code></td>
+                            <td>全站默认按钮</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn_info" href="#">Info</a></td>
+                            <td><code>btns btn_info</code></td>
+                            <td>全站辅助信息按钮</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn_cancel" href="#">Cancel</a></td>
+                            <td><code>btns btn_cancel</code></td>
+                            <td>全站事件取消按钮</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns disabled" href="#">Cancel</a></td>
+                            <td><code>btns disabled</code></td>
+                            <td>全站disable状态按钮</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn-order" href="#">预约</a></td>
+                            <td><code>btns btn-order</code></td>
+                            <td>全站预约状态按钮</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>特殊尺寸按钮，有特别说明的情况下使用。高：34px，字体大小：14px，字体加粗：bold</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>class=""</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="btns btn_large" href="#">Default</a></td>
+                            <td><code>btns btn_large</code></td>
+                            <td>全站默认按钮（大）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn_info btn_large" href="#">Info</a></td>
+                            <td><code>btns btn_info btn_large</code></td>
+                           <td>全站辅助信息按钮（大）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn_cancel btn_large" href="#">Cancel</a></td>
+                            <td><code>btns btn_cancel btn_large</code></td>
+                            <td>全站事件取消按钮（大）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns disabled btn_large" href="#">Cancel</a></td>
+                            <td><code>btns disabled btn_large</code></td>
+                            <td>全站disable状态按钮（大）</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>特殊尺寸按钮，有特别说明的情况下使用。高：38px，字体大小：14px，字体加粗：bold</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>class=""</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="btns btn_xlarge" href="#">Default</a></td>
+                            <td><code>btns btn_xlarge</code></td>
+                            <td>全站默认按钮（特大）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn_info btn_xlarge" href="#">Info</a></td>
+                            <td><code>btns btn_info btn_xlarge</code></td>
+                             <td>全站辅助信息按钮（特大）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn_cancel btn_xlarge" href="#">Cancel</a></td>
+                            <td><code>btns btn_cancel btn_xlarge</code></td>
+                            <td>全站事件取消按钮（特大）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns disabled btn_xlarge" href="#">Cancel</a></td>
+                            <td><code>btns disabled btn_xlarge</code></td>
+                            <td>全站disable状态按钮（特大）</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>简版翻页，高：22px，字体大小：12px，字体加粗：normal</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>class=""</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <a class="btns btn_page btn_small prev" href="#"><span class="caret">&lt;</span></a></td>
+                            <td><code>btns btn_page btn_small prev</code></td>
+                            <td>用于翻页按钮</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn_page btn_small next" href="#">上一页 <span class="caret">&gt;</span></a></td>
+                            <td><code>btns btn_page btn_small next</code></td>
+                            <td>用于翻页按钮</td>
+                        </tr>
+                        <tr>
+                            <td> <a class="btns btn_page disabled btn_small prev" href="#"><span class="caret">&lt;</span></a></td>
+                            <td><code>btns disabled btn_small prev</code></td>
+                            <td>用于翻页按钮（disable状态）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btns btn_page disabled btn_small next" href="#">上一页 <span class="caret">&gt;</span></a></td>
+                            <td><code>btns disabled btn_small next</code></td>
+                            <td>用于翻页按钮（disable状态）</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                  <h3>特殊的按钮，少量存在于网站中，不能做统一规范，今后将慢慢去除（除关闭按钮）</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>class=""</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <a class="btnsp btnsp_invest" href="#"></a></td>
+                            <td><code>btnsp btnsp_invest</code></td>
+                            <td>我要投资</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btnsp btnsp_investLarge" href="#"></a></td>
+                            <td><code>btnsp btnsp_investLarge</code></td>
+                            <td>我要投资(大)</td>
+                        </tr>
+                        <tr>
+                            <td> <a class="btnsp btnsp_question" href="#"></a></td>
+                            <td><code>btnsp btnsp_question</code></td>
+                            <td>提交问题</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btnsp btnsp_loan" href="#">我要借款</a></td>
+                            <td><code>btnsp btnsp_loan</code></td>
+                            <td>我要借款（多出现在table中）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btnsp btnsp_investSmall" href="#">我要投资</a></td>
+                            <td><code>btnsp btnsp_investSmall</code></td>
+                            <td>我要投资（多出现在table中）</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btnsp btnsp_claims" href="#">理赔中</a></td>
+                            <td><code>btnsp btnsp_claims</code></td>
+                            <td>理赔中</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btnsp btnsp_close" href="#"></a></td>
+                            <td><code>btnsp btnsp_close</code></td>
+                            <td>关闭按钮</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+                <h2>自适应button</h2><br/>
+                <h3>1 简版翻页，高：22px，字体大小：12px，字体加粗：normal</h3>
+                <div class="buttons">
+                    <a class="button lastPageBtn" href="#">&nbsp;</a>
+                    <a class="button nextPageBtn" href="#"><span>下一步</span></a>
+                    <a class="button lastPageBtn disabled" href="#">&nbsp;</a>
+                    <a class="button nextPageBtn disabled" href="#"><span>下一步</span></a>
+                </div>
+                <br/><br/><br/>
+                <h3>2 常用按钮，无特别说明的情况下使用。高：28px，字体大小：12px，字体加粗：bold</h3>
+                <div class="buttons">
+                    <a class="button blueBtn28" href="#"><span>返回查看充值记录</span></a>
+                    <a class="button blueBtn28 disabled" href="#"><span>返回查看充值记录</span></a>
+                    <a class="button blueBtn28" href="#"><span>取&emsp;现</span></a>
+                </div>
+                <br/><br/><br/>
+                <div class="buttons">
+                    <a class="button orangeBtn28" href="#"><span>返回查看充值记录</span></a>
+                    <a class="button orangeBtn28 disabled" href="#"><span>返回查看充值记录</span></a>
+                    <a class="button orangeBtn28" href="#"><span>充&emsp;值</span></a>
+                </div>
+                <br/><br/><br/>
+                <div class="buttons">
+                    <a class="button grayBtn28" href="#"><span>返回查看充值记录</span></a>
+                    <a class="button grayBtn28 disabled" href="#"><span>返回查看充值记录</span></a>
+                    <a class="button grayBtn28" href="#"><span>取&emsp;消</span></a>
+                </div>
+                <br/><br/><br/>
+                <h3>3 特殊尺寸按钮，有特别说明的情况下使用。高：33px，字体大小：14px，字体加粗：bold</h3>
+                <div class="buttons">
+                    <a class="button orangeBtn33" href="#"><span>下一步</span></a>
+                    <a class="button orangeBtn33 disabled" href="#"><span>下一步</span></a>
+                </div>
+                <br/><br/><br/>
+                <div class="buttons">
+                    <a class="button blueBtn33" href="#"><span>下一步</span></a>
+                    <a class="button blueBtn33 disabled" href="#"><span>下一步</span></a>
+                </div>
+                <br/><br/><br/>
+                <h3>4 特殊尺寸按钮，有特别说明的情况下使用。高：38px，字体大小：14px，字体加粗：bold</h3>
+                <div class="buttons">
+                    <a class="button orangeBtn38" href="#"><span>立即投资</span></a>
+                    <a class="button orangeBtn38 disabled" href="#"><span>立即投资</span></a>
+                </div>
+                <br/><br/><br/>
+                <div class="buttons">
+                    <a class="button blueBtn38" href="#"><span>立即投资</span></a>
+                    <a class="button blueBtn38 disabled" href="#"><span>立即投资</span></a>
+                </div>
+                <br/><br/><br/>
+                <h2 style="margin-top:50px;">button (old)</h2>
+                <div style="padding:20px 0 0 0;">
+                    <h3>橙色表示重要的按钮，页面同时有两个按钮时，左边为橙色。例：登录、充值、投资、同意；</h3>
+                    <br/>
+                    <table class="btn_grid">
+                        <tr>
+                            <td><a class="btn orgBtn_8126 png" href="#">充值</a><span>(81x26)</span></td>
+                            <td><a class="btn orgBtn_9132 png" href="#">两到四字</a><span>(91x32)</span></td>
+                            <td><a class="btn orgBtn_8132 png" href="#">登录</a><span>(81x32)</span></td>
+                            <td><a class="btn orgBtn_9036 png" href="#">充值</a><span>(91x37)</span></td>
+                            <td><a class="btn orgBtn_17037 png" href="#">立即投资</a><span>(171x37)</span></td>
+                            <td><a class="btn orgBtn_20132 png" href="#">提交帐户认证信息</a><span>(201x32)</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn darkGrayBtn_7028 png" href="#">投资</a><span>(70x28)</span></td>
+                            <td><a class="btn orgBtn_23633 png" href="#">我已同意并阅读以上协议及委托书</a><span>(236x33)</span></td>
+                        </tr>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+
+                <div style="padding:20px 0 0 0;">
+                    <h3>蓝色表示次要的按钮，页面同时有两个按钮时，右边为蓝色。例：提现、免费注册、搜素、返回、发送动态码；</h3>
+                    <table class="btn_grid">
+                        <tr>
+                            <td><a class="btn bluBtn_8127 png" href="#">发送动态码</a><span>(81x26)</span></td>
+                            <td><a class="btn bluBtn_8127 png" href="#">取现</a><span>(81x26)</span></td>
+                            <td><a class="btn bluBtn_8132 png" href="#">注册</a><span>(81x32)</span></td>
+                            <td><a class="btn bluBtn_9132 png" href="#">两到四字</a><span>(91x32)</span></td>
+                            <td><a class="btn bluBtn_9137 png" href="#">提现</a><span>(91x37)</span></td>
+                            <td><a class="btn bluBtn_14127 png" href="#">返回查看充值记录</a><span>(141x26)</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn bluBtn_7026" href="#">搜索</a><span>(70x26)</span></td>
+                            <td><a class="btn bluBtn_11728 png" href="#">投资收益计算器</a><span>(81x26)</span></td>
+                        </tr>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+                <div style="padding:20px 0 0 0;">
+                    <h3>灰色表示辅助按钮，例：翻页按钮</h3>
+                    <table class="btn_grid">
+                        <tr>
+                            <td><a class="btn graBtn_2322 png" href="#">&nbsp;</a><span>(23x22)</span></td>
+                            <td style="text-align: left;"><a class="btn graBtn_6121 png" href="#">下一页</a><span>(23x22)</span></td>
+                            <td><a class="btn graBtn_2222 png" href="#">&nbsp;</a><span>(22x22)</span></td>
+                            <td style="text-align: left;"><a class="btn graBtn_6122 png" href="#">下一页</a><span>(61x22)</span></td>
+                            <td><a class="btn graBtn_6027 png" href="#">上一页</a><span>(60x27)</span></td>
+                            <td><a class="btn graBtn_6027 png" href="#">首页</a><span>(60x27)</span></td>
+                            <td><a class="btn graBtn_8027 png" href="#">不同意</a><span>(80x27)</span></td>
+                            <td><a class="btn graBtn_plus_8027 png" href="#"><label class="plus png"></label>全部展开</a><span>(80x27)</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn graBtn_plus_8027 png" href="#"><label class="minus png"></label>全部收缩</a><span>(80x27)</span></td>
+                           
+                            <td><a class="btn graBtn_14027 png" href="#">浏览开放的投资机会</a><span>(width:140px,height:27px)</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="padding:20px 0 0 0;">
+                    <h3>灰色状态按钮：不可点状态按钮</h3>
+                    <table class="btn_grid">
+                        <tr>
+                            <td><a class="btn disGraBtn_2322 png" href="#">&nbsp;</a><span>(23x22)</span></td>
+                            <td style="text-align: left;"><a class="btn disGraBtn_6121 png" href="#">下一页</a><span>(61x21)</span></td>
+                            <td><a class="btn disGraBtn_6027 png" href="#">上一页</a><span>(60x27)</span></td>
+                            <td><a class="btn disGraBtn_6027 png" href="#">首页</a><span>(60x27)</span></td>
+                            <td><a class="btn disGraBtn_8027 png" href="#">发送动态码</a><span>(80x27)</span></td>
+                            <td><a class="btn disGraBtn_8027 png" href="#">投资</a><span>(80x27)</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn disGraBtn_14127 png" href="#">返回查看充值记录</a><span>(141x27)</span></td>
+                            <td><a class="btn disGraBtn_9137 png" href="#">充值</a><span>(91x37)</span></td>
+                            <td><a class="btn disGraBtn_17137 png" href="#">立即投资</a><span>(171x37)</span></td>
+                            <td><a class="btn disGraBtn_20132 png" >提交帐户认证信息</a><span>(201x32)</span></td>
+                            <td><a class="btn disGlodBtn_7228 png" >我要借款</a><span>(72x28)</span></td>
+                            <td><a class="btn disDarkGrayBtn_7028 png" >已投资</a><span>(70x28)</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="padding:20px 0 0 0;">
+                    <h3>其他功能按钮</h3>
+                    <table class="btn_grid">
+                        <tr>
+                            <td><a class="btn graBtn_11541 png" href="#">&nbsp;</a><span>(115x41)</span></td>
+                            <td><a class="btn graBtn_16250 png" href="#">&nbsp;</a><span>(162x50)</span></td>
+                            <td><a class="btn graBtn_13544 png" href="#">&nbsp;</a><span>(135x44)</span></td>
+                            <td><a class="btn orgBtn_4818 png" href="#">理赔中</a><span>(48x18)</span></td>
+                            <td><span class="btn_stateTip"><span class="stateTip bRFix">逾期</span></span></td>
+                             <td><a class="btn graBtn_2020 png" >&nbsp;</a><span>(20x20)</span></td>
+                            <td><a class="btn goldBtn_6228 png" href="#">还款</a><span>(62x28)</span></td>
+                            <td><a class="btn goldBtn_7228 png" href="#">我要投资</a><span>(72x28)</span></td>
+                            <td><a class="btn azureBtn_7228 png" href="#">我要借款</a><span>(72x28)</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="padding:20px 0 0 0;">
+                    <h3>文字链接，例：浏览投资机会</h3>
+                    <table class="btn_grid">
+                        <tr>
+                            <td><a href="#">浏览投资机会</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <br/><br/><br/>
+            </div>
+        </div>
+        <script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+        <!--[if IE]><script type="text/javascript" src="http://static.lufax.com/config/js/lib/PIE.js"></script><![endif]-->
+        <script type="text/javascript">
+            $(function(){
+                $(".tabs>a").each(function(i){
+                    $(this).click(function(){
+                        $(this).addClass("current").siblings().removeClass("current")
+                        .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+                    })
+		
+                })
+
+            });
+        </script>
+    </body>
+</html>

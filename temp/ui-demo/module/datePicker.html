@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>日期选择</title>
+    <link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/jQueryUI.css"/>
+    <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+    <style type="text/css">
+        .receivables-calendar {
+            background: url("images/receivables_calendar_bg.png") 0 bottom no-repeat;
+            padding-bottom: 4px;
+            margin-bottom: 1px;
+            min-height: 180px;
+
+        }
+
+        .receivables-calendar .ui-corner-all {
+            border-radius: 0;
+            padding: 0;
+
+        }
+
+        .receivables-calendar .ui-datepicker table {
+            margin: 0;
+        }
+
+        .receivables-calendar .ui-datepicker table tr:first-child td {
+            background: url("images/receivables_calendar_thbg.png") 0 0 repeat-x;
+        }
+
+        .receivables-calendar .ui-datepicker {
+            width: 258px;
+        }
+
+        .receivables-calendar .ui-widget-content {
+            background: #fff;
+            border-color: #dfdfdf;
+        }
+
+        .receivables-calendar .ui-state-default {
+            background: none;
+        }
+
+        .receivables-calendar .ui-datepicker td {
+            padding: 0;
+        }
+
+        .receivables-calendar .ui-datepicker td span, .receivables-calendar .ui-datepicker td a {
+            padding: 5px 6px;
+            text-align: center;
+            border: none;
+            border-top: 1px solid #dfdfdf;
+            border-left: 1px solid #dfdfdf;
+        }
+
+        .receivables-calendar .ui-datepicker td:first-child span, .receivables-calendar .ui-datepicker td:first-child a {
+            border-left: none;
+        }
+
+        .receivables-calendar .ui-datepicker td a.ui-state-active {
+            background: #ebebeb;
+            border-top: 2px solid #dedede;
+            border-left: 2px solid #cdcdcd;
+            padding: 4px 6px 5px 5px;
+            color: #3F3731;
+        }
+
+        .receivables-calendar td .ui-state-hover {
+            color: #4d4398;
+        }
+
+        .receivables-calendar .ui-datepicker th {
+            background: #a8a8a8;
+            font-weight: normal;
+            color: #fff;
+            padding: 0.4em 0.3em;
+        }
+
+        .receivables-calendar .ui-widget-header {
+            background: #f5f5f5;
+            border: none;
+            color: #1d2088;
+        }
+
+        .receivables-calendar .ui-icon {
+            width: 7px;
+            height: 11px;
+        }
+
+        .receivables-calendar .ui-datepicker .ui-datepicker-prev, .receivables-calendar .ui-datepicker .ui-datepicker-next {
+            width: 7px;
+            height: 11px;
+            top: 8px;
+        }
+
+        .receivables-calendar .ui-datepicker .ui-datepicker-next {
+            right: 20px;
+        }
+
+        .receivables-calendar .ui-datepicker .ui-datepicker-prev {
+            left: 20px;
+        }
+
+        .receivables-calendar .ui-widget-header .ui-icon {
+            background: url("images/calendar-icon.gif") no-repeat;
+            cursor: pointer;
+        }
+
+        .receivables-calendar .ui-widget-header .ui-icon-circle-triangle-e {
+            background-position: -7px 0;
+        }
+
+        .receivables-calendar .ui-widget-header .ui-icon-circle-triangle-w {
+            background-position: 0 0;
+        }
+
+        .receivables-calendar .ui-widget-header .ui-state-hover .ui-icon-circle-triangle-e {
+            background-position: -7px -11px;
+        }
+
+        .receivables-calendar .ui-widget-header .ui-state-hover .ui-icon-circle-triangle-w {
+            background-position: 0 -11px;
+        }
+
+        .receivables-calendar .ui-widget-header .ui-state-hover,
+        .receivables-calendar .ui-widget-header .ui-state-focus {
+            background: none;
+            border: none;
+        }
+
+        .receivables-calendar .ui-state-execute {
+            background: url("images/execute_date_bg.png") center center no-repeat;
+        }
+
+        .receivables-calendar .ui-datepicker-collection {
+            color: #666;
+            padding: 0 10px 0 0;
+        }
+
+        .receivables-calendar .ui-state-disabled {
+            opacity: 1;
+        }
+
+        .receivables-calendar .ui-state-disabled span {
+            color: #c9c9c9;
+        }
+
+        .receivablesInfo {
+            width: 246px;
+            height: 43px;
+            border: 1px solid #fab418;
+            background: #fef3cd;
+            padding: 5px 0 0 12px;
+        }
+        .ui-widget-header a.current-month {
+            color: #2438cd;
+        }
+        .ui-widget-header a.current-month:hover {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body style="padding:20px;">
+
+<div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 日期选择</div>
+<div class="tabs">
+    <a href="javascript:void(0)"><b>原型文档</b></a>
+    <a href="javascript:void(0)"><b>视觉稿</b></a>
+    <a href="javascript:void(0)"><b>前端代码</b></a>
+    <a href="javascript:void(0)"><b>必要样式</b></a>
+    <a href="javascript:void(0)"><b>必要脚本</b></a>
+    <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+</div>
+<div class="tab_cons">
+    <div class="tab_con">
+        按钮控件-原型文档
+    </div>
+    <div class="tab_con">
+        <img src="../widget_resource/images/visual_image/界面控件.png"/>
+    </div>
+    <div class="tab_con">
+        <pre></pre>
+    </div>
+
+    <div class="tab_con">
+        <a href="#">http://static.dev.lufax.com/config/css/main_1018.css</a>
+    </div>
+    <div class="tab_con">
+        无
+    </div>
+    <div class="tab_con current">
+        <form class="form_horizontal">
+            <div class="control_group clearfix">
+                <label class="control_label" for="calendar">还款日期：</label>
+
+                <div class="controls">
+                    <span class="input-wrap"><input type="text" id="calendar" placeholder="" class="input calendar input_aide" readonly="readonly" value="2012-12-31"/></span>
+                    <a class="btns" href="javascript:;">测&emsp;算</a>
+                </div>
+            </div>
+        </form>
+
+        <div id="datepicker" class="receivables-calendar "></div>
+        <div class="receivablesInfo">
+            <p>预计下一收款日：2013-08-12</p>
+
+            <p>预计下一收款额：4,000.00元（<a href="#">2</a>笔）</p>
+        </div>
+    </div>
+</div>
+
+<!--#include virtual="../modules/includeJs.html"-->
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery.ui.custom.js"></script>
+<!--<script type="text/javascript" src="js/jquery.ui.datepicker-zh-TW.js"></script>-->
+<script type="text/javascript">
+    $(function () {
+        $(".tabs>a").each(function (i) {
+            $(this).click(function () {
+                $(this).addClass("current").siblings().removeClass("current")
+                        .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+            });
+        });
+        $(".calendar").datepicker({
+            yearRange:"c-99:c-17"
+        });
+
+        $('#datepicker').datepicker({
+            showCollectionText:true, //配置收款日历
+            showMonthAfterYear:true,//月份在年份后面显示
+            changeMonth:false,//取消月份选择
+            changeYear:false,//取消年份选择
+            yearRange: '2013:2013',
+            defaultDate: '2013-08-04', //取服务器日期
+
+            afterShow:function (dateText, inst) {
+                $(this).find('td').each(function(){
+                    var dayTxt = $(this).find('a').text();
+                    if(dayTxt=="3" || dayTxt =="7"){
+                        $(this).find('a').addClass('ui-state-execute').attr('title','123123123');
+                    }
+                });
+            $('.ui-state-execute').mouseTips();
+            $(this).find('.current-month').attr('href','http://www.lufax.com');
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

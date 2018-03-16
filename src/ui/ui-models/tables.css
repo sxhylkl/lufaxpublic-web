@@ -1,0 +1,425 @@
+/* !Includes:table
+ * author: huangjunyan873@pingan.com.cn
+ */
+
+.grid_yellow_sort_wrap {
+    width: 678px;
+}
+
+.ui_grid_yellow_sort {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.ui_grid_yellow_sort tr.even {
+    background: #f5f5f5;
+}
+
+.ui_grid_yellow_sort tr.disabled {
+    color: #999;
+}
+
+.ui_grid_yellow_sort th {
+    border: #cecece solid 0;
+    border-width: 1px;
+    height: 30px;
+    background: url("img/grid_th_bg.png") repeat-x;
+    font-weight: normal;
+    text-align: center;
+}
+
+.ui_grid_yellow_sort th a {
+    display: block;
+    height: 100%;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.ui_grid_yellow_sort th a.selected {
+    background: url("img/grid_th_bg.png") repeat-x 0 -30px;
+}
+
+.ui_grid_yellow_sort th a:hover {
+    background: url("img/grid_th_bg.png") repeat-x 0 -30px;
+}
+
+.ui_grid_yellow_sort th a label {
+    cursor: pointer;
+}
+
+.ui_grid_yellow_sort th a span {
+    background: url("img/sort_down-711.png") no-repeat right center;
+    padding: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.ui_grid_yellow_sort th a.asc span {
+    background: url("img/sort_up-711.png") no-repeat right center;
+}
+
+.ui_grid_yellow_sort .amount {
+    text-align: center;
+}
+
+.ui_grid_yellow_sort th.amount {
+    text-align: center;
+}
+
+.ui_grid_yellow_sort th.selected {
+    background: url("img/grid_th_bg.png") repeat-x 0 -30px;
+}
+
+.ui_grid_yellow_sort th.hover {
+    background: url("img/grid_th_bg.png") repeat-x 0 -30px;
+}
+
+.ui_grid_yellow_sort td {
+    text-align: center;
+    height: 40px;
+    border-bottom: #e5eaee solid 1px;
+}
+
+.ui_grid_yellow_sort td a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.ui_grid_yellow_sort td a:hover {
+    text-decoration: none;
+}
+
+.ui_grid_yellow_sort td.gray_word {
+    color: #999999;
+}
+
+.ui_grid_yellow_sort td a.disabled {
+    color: #999999;
+    text-decoration: underline;
+}
+
+.ui_grid_yellow_sort td a.disabled:hover {
+    text-decoration: none;
+}
+
+.ui_grid_gray tr.first {
+    background: url("img/grid_th_bg.png") 0 -60px repeat-x;
+}
+
+.ui_grid_gray th {
+    border: #CECECE solid 1px;
+    height: 28px;
+    padding: 0;
+}
+
+.ui_grid_gray td {
+    padding: 6px;
+    text-align: center;
+    background: #f5f5f5;
+    border-top: none;
+    border-bottom: #EBEEEF solid 1px;
+}
+
+.grid_yellow_wrap {
+    width: 728px;
+}
+
+.ui_grid_yellow {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.ui_grid_yellow th {
+    background: #FDF4DA;
+    border: #CECECE solid 1px;
+    font-size: 14px;
+    text-align: center;
+    padding: 6px;
+}
+
+.ui_grid_yellow td {
+    border: #CECECE solid 1px;
+    text-align: center;
+    padding: 6px;
+}
+
+.ui_grid_yellow td.title {
+    background: #f5f5f5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+div.form_datagrid_wrap {
+    width: 660px;
+}
+
+table.ui_form_datagrid {
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+}
+
+table.ui_form_datagrid tr td {
+    padding: 6px 10px 6px 10px;
+}
+
+table.ui_form_datagrid tr th {
+    text-align: right;
+    padding: 6px 10px 6px 10px;
+}
+
+table.ui_form_datagrid tr td.prompting {
+    padding: 0 10px 0 10px;
+}
+
+table.ui_form_datagrid tr td span.unit {
+    float: left;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.grid_gray_wrap {
+    width: 680px;
+    margin: 0px 0 0 0;
+}
+
+.ui_grid_gray .amount {
+    text-align: right;
+    padding: 0 10px 0 0;
+}
+
+.ui_grid_gray th.amount {
+    text-align: right;
+    padding: 0 2px 0 0;
+}
+
+.ui_grid_gray td a.graBtn_8027 {
+    text-decoration: none;
+}
+
+.ui_grid_gray td a.disGraBtn_8027 {
+    text-decoration: none;
+}
+
+.ui_grid_gray tr.disabled a {
+    color: #999;
+    text-decoration: none;
+}
+
+.ui_grid_gray td.gray_word {
+    color: #999999;
+}
+
+.ui_grid_gray td a.disabled {
+    color: #999999;
+    text-decoration: underline;
+}
+
+.ui_grid_gray td a.disabled:hover {
+    text-decoration: none;
+}
+
+.ui_grid_gray td a.income_link {
+    padding-right: 20px;
+}
+
+.grid_account_grid_wrap {
+    width: 804px;
+}
+
+.ui_grid_account_head_wrap {
+    height: 30px;
+    border: #eeeeee solid 1px;
+    border-bottom: #BDBDBD solid 1px;
+    background: url(img/grid_th_bg.png) repeat-x;
+}
+
+.ui_grid_account_head_wrap .anyidai_title {
+    width: 91px;
+    height: 18px;
+    float: left;
+    margin: 6px 0 0 17px;
+    background: url(img/anyidai_icon-9118.png) no-repeat;
+}
+
+.ui_grid_account_head_wrap .amount {
+    padding-left: 8px;
+    float: left;
+    line-height: 28px;
+}
+
+.ui_grid_account_head_wrap .anxin_title {
+    width: 51px;
+    height: 24px;
+    float: left;
+    margin: 4px 0 0 17px;
+    background: url(img/huixin_4320.gif) no-repeat;
+}
+
+.ui_grid_account_head_wrap .jinyingtong_title {
+    width: 64px;
+    height: 18px;
+    float: left;
+    margin: 6px 0 0 17px;
+    background: url(img/jinyingtong_6418.gif) no-repeat;
+}
+
+.ui_grid_account_head_wrap .ppagination {
+    float: right;
+    width: 150px;
+    height: 26px;
+    padding: 4px 0 0 0;
+    line-height: 22px;
+}
+
+.ui_grid_account_head_wrap .ppagination .pspan {
+    float: left;
+}
+
+.ui_grid_account_head_wrap .ppagination .pspan_btn {
+    padding-left: 20px;
+    float: left;
+}
+
+.ui_grid_account {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.ui_grid_account tr {
+    border-bottom: white solid 1px;
+    background: whiteSmoke;
+}
+
+.ui_grid_account tr.title th {
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: #cbcbcb;
+    background: url(img/grid_th_bg.png) 0 -60px repeat-x;
+}
+
+.ui_grid_account tr.title th.first {
+    border-style: solid;
+    border-left-width: 1px;
+    border-color: #cbcbcb;
+}
+
+.ui_grid_account tr.title th.last {
+    border-right-width: 1px;
+}
+
+.ui_grid_account tr.title td {
+    border: none;
+}
+
+.ui_grid_account td {
+    text-align: center;
+}
+
+.ui_grid_account td a.productNameNor {
+    color: #333;
+    font-size: 12px;
+}
+
+.ui_grid_account td.amount {
+    padding: 0 10px 0 0;
+    text-align: right;
+}
+
+.ui_grid_account th.amount {
+    padding: 0 6px 0 0;
+    text-align: right;
+}
+
+.grid_gray_ltitle_wrap {
+    width: 590px;
+}
+.ui_grid_gray tr.even {
+    background: #f5f5f5;
+}
+
+.ui_grid_gray tr.disabled {
+    color: #999;
+}
+/* 以下是目前通用的table样式，以上为极少页面才用到，将删除 */
+.table {
+    width: 100%;
+    border: 1px solid #ebeeef;
+}
+.ui_grid_gray {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-left: 1px solid #ebeeef;
+    border-right: 1px solid #ebeeef;
+}
+
+
+.ui_grid_gray tr {
+    border: #ebeeef solid 0;
+    border-width: 0px 1px;
+}
+.table tr td {
+    height: 45px;
+    border-bottom: 1px solid #D5D5D5;
+    padding: 0;
+    text-align: center;
+
+}
+.table tr td.first-col {
+    text-align: left;
+    padding: 0 0 0 5px;
+}
+.table th,
+.ui_grid_gray th {
+    height: 30px;
+    background: url(img/grid_th_bg.png) 0 -60px repeat-x;
+    font-weight: normal;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.table th a,
+.ui_grid_gray th a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: #000;
+}
+.table th a.selected,
+.ui_grid_gray th a.selected {
+    background: #d1d3d3;
+}
+
+.table th a:hover,
+.ui_grid_gray th a:hover {
+    background: #d1d3d3;
+}
+
+.table th a span,
+.ui_grid_gray th a span {
+    height: 100%;
+    line-height: 29px;
+    padding: 0 12px 0 0;
+}
+
+.table th a span,
+.ui_grid_gray th a span {
+    background: url(img/sort_down-711.png) no-repeat right center;
+    cursor: pointer;
+}
+
+.table th a.asc span,
+.ui_grid_gray th a.asc span {
+    background: url(img/sort_up-711.png) no-repeat right center;
+    cursor: pointer;
+}
+
+.table-hover tr:hover td {
+    background: #f5f5f5;
+}

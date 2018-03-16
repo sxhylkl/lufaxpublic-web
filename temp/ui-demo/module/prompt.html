@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>prompt</title>
+        <!--#include virtual="../includeLinks.html"-->
+        <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+        <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+    </head>
+
+    <body style="padding:20px;">
+
+        <div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 提示控件</div>
+        <div class="tabs">
+            <a href="javascript:void(0)"><b>原型文档</b></a>
+            <a href="javascript:void(0)"><b>视觉稿</b></a>
+            <a href="javascript:void(0)"><b>前端代码</b></a>
+            <a href="javascript:void(0)"><b>必要样式</b></a>
+            <a href="javascript:void(0)"><b>必要脚本</b></a>
+            <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+        </div>
+        <div class="tab_cons">
+            <div class="tab_con">
+                提示控件-原型文档
+            </div>
+            <div class="tab_con">
+                <img src="../widget_resource/images/visual_image/prompt.png" />
+            </div>
+            <div class="tab_con">
+                <pre>
+&lt;div class=&quot;prompt_nor_wrap&quot;&gt;<br />                &lt;div class=&quot;ui_prompt&quot;&gt;<br />                    &lt;div class=&quot;success_wrap&quot;&gt;<br />                        &lt;h4&gt;&lt;span class=&quot;succeed_icon&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span&gt;申请成功&lt;/span&gt;&lt;/h4&gt;<br />                        &lt;p class=&quot;notice&quot;&gt;您投资的该笔金额已被冻结，请耐心等待借款人确认合同。如果3天后未确认，您的投资款项将解冻<br />                            退还到您的陆金所账户。&lt;/p&gt;<br />                        &lt;p&gt;&lt;span&gt;现在您可以&lt;/span&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;查看该投资请求&lt;/a&gt;&lt;span&gt;或&lt;/span&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;浏览更多投资机会&lt;/a&gt;&lt;/p&gt;<br />                    &lt;/div&gt;<br />                &lt;/div&gt;<br />            &lt;/div&gt;<br />            &lt;br/&gt;<br />            &lt;div class=&quot;prompt_nor_wrap&quot;&gt;<br />                &lt;div class=&quot;ui_prompt&quot;&gt;<br />                    &lt;div class=&quot;success_wrap&quot;&gt;<br />                        &lt;h4&gt;&lt;span class=&quot;failure_icon&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span&gt;申请失败&lt;/span&gt;&lt;/h4&gt;<br />                        &lt;p class=&quot;notice&quot;&gt;您投资的该笔金额已被冻结，请耐心等待借款人确认合同。如果3天后未确认，您的投资款项将解冻<br />                            退还到您的陆金所账户。&lt;/p&gt;<br />                        &lt;p&gt;&lt;span&gt;现在您可以&lt;/span&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;查看该投资请求&lt;/a&gt;&lt;span&gt;或&lt;/span&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;浏览更多投资机会&lt;/a&gt;&lt;/p&gt;<br />                    &lt;/div&gt;<br />                &lt;/div&gt;<br />            &lt;/div&gt;
+                </pre>
+            </div>
+            <div class="tab_con">
+                <a href="../widget_resource/css/common_layout.css">../widget_resource/css/common_layout.css</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="tab_con">
+                无
+            </div>
+            <div class="tab_con current">
+                <br/>
+                <h3 style="text-align: center">prompt : normal</h3>
+                <br/>
+                <div class="vw_prompt_wrap">
+                    <div class="prompt_container">
+                        <div class="prompt_state"><i class="icon correctGreenCircleWhiteIcon"></i><span class="prompt_title">投资成功</span>
+                        </div>
+                        <div class="prompt_content">
+                            <p class="prompt_item"><i class="icon aquareGrayIcon"></i>您投资的该笔金额已被冻结，请耐心等待借款人确认合同。</p>
+                            <p class="prompt_item"><i class="icon aquareGrayIcon"></i>如果3天后未确认，您的投资款项将解冻退还到您的陆金所帐户。</p>
+                            <p class="prompt_item"><i class="icon aquareGrayIcon"></i>有木有发现，今天，天气很好~~~~</p>
+                        </div>
+                        <div class="prompt_tips">您现在可以&ensp;<a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="vw_prompt_wrap">
+                    <div class="prompt_container">
+                        <div class="prompt_state"><i class="icon correctGreenCircleWhiteIcon"></i><span class="prompt_title">投资成功</span>
+                        </div>
+                        <div class="prompt_tips">您现在可以&ensp;<a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="vw_prompt_wrap">
+                    <div class="prompt_container">
+                        <div class="prompt_state"><i class="icon exclamationOrangeCircleWhiteIcon"></i><span class="prompt_title orange_word">投资失败</span>
+                        </div>
+                        <div class="prompt_tips">您现在可以&ensp;<a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="vw_prompt_wrap">
+                    <div class="prompt_container">
+                        <div class="prompt_state"><i class="ajax_loading"></i><span class="prompt_title default_word">正在处理</span>
+                        </div>
+                        <div class="prompt_content">
+                            <p class="taC">请稍候在投资申请中查看申请结果</p>
+                        </div>
+                        <div class="prompt_tips">您现在可以&ensp;<a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a>
+                        </div>
+                    </div>
+                </div>
+
+                <br/><br/><br/>
+                <h3 style="text-align: center">prompt : normal，.prompt_state_content</h3>
+                <br/>
+                <div class="vw_prompt_wrap">
+                    <div class="prompt_container">
+                        <div class="prompt_state"><i class="icon correctGreenCircleWhiteIcon"></i><span class="prompt_title">投资成功</span></div>
+                        <div class="prompt_state_content">
+                            <p>您已获得20积分。</p>
+                            <p>您在将2013-10-25收到 <span class="orange-word">2580.00</span> 元的第一笔回款，想要您的回款轻松获得收益吗？</p>
+                            <p class="btnWrap"><a class="btns btn-large" href="javascript:;">马上体验</a></p>
+                        </div>
+                        <div class="prompt_content light-word">
+                            <p class="prompt_item"><i class="icon aquareGrayIcon"></i>您投资的该笔金额已被冻结，请耐心等待借款人确认合同。</p>
+                            <p class="prompt_item"><i class="icon aquareGrayIcon"></i>如果3天后未确认，您的投资款项将解冻退还到您的陆金所帐户。</p>
+                            <p class="prompt_item"><i class="icon aquareGrayIcon"></i>有木有发现，今天，天气很好~~~~</p>
+                        </div>
+                        <div class="prompt_tips"><a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a></div>
+                    </div>
+                </div>
+                <br/>
+                <div class="vw_prompt_wrap">
+                    <div class="prompt_container">
+                        <div class="prompt_state">
+                            <i class="icon correctGreenCircleWhiteIcon"></i><span class="prompt_title">开通申请已提交</span>
+                        </div>
+                        <div class="prompt_state_content">
+                            <p>您的稳盈-安e贷1432415123投资成功后，将开通自动转入陆金宝服务。</p>
+                            <p>该产品的每月收款自动获取收益，资金可随时赎回。</p>
+                        </div>
+                        <div class="prompt_content light-word simple">
+                            当前仅支持稳盈-安e贷每月正常还款的资金自动转入陆金宝，提前还款、代偿还款等资金暂不会自动转入陆金宝。
+                        </div>
+                        <div class="prompt_tips"><a class="btns" href="javascript:;">开通更多项目</a><a class="ml20" href="javascript:;">管理我的陆金宝</a></div>
+                    </div>
+                </div>
+
+
+                <br/><br/><br/>
+                <h3 style="text-align: center">prompt : complex</h3>
+                <br/>
+                <div class="vw_prompt_wrap complex">
+                    <div class="prompt_container">
+                        <div class="prompt_state">
+                            <i class="icon correctGreenCircleWhiteIcon"></i><span class="prompt_title">恭喜您,飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦（PHILIPS） DCM1130 台式微型音响的电子券兑换成功</span>
+                        </div>
+                        <div class="prompt_content">
+                            <p class="prompt_item"><i class="icon aquareGrayIcon"></i>电子券码：<span class="orange-word">ZCBHFGSL129483724347</span> 已经发送至您的认证手机137***0031，请注意查收。</p>
+                            <p class="prompt_item"><i class="icon aquareGrayIcon"></i>如果没有收到，您可至我的帐户->我的积分->我的兑换商品商品列表中，重新发送券码。</p>
+                        </div>
+                        <div class="prompt_tips">
+                            <a href="#">继续逛逛</a><a class="ml20" href="#">我的兑换商品</a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="vw_prompt_wrap complex">
+                    <div class="prompt_container">
+                        <div class="prompt_state"><i class="icon correctGreenCircleWhiteIcon"></i><span class="prompt_title">投资成功</span>
+                        </div>
+                        <div class="prompt_tips">
+                            <a href="#">继续逛逛</a><a class="ml20" href="#">我的兑换商品</a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="vw_prompt_wrap complex">
+                    <div class="prompt_container">
+                        <div class="prompt_state">
+                            <i class="icon exclamationOrangeCircleWhiteIcon"></i><span class="prompt_title">投资失败</span>
+                        </div>
+                        <div class="prompt_tips">
+                            <a href="#">继续逛逛</a><a class="ml20" href="#">我的兑换商品</a>
+                        </div>
+                    </div>
+                </div>
+                <br/><br/><br/>
+                <h3 style="text-align: center">prompt : old</h3>
+                <br/>
+                <div class="prompt_nor_wrap">
+                    <div class="ui_prompt">
+                        <div class="success_wrap">
+                            <h4><span class="succeed_icon">&nbsp;</span><span>申请成功</span></h4>
+                            <p class="clearfix seq"><label></label><span>您投资的该笔金额已被冻结，请耐心等待借款人确认合同。如果3天后未确认，您的投资款项将解冻退还到您的陆金所账户。</span></p>
+                            <p class="link_wrap"><span>现在您可以</span><a href="#" class="link">查看该投资请求</a><span>或</span><a href="#" class="link">浏览更多投资机会</a></p>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="prompt_nor_wrap">
+                    <div class="ui_prompt">
+                        <div class="success_wrap">
+                            <h4><span class="failure_icon">&nbsp;</span><span>申请失败</span></h4>
+                            <p class="clearfix seq"><label>&nbsp;</label><span>您投资的该笔金额已被冻结，请耐心等待借款人确认合同。如果3天后未确认，您的投资款项将解冻
+                                    退还到您的陆金所账户。</span></p>
+                            <p class="link_wrap"><span>现在您可以</span><a href="#" class="link">查看该投资请求</a><span>或</span><a href="#" class="link">浏览更多投资机会</a></p>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="prompt_nor_wrap">
+                    <div class="ui_prompt">
+                        <div class="success_wrap">
+                            <h4><span class="succeed_icon">&nbsp;</span><span>申请成功</span></h4>
+                            <p class="clearfix short"><label></label><span>您投资的该笔金额已被冻结，请耐心等待借款人确认合同。</span></p>
+                            <p class="link_wrap center"><span>现在您可以</span><a href="#" class="link">查看该投资请求</a><span>或</span><a href="#" class="link">浏览更多投资机会</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $(".tabs>a").each(function(i){
+                    $(this).click(function(){
+                        $(this).addClass("current").siblings().removeClass("current")
+                        .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+                    })
+                })
+            });
+        </script>
+        <!--[if IE 6]>
+        <script src="../app_js/ui30/js/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script>
+            DD_belatedPNG.fix('.png');
+        </script>
+        <![endif]-->
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://static.lufaxcdn.com/lufax-public/lufax-public/20141230.lufax-public.min.css"/>
+    <script type="text/javascript">
+        document.domain = "lufax.com";
+    </script>
+    <style type="text/css" rel="stylesheet">
+        .surveyIframe{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="main-wide-wrap">
+    <iframe src="http://contact.lufax.com/uic/survey/view?id=54878e1920e945269a89492c5196a8b1&domId=surveyIframe&callback=surveyHandle" id="surveyIframe" class="surveyIframe hidden"></iframe>
+</div>
+
+<script type="text/javascript" src="https://static.lufaxcdn.com/lufax-public/jquery/20140717.jquery.min.js"></script>
+<script type="text/javascript" src="https://static.lufaxcdn.com/lufax-public/lufax-public/20141230.lufax-public.min.js"></script>
+<script type="text/javascript">
+    function surveyHandle(data){
+        console.log("data: "+data);
+        alert("data: "+data);
+    }
+</script>
+</body>
+</html>

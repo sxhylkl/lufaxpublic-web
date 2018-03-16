@@ -1,0 +1,550 @@
+/* !Includes:icon
+ * author: huangjunyan873@pingan.com.cn
+ */
+
+/*-------------Icon component--2012-9-5 update----------*/
+.icon {
+    display: inline-block;
+    background-image: url("img/icon.png");
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-position: 100px 100px;
+}
+
+.iconV2 {
+    display: inline-block;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-position: 100px 100px;
+    background-image: url(img/icon-v2-0314.png);
+    font-size: 0;
+    margin-right: 2px;
+}
+
+.aquareGrayIcon {
+    background-position: 4px 4px;
+    width: 12px;
+    height: 12px;
+}
+
+.aquareRedIcon {
+    background-position: 4px -7px;
+    width: 12px;
+    height: 12px;
+}
+
+.triangleRedLeftIcon {
+    background-position: -19px 1px;
+    width: 12px;
+    height: 12px;
+}
+
+.triangleGrayLeftIcon {
+    width: 12px;
+    height: 12px;
+    background-position: -43px 4px;
+}
+
+.moreThanRedLeftIcon {
+    background-position: -68px 3px;
+    width: 12px;
+    height: 12px;
+}
+
+.triangleRedDownIcon {
+    background-position: -91px 0px;
+    width: 12px;
+    height: 12px;
+}
+
+.goLastRedIcon {
+    background-position: -43px -10px;
+    width: 12px;
+    height: 12px;
+}
+
+.goNextRedIcon {
+    background-position: -67px -10px;
+    width: 12px;
+    height: 12px;
+}
+
+.triangleGrayDownIcon {
+    background-position: -91px -12px;
+    width: 12px;
+    height: 12px;
+}
+
+.dotBlackIcon {
+    background-position: 4px -22px;
+    width: 12px;
+    height: 12px;
+}
+
+.dotGreenIcon {
+    background-position: -20px -22px;
+    width: 12px;
+    height: 12px;
+}
+
+.triangleLitterGreenLeftIcon {
+    background-position: -44px -24px;
+    width: 12px;
+    height: 12px;
+}
+
+.triangleLittleGrayLeftIcon {
+    background-position: -67px -22px;
+    width: 12px;
+    height: 12px;
+}
+
+.triangleLittleWhiteLeftIcon {
+    background-position: -92px -22px;
+    width: 12px;
+    height: 12px;
+}
+
+.failureRedIcon {
+    background-position: 0px -56px;
+    width: 20px;
+    height: 19px;
+}
+
+.correctGreenIcon {
+    background-position: -48px -56px;
+    width: 34px;
+    height: 25px;
+}
+
+.exclamationCircleIcon {
+    background-position: 0 -96px;
+    height: 16px;
+    width: 15px;
+}
+
+.rotateIcon {
+    background-position: -32px -96px;
+    width: 14px;
+    height: 15px;
+}
+
+.interrogationGreenIcon {
+    background-position: -64px -96px;
+    width: 11px;
+    height: 16px;
+}
+
+.interrogationWhiteIcon {
+    background-position: 0px -128px;
+    width: 15px;
+    height: 16px;
+}
+
+.interrogationYellowIcon {
+    background-position: -32px -128px;
+    width: 15px;
+    height: 15px;
+}
+
+.minusRedIcon {
+    background-position: -61px -130px;
+    width: 12px;
+    height: 12px;
+}
+
+.plusRedIcon {
+    background-position: -85px -130px;
+    width: 12px;
+    height: 12px;
+}
+
+.failureCircleIcon {
+    background-position: 0px -161px;
+    height: 13px;
+    width: 13px;
+}
+
+.correctCircleIcon {
+    background-position: -30px -161px;
+    height: 13px;
+    width: 13px;
+}
+
+.minusCircleIcon {
+    background-position: -60px -161px;
+    height: 13px;
+    width: 13px;
+}
+
+.threeCircleOrangeIcon {
+    width: 20px;
+    height: 18px;
+    background-position: 0px -192px;
+}
+
+.threeRectangleListOrangeIcon {
+    width: 20px;
+    height: 17px;
+    background-position: -33px -192px;
+}
+
+.twoRectangleListOrangeIcon {
+    width: 20px;
+    height: 18px;
+    background-position: -73px -192px;
+}
+
+.correctRedIcon {
+    background-position: 0px -224px;
+    width: 12px;
+    height: 12px;
+}
+
+.rectangleGreenIcon {
+    background-position: -32px -224px;
+    width: 27px;
+    height: 15px;
+}
+
+.rectangleYellowIcon {
+    background-position: -72px -224px;
+    width: 27px;
+    height: 15px;
+}
+
+.rectangleWhiteIcon {
+    background-position: 0px -256px;
+    width: 27px;
+    height: 15px;
+}
+
+.wordFuIcon {
+    background-position: -40px -256px;
+    width: 19px;
+    height: 19px;
+}
+
+.correctGreenCircleWhiteIcon {
+    background-position: 0px -280px;
+    width: 38px;
+    height: 35px;
+}
+
+.exclamationOrangeCircleWhiteIcon {
+    background-position: -40px -280px;
+    width: 34px;
+    height: 35px;
+}
+
+.heartYellowIcon {
+    background-position: -71px -255px;
+    width: 19px;
+    height: 15px;
+}
+
+.eLetterOrangeIcon {
+    background-position: 0px -320px;
+    width: 12px;
+    height: 12px;
+}
+
+.houseGreenIcon {
+    background-position: -16px -319px;
+    width: 13px;
+    height: 12px;
+}
+
+.triangleRedLeftLittleIcon {
+    background-position: -24px 4px;
+    width: 10px;
+    height: 12px;
+}
+
+.correctGrayGoldIcon {
+    background-position: -84px -160px;
+    width: 19px;
+    height: 13px;
+}
+
+.wordZhuanIcon {
+    background-position: -80px -340px;
+    height: 17px;
+    width: 19px;
+}
+
+.closeButtonRed {
+    background-position: -31px -319px;
+    width: 12px;
+    height: 12px;
+}
+
+.jielidaiIcon {
+    background-position: -45px -319px;
+    width: 13px;
+    height: 12px;
+}
+
+.newUser {
+    background-position: 0 -339px;
+    width: 32px;
+    height: 17px;
+}
+
+.enjoymentIcon {
+    background-position: -37px -339px;
+    width: 36px;
+    height: 17px;
+}
+
+.mobileIcon {
+    background-position: -81px -321px;
+    width: 18px;
+    height: 18px;
+}
+
+.auctionIcon {
+    background-position: -81px -301px;
+    width: 18px;
+    height: 18px;
+}
+
+.member1Icon {
+    background-position: -108px -124px;
+    width: 18px;
+    height: 18px;
+}
+
+.member2Icon {
+    background-position: -107px -95px;
+    width: 18px;
+    height: 18px;
+}
+
+.member3Icon {
+    background-position: -107px -155px;
+    width: 18px;
+    height: 18px;
+}
+
+.newMessageIcon {
+    background-position: -109px -70px;
+    width: 18px;
+    height: 18px;
+}
+
+.noMessageIcon {
+    background-position: -147px -67px;
+    width: 18px;
+    height: 18px;
+}
+
+.correctIcon {
+    background-position: -107px -39px;
+    width: 18px;
+    height: 18px;
+}
+
+.errorIcon {
+    background-position: -106px -11px;
+    width: 18px;
+    height: 18px;
+}
+
+.errorIcon {
+    background-position: -146px -248px;
+    width: 18px;
+    height: 18px;
+}
+
+
+.alert-icon {
+    background-position: -107px -248px;
+    width: 18px;
+    height: 18px;
+}
+
+.transfer-icon {
+    background-position: -72px -67px;
+    width: 18px;
+    height: 18px;
+}
+
+.mobile-icon {
+    background-position: -76px -38px;
+    width: 11px;
+    height: 20px;
+}
+
+.auction-icon {
+    background-position: -72px -11px;
+    width: 18px;
+    height: 18px;
+}
+
+.new-user-icon {
+    background-position: -10px -11px;
+    width: 32px;
+    height: 18px;
+}
+
+.recommend-icon {
+    background-position: -10px -39px;
+    width: 32px;
+    height: 18px;
+}
+
+.enjoyment-icon {
+    background-position: -10px -67px;
+    width: 32px;
+    height: 18px;
+}
+
+.hot-icon {
+    background-position: -10px -95px;
+    width: 32px;
+    height: 18px;
+}
+
+.new-channel-icon {
+    background-position: -10px -123px;
+    width: 42px;
+    height: 18px;
+}
+
+.vip-icon {
+    background-position: -10px -150px;
+    width: 32px;
+    height: 18px;
+}
+
+.lucion-icon {
+    width: 18px;
+    height: 18px;
+    background-position: -109px -189px;
+}
+
+.clock-icon {
+    width: 18px;
+    height: 18px;
+    background-position: -109px -273px;
+}
+
+.integral-icon {
+    width: 18px;
+    height: 18px;
+    background-position: -72px -189px;
+}
+
+.promotion-icon {
+    width: 32px;
+    height: 18px;
+    background-position: -10px -175px;
+}
+.mobile-transfer-icon {
+    width: 32px;
+    height: 18px;
+    background-position: -10px -202px;
+}
+.cash-back-icon {
+    width: 32px;
+    height: 18px;
+    background-position: -10px -253px;
+}
+.coin-back-icon {
+    width: 32px;
+    height: 18px;
+    background-position: -10px -228px;
+}
+.gift-icon {
+    width: 32px;
+    height: 18px;
+    background-position: -10px -279px;
+}
+.download-icon {
+    width: 18px;
+    height: 18px;
+    background-position: -109px -218px;
+}
+.prompt-icon {
+    background-position: -150px -14px;
+    width: 12px;
+    height: 12px;
+}
+.help-icon {
+    background-position: -149px -96px;
+    width: 16px;
+    height: 16px;
+}
+
+.prompt-popup-icon {
+    background-position: -74px -124px;
+    width: 12px;
+    height: 12px;
+}
+.help-popup-icon {
+    background-position: -74px -152px;
+    width: 12px;
+    height: 12px;
+}
+.success-window-icon {
+    background-position: -59px -223px;
+    width: 38px;
+    height: 35px;
+}
+.failure-window-icon {
+    background-position: -59px -263px;
+    width: 38px;
+    height: 35px;
+}
+.correct-icon {
+    background-position: -112px -42px;
+    width: 12px;
+    height: 12px;
+}
+.warning-icon {
+    background-position: -112px -14px;
+    width: 12px;
+    height: 12px;
+}
+.ordinary-members-icon {
+    background-position: -147px -155px;
+    width: 18px;
+    height: 18px;
+}
+.golden-members-icon {
+    background-position: -147px -188px;
+    width: 18px;
+    height: 18px;
+}
+.platinum-members-icon {
+    background-position: -147px -219px;
+    width: 18px;
+    height: 18px;
+}
+
+.icon-deduction {
+    display: inline-block;
+    height:16px;
+    vertical-align: middle;
+    margin-right:2px;
+    border:1px solid #f90;
+    color:#f90;
+    padding-right:2px;
+    border-radius: 3px;
+    cursor:default;
+}
+.icon-deduction i {
+    display: inline-block;
+    height: 16px;
+    background-color: #f90;
+    color:#fff;
+    padding:0 3px;
+    font-style: normal;
+    vertical-align: top;
+}
+.new-nav-icon {
+    background-position: -174px -39px;
+    width: 28px;
+    height: 10px;
+}

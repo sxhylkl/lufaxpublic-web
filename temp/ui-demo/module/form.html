@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>form</title>
+
+        <!--#include virtual="../includeLinks.html"-->
+        <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+        <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+    </head>
+
+    <body>
+
+        <div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 表单控件</div>
+        <div class="tabs">
+            <a href="javascript:void(0)"><b>原型文档</b></a>
+            <a href="javascript:void(0)"><b>视觉稿</b></a>
+            <a href="javascript:void(0)"><b>前端代码</b></a>
+            <a href="javascript:void(0)"><b>必要样式</b></a>
+            <a href="javascript:void(0)"><b>必要脚本</b></a>
+            <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+        </div>
+        <div class="tab_cons">
+            <div class="tab_con">
+                表单控件-原型文档
+            </div>
+            <div class="tab_con">
+                <img src="../widget_resource/images/visual_image/界面控件.png" />
+            </div>
+            <div class="tab_con">
+                <pre>
+                </pre>
+            </div>
+            <div class="tab_con">	
+                <a href="#">../widget_resource/css/form.css</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="tab_con">
+                <a href="#">../widget_resource/js/jquery-1.7.1.min.js</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">../widget_resource/js/form.js</a>
+            </div>
+            <div class="tab_con current">
+                <div style="padding:20px;">
+                    <h2>new input and textarea </h2>
+                    <form class="form_horizontal mt20">
+                        <div class="control_group">
+                            <label class="control_label" for="inputDefult">普通输入框：</label>
+                            <div class="controls">
+                                <input type="text" id="inputDefult" placeholder="Email" class="input">
+                                <span class="help_line">class="input"</span>
+                            </div>
+                        </div>
+                        <div class="control_group">
+                            <label class="control_label" for="inputDisabled">不可用输入框：</label>
+                            <div class="controls">
+                                <input type="text" id="inputDisabled" placeholder="Email" class="input disabled" disabled="disabled">
+                                <span class="help_line">class="input disabled"</span>
+                            </div>
+                        </div>
+                        <div class="control_group error">
+                            <label class="control_label" for="inputuid">提示错误输入框：</label>
+                            <div class="controls">
+                                <input type="password" id="inputuid" placeholder="Password" class="input">
+                                <span class="help_line"><i class="icon minusCircleIcon"></i><span class="content">错误提示（ icon会在js里面载入）</span></span>
+                            </div>
+                        </div>
+                        <div class="control_group error">
+                            <label class="control_label" for="inputPassword">密码输入框：</label>
+                            <div class="controls">
+                                <input type="password" id="inputPassword" placeholder="输入密码" class="input input_icon pwd">
+                                <span class="help_line"><i class="icon minusCircleIcon"></i><span class="content">错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）错误提示（ icon会在js里面载入）</span></span>
+                            </div>
+                        </div>
+                        <div class="control_group">
+                            <label class="control_label" for="inputMobile">手机输入框：</label>
+                            <div class="controls">
+                                <input type="text" id="inputMobile" placeholder="输入手机" class="input input_icon mobile">
+                                <span class="help_line">class="input input_icon mobile"</span>
+                            </div>
+                        </div>
+                        <div class="control_group">
+                            <label class="control_label" for="inputName">用户名输入框：</label>
+                            <div class="controls">
+                                <input type="text" id="inputName" placeholder="Name" class="input input_icon user">
+                                <span class="help_line">class="input input_icon user"</span>
+                            </div>
+                        </div>
+                        <div class="control_group">
+                            <label class="control_label" for="inputMail">邮箱输入框：</label>
+                            <div class="controls">
+                                <input type="text" id="inputMail" placeholder="Mail" class="input input_icon mail">
+                                <span class="help_line">class="input input_icon mail"</span>
+                            </div>
+                        </div>
+                        <div class="control_group">
+                            <label class="control_label" for="inputNum">软件盘输入框：</label>
+                            <div class="controls">
+                                <input type="text" id="inputNum" placeholder="Email" class="input input_aide softkey">
+                                <span class="help_line">class="input input_aide softkey"</span>
+                            </div>
+                        </div>
+                        <div class="control_group">
+                            <label class="control_label" for="inputDate">日期输入框：</label>
+                            <div class="controls">
+                                <input type="text" id="inputDate" placeholder="Email" class="input input_aide calendar">
+                                <span class="help_line">class="input input_aide calendar"</span>
+                            </div>
+                        </div>
+                        <div class="control_group">
+                            <label class="control_label" for="inputCheck">动态码：</label>
+                            <div class="controls">
+                                <input type="text" id="inputCheck" placeholder="动态码" class="input input_icon input_small check">
+                                <span class="help_line">class="input input_icon input_small check"</span>
+                            </div>
+                        </div>
+                        <div class="control_group">
+                            <label class="control_label" for="inputTextarea">留言：</label>
+                            <div class="controls">
+                                <textarea id="inputTextarea" placeholder="Password" class="textarea"> </textarea>     
+                                <span class="help_line">class="textarea"</span>
+                            </div>
+                        </div>
+
+                    </form>
+                    <h2>form</h2>
+                    <!--
+                                        <div class="form_text"><span>
+                                                <label></label><label class="text"><input type="text"/></label>
+                                            </span></div>
+                                        <div class="clearDiv"></div>
+                                        <p>普通的text,默认为200px宽</p>
+                    
+                                        <div class="form_text w170"><span>
+                                                <label></label><label class="text"><input type="text"/></label>
+                                            </span></div>
+                                        <div class="clearDiv"></div>
+                                        <p>普通的text,默认为170px宽</p>
+                    
+                                        <div class="form_text w80"><span>
+                                                <label></label><label class="text"><input type="text"/></label>
+                                            </span></div>
+                                        <div class="clearDiv"></div>
+                                        <p>普通的text,默认为80px宽</p>
+                    
+                                        <div class="form_text" style="width:500px;"><span>
+                                                <label class="icon pass"></label><label class="text"><input type="password"/></label><label class="last calendar"></label>
+                                            </span></div>
+                                        <div class="clearDiv"></div>
+                                        <p>正常状态的text,可在框架内第一个label内添加:用户（class="icon user"）、密码（class="icon pass"）、验证码（class="icon check"）、手机（class="icon mobile"）,可在框架内最后一个label内添加：软键盘（class="last softkey"）/ 日历(class="calendar")</p>
+                    
+                                        <div class="form_text text_disable" style="width:300px;"><span>
+                                                <label class="icon user"></label><label class="text"><input type="text" disabled="disabled"/></label>
+                                            </span></div>
+                                        <div class="clearDiv"></div>
+                                        <p>不可用的text</p>
+                                        <p>以上控件可自定义设置style的width,最长可设置为500px</p>
+                    
+                                        <div class="form_textarea"><span><textarea></textarea></span></div>
+                                        <div class="clearDiv"></div><br/>
+                    
+                                        <p>多行输入框,设置宽度：加宽度class</p><br/>-->
+
+                    <div class="form_checkbox"><input type="checkbox"/><label>你好</label></div>
+                    <div class="form_checkbox checked"><input type="checkbox"/><label>默认选中</label></div>
+                    <div class="form_checkbox disabled"><input type="checkbox"/><label>默认不可选</label></div>
+                    <div class="form_checkbox disabled checked"><input type="checkbox"/><label>默认选中且不可取消</label></div>
+                    <div class="clearDiv"></div>
+                    <p>checkbox 如需结束浮动，请在form_checkbox上添加样式 clearfix</p><br/>
+
+                    <div class="form_radio"><input type="radio" name="sex"/><label>男</label></div>
+                    <div class="form_radio"><input type="radio" name="sex"/><label>女</label></div>
+                    <div class="form_radio disabled"><input type="radio" name="sex"/><label>默认不可选</label></div>
+                    <div class="clearDiv"></div>
+                    <p>checkbox 选中的radio value 为 true ，否则为 false </p>
+                    <br/>
+                    <div class="form_select">
+                        <select>
+                            <option>身份证</option>
+                            <option>护照</option>
+                            <option>军人证</option>
+                        </select>
+                    </div>
+                    <p>select 可自定义宽度，默认为200px，自定义宽度，请写在form_select的div中</p>
+                    <br/>
+                    <div class="form_select form_select_grey" style="width:150px">
+                        <select>
+                            <option>平安集团旗下网站</option>
+                            <option>平安财富e</option>
+                            <option>一号店</option>
+                        </select>
+                    </div>
+                    <p>select 可自定义宽度，默认为200px，自定义宽度，请写在form_select的div中</p>
+                    <br/>
+                    <h2> new prompt</h2>
+                    <br/>
+                    <div class="com_prompt bRFix leftArrow" style="width:760px">
+                        <div class="arrow"></div>
+                        <i class="icon exclamationCircleIcon"></i>
+                        <p>您认证中的银行卡已达4张，请先完成其他银行卡认证，<span class="green_word">再申请认证新银行卡</span>
+                        </p>
+                    </div>
+                    <br/><br/>
+                    <div class="com_prompt bRFix topleftArrow border" style="width:760px">
+                        <div class="arrow"></div>
+                        <i class="icon exclamationCircleIcon"></i>
+                        <p>您认证中的银行卡已达4张，请先完成其他银行卡认证，<span class="green_word">再申请认证新银行卡</span>
+                        </p>
+                    </div>
+                    <br/><br/>
+                    <div class="com_prompt bRFix toprightArrow border" style="width:760px">
+                        <div class="arrow"></div>
+                        <i class="icon exclamationCircleIcon"></i>
+                        <p>您认证中的银行卡已达4张，请先完成其他银行卡认证，<span class="green_word">再申请认证新银行卡</span>
+                        </p>
+                    </div>
+                    <br/><br/>
+                    <div class="com_prompt bRFix leftborderArrow border" style="width:760px">
+                        <div class="arrow"></div>
+                        <i class="icon exclamationCircleIcon"></i>
+                        <h4>温馨提示</h4>
+                        <p>您认证中的银行卡已达4张，请先完成其他银行卡认证，<span class="green_word">再申请认证新银行卡</span>
+                        </p>
+                    </div>
+                    <br/>
+                    <div class="com_prompt_error" style="width:700px;">
+                        <i class="icon minusCircleIcon"></i>
+                        <p class="content">可自定义宽度，默认继承父级容器。自定义宽度，请写在com_prompt_error的div中.... 可自定义宽度，默认继承父级容器，自定义宽度，请写在com_prompt_error的div中可自定义宽度，默认继承父级容器，自定义宽度，请写在com_prompt_error的div中</p>
+                    </div>
+                    <br/>
+                    <div class="com_prompt_error" style="width:700px;">
+                        <i class="icon correctCircleIcon"></i>
+                        <p class="content">可自定义宽度，默认继承父级容器。自定义宽度，请写在com_prompt_error的div中.... </p>
+                    </div>
+                    <br/>
+                    <div class="com_prompt_error" style="width:700px;">
+                        <i class="icon failureCircleIcon"></i>
+                        <p class="content">可自定义宽度，默认继承父级容器。自定义宽度，请写在com_prompt_error的div中.... 可自定义宽度，默认继承父级容器，自定义宽度，请写在com_prompt_error的div中可自定义宽度，默认继承父级容器，自定义宽度，请写在com_prompt_error的div中</p>
+                    </div>
+                    <br/>
+                    <div class="com_prompt_error withoutIcon" style="width:700px;">
+                        <i class=""></i>
+                        <p class="content">没有图标,可自定义宽度，默认继承父级容器.自定义宽度，请写在com_prompt_error的div中.... 可自定义宽度，默认继承父级容器，自定义宽度，请写在com_prompt_error的div中可自定义宽度，默认继承父级容器，自定义宽度，请写在com_prompt_error的div中</p>
+                    </div>
+                    <br/>
+                    <div class="helpWrap" style="width:700px;">
+                        <div class="prompting_com">
+                            <div class="head clearfix">
+                                <i class="icon interrogationWhiteIcon"></i>
+                                <p class="operationTitle">温馨提示</p>
+                            </div>
+                            <div class="content">• 陆金所采用“用户名密码”和“手机动态码”双重保障账户安全。</div>
+                            <div class="content">• 冒用他人信息是违法行为，陆金所保留追求其法律责任的权利。</div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                        <div class="prompting_com" style="width:800px;">
+                            <div class="head clearfix">
+                                <div class="title">
+                                    <i class="icon interrogationWhiteIcon"></i>
+                                    <p class="operationTitle">常见问题</p>
+                                </div>
+                                <a class="helpLink" href="#">帮助中心</a>
+                            </div>
+                            <div class="question">• 怎样申请银行卡认证？</div>
+                            <div class="answer"><a class="showOperationStep" href="javascript:;">点此查看流程演示图</a></div>
+                            <div class="question">• 哪些银行卡可以申请银行卡认证？</div>
+                            <div class="answer">目前仅对以下8家银行开放认证：</div>
+                            <div class="answer">平安银行、中国工商银行、中国建设银行、中国农业银行、招商银行、中信银行、中国民生银行和深圳发展银行。平安银行、中国工商银行、中国建设银行、中国农业银行、招商银行、中信银行、中国民生银行和深圳发展银行。平安银行、中国工商银行、中国建设银行、中国农业银行、招商银行、中信银行、中国民生银行和深圳发展银行。</div>
+                        </div>
+                    <br/>
+                    <h2> old prompt</h2>
+                    <br/>
+                    <div class="prompting" style="width:800px">
+                        <table class="leftarrow">
+                            <tr>
+                                <td class="left_td">
+                                    <div class="left_top_corner"></div>
+                                    <div class="left_border"><span></span></div>
+                                    <div class="left_bottom_corner"></div>
+                                </td>
+                                <td class="center_td">
+                                    <div class="prompting_main">
+                                        <div class="prompting_con">
+                                            <label class="icon help"></label>
+                                            <h4>温馨提示</h4><p>这里您可以添加内容，高度自适应，宽度继承父级容器，但您可以自定义它的宽度（自定义宽度，请写在prompting的div中）；可以在内容中添加图标（图标样式请写在label中）：帮助（class="icon help"）、注意（class="icon notice"）、出错（class="icon error"）、正确（class="icon right"）、错误2（class="icon error2"）</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="right_td">
+                                    <div class="right_top_corner"></div>
+                                    <div class="right_border"></div>
+                                    <div class="right_bottom_corner"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+
+                    <div class="prompting" style="width:800px">
+                        <table class="leftarrow">
+                            <tr>
+                                <td class="left_td">
+                                    <div class="left_top_corner"></div>
+                                    <div class="left_border"><span></span></div>
+                                    <div class="left_bottom_corner"></div>
+                                </td>
+                                <td class="center_td">
+                                    <div class="prompting_main">
+                                        <div class="prompting_con">
+                                            <label class="icon help notitle"></label><p>
+                                                与上面不同的是这个没有温馨提示title<br>
+                                                与上面不同的是这个没有温馨提示title
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="right_td">
+                                    <div class="right_top_corner"></div>
+                                    <div class="right_border"></div>
+                                    <div class="right_bottom_corner"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="prompting" style="width:800px">
+                        <table class="leftarrow">
+                            <tr>
+                                <td class="left_td">
+                                    <div class="left_top_corner"></div>
+                                    <div class="left_border"><span></span></div>
+                                    <div class="left_bottom_corner"></div>
+                                </td>
+                                <td class="center_td">
+                                    <div class="prompting_main">
+                                        <div class="prompting_con">
+                                            <label class="icon help notitle"></label>
+                                            <p>
+                                                单行显示
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="right_td">
+                                    <div class="right_top_corner"></div>
+                                    <div class="right_border"></div>
+                                    <div class="right_bottom_corner"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="prompting" style="width:800px">
+                        <table class="leftarrow">
+                            <tr>
+                                <td class="left_td">
+                                    <div class="left_top_corner"></div>
+                                    <div class="left_border"><span></span></div>
+                                    <div class="left_bottom_corner"></div>
+                                </td>
+                                <td class="center_td">
+                                    <div class="prompting_main">
+                                        <div class="prompting_con">
+                                            <p class="noicon">
+                                                单行显示
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="right_td">
+                                    <div class="right_top_corner"></div>
+                                    <div class="right_border"></div>
+                                    <div class="right_bottom_corner"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="prompting" style="width:500px;">
+                        <table class="greyarrow">
+                            <tr>
+                                <td class="left_td">
+                                    <div class="left_top_corner"></div>
+                                    <div class="left_border"><span></span></div>
+                                    <div class="left_bottom_corner"></div>
+                                </td>
+                                <td class="center_td">
+                                    <div class="prompting_main">
+                                        <div class="prompting_con">
+                                            <label class="icon notice"></label>
+                                            <h4>温馨提示</h4><p>这里您可以添加内容，高度自适应，宽度继承父级容器，但您可以自定义它的宽度（自定义宽度，请写在prompting的div中）；可以在内容中添加图标（图标样式请写在label中）：帮助（class="icon help"）、注意（class="icon notice"）、出错（class="icon error"）、正确（class="icon right"）、错误2（class="icon error2"）</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="right_td">
+                                    <div class="right_top_corner"></div>
+                                    <div class="right_border"></div>
+                                    <div class="right_bottom_corner"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="prompting" style="width:500px;">
+                        <table class="greyarrow">
+                            <tr>
+                                <td class="left_td">
+                                    <div class="left_top_corner"></div>
+                                    <div class="left_border"><span></span></div>
+                                    <div class="left_bottom_corner"></div>
+                                </td>
+                                <td class="center_td">
+                                    <div class="prompting_main">
+                                        <div class="prompting_con">
+                                            <label class="icon notice notitle"></label>
+                                            <p>
+                                                与上面不同的是没有温馨提示</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="right_td">
+                                    <div class="right_top_corner"></div>
+                                    <div class="right_border"></div>
+                                    <div class="right_bottom_corner"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="prompting" style="width:500px;">
+                        <table class="greyarrow">
+                            <tr>
+                                <td class="left_td">
+                                    <div class="left_top_corner"></div>
+                                    <div class="left_border"><span></span></div>
+                                    <div class="left_bottom_corner"></div>
+                                </td>
+                                <td class="center_td">
+                                    <div class="prompting_main">
+                                        <div class="prompting_con">
+                                            <p class="noicon">
+                                                没有icon没有温馨提示
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="right_td">
+                                    <div class="right_top_corner"></div>
+                                    <div class="right_border"></div>
+                                    <div class="right_bottom_corner"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="prompting" style="width:800px;">
+                        <div class="toprightarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                        <label class="icon help"></label>
+                                        <h4>温馨提示</h4><p>这里您可以添加内容，高度自适应，宽度继承父级容器，但您可以自定义它的宽度（自定义宽度，请写在prompting的div中）；可以在内容中添加图标（图标样式请写在label中）：帮助（class="icon help"）、注意（class="icon notice"）、出错（class="icon error"）、正确（class="icon right"）、错误2（class="icon error2"）</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="prompting" style="width:800px;">
+                        <div class="toprightarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                        <label class="icon help notitle"></label><p>与上面不同的是没有温馨提示title</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="prompting" style="width:700px">
+                        <div class="prompting_info error_info">
+                            <div class="prompting_con">
+                                <label class="icon right"></label><p>可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中
+                                    可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中ht</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="prompting" style="width:700px">
+                        <div class="prompting_info error_info">
+                            <div class="prompting_con">
+                                <label class="icon error"></label><p>可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中
+                                    可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中ht</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="prompting" style="width:700px">
+                        <div class="prompting_info error_info">
+                            <div class="prompting_con">
+                                <label class="icon error2"></label><p>可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中
+                                    可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中可自定义宽度，默认继承父级容器，自定义宽度，请写在prompting的div中ht</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="prompting" style="width:700px">
+                        <div class="prompting_info error_info">
+                            <p>与上面不同的是没有图标</p>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="prompting" style="width:800px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                        <label class="icon help notitle"></label><p>与上面不同的是没有温馨提示title</p><p>与上面不同的是没有温馨提示title</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="prompting">
+                        <div class="prompting_info right_info">
+                            <div class="prompting_con">
+                                <label class="icon right notitle"></label><p>可自定义宽度，默认继承父级容器</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="prompting">
+                        <i class=" "></i>
+                        <div class="promptingWrapper bRFix">
+                            <i class=""></i><span>外围没有指向箭头，内部没有icon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function(){
+                $(".tabs>a").each(function(i){
+                    $(this).click(function(){
+                        $(this).addClass("current").siblings().removeClass("current")
+                        .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>

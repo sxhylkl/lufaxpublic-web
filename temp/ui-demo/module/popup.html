@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>popup</title>
+<!--#include virtual="../modules/includeCss.html"-->
+<link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+<link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+</head>
+
+<body style="padding:20px;">
+
+<div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 按钮控件</div>
+<div class="tabs">
+	<a href="javascript:void(0)"><b>原型文档</b></a>
+	<a href="javascript:void(0)"><b>视觉稿</b></a>
+	<a href="javascript:void(0)"><b>前端代码</b></a>
+	<a href="javascript:void(0)"><b>必要样式</b></a>
+	<a href="javascript:void(0)"><b>必要脚本</b></a>
+    <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+</div>
+<div class="tab_cons">
+	<div class="tab_con">
+		按钮控件-原型文档
+	</div>
+    <div class="tab_con">
+          <img src="../widget_resource/images/visual_image/界面控件.png" />
+	</div>
+	<div class="tab_con">
+		<pre>
+			&lt;div class="popup_wrap timeout_safe_exit safeExit"&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td&gt;&lt;div class="logo"&gt;&nbsp;&lt;/div&gt;&lt;/td&gt;
+						&lt;td class="detail"&gt;
+							&lt;p class="title"&gt;抱歉，您登录已超时。&lt;/p&gt;
+							&lt;p&gt;请&ensp;&lt;a href="#"&gt;重新登录&lt;/a&gt;&lt;/p&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+		</pre> 
+	</div>
+        <div class="tab_con">	
+            <a href="#">../mainCss/main.css</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="tab_con">
+            无
+        </div>
+        <div class="tab_con current">
+			<ul class="itemWrap clearfix">
+				<li class="simplePopup diffLanding">
+					<a href="javascript:;">simplePopup / 异地登录</a>
+				</li>
+				<li class="simplePopup safeExit">
+					<a href="javascript:;">simplePopup / 安全退出</a>
+					<!--pop panel start:safe exit-->
+			        	<!-- <div class="popup_wrap timeout_safe_exit safeExit">
+			        		<div class="border">
+			        			<table>
+								<tr>
+									<td><div class="logo">&nbsp;</div></td>
+									<td class="detail">
+										<p class="title">您即将安全退出</p>
+										<div class="buttons">
+											<a class="btns btn_large btn_info " href="#"><span>安全退出</span></a>
+					                		<a class="btns btn_large btn_cancel ml20 close" href="#"><span>取&nbsp;消</span></a>
+										</div>
+									</td>
+								</tr>
+							</table>
+			        		</div>
+						</div> -->
+					<!--pop panel end-->	
+				</li>
+				<li class="simplePopup timeout">
+					<a href="javascript:;">simplePopup / 登录超时</a>
+					<!--pop panel start:timeout exit-->
+			        	<!-- <div class="popup_wrap timeout_safe_exit timeout">
+			        		<div class="border">
+								<table>
+									<tr>
+										<td><div class="logo">&nbsp;</div></td>
+										<td class="detail">
+											<p class="title">抱歉，您登录已超时。</p>
+											<div class="operation">请&ensp;<a href="#">重新登录</a><span class="countDown"><span id="sec"></span>秒后返回首页</span></div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div> -->
+					<!--pop panel end-->
+				</li>
+				<li class="blankPopup">
+					<a href="javascript:;">blankPopup / 空白弹出层</a>
+				</li>
+				<li class="blankPopup processing">
+					<a href="javascript:;">blankPopup / 正在处理</a>
+				</li>
+				<li class="popup">
+					<a href="javascript:;">popup / 重要提示</a>
+				</li>
+				<li class="popup_subTitle">
+					<a href="javascript:;">popup_subTitle / 信息确认</a>
+				</li>
+				<li class="richPopup">
+					<a href="javascript:;">richPopup / 复制链接</a>
+				</li>
+			</ul>
+        </div>
+</div>
+
+<!--#include virtual="../modules/includeJs.html"-->
+<script type="text/javascript" src="../mainJs/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".tabs>a").each(function(i){
+		$(this).click(function(){
+			$(this).addClass("current").siblings().removeClass("current")
+			.parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+		})
+		
+	});
+
+	$(".blankPopup a").click(function(){
+		LufaxPopup.blankPopup({
+	        content:'<div class="operationPopWrap"><p>空白弹出层</p><p>可自定义内容和样式</p><a class="close">close</a></div>',
+	        onConfirm:function () { }
+	    });		
+	});
+                  
+	$(".blankPopup.processing a").click(function(){
+		LufaxPopup.blankPopup({
+            content: '<div class="content_wrap_loading clearfix"><i class="ajax_loading fl"></i><span class="title">正在处理</span><span class="tips">请稍候在投资申请中查看申请结果</span></div>',
+            onConfirm:function () { }
+        });
+	});
+
+	$(".popup a").click(function(){
+		LufaxPopup.popup({
+            popupTitleName: "重要提示",
+            iconClass: "exclamationCircleIcon",
+            message: "如果您连续5次银行卡认证失败，您将无法再申请银行卡认证。<br/><span class='gray_word'>您现在还有4次机会。</span> ",
+            button: "<a class='btns btn_info' href='http://common.lufax.com/common/recharge' target='_self'>重新申请认证</a><a class='btns btn_cancel ml20 close' href='javascript:;'>取消</a>"
+        });
+	});
+
+	$(".popup_subTitle a").click(function(){
+		LufaxPopup.popup_subTitle({
+	        privateClass:'bankAuth_ensureInfo',
+	        popupTitleName:'银行卡信息确认',
+	        iconClass:'exclamationCircleIcon',
+	        subTitle:'请仔细核对以下银行卡信息：',
+	        contents:'<table>' +
+	            '<thead><tr><th class="bankAccountName">开户姓名</th><th class="bankName">开户银行</th><th class="bankCardNum">银行卡号</th></tr></thead>' +
+	            '</table>' +
+	            '<p class="comment">&bull; 您即将第1次申请银行卡认证，如果信息有误，请立即修改。</p>' +
+	            '<p class="comment">&bull; 每个账户最多能申请5次银行卡认证，如果您5次均失败，将无法再进行银行卡认证。</p>',
+	        button:'<a class="btns btn_info" href="javascript:;">确认无误</a><a class="btns btn_cancel ml20 close" href="javascript:;">修改信息</a>',
+	        closeDisplay:'false'
+	    });
+	});
+	$(".simplePopup.diffLanding a").click(function(){
+		LufaxPopup.simplePopup({
+	        imgClass:"safeExit",
+	        title:"您已在他处登录",
+	        content:"如非您本人操作，请联系客服 4001666618",
+	        button:'<a class="btns btn_large btn_info confirmBtn" href="javascript:void(0)"><span>重新登录</span></a><a class="btns btn_large btn_cancel ml20 cancleBtn" href="#"><span>返回首页</span></a>',
+	        onConfirm: function(){window.location.href= "https://member.lufax.com/member/uiLogin.view?appId=20000&returnPostURL=" + encodeURIComponent(window.location.href)},
+	        onCancel: function(){window.location.href= "http://www.lufax.com"}
+	    });
+	});
+
+	$(".richPopup a").click(function(){
+		LufaxPopup.richPopup({
+	        privateClass: '',
+	        title: '直接复制链接',
+	        content: '<div class="textWrap"><div class="textHead">复制一下内容，发给您的好友</div><div class="textPanel">http://affiliate.lufax.com/action?a=-1&t=201&s=C006&opt=5&lp=http://www.lufax.com</div><div class="copyTip hidden"><i class="icon correctCircleIcon"></i>复制成功！</div></div>',
+	        foot: '<a class="btns btn_info copyBtn" id="copyBtn" href="javascript:;">复制内容</a> ',
+	        onConfirm:function () {
+
+	        }
+	    });
+	});
+
+	$(".simplePopup.safeExit a").click(function(){
+		LufaxPopup.simplePopup({
+	        imgClass:"safeExit",
+	        title:"您即将安全退出",
+	        content:"",
+	        button:'<a class="btns btn_large btn_info" href="javascript:void(0);"><span>安全退出</span></a><a class="btns btn_large btn_cancel ml20 close" href="#"><span>取&ensp;消</span></a>',
+	        onConfirm: function(){},
+	        onCancel: function(){}
+	    });
+	});
+
+	$(".simplePopup.timeout a").click(function(){
+		LufaxPopup.simplePopup({
+            imgClass:"timeout",
+            title:"账户登录超时",
+            content:"",
+            button:'<span class="countDown"><span id="sec"></span>秒后</span><a href="window.location.href= "https://user.lufax.com/user/login&returnPostURL=" + encodeURIComponent(window.location.href)">重新登录</a>',
+            onConfirm: function(){},
+            onCancel: function(){}
+        });
+        tool.countDown({
+            countDownSeconds:parseInt(5),
+            doubleDigit:false,
+            callback:function(){
+                window.location.href = 'https://user.lufax.com/user/login&returnPostURL=" + encodeURIComponent(window.location.href)';
+            }
+        });
+	});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>countdown - Lufax FE demo</title>
+    <link rel="stylesheet" type="text/css" href="https://static.lufaxcdn.com/config/css/main_1018.css"/>
+</head>
+<body>
+<div class="main-wrap">
+        <div id="wwew">
+            <div class="countDownSec"></div>
+        </div>
+    <div id="wwew1">
+        <div class="countDownSec"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../../lufax.js"></script>
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="countDown.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var countDown=new lufax.util.countDown($('#wwew'),{
+            countDownSeconds: parseInt(20),
+            callback: function () {
+              alert(11);
+            }
+        });
+        countDown.init();
+        var countDown2=new lufax.util.countDown($('#wwew1'),{
+            countDownSeconds: parseInt(10),
+            callback: function () {
+                alert(222);
+            }
+        });
+        countDown2.init();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>input for login and register</title>
+    <!--#include virtual="../modules/includeCss.html"-->
+    <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+</head>
+
+<body>
+	<div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 登录注册输入框控件</div>
+    <div class="tabs">
+        <a href="javascript:void(0)"><b>原型文档</b></a>
+        <a href="javascript:void(0)"><b>视觉稿</b></a>
+        <a href="javascript:void(0)"><b>前端代码</b></a>
+        <a href="javascript:void(0)"><b>必要样式</b></a>
+        <a href="javascript:void(0)"><b>必要脚本</b></a>
+        <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+    </div>
+    <div class="tab_cons">
+        <div class="tab_con">
+            表单控件-原型文档
+        </div>
+        <div class="tab_con">
+            <img src="../widget_resource/images/visual_image/界面控件.png" />
+        </div>
+        <div class="tab_con">
+            <pre>
+            </pre>
+        </div>
+        <div class="tab_con">	
+            <a href="#">../widget_resource/css/form.css</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="tab_con">
+            <a href="#">../widget_resource/js/jquery-1.7.1.min.js</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">../widget_resource/js/form.js</a>
+        </div>
+        <div class="tab_con current">
+        <div style="font-size: 16px;font-weight:bold;color: #2f3e46;line-height: 2em;">大号输入框 </div>
+        大号输入框 仅用于登录注册 （用法在control-group加上class：control-group-large）
+        <form class="form-horizontal">
+            <div class="control-group control-group-large">
+                <label class="control-label" for="username">用户名</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs input-small" id="username"/></span>
+                    <span class="help-line">.input-wrap.icon-wrap .input-small<br/><span class="orange_word">width:110px</span></span>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="username">用户名</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs input-medium" id="username"/></span>
+                    <span class="help-line">.input-wrap.icon-wrap .input-medium<br/><span class="orange_word">width:170px;</span></span>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="username">用户名</label>
+
+                <div class="controls error">
+                    <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs" id="username"/></span>
+                    <span class="help-line">.input-wrap.icon-wrap<br/><span class="orange_word">width:220px;</span></span>
+                </div>
+            </div>
+
+            <div class="control-group control-group-large">
+                <label class="control-label" for="username">用户名</label>
+
+                <div class="controls">
+                    <span class="input-wrap"><input type="text" class="inputs input-small" id="username"/></span>
+                    <span class="help-line">.input-wrap .input-small<br/><span class="orange_word">width:110px</span></span>
+                </div>
+            </div>
+
+
+            <div class="control-group control-group-large radio-group">
+                <label class="control-label">常用性别</label>
+
+                <div class="controls clearfix">
+                    <div class="form_radio ullh"><input type="radio" name="sex"/><label>男</label></div>
+                    <div class="form_radio ullh"><input type="radio" name="sex"/><label>女</label></div>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="userEmail">常用邮箱</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap error"><i class="input-icon mail">&nbsp;</i><input type="text" class="inputs" id="userEmail"/></span>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="password">登录密码</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon password">&nbsp;</i><input type="password" class="inputs" id="password"/></span>
+                    <span class="help-line">6~16位字符，至少包含数字、字母（区分大小写）、符号中的<br/>2种。</span>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="ensurePassword">确认密码</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon password">&nbsp;</i><input type="password" class="inputs" id="ensurePassword"/></span>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="phoneNum">手机号码</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon mobile">&nbsp;</i><input type="text" class="inputs" id="phoneNum"/></span>
+                    <span class="help-line">请填写您“本人合法获得且真实有效并处于您有效掌控”的手机号码，然后点击“免费获取”验证您的手机。</span>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="invite">邀请码：</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon invite">&nbsp;</i><input type="text" class="inputs" id="invite"/></span>
+                    <span class="help-line"></span>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="company">公司名称：</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon company">&nbsp;</i><input type="text" class="inputs" id="company"/></span>
+                    <span class="help-line"></span>
+                </div>
+            </div>
+            <div class="control-group control-group-large">
+                <label class="control-label" for="tel">办公电话：</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon tel">&nbsp;</i><input type="text" class="inputs" id="tel"/></span>
+                    <span class="help-line"></span>
+                </div>
+            </div>
+
+            <div class="control-group control-group-large">
+                <label class="control-label"><span class="orange_word">* </span>留言类型:</label>
+                <div class="controls clearfix">
+                    <div class="form_select ullh">
+                        <select>
+                            <option>咨询</option>
+                            <option>建议</option>
+                            <option>投诉</option>
+                            <option>其他</option>
+                        </select>
+                    </div>
+                    <!--<span class="replenish-hor">&nbsp;</span>-->
+                </div>
+            </div>
+
+            <div class="control-group control-group-large">
+                <label class="control-label" for="phoneValidCode">验证码</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap validate-input"><i class="input-icon validate">&nbsp;</i><input type="text" class="inputs input-small" id="validCode" maxlength="4"/><i class="icon validIcon"></i></span>
+                    <span class="validateImg"><img src="https://user.lufax.com/user/captcha/captcha.jpg?source=login&_=1373939382405" alt="验证码" width="100" height="38"/></span>
+                    <span class="help-line"></span>
+                </div>
+            </div>
+            <div class="control-group control-group-large error">
+                <label for="phoneValidCode" class="control-label">手机动态码</label>
+                <div class="controls">
+                    <span class="input-wrap icon-wrap validate-input error"><i class="input-icon validate">&nbsp;</i><input type="text" maxlength="7" id="phoneValidCode" class="inputs phoneValideNum"/><i class="icon validIcon failureCircleIcon"></i></span>
+                    <a class="btns btn_info btn_valid obtainBtn">免费获取</a>
+                </div>
+            </div>
+
+            <div class="control-group error">
+                <label for="phoneValidCode" class="control-label">&nbsp;</label>
+                <div class="controls">
+                    <div class="form_checkbox ullh">
+                        <a></a>
+                        <input type="checkbox">
+                        <label>我已阅读并同意</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="userMessage"><span class="orange_word">* </span>留言内容:</label>
+                <div class="controls">
+                    <span class="input-wrap"><textarea id="userMessage" class="textareas" placeholder="欢迎留言..."></textarea></span>
+                    <span class="replenish-hor">欢迎留言</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label"></label>
+                <div class="controls"><a href="javascript:;" class="btns btn_xlarge ensureSubmit close">确&emsp;认</a></div>
+            </div>
+        </form>
+
+        <div style="font-size: 16px;font-weight:bold;color: #2f3e46;line-height: 2em;">默认输入框 </div>
+        	<form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="username">用户名</label>
+
+                    <div class="controls">
+                        <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs input-small" id="username"/></span>
+                        <span class="help-line">.input-wrap.icon-wrap .input-small<br/><span class="orange_word">width:110px</span></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="username">用户名</label>
+
+                    <div class="controls">
+                        <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs input-medium" id="username"/></span>
+                        <span class="help-line">.input-wrap.icon-wrap .input-medium<br/><span class="orange_word">width:170px;</span></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="username">用户名</label>
+
+                    <div class="controls error">
+                        <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs" id="username"/></span>
+                        <span class="help-line">.input-wrap.icon-wrap<br/><span class="orange_word">width:220px;</span></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="username">用户名</label>
+
+                    <div class="controls">
+                        <span class="input-wrap"><input type="text" class="inputs input-small" id="username"/></span>
+                        <span class="help-line">.input-wrap .input-small<br/><span class="orange_word">width:110px</span></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="username">用户名</label>
+
+                    <div class="controls">
+                        <span class="input-wrap"><input type="text" class="inputs input-medium" id="username"/></span>
+                        <span class="help-line">.input-wrap .input-medium<br/><span class="orange_word">width:170px;</span></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="username">用户名</label>
+
+                    <div class="controls">
+                        <span class="input-wrap"><input type="text" class="inputs" id="username"/></span>
+                        <span class="help-line">.input-wrap<br/><span class="orange_word">width:220px;</span></span>
+                    </div>
+                </div>
+
+                <div class="control-group radio-group">
+                    <label class="control-label">常用性别</label>
+
+                    <div class="controls clearfix">
+                    	<div class="form_radio ullh"><input type="radio" name="sex"/><label>男</label></div>
+                    	<div class="form_radio ullh"><input type="radio" name="sex"/><label>女</label></div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="userEmail">常用邮箱</label>
+
+                    <div class="controls">
+                        <span class="input-wrap icon-wrap error"><i class="input-icon mail">&nbsp;</i><input type="text" class="inputs" id="userEmail"/></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="password">登录密码</label>
+
+                    <div class="controls">
+	                    <span class="input-wrap icon-wrap"><i class="input-icon password">&nbsp;</i><input type="password" class="inputs" id="password"/></span>
+	                    <span class="help-line">6~16位字符，至少包含数字、字母（区分大小写）、符号中的<br/>2种。</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="ensurePassword">确认密码</label>
+
+                    <div class="controls">
+                    	<span class="input-wrap icon-wrap"><i class="input-icon password">&nbsp;</i><input type="password" class="inputs" id="ensurePassword"/></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="phoneNum">手机号码</label>
+
+                    <div class="controls">
+                        <span class="input-wrap icon-wrap"><i class="input-icon mobile">&nbsp;</i><input type="text" class="inputs" id="phoneNum"/></span>
+                        <span class="help-line">请填写您“本人合法获得且真实有效并处于您有效掌控”的手机号码，然后点击“免费获取”验证您的手机。</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="invite">邀请码：</label>
+
+                    <div class="controls">
+                        <span class="input-wrap icon-wrap"><i class="input-icon invite">&nbsp;</i><input type="text" class="inputs" id="invite"/></span>
+                        <span class="help-line"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="company">公司名称：</label>
+
+                    <div class="controls">
+                        <span class="input-wrap icon-wrap"><i class="input-icon company">&nbsp;</i><input type="text" class="inputs" id="company"/></span>
+                        <span class="help-line"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="tel">办公电话：</label>
+
+                    <div class="controls">
+                        <span class="input-wrap icon-wrap"><i class="input-icon tel">&nbsp;</i><input type="text" class="inputs" id="tel"/></span>
+                        <span class="help-line"></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label"><span class="orange_word">* </span>留言类型:</label>
+                    <div class="controls clearfix">
+                        <div class="form_select ullh">
+                            <select>
+                                <option>咨询</option>
+                                <option>建议</option>
+                                <option>投诉</option>
+                                <option>其他</option>
+                            </select>
+                        </div>
+                        <!--<span class="replenish-hor">&nbsp;</span>-->
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="phoneValidCode">验证码</label>
+
+                    <div class="controls">
+                        <span class="input-wrap icon-wrap validate-input"><i class="input-icon validate">&nbsp;</i><input type="text" class="inputs input-small" id="validCode" maxlength="4"/><i class="icon validIcon"></i></span>
+                        <span class="validateImg"><img src="https://user.lufax.com/user/captcha/captcha.jpg?source=login&_=1373939382405" alt="验证码" width="100" height="38"/></span>
+                        <span class="help-line"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                	<label for="phoneValidCode" class="control-label">手机动态码</label>
+                	<div class="controls">
+                		<span class="input-wrap icon-wrap validate-input error"><i class="input-icon validate">&nbsp;</i><input type="text" maxlength="7" id="phoneValidCode" class="inputs phoneValideNum"/><i class="icon validIcon failureCircleIcon"></i></span>
+                		<a class="btns btn_info btn_valid obtainBtn">免费获取</a>
+                	</div>
+                </div>
+
+                <br/>
+                <div class="control-group">
+                	<label for="phoneValidCode" class="control-label">&nbsp;</label>
+                	<div class="controls">
+                		<div class="form_checkbox ullh">
+							<a></a>
+							<input type="checkbox">
+							<label>我已阅读并同意 </label>
+						</div>
+                	</div>
+                </div>
+
+                <br/>
+                <div class="control-group error">
+                    <label for="phoneValidCode" class="control-label">&nbsp;</label>
+                    <div class="controls">
+                        <div class="form_checkbox ullh checked disabled">
+                            <a></a>
+                            <input type="checkbox">
+                            <label>选中且不可取消</label>
+                        </div>
+                    </div>
+                </div>
+
+                <br/><br/>
+                <div class="control-group">
+                    <label class="control-label" for="userMessage"><span class="orange_word">* </span>留言内容:</label>
+                    <div class="controls">
+                        <span class="input-wrap"><textarea id="userMessage" class="textareas" placeholder="欢迎留言..."></textarea></span>
+                        <span class="replenish-hor">欢迎留言</span>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                	<label class="control-label"></label>
+                	<div class="controls"><a href="javascript:;" class="btns btn_xlarge ensureSubmit close">确&emsp;认</a></div>
+            	</div>
+            </form>
+
+            <br/>
+            <table class="core-table">
+                <caption style="font-size: 16px;font-weight:bold;color: #2f3e46;line-height: 2em;">普通输入框 </caption>
+                <tr>
+                    <td>小 input-wrap .input.input-small：</td>
+                    <td>
+                        <form class="form-horizontal">
+                            <span class="input-wrap"><input type="text" class="input input-small"/></span>
+                            <span class="errorPanel multipleLine"><b class="arrow left"> </b><span class="errorContent"></span></span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>默认 input-wrap .input：</td>
+                    <td>
+                        <form class="form-horizontal">
+                            <span class="input-wrap"><input type="text" class="input"/></span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>不可输入 .input-wrap.disabled：</td>
+                    <td>
+                        <form class="form-horizontal">
+                            <span class="input-wrap disabled"><input type="text" class="input" disabled="disabled"/></span>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>.form_select.ullh</td>
+                    <td>
+                        <div class="form_select ullh">
+                            <select>
+                                <option>全部</option>
+                                <option>最近三个月</option>
+                                <option>最近一个月</option>
+                                <option>最近7天</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>小 .form_select.ullh.small</td>
+                    <td>
+                        <div class="form_select ullh small">
+                            <select>
+                                <option>全部</option>
+                                <option>最近三个月</option>
+                                <option>最近一个月</option>
+                                <option>最近7天</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+    	</div>
+    </div>
+    <p style="margin-bottom: 100px;">&nbsp;</p>
+
+<!--#include virtual="../modules/includeJs.html"-->
+<script type="text/javascript">
+    $(function(){
+        $(".tabs>a").each(function(i){
+            $(this).click(function(){
+                $(this).addClass("current").siblings().removeClass("current")
+                .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+            });
+        });
+
+        $(document).on('click',".obtainBtn",function(){
+		    obtainDynamicCode($(this),59);
+		});
+
+        inputsValid(".inputs,input","xxx不能为空",10,false);
+    });
+
+    /*security validate page, obtain dynamic code to mobile phone*/
+    function obtainDynamicCode (handler,seconds){
+        if(!handler.hasClass("disabled")){
+            handler.empty().append('<span><label id="sec">'+seconds+'</label>秒后重发</span>').addClass("disabled");
+            tool.countDown({
+                countDownSeconds:parseInt(seconds),
+                doubleDigit:false,
+                callback:function(){
+                    handler.empty().append("<span>免费获取</span>").removeClass("disabled");
+                }
+            });
+        }
+    }
+
+    function inputsValid(targetDom,errorText,maxWidth,rmCommets){
+        var errorPanel = $(targetDom).parent(".input-wrap").siblings(".errorPanel");
+        var errorTextDom = errorPanel.children(".errorContent");
+        var commentsDom = $(targetDom).parent(".input-wrap").siblings(".replenish-hor");
+
+        $(targetDom).focusin(function(){
+            if(rmCommets){
+                commentsDom.removeClass("hidden");
+            }
+
+            $(this).parent(".input-wrap").removeClass("error");
+            errorTextDom.html("");
+            errorPanel.removeClass("multipleLine").css({display:"none"});
+        });
+
+        $(targetDom).focusout(function(){
+            if(rmCommets){
+                commentsDom.addClass("hidden");
+            }
+
+            if(errorText.length > maxWidth){
+                errorPanel.addClass("multipleLine");
+            }else{
+                errorPanel.removeClass("multipleLine");
+            }
+            $(this).parent(".input-wrap").addClass("error");
+            errorTextDom.html(errorText);
+            errorPanel.css({display:"inline-block"});
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* CSS Document Author tianzs */
+*{margin:0;padding:0;}
+body{font-family:"Microsoft Yahei","微软雅黑",Tahoma,Arial,Helvetica,STHeiti; font-size:12px; color:#333333;}
+a{color:#2438cd;}
+span.sp_green{color:#106f00;}
+span.sp_orange{color:#e6551d;}
+ul,li{list-style:none none outside;padding:0;margin:0}
+img{border:0;}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:"";clear:both;height:0;overflow:hidden;}
+.clearfix{zoom:1;}
+.clearDiv{clear:both;height:0;overflow:hidden;}
+h1{font-size: 22px;}
+h2{font-size: 18px;}
+h3{font-size: 14px;}
+h4{font-size: 12px;}
+h5{font-size: 10px;}
+h6{font-size: 8px;}
+h4 span{font-size: 12px; font-weight: normal;}

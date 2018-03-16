@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* !Includes: base.css
+ * author: liangwenqi221@pingan.com.cn
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, textarea,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;
+    font-size: 12px;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    outline: none;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #2438cd;
+    text-decoration: none;
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.main-wrap{
+    width: 960px;
+    height: auto !important;
+    height: 420px;
+    min-height: 420px;
+    margin: 20px auto 40px;
+}
+.main-wide-wrap{
+    width: 1170px;
+    height: auto !important;
+    height: 420px;
+    min-height: 420px;
+    margin: 20px auto 40px;
+}
+
+.clearfix:after {
+    content:"\200B"; /*零宽度空格*/
+    display:block;
+    height:0;
+    clear:both;
+}
+.clearfix {*zoom:1;} /*IE/7/6*/
+
+.help-line,
+.help_line {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.default_word {
+    color:#333;
+}
+
+.orange {
+    color: #ea5404;
+}

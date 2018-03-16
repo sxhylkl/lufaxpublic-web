@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="http://static.lufaxcdn.com/config/css/main_1018.css"/>
+    <script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="../../lufax.js"></script>
+    <script type="text/javascript" src="../ui.js"></script>
+    <script src="placeholder.js"></script>
+</head>
+<body>
+<div class="main-wrap">
+    <form class="form-horizontal">
+        <div class="control-group control-group-large">
+            <label class="control-label" for="username">用户名</label>
+
+            <div class="controls">
+                <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" data-placeholder="王大琼" class="inputs input-small" id="username"/></span>
+                <span class="help-line">.input-wrap.icon-wrap .input-small<br/><span class="orange_word">width:110px</span></span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="userMessage"><span class="orange_word">* </span>留言内容:</label>
+            <div class="controls">
+                <span class="input-wrap"><textarea id="userMessage" class="textareas" data-placeholder="欢迎留言..."></textarea></span>
+                <span class="replenish-hor">欢迎留言</span>
+            </div>
+        </div>
+        <div>
+            <a id="J_clear" class="btns" href="javascript:;">清空</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    $("input").placeholder({});
+    $("textarea").placeholder({placeholderColor:'#09c',placeholderFontSize:'20px'});
+    //不支持password
+
+</script>
+</body>
+</html>

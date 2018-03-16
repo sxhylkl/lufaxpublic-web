@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>font</title>
+<link rel="stylesheet" type="text/css" href="../mainCss/main.css" />
+<link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+<link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+</head>
+
+<body>
+<div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 字体控件</div>
+<div class="tabs">
+	<a href="javascript:void(0)"><b>原型文档</b></a>
+	<a href="javascript:void(0)"><b>视觉稿</b></a>
+	<a href="javascript:void(0)"><b>前端代码</b></a>
+	<a href="javascript:void(0)"><b>必要样式</b></a>
+	<a href="javascript:void(0)"><b>必要脚本</b></a>
+    <a class="current" href="javascript:void(0)"><b>前段输出</b></a>
+</div>
+<div class="tab_cons">
+	<div class="tab_con">
+		字体控件-原型文档
+	</div>
+    <div class="tab_con">
+          <img src="../widget_resource/images/visual_image/font.png" />
+  </div>
+        <div class="tab_con">
+        	<pre>
+&lt;div style=&quot;padding:20px;&quot;&gt;<br />                &lt;h2&gt;font&lt;/h2&gt;<br />                &lt;p&gt;常规字体&amp;nbsp;&amp;nbsp;&lt;span&gt;333333&lt;/span&gt;&lt;/p&gt;<br />                &lt;p&gt;链接&amp;nbsp;&amp;nbsp;&lt;a href=&quot;#&quot;&gt;2438cd&lt;/a&gt;&lt;/p&gt;<br />                &lt;p&gt;绿色字体&amp;nbsp;&amp;nbsp;&lt;span class=&quot;sp_green&quot;&gt;106f00&lt;/span&gt;&lt;/p&gt;<br />                &lt;p&gt;橙色字体&amp;nbsp;&amp;nbsp;&lt;span class=&quot;sp_orange&quot;&gt;e6551d&lt;/span&gt;&lt;/p&gt;<br />            &lt;/div&gt;            
+            </pre>
+  </div>
+        <div class="tab_con">	
+            <a href="#">../widget_resource/css/widget_base.css</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="tab_con">
+            无
+        </div>
+        <div class="tab_con current">
+        	<div style="padding:20px; font-size:18px;">
+                <h2>font</h2>
+                <p>常规字体&nbsp;&nbsp;<span>333333</span></p>
+                <p>链接字体&nbsp;&nbsp;<a href="#">2438cd</a></p>
+                <p>绿色字体&nbsp;&nbsp;<span class="sp_green">106f00</span></p>
+                <p>橙色字体&nbsp;&nbsp;<span class="sp_orange">e6551d</span></p>
+                <p>浅蓝字体&nbsp;&nbsp;<span class="" style="color:#4d4398">4d4398</span></p>
+            </div>
+        </div>
+</div>
+
+<script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".tabs>a").each(function(i){
+		$(this).click(function(){
+			$(this).addClass("current").siblings().removeClass("current")
+			.parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+		})
+		
+	})
+
+})
+</script>
+</body>
+</html>

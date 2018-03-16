@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>手机动态码-无交易验证</title>
+<link rel="stylesheet" type="text/css" href="../mainCss/main.css" />
+<link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+<style>
+	h3,h4{padding:10px 10px 10px 0;}
+</style>
+</head>
+
+<body>
+	<div style="padding:20px;">
+    	<h3>1.初始状态</h3>
+         <table class="ui_form_datagrid">
+            <tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+                <td><a class="btns btn_info" href="#">发送动态码</a></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+        </table>
+        
+        <h4>或</h4>
+         <table class="ui_form_datagrid">
+            <tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173 text_disable"><span>
+                        <label></label><label class="text"><input type="text" disabled="disabled" value="130****1234"/></label>
+                    </span></div>
+                </td>
+                <td><a class="btns btn_info" href="#">发送动态码</a></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+        </table>
+        
+        <h3>2.点击发送动态码按钮后</h3>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173 text_disable"><span>
+                        <label></label><label class="text"><input type="text" disabled="disabled" value="130****1234"/></label>
+                    </span></div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	请在收到短信后<span class="sp_orange"> 114 秒</span> 内输入。<br>
+                                            如果<span class="sp_orange"> 57 秒</span> 内还没有收到验证短信，请点击&nbsp;&nbsp;<a class="btns disabled" href="#">重新发送</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text" value="13012341234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"><a class="btns disabled" href="#">发送动态码</a></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	请在收到短信后<span class="sp_orange"> 114 秒</span> 内输入。<br>
+                                            如果<span class="sp_orange"> 57 秒</span> 内还没有收到验证短信，请点击&nbsp;&nbsp;<a class="btns disabled" href="#">重新发送</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <h4>60s后</h4>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173 text_disable"><span>
+                        <label></label><label class="text"><input type="text" disabled="disabled" value="130****1234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	请在收到短信后<span class="sp_orange"> 54 秒</span> 内输入。<br>
+                                            如果还没有收到验证短信，请点击&nbsp;&nbsp;<a class="btns btn_info" href="#">重新发送</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text" value="13012341234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"><a class="btns disabled" href="#">发送动态码</a></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	请在收到短信后<span class="sp_orange"> 54 秒</span> 内输入。<br>
+                                            如果还没有收到验证短信，请点击&nbsp;&nbsp;<a class="btns btn_info" href="#">重新发送</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <h4>再60s后</h4>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173 text_disable"><span>
+                        <label></label><label class="text"><input type="text" disabled="disabled" value="130****1234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"></td>
+            </tr>
+            <tr>
+            	<th>动态码：</td>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	手机动态码已失效。<br>
+                                            请点击&nbsp;&nbsp;<a class="btns btn_info" href="#">重新发送</a>&nbsp;&nbsp;获取新动态码。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text" value="13012341234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"><a class="btns disabled" href="#">发送动态码</a></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	手机动态码已失效。<br>
+                                            请点击&nbsp;&nbsp;<a class="btns btn_info" href="#">重新发送</a>&nbsp;&nbsp;获取新动态码。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <h3>3.半小时内重发三次后</h3>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173 text_disable"><span>
+                        <label></label><label class="text"><input type="text" disabled="disabled" value="130****1234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	请在收到短信后<span class="sp_orange"> 114 秒</span> 内输入。<br>
+                                            您已经申请获取了3次手机动态码，不能再申请。<br>
+                                            如想获取，请您输入新的手机号码后重新获取。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text" value="13012341234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"><a class="btns disabled" href="#">发送动态码</a></td>
+            </tr>
+            <tr>
+            	<th>动态码：</td>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	请在收到短信后<span class="sp_orange"> 114 秒</span> 内输入。<br>
+                                            您已经申请获取了3次手机动态码，不能再申请。<br>
+                                            如想获取，请您输入新的手机号码后重新获取。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        
+        <h3>4.校验码输错三次后</h3>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173 text_disable"><span>
+                        <label></label><label class="text"><input type="text" disabled="disabled" value="130****1234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                        	抱歉，您的验证码已连续输错3次，无法再使用该号码获取动态码。<br>
+                                            如想获取，请您输入新的手机号码后重新获取。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+         <table class="ui_form_datagrid">
+        	<tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text" value="13012341234"/></label>
+                    </span></div>
+                </td>
+                <td class="dcode"><a class="btns disabled" href="#">发送动态码</a></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td class="prompting" colspan="2">
+                	<div class="prompting" style="width:378px;">
+                        <div class="topleftarrow">
+                            <div class="top_div">
+                                <div class="top_left_corner"></div>
+                                <div class="top_center"></div>
+                                <div class="top_right_corner"></div>
+                            </div>
+                            <div class="middle_div">	
+                                <div class="prompting_main">
+                                    <div class="prompting_con">
+                                    	<p class="noicon">
+                                            抱歉，您的验证码已连续输错3次，无法再使用该号码获取动态码。<br>
+                                            如想获取，请您输入新的手机号码后重新获取。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_div">
+                                <div class="bottom_left_corner"></div>
+                                <div class="bottom_center"></div>
+                                <div class="bottom_right_corner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <h3>5.手机号码更改后（鼠标激活手机号码输入框，再离开该输入框后，即校验和上个号码是否一致，如果一致，则保持上个号码的状态，如不一致，则回到此状态）。点击发送动态码，进入2。</h3>
+         <table class="ui_form_datagrid">
+            <tr>
+            	<th>手机号码：</th>
+                <td class="tcontent">
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text" value="13012340987"/></label>
+                    </span></div>
+                </td>
+                <td><a class="btns btn_info" href="#">发送动态码</a></td>
+            </tr>
+            <tr>
+            	<th>动态码：</th>
+                <td>
+                	<div class="form_text w173"><span>
+                        <label></label><label class="text"><input type="text"/></label>
+                    </span></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+<script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../mainJs/form.js"></script>
+<!--[if IE 6]>
+<script src="../app_js/ui30/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+</script>
+<![endif]-->
+</body>
+</html>

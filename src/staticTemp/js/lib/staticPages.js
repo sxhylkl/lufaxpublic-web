@@ -1,0 +1,8 @@
+requirejs([
+    'staticParth/loadBasicStatic'
+], function ($) {
+
+});
+
+
+

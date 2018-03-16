@@ -1,0 +1,20 @@
+[DEP]
+    无
+
+[DB1]
+    无
+
+[DB2]
+	无
+
+[NOTIFY]
+    fangxiao483@pingan.com.cn
+    wangdongqiang334@pingan.com.cn
+    chenlixin193@pingan.com.cn
+
+[ADVICE]
+	无
+
+[STATEMENT]
+1. WEBDEV-1662  【易联鉴权】多场景下增加人工审核入口+提示文案优化
+2. WEBDEV-1840   公共简版页头页尾

@@ -1,0 +1,27 @@
+{
+    "header": [
+        true,
+        "common/headerTpl.vm"
+    ],
+    "navigator": [
+        true,
+        "common/navigatorTpl.vm"
+    ],
+    "footer": [
+        true,
+        "common/footerTpl.vm"
+    ],
+    "lufaxPublicCss": [
+        true,
+        "common/favicon.vm",
+        "common/cssTpl.vm"
+    ],
+    "lufaxPublicJs": [
+        true,
+        "common/jsTpl.vm"
+    ],
+    "statistic": [
+        true,
+        "common/statisticTpl.vm"
+    ]
+}

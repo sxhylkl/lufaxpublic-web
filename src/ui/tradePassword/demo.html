@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>tradePassword - Lufax FE demo</title>
+    <link rel="stylesheet" type="text/css" href="http://static.dev.lufax.com/config/css/main_1018.css"/>
+</head>
+<body>
+<div class="main-wrap">
+    <form class="form-horizontal">
+    	<div id="tradePassword"></div>
+
+        <div class="control-group">
+            <label class="control-label"></label>
+            <div class="controls">
+                <a class="btns btn-xlarge Submit" href="javascript:void(0);" id="submitBtn"><span>提交</span></a>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../../lufax.js"></script>
+<script type="text/javascript" src="../ui.js"></script>
+<script type="text/javascript" src="tradePassword.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        var options = {
+            container: $('#tradePassword'),
+            rightText: '测试环境'
+        }
+        var tradePassword = new lufax.ui.tradePassword(options);
+        tradePassword.init();
+        $('#submitBtn').click(function(){
+            tradePassword.validate();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,965 @@
+.head-wrap {
+    min-height: 121px;
+}
+
+.head-wrap .top-wrap {
+    height: 40px;
+    border-bottom: 1px solid #dedede;
+    background-color: #f5f5f5;
+    min-width: 960px;
+}
+
+.top-wrap .top-body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.top-wrap .top-body .login-status {
+    float: left;
+    padding: 10px 0 0;
+}
+
+.top-wrap .top-body .login-status li {
+    float: left;
+    background: url("../images/top_foot_icon.png") 0 -82px no-repeat;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.top-wrap .top-body .login-status li.home-icon {
+    padding-left: 0;
+    background: none;
+}
+
+.top-wrap .top-body .login-status li.home-icon a {
+    background: url("../images/top_foot_icon.png") -30px -45px no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.top-wrap .top-body .login-status li.home-icon a:hover {
+    background-position: -48px -45px;
+}
+.top-wrap .top-body .login-status .safe-logout-wrap {
+    margin-left: 10px;
+}
+.top-wrap .top-body .login-status .safe-logout {
+    color: #333;
+}
+.top-wrap .top-body .login-status .cookie-name {
+    margin-right: 10px;
+}
+.top-wrap .top-body .login-status .cookie-register,
+.top-wrap .top-body .login-status .cookie-login {
+    color: #333;
+}
+
+.sub-nav-wrap {
+    float: right;
+    padding: 7px 0 0;
+    margin-right: 20px;
+}
+
+.sub-nav-wrap .sub-nav-left,
+.sub-nav-wrap .sub-nav-right {
+    background: url("../images/top_foot_icon.png") -101px -37px no-repeat;
+    width: 12px;
+    height: 23px;
+    float: left;
+}
+
+.sub-nav-wrap .sub-nav-right {
+    background-position: -113px -37px;
+}
+
+.sub-nav-wrap .sub-nav-list {
+    float: left;
+    height: 23px;
+    line-height: 23px;
+    background-color: #fff;
+    border-top: 1px solid #e3e3e3;
+}
+
+.sub-nav-wrap .sub-nav-list li {
+    float: left;
+    background: url("../images/top_foot_icon.png") 0 -80px no-repeat;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.sub-nav-wrap .sub-nav-list li a {
+    color: #333;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-account {
+    background: none;
+    padding-left: 0;
+    position: relative;
+    z-index: 200;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-account b {
+    border-color: #999 transparent transparent;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    -moz-transition: -moz-transform .2s ease-in;
+    -o-transition: -o-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    width: 0;
+    vertical-align: middle;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.my-msg-status .msg-wrap .icon-msg {
+    background: url("../images/top_foot_icon.png") -151px -42px no-repeat;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+
+.my-msg-status .msg-wrap .icon-msg.new-msg {
+    background-position: -134px -44px;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-msg-status .msg-wrap a {
+    color: #2438cd;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-account.my-msg-status:hover .cover {
+    width: 135px;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-account .my-account-title {
+    position: relative;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-account:hover .cover {
+    background-color: #fef9f1;
+    display: inline-block;
+    height: 26px;
+    top: -1px;
+    left: -15px;
+    position: absolute;
+    width: 90px;
+    z-index: 202;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-account:hover .my-account-title span,
+.sub-nav-wrap .sub-nav-list li.my-account:hover .my-account-title {
+    z-index: 203;
+    text-decoration: none;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-account .my-account-list {
+    display: none;
+}
+
+
+.sub-nav-wrap .sub-nav-list li.my-account:hover .my-account-list {
+    z-index: 201;
+    width: 162px;
+    height: 125px;
+    border: 1px solid #d9d9d9;
+    position: absolute;
+    background-color: #fef9f1;
+    top: 25px;
+    left: -15px;
+    padding: 15px 0 0 16px;
+    display: block;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 1px 1px 1px #ececec;
+}
+
+.sub-nav-wrap .sub-nav-list li.my-account .my-account-list li {
+    float: left;
+    margin: 0 10px 0 0;
+    padding-left: 0;
+    background: none;
+    display: inline;
+    width: 60px;
+}
+.sub-nav-wrap .sub-nav-list li .new-tips {
+    color: #ea5404;
+    font-family: Arial;
+}
+
+.media-link {
+    float: right;
+    padding: 10px 0 0;
+}
+
+.media-link li {
+    float: left;
+    margin-left: 10px;
+    position: relative;
+    z-index: 200;
+}
+
+.media-link li a {
+    color: #333;
+}
+
+.media-link .icon-weibo,
+.media-link .icon-weixin {
+    background: url("../images/top_foot_icon.png") 0 0 no-repeat #fff;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #dedede;
+}
+
+.media-link .icon-weibo {
+    background-position: -64px -45px;
+}
+
+.media-link .icon-weixin {
+    background-position: -81px -43px;
+}
+
+.media-link .icon-mobile{
+    margin-right: 2px;
+    width: 18px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../images/icon-mobile.gif) 0 0 no-repeat;
+}
+
+.head-wrap .head-body {
+    height: 80px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.head-wrap .head-body .logo {
+    float: left;
+}
+
+.head-wrap .head-body .slogan {
+    float: left;
+    margin: 0 0 0 15px;
+}
+
+.head-wrap .head-body .link-logo {
+    float: right;
+}
+
+.head-wrap .head-body .slogan img,
+.head-wrap .head-body .logo img,
+.head-wrap .head-body .link-logo img {
+    vertical-align: middle;
+    height: 80px;
+}
+
+.head-wrap .head-body .logo img {
+    width: 260px;
+}
+
+.head-wrap .nav-wrap {
+    background-color: #4d4398;
+    height: 40px;
+    min-width: 960px;
+}
+
+.head-wrap .nav-wrap .main-nav {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.head-wrap .nav-wrap .main-nav li {
+    float: left;
+    margin-right: 1px;
+    position: relative;
+    z-index: 100;
+}
+
+.head-wrap .icon-top-foot{
+    position: absolute;
+    display: inline-block;
+    background: url("../images/top_foot_icon.png") 1000px 1000px no-repeat;
+    font-size: 0;
+}
+.head-wrap .icon-top-foot.icon-fanxian{
+    width: 35px;
+    height: 16px;
+    top: -7px;
+    right: 18px;
+    background-position: -341px -42px;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav .icon-new-item {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    background: url("../images/top_foot_icon.png") -263px -42px no-repeat;
+    top: -7px;
+    right: 32px;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav .icon-hot-item {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    background: url("../images/top_foot_icon.png") -303px -42px no-repeat;
+    top: -7px;
+    right: 32px;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav .nav-arrow {
+    background: url("../images/top_foot_icon.png") -185px -50px no-repeat;
+    width: 11px;
+    height: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav:hover .nav-arrow {
+    -webkit-transition:-webkit-transform .2s ease-in;
+    -moz-transition:-moz-transform .2s ease-in;
+    transition:transform .2s ease-in;
+    -webkit-transform: rotate(180deg);
+    -webkit-transform-origin:50% 50%;
+    -moz-transform: rotate(180deg);
+    -moz-transform-origin:50% 50%;
+    transform: rotate(180deg);
+    transform-origin:50% 50%;
+    background-position: -170px -50px\9;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav .transition {
+    -webkit-transition:-webkit-transform .2s ease-in;
+    -moz-transition:-moz-transform .2s ease-in;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list {
+    background-color: #1d2088;
+    width: 230px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav:hover ul.sub-nav-list{
+    display: block;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li {
+    float: none;
+    margin-right: 0;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li .icon-new-product {
+    background: url("../images/top_foot_icon.png") -221px -42px no-repeat;
+    width: 32px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li a {
+    display: inline-block;
+    height: 40px;
+    font-weight: normal;
+    width: 90%;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 23px;
+    line-height: 40px;
+    color: #fff;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li a strong {
+    font-size: 12px;
+    color: #bdb6f4;
+    margin: 0 5px;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li b {
+    border-color: transparent transparent transparent #fff;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    width: 0;
+    margin: 0 2px 0 0;
+    vertical-align: middle;
+    visibility: hidden;
+    display: inline-block;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li a:hover b {
+    visibility: visible;
+}
+
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li a:hover {
+    background-color: #343794;
+}
+
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li a span {
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.head-wrap .nav-wrap .main-nav li.has-sub-nav ul.sub-nav-list li a span em {
+    color: #ffc000;
+}
+
+.head-wrap .nav-wrap .main-nav>li>a {
+    display: block;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    -moz-transition: 0.4s all;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
+    transition: 0.4s all;
+    font-weight: bold;
+}
+.head-wrap .nav-wrap .main-nav>li.invest>a,
+.head-wrap .nav-wrap .main-nav>li.licai>a {
+    cursor: default;
+}
+
+.head-wrap .nav-wrap .main-nav li a em {
+    font-style: normal;
+    color: #ffc000;
+}
+.head-wrap .nav-wrap .main-nav li.has-sub-nav:hover,
+.head-wrap .nav-wrap .main-nav li.selected a,
+.head-wrap .nav-wrap .main-nav li a:hover {
+    background-color: #1d2088;
+    text-decoration: none;
+}
+.head-wrap .nav-wrap .main-nav li.loan {
+    float: right;
+    margin-right: 0;
+}
+
+.head-wrap .nav-wrap .main-nav li.loan a {
+    display: inline;
+    width: auto;
+    color: #c9c3f4;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.head-wrap .nav-wrap .main-nav li.loan a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.media-link .weixin p {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: #f8f8f8;
+    border: 1px solid #7a72b2;
+    z-index: 1;
+    top: 27px;
+    right: -10px;
+    opacity: 0.9;
+    display: none;
+}
+
+.media-link .weixin p b {
+    background: url("https://static.lufaxcdn.com/config/images/p2p_index/lufax-codes.png") -420px 0 no-repeat;
+    width: 18px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+.lufax-code.weixin-code {
+    display: block;
+    background: url("https://static.lufaxcdn.com/config/images/p2p_index/lufax-codes.png") 0 0 no-repeat;
+    width: 140px;
+    height: 140px;
+    margin: 10px 0 0 10px;
+}
+
+.media-link .weixin:hover p {
+    display: block;
+}
+
+.head-wrap-inside .top-wrap {
+    background-color: #ebebeb;
+}
+
+.head-wrap-inside .head-body-wrap {
+    background-color: #f5f5f5;
+}
+
+.head-wrap.head-wrap-inside .head-body .slogan {
+    float: right;
+    margin: 0 60px 0 0;
+}
+
+/*------footer-------*/
+.foot-wrap {
+    height: 225px;
+    background-color: #dedede;
+    border-bottom: 4px solid #4d4398;
+    min-width: 960px;
+}
+
+.foot-wrap .foot-body {
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.foot-body .foot-info {
+    width: 140px;
+    padding-top: 30px;
+    text-align: center;
+    float: left;
+    background: url("../images/top_foot_icon.png") 0 -120px no-repeat;
+}
+
+.foot-body .foot-info .icon-about-lufax,
+.foot-body .foot-info .icon-help-center,
+.foot-body .foot-info .icon-safe-lufax {
+    background: url("../images/top_foot_icon.png") 0 0 no-repeat;
+    width: 29px;
+    height: 29px;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.foot-body .foot-info .icon-help-center {
+    background-position: -32px 0;
+}
+
+.foot-body .foot-info .icon-safe-lufax {
+    background-position: -65px 0;
+}
+
+.foot-body .foot-info dl {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.foot-body .foot-info dl.about-lufax-list {
+    padding-left: 35px;
+}
+
+.foot-body .foot-info dt {
+    margin-bottom: 10px;
+}
+
+.foot-body .foot-info dt a {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+.foot-body .foot-info dd {
+    line-height: 20px;
+}
+
+.foot-body .foot-info dd a {
+    color: #666;
+}
+
+.foot-body .hot-line {
+    width: 165px;
+    padding: 30px 0 0 20px;
+    float: left;
+    background: url("../images/top_foot_icon.png") 0 -120px no-repeat;
+}
+
+.foot-body .hot-line .hot-line-title {
+    color: #999;
+}
+
+.foot-body .hot-line .hot-line-num {
+    font-size: 24px;
+    color: #333;
+    font-family: "Arial";
+    font-weight: bold;
+    line-height: 22px;
+    margin: 1px 0 8px 0;
+}
+
+.foot-body .hot-line .hot-line-service-time {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.foot-body .copyright-info {
+    float: left;
+    background: url("../images/top_foot_icon.png") 0 -120px no-repeat;
+    text-align: right;
+    padding: 30px 0 0 0;
+    width: 342px;
+}
+
+.foot-body .copyright-info .icon-pingan-logo {
+    background: url("../images/top_foot_icon.png") -96px -5px no-repeat;
+    width: 207px;
+    height: 18px;
+    display: inline-block;
+    float: right;
+}
+
+.foot-body .copyright-info .select-box {
+    clear: both;
+    width: 130px;
+    height: 22px;
+    line-height: 22px;
+    margin: 15px 0 20px 0;
+    float: right;
+    *float: none;
+    text-align: left;
+    border: 1px solid #a3a3a3;
+    color: #555;
+    padding: 0 0 0 6px;
+    background: #e7e4e4 url("../images/top_foot_icon.png") 112px -42px no-repeat;
+}
+
+.foot-body .copyright-info .copyright {
+    clear: both;
+    color: #666;
+    line-height: 20px;
+}
+
+
+.foot-body .select-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.foot-body .select-box-list {
+    position: absolute;
+    background: #ebebeb;
+    border: 1px solid #ccc;
+    width: 136px;
+    left: 0;
+    top: 22px;
+    display: none;
+}
+
+.foot-body .select-box-list li a {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 6px;
+    text-align: left;
+    color: #333;
+}
+
+.foot-body .select-box-list li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #a3a3a3;
+}
+
+/*about lufax css3*/
+.logo_ani {
+    display: block;
+    width: 250px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo_ani span, .logo_ani i {
+    display: block;
+    position: absolute;
+    background: url('../images/logo_ani.png') no-repeat;
+    overflow: hidden;
+}
+
+.logo_ani .t1 {
+    width: 163px;
+    height: 80px;
+    background-position: 0 0;
+    bottom: 0px;
+    left: 0px;
+    /*opacity: 0;*/
+    /*-webkit-animation: 10s 0.5s ease infinite;*/
+    /*-webkit-animation-name: a_t1;*/
+    /*-moz-animation: 10s 0.5s ease infinite;*/
+    /*-moz-animation-name: a_t1;*/
+}
+
+@-webkit-keyframes a_t1 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@-moz-keyframes a_t1 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+.logo_ani .t2 {
+    width: 114px;
+    height: 56px;
+    background-position: 0 -80px;
+    bottom: 0px;
+    left: 0px;
+    /*opacity: 0;*/
+    /*-webkit-animation: 10s 0.5s ease infinite;*/
+    /*-webkit-animation-name: a_t2;*/
+    /*-moz-animation: 10s 0.5s ease infinite;*/
+    /*-moz-animation-name: a_t2;*/
+}
+
+@-webkit-keyframes a_t2 {
+    0% {
+        opacity: 0;
+    }
+    7% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes a_t2 {
+    0% {
+        opacity: 0;
+    }
+    7% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo_ani .t_pingan {
+    width: 24px;
+    height: 9px;
+    background-position: -140px -128px;
+    top: 36px;
+    left: 60px;
+    /*opacity: 0;*/
+    /*-webkit-animation: 10s 0.5s ease infinite;*/
+    /*-webkit-animation-name: a_pingan;*/
+    /*-moz-animation: 10s 0.5s ease infinite;*/
+    /*-moz-animation-name: a_pingan;*/
+}
+
+@-webkit-keyframes a_pingan {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes a_pingan {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo_ani .t_tit {
+    width: 90px;
+    height: 20px;
+    background-image: none;
+    top: 45px;
+    right: 0;
+    /*opacity: 0;*/
+    font: bold 14px 'Microsoft YaHei';
+    color: #666;
+    /*-webkit-animation: 10s 0.5s ease infinite;*/
+    /*-webkit-animation-name: a_tit;*/
+    /*-moz-animation: 10s 0.5s ease infinite;*/
+    /*-moz-animation-name: a_tit;*/
+}
+
+@-webkit-keyframes a_tit {
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes a_tit {
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo_ani .t_tit i {
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-position: -146px -106px;
+    right: 0;
+    top: 3px;
+}
+
+.foot-wrap .trust-site{
+    display:inline-block;
+    position:relative;
+    width:100px;
+    height:37px;
+    background: url(../images/top-foot-icon-security.png) 0 0 no-repeat;
+}
+
+.foot-wrap .trust-site:hover,
+.foot-wrap .IC-network-supervisor:hover{
+    text-decoration: none;
+}
+
+.foot-wrap .IC-network-supervisor{
+    display:inline-block;
+    margin-left: 16px;
+    width:30px;
+    height:40px;
+    background: url(../images/top-foot-icon-security.png) 0 -39px no-repeat;
+}/*new head-simplicity*/
+.simple-head-wrap {
+    border-top: 3px solid #4e0ea6;
+    height: 88px;
+}
+
+.simple-head-wrap .header {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header .logo {
+    float: left;
+    margin-top: 3px;
+}
+
+.header .logo a {
+    display: block;
+}
+
+.head-body .headline,
+.header .headline {
+    font-size: 18px;
+    color: #666;
+    float: left;
+    margin: 24px 0 0 10px;
+}
+
+.head-body .headline {
+    margin-top: 22px;
+}
+
+.head-body .headline span.page-name,
+.header .headline span.page-name {
+    font-weight: bold;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.head-body .headline span.head-divide,
+.header .headline span.head-divide {
+    vertical-align: middle;
+}
+
+.header .headNav {
+    float: right;
+    margin-top: 30px;
+}
+
+.header .headNav li {
+    float: left;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.header .headNav li a {
+    color: #666;
+}
+
+.simple-foot-wrap {
+    width: 100%;
+    padding: 30px 0 40px;
+    border-top: 1px solid #d9d9d9;
+}
+
+.simple-foot-wrap .footer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.simple-foot-wrap .phoneNum {
+    float: left;
+    height: 33px;
+    margin: 10px 10px 0 100px;
+    padding: 10px 0 0 30px;
+    background: url("../images/foot-phone-num.png") no-repeat 0 0;
+}
+
+.simple-foot-wrap .phoneNum .num {
+    color: #1d2088;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.simple-foot-wrap .copyright {
+    float: left;
+    color: #666;
+    line-height: 20px;
+    padding-left: 20px;
+    text-align: left;
+}

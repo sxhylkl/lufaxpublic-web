@@ -1,0 +1,222 @@
+.lufax-footer {
+    min-width: 1170px;
+    height: 285px;
+    background-color: #f6f6f6;
+    border-top: 1px solid #e1dddd;
+}
+
+.lufax-footer .foot-body {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.lufax-footer .foot-body .foot-info {
+    float: left;
+    padding-top: 30px;
+    height: 170px;
+    padding-left: 90px;
+    background: url("img/icon-foot.png") 1000px 1000px no-repeat;
+}
+
+.lufax-footer .foot-body .foot-info.about-lufax{
+    width: 110px;
+    background-position: -325px -315px;
+}
+.lufax-footer .foot-body .foot-info.help-center{
+    width: 100px;
+    background-position: -243px -394px;
+}
+.lufax-footer .foot-body .foot-info.safe-lufax {
+    width: 110px;
+    background-position: -150px -474px;
+}
+.lufax-footer .foot-body .foot-info.border-left{
+    background-position: -398px -745px;
+}
+.lufax-footer .foot-body .foot-info.app-download{
+    width: 270px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.lufax-footer .foot-body .foot-info.app-download .webchat.wl{
+    float: left;
+}
+.lufax-footer .foot-body .foot-info.app-download .webchat.wr{
+    float: right;
+}
+
+.lufax-footer .foot-body .foot-info.cooperate{
+    width: 240px;
+    padding: 30px 10px 0 0;
+    text-align: right;
+    overflow: hidden;
+}
+
+.lufax-footer .foot-body .foot-info .title,
+.lufax-footer .foot-body .foot-info .title a{
+    font-size: 12px;
+    color: #666;
+}
+
+.lufax-footer .foot-body .foot-info .title{
+    margin-top: 5px;
+}
+
+.lufax-footer .foot-body .foot-info .title a{
+    display: inline-block;
+}
+
+.lufax-footer .foot-body .foot-info .item a{
+    color: #999;
+    line-height: 2;
+}
+
+.lufax-footer .foot-body .foot-info.app-download .item{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    background: url("img/icon-foot.png") 0 0 no-repeat;
+}
+
+.lufax-footer .foot-body .foot-info.app-download .title{
+    font-weight: normal;
+}
+
+.lufax-footer .foot-body .foot-info.app-download .wr .item{
+    background-position: 0 -1086px;
+}
+.lufax-footer .foot-body .foot-info .icon-pingan-logo {
+    background: url("img/icon-foot.png") -137px -743px no-repeat;
+    width: 207px;
+    height: 18px;
+    display: inline-block;
+}
+
+.lufax-footer .foot-body .foot-info.cooperate .service-phone-title{
+    background: url("img/icon-foot.png") no-repeat 99px -586px;
+    color: #999;
+}
+
+.lufax-footer .foot-body .foot-info.cooperate .service-phone-num{
+    font-size: 24px;
+    font-weight: bold;
+    color: #999;
+    margin: 6px 0;
+}
+
+.lufax-footer .foot-body .foot-info.cooperate .service-phone-time{
+    color: #999;
+}
+
+.lufax-footer .foot-body .foot-info.cooperate .select-box{
+    position: relative;
+    cursor: pointer;
+    width: 156px;
+    height: 22px;
+    line-height: 22px;
+    margin: 10px 0 20px 76px;
+    text-align: left;
+    border: 1px solid #a3a3a3;
+    color: #555;
+    padding: 0 0 0 6px;
+    background: url("img/icon-foot.png") -206px -931px no-repeat;
+}
+
+.lufax-footer .foot-body .foot-info.cooperate .select-box-list {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 162px;
+    left: -1px;
+    top: 22px;
+    display: none;
+}
+
+.lufax-footer .foot-body .select-box-list li a {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 6px;
+    text-align: left;
+    color: #333;
+}
+
+.lufax-footer .foot-body .select-box-list li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #d0d0d0;
+}
+
+.lufax-footer .foot-body .copyright-info {
+    clear: both;
+    margin-left: 20px;
+}
+
+.lufax-footer .foot-body .copyright-info .copyright {
+    float: left;
+    width: 560px;
+    color: #666;
+    line-height: 20px;
+}
+.lufax-footer .foot-body .site-certificate-wrap{
+    float: left;
+    margin: 15px 0 0 30px;
+}
+.lufax-footer .foot-body .trust-site {
+    display: inline-block;
+    width: 100px;
+    height: 37px;
+    background: url(img/icon-foot.png) 0 -743px no-repeat;
+}
+
+.lufax-footer .foot-body .IC-network-supervisor {
+    display: inline-block;
+    margin-left: 30px;
+    width: 30px;
+    height: 40px;
+    background: url(img/icon-foot.png) -105px -743px no-repeat;
+}
+
+.lufax-footer .foot-body .trust-site:hover,
+.lufax-footer .foot-body .IC-network-supervisor:hover {
+    text-decoration: none;
+}
+
+/*----------------------------------------------division--------------------------------------------------*/
+
+/*简版页尾---begin*/
+.lufax-footer.simple-foot {
+    border-top: 1px solid #D9D9D9;
+    padding: 30px 0 40px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+.lufax-footer.simple-foot .footer {
+    margin: 0 auto;
+    width: 960px;
+}
+.lufax-footer.simple-foot .phoneNum {
+    background: url(img/foot-phone-num.png) no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 33px;
+    margin: 10px 10px 0 100px;
+    padding: 10px 0 0 30px;
+}
+.lufax-footer.simple-foot .phoneNum .num {
+    color: #1D2088;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.lufax-footer.simple-foot .copyright {
+    color: #666666;
+    float: left;
+    line-height: 20px;
+    padding-left: 20px;
+    text-align: left;
+}
+/*简版页尾---end*/

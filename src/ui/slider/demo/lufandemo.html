@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="charset=utf-8">
+	<title>FlexSlider 2</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+  <!-- Demo CSS -->
+	<link rel="stylesheet" href="demo.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../flexslider.css" type="text/css" media="screen" />
+
+</head>
+<body class="loading">
+
+  <div id="container" class="cf">
+	<div id="main" role="main">
+      <section class="slider">
+        <h1>original setting</h1>
+        <div class="flexslider" id="flexslider1" style="width: 400px;">
+          <ul class="slides">
+            <li>
+  	    	    <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/kitchen_adventurer_lemon.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/kitchen_adventurer_donut.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/kitchen_adventurer_caramel.jpg" />
+  	    		</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="slider">
+        <h1>self definition setting</h1>
+        <div class="flexslider" id="flexslider2" style="width: 400px;">
+          <ul class="slides">
+            <li>
+              <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+              <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+              <img src="images/kitchen_adventurer_donut.jpg" />
+            </li>
+            <li>
+              <img src="images/kitchen_adventurer_caramel.jpg" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="nav-for-lufax">
+        <div class="nav-container" style="width:400px;height: 50px;">
+          <span class="nav-item"> &nbsp </span>
+          <span class="nav-item"> &nbsp </span>
+          <span class="nav-item"> &nbsp </span>
+          <span class="nav-item"> &nbsp </span>
+        </div>
+      </section>
+
+      <section class="direction-for-lufax" style="margin-left: 180px">
+        <a class="lufax-prev" href="#">pre</a>
+        <a class="lufax-next" href="#" style="margin-left: 150px;">next</a>
+      </section>
+    </div>
+
+  </div>
+
+  <!-- jQuery -->
+   <script src="../../../lib/jquery-1.7.2.min.js"></script>
+   
+  <!-- FlexSlider -->
+  <script defer src="../jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('#flexslider1').flexslider({
+        animation: "slide",
+        slideshowSpeed: 2000,    
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+
+      $('#flexslider2').flexslider({
+        animation: "slide",
+        slideshowSpeed: 2000,
+        direction: "vertical",
+
+        // 自定义左右翻页按钮
+        prevContainer: $(".lufax-prev"),
+        nextContainer: $(".lufax-next"),
+        disableState: "direct-disable-state",
+
+        animationLoop: false,
+        
+        controlsContainer: $(".nav-for-lufax"),
+        //设置自定义的nav, 需要设置自己的flex-active
+        manualControls: $(".nav-container span")
+      });
+    });
+  </script>
+
+</body>
+</html>

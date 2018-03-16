@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>top - Lufax FE demo</title>
+    <link rel="stylesheet" type="text/css" href="http://static.lufaxcdn.com/config/css/main_1018.css"/>
+    <link rel="stylesheet" type="text/css" href="top.css"/>
+</head>
+<body>
+<div class="main-wrap" style="background-color:gray">
+</div>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../../lufax.js"></script>
+<script type="text/javascript" src="../ui.js"></script>
+<script type="text/javascript" src="top.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var test = '<div>';
+        for (var i = 0; i < 200; i++) {
+            test += '<div style="with:400px; height:50px; background-color:pink">';
+            test += '&nbsp</div>';
+        }
+        test += '</div>';
+        $('.main-wrap').append(test);
+
+        var options = {
+			showMessage: true,
+            showHelp:true,
+			showQuestion: true,
+            showCalc: true
+        }
+        var gotop = new lufax.ui.GoTop(options);
+    });
+</script>
+</body>
+</html>

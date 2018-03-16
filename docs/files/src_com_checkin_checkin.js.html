@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/com/checkin/checkin.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/: Animation.html">: Animation</a></li>
+            
+                <li><a href="../classes/Captcha.html">Captcha</a></li>
+            
+                <li><a href="../classes/Checkin.html">Checkin</a></li>
+            
+                <li><a href="../classes/Cookie.html">Cookie</a></li>
+            
+                <li><a href="../classes/countDown.html">countDown</a></li>
+            
+                <li><a href="../classes/GoTop.html">GoTop</a></li>
+            
+                <li><a href="../classes/limitText.html">limitText</a></li>
+            
+                <li><a href="../classes/loading.html">loading</a></li>
+            
+                <li><a href="../classes/Log.html">Log</a></li>
+            
+                <li><a href="../classes/numberstep.html">numberstep</a></li>
+            
+                <li><a href="../classes/NumFormat.html">NumFormat</a></li>
+            
+                <li><a href="../classes/NumSeparate.html">NumSeparate</a></li>
+            
+                <li><a href="../classes/pageCount.html">pageCount</a></li>
+            
+                <li><a href="../classes/popup.html">popup</a></li>
+            
+                <li><a href="../classes/Tabset.html">Tabset</a></li>
+            
+                <li><a href="../classes/templateMerge.html">templateMerge</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/com.html">com</a></li>
+            
+                <li><a href="../modules/lufax.html">lufax</a></li>
+            
+                <li><a href="../modules/lufax
+author: fangxiao.html">lufax
+author: fangxiao</a></li>
+            
+                <li><a href="../modules/ui.html">ui</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src/com/checkin/checkin.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * name: sign in component
+ * depends: jquery
+ * author: huangjunyan
+ * date: 2014/07/22
+ */
+!function (window) {
+
+    function Checkin(container, options) {
+        var me = this;
+        me.container = container;
+        me.options = options || {};
+        me.beforeTxt = &#x27;签到赚积分&#x27;;
+        me.afterTxt = &#x27;今日已签到&#x27;;
+        $.extend(me, me.options);
+    }
+
+    Checkin.prototype = {
+        template: &#x27;&lt;a href=&quot;javascript:void(0);&quot; hidefocus=&quot;&quot; id=&quot;btn-sign&quot; class=&quot;!${cls} btn-sign&quot;&gt;!${txt}&lt;/a&gt;&#x27;,
+        /**
+         * 初始化方法：渲染样式绑定事件
+         *@method init
+         *@example lufax.SignIn.int();
+         */
+        init: function () {
+            var me = this,
+                beforeTxt = me.beforeTxt,
+                afterTxt = me.afterTxt,
+                url = {
+                    isUserSignIn: &#x27;https://points.&#x27; + location.hostname.split(&quot;.&quot;).slice(location.hostname.split(&quot;.&quot;).length-2).join(&quot;.&quot;) + &#x27;/points/service/points/is-user-sign-in?jsoncallback=?&#x27;,
+                    iframeSrc: &#x27;//points.lufax.com/points/public/checkin&#x27;
+                };
+            $.getJSON(url.isUserSignIn, function (data) {
+                if (data.result == &quot;02&quot;) {
+                    me._bindEvent(beforeTxt, function () {
+                        location.href = &quot;https://user.&quot; + location.hostname.split(&quot;.&quot;).slice(location.hostname.split(&quot;.&quot;).length-2).join(&quot;.&quot;) + &quot;/user/login?returnPostURL=&quot; + encodeURIComponent(location.href);
+                    });
+                } else if (data.result == &quot;01&quot;) {
+                    me._bindEvent(afterTxt, function () {
+                        me._popup(url.iframeSrc);
+                    });
+                    me._afterChecked();
+                } else if (data.result == &quot;00&quot;) {
+                    me._bindEvent(beforeTxt, function () {
+                        me._popup(url.iframeSrc);
+                    });
+                }
+            });
+        },
+        /**
+         *method private
+         *绑定操作时间
+         */
+        _bindEvent: function (txt, func) {
+            var me = this,
+                container = me.container,
+                cls = me.cls,
+                mergedResult = me.template.replace(&quot;!${cls}&quot;, cls).replace(&quot;!${txt}&quot;, txt);
+            container.html(mergedResult);
+            container.on(&#x27;click&#x27;, &#x27;#btn-sign&#x27;, function () {
+                func();
+            });
+        },
+        _afterChecked: function () {
+            var me = this,
+                afterTxt = me.afterTxt,
+                container = me.container;
+            container.find(&#x27;.btn-sign&#x27;).addClass(&#x27;done&#x27;).text(afterTxt);
+            container.off(&#x27;click&#x27;, &#x27;#btn-sign&#x27;);
+        },
+        /**
+         *method private
+         *弹窗
+         */
+        _popup: function (srcUrl) {
+            var me = this;
+            lufax.popup.blankPopup({
+                content: &#x27;&lt;div class=&quot;modal-sigIn-popup&quot;&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;modal-content&quot;&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;modal-header clearfix&quot;&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;close&quot;&gt;&#x27; +
+                    &#x27;&lt;a class=&quot;modal-close&quot; href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;h4 class=&quot;modal-title&quot;&gt;签到赚积分&lt;/h4&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;modal-body clearfix&quot;&gt;&#x27; +
+                    &#x27;&lt;iframe frameborder=&quot;0&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;270&quot; src=&quot;&#x27; + srcUrl + &#x27;&quot;&gt;&lt;/iframe&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27;,
+                onClose: function () {
+                    window.location.reload();
+                }
+            });
+        }
+    }
+    lufax.com.Checkin = Checkin;
+}(this);
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[DEP]
+    无
+
+[DB1]
+    无
+
+[DB2]
+    无
+
+[NOTIFY]
+    fangxiao483@pingan.com.cn
+    huangjunyan873@pingan.com.cn
+    wangdongqiang334@pingan.com.cn
+    liangwenqi221@pingan.com.cn
+    wangyaqiong553@pingan.com.cn
+
+[ADVICE]
+    无
+
+[STATEMENT]
+    ECR6058 签到完成控件，显示积分商品信息
+    ECR5405 我的账户改版（三期）
+    ECR6998 换卡时银行卡的logo更换

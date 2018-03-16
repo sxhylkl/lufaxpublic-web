@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/ui/tabset/tabset.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/: Animation.html">: Animation</a></li>
+            
+                <li><a href="../classes/Captcha.html">Captcha</a></li>
+            
+                <li><a href="../classes/Checkin.html">Checkin</a></li>
+            
+                <li><a href="../classes/Cookie.html">Cookie</a></li>
+            
+                <li><a href="../classes/countDown.html">countDown</a></li>
+            
+                <li><a href="../classes/GoTop.html">GoTop</a></li>
+            
+                <li><a href="../classes/limitText.html">limitText</a></li>
+            
+                <li><a href="../classes/loading.html">loading</a></li>
+            
+                <li><a href="../classes/Log.html">Log</a></li>
+            
+                <li><a href="../classes/numberstep.html">numberstep</a></li>
+            
+                <li><a href="../classes/NumFormat.html">NumFormat</a></li>
+            
+                <li><a href="../classes/NumSeparate.html">NumSeparate</a></li>
+            
+                <li><a href="../classes/pageCount.html">pageCount</a></li>
+            
+                <li><a href="../classes/popup.html">popup</a></li>
+            
+                <li><a href="../classes/Tabset.html">Tabset</a></li>
+            
+                <li><a href="../classes/templateMerge.html">templateMerge</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/com.html">com</a></li>
+            
+                <li><a href="../modules/lufax.html">lufax</a></li>
+            
+                <li><a href="../modules/lufax
+author: fangxiao.html">lufax
+author: fangxiao</a></li>
+            
+                <li><a href="../modules/ui.html">ui</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src/ui/tabset/tabset.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * tabset 组件
+ * author fangxiao
+ * 功能: click或者hover切换  自动切换 提供二次开发扩展  因为与结构不耦合，所以能支持不同的切换。
+ */
+!function() { 
+	/**
+	 * @class Tabset
+	 *
+	 */
+	function TabSet(titles,contents, options) {
+		var me = this;
+		me.titles = titles;
+		me.contents = contents || [];
+		me.options = options || {};
+		$.extend(me, me.options);
+		//me.defaultTitle = me.defaultTitle || me.titles.first();
+		me.currentClass = me.currentClass || &quot;tabs-curr&quot;;
+		me.eventType = me.eventType || &quot;mouseover&quot;;
+		me.index = me.index || 0;
+		me.time = me.time || 5000;
+		me.isAbleChange = true;
+	}
+	
+	TabSet.prototype._setTab = function(title,content) {
+		var me = this;
+		title.addClass(me.currentClass);
+		title.show();
+		content.show();
+		if(me.lazyload &amp;&amp; content.attr(&quot;lazyload&quot;) != &quot;ok&quot;) {
+			var imgs = content.find(&quot;img&quot;),
+				iframe = content.find(&quot;iframe&quot;);
+			imgs.each(function(){
+				$(this).attr(&quot;src&quot;, $(this).attr(&quot;_src&quot;));
+			});
+			iframe.attr(&quot;src&quot;, $(this).attr(&quot;_src&quot;));
+			content.attr(&quot;lazyload&quot;, &quot;ok&quot;);
+		}
+		if(me.mores) {
+			me.mores.each(function(){
+				$(this).hide();
+			});
+			me.mores.eq(me.index).show();
+		}
+	}
+	
+	
+	TabSet.prototype._regEvent = function() {
+		var me = this;
+		(me.titles[me.eventType])(function() {
+			var content = null;
+			if(me.contents.length &gt; 0) {
+				content = me.contents.eq(me.titles.index(this));
+			}
+			
+			me._selectTab($(this),content);
+			me.isAbleChange = false;
+			
+		});
+
+		me.titles.mouseout(function() {
+			me.isAbleChange = true;	
+		});
+
+
+	}
+
+	TabSet.prototype.init =function() {
+		var me = this;
+		me._regEvent();
+		if(me.isAuto) {
+			me.auto();	
+		}
+		if(me.index&gt;0) {
+			me.selectByIndex(me.index);
+		}
+	}
+
+	TabSet.prototype.selectByIndex = function(index) {
+		var	me = this,
+			title = me.titles.eq(index),
+			content = null;
+		if(index &gt;= 0 &amp;&amp; index &lt; me.titles.length) {
+			me.contents.length &gt; 0  &amp;&amp; (content = me.contents.eq(index));
+			me._selectTab(title,content);
+		}
+	}
+	
+	
+	TabSet.prototype.next = function() {
+		var me = this;
+		me.selectByIndex(me.index + 1);
+	}
+
+	
+	TabSet.prototype.prev = function() {
+		var me = this;
+		me.selectByIndex(me.index - 1);
+	}
+	
+	TabSet.prototype.auto = function() {
+		var me = this;
+		window.setTimeout(function(){
+			me.autoId = window.setInterval(function() {
+				if(me.isAbleChange) {
+					me.next();
+					if(me.index == (me.titles.length-1)){
+						me.index = -1;	
+					}
+				}	
+			}, me.time);		
+		},me.time);
+	}
+
+	
+	
+	
+	TabSet.prototype._selectTab = function(title,content) {
+		var me = this;
+		me.titles.each(function() {
+			$(this).removeClass(me.currentClass);
+		});
+		me.contents.each(function() {
+			$(this).hide();
+		});
+		me.index = me.titles.index(title);
+		me._setTab(title, content);
+
+		me.select &amp;&amp; me.select({title:title,content:content,index:me.index});
+	}
+	
+	lufax.ui.TabSet = TabSet;
+}();
+
+
+
+
+
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

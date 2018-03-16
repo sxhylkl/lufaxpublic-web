@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>激活路金币iframe - 平安陆金所</title>
+    <link rel="stylesheet" type="text/css" href="https://static.lufaxcdn.com/lufax-public/lufax-public/20150204.lufax-public.min.css" />
+    <link rel="stylesheet" type="text/css" href="iframe.css" />
+    <script type="text/javascript">document.domain = 'lufax.com';</script>
+</head>
+
+<body>
+
+<!--输入激活码-->
+<div class="modal-body active-input">
+    <p class="message">通过陆金所宣传单、其他合作网站等获得激活码，输入后可激活一张陆金币。</p>
+    <form class="form-horizontal">
+        <span class="input-wrap input-xlarge"><input class="input" type="text" value="陆金币激活码"></span>
+        <input id="defaultFocus" type="hidden"/>
+        <a class="btns btn-info btn-large" id="btn-active" target="_self" href="javascript:;">激活</a>
+    </form>
+    <p class="fail-reason">本次待激活的陆金币为Y，超出了本月剩余可激活额度，无法激活。</p>
+    <div class="prompting_com">
+        <div class="head clearfix">
+            <i class="iconV2 prompt-icon">&nbsp;</i>
+            <p class="operationTitle">激活规则：</p>
+        </div>
+        <div class="content">1.请在有效期内激活陆金币，过期无法激活；</div>
+        <div class="content">2.每人每月累计可以激活 M 陆金币。</div>
+    </div>
+</div>
+
+<!--成功激活-->
+<!--<div class="modal-body activated">
+    <span class="message"><i class="icon correctCircleIcon">&nbsp;</i>您已成功激活一张编号为<span class="active-code">LOWJRJKFDO-29450324242</span>的陆金币。</span>
+    &lt;!&ndash;<p class="LC-limited">因使用规则的限制，不能用于本次投资。</p>&ndash;&gt;
+    <table class="table-rules">
+        <tr>
+            <td class="table-name">使用规则</td>
+            <td class="table-value">投资10000元及以上抵扣100元；<br/>不限产品。</td>
+        </tr>
+        <tr>
+            <td class="table-name">有效期</td>
+            <td class="table-value">2014-4-8至2014-4-19</td>
+        </tr>
+    </table>
+</div>
+<div class="modal-footer">
+    <a class="btns btn-info close" target="_self" href="javascript:;">确定</a>
+</div>-->
+
+
+<!--base lib begin-->
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/lufax.lib.js"></script>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/env.config.js"></script>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/template.js"></script>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/layout.p2p.js"></script>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/form.js"></script>
+<!--base lib end-->
+<script type="text/javascript">
+    $(function(){
+        /*回调设置iframe高度*/
+        parent.ActivationLufaxCoinAsync({
+            result:"00",
+            height:300
+        });
+
+        /*回调关闭iframe*/
+        $(".close").click(function(){
+            parent.ActivationLufaxCoinAsync({
+                result:"01"
+            });
+        });
+
+        /*回调，返回激活码*/
+        $("#btn-active").click(function(){
+            parent.ActivationLufaxCoinAsync({
+                result:"02",
+                LufaCoin_code:"123abc"
+            });
+        });
+
+        /*输入框PlaceHolder*/
+        inputPlaceHolder();
+
+        /*输入框报错样式*/
+        var isInputError = true;
+        $("#btn-active").click(function(){
+            error_input(isInputError);
+        });
+        $(".input").focusin(function(){
+            isInputError = false;
+            error_input(isInputError);
+        });
+        $(".input").focusout(function(){
+            var value = $(this).val();
+            if(value == '' || value == $(this).attr("data-default-val")){
+                isInputError = true;
+            }
+        });
+    });
+
+    function error_input(showError){
+        $(".input").each(function(){
+            if(showError){
+                $(this).parent(".input-wrap").addClass("error").siblings(".warning-icon").removeClass("hidden");
+            }else{
+                $(this).parent(".input-wrap").removeClass("error").siblings(".warning-icon").addClass("hidden");
+            }
+        });
+    }
+
+    function inputPlaceHolder(targetDom){
+        var inputs = targetDom ? $(targetDom) : $("input");
+        for(var i=0;i<inputs.length;i++){
+            if(inputs[i].type != "text"){return;}
+
+            inputs[i].setAttribute("data-default-val",inputs[i].defaultValue);
+            inputs[i].onfocus = function() {
+                if(this.value == this.getAttribute('data-default-val')) {
+                    this.value = '';
+                } else {
+                    return false;
+                }
+            }
+            inputs[i].onblur = function() {
+                if(this.value == '') {
+                    this.value = this.getAttribute('data-default-val');
+                } else {
+                    return false;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

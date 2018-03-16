@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>countdown - Lufax FE demo</title>
+    <link rel="stylesheet" type="text/css" href="https://static.lufaxcdn.com/config/css/main_1018.css"/>
+</head>
+<body>
+<div class="main-wrap">
+
+</div>
+
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../../lufax.js"></script>
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="numFormat.js"></script>
+<script type="text/javascript">
+    $(function(){
+        console.log(lufax.NumFormat.convertCurrency("65444"))
+        console.log(lufax.NumFormat.intFormatWithoutCurrency("65444"))
+        console.log(lufax.NumFormat.numberFormatTenThousand("65444"))
+    });
+</script>
+</body>
+</html>

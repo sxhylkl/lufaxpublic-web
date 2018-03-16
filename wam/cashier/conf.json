@@ -1,0 +1,22 @@
+{
+    "header": [
+        true,
+        "common/header-simpleTpl.vm"
+    ],
+    "footer": [
+        true,
+        "common/footer-simpleTpl.vm"
+    ],
+    "lufaxPublicCss": [
+        true,
+        "common/cssTpl.vm"
+    ],
+    "lufaxPublicJs": [
+        true,
+        "common/jsTpl.vm"
+    ],
+    "statistic": [
+        true,
+        "common/statisticTpl.vm"
+    ]
+}

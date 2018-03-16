@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html ng-app>
+<head>
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/angular.js/1.3.0-beta.8/angular-csp.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.lufaxcdn.com/lufax-public/lufax-public/20150204.lufax-public.min.css"/>
+    <style type="text/css">
+        body{
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .block{
+            background-color: #e7f9d2;
+            margin:20px;
+            padding: 20px;
+        }
+        .border-block{
+            margin: 10px;
+            border: 1px dashed #E6551D;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h2>data-sk和data-sk-type测试：</h2>
+        <p><a href="javascript:;" data-sk="我是关键字">只有data-sk的情况</a></p>
+        <p><a href="javascript:;" data-sk="关键字" data-sk-type="还有指定类型">有data-sk和data-type</a></p>
+    </div>
+
+    <div class="block">
+        <h2>referrer测试：</h2>
+        <p><a href="javascript:;">javascript:;</a></p>
+        <p><a href="javascript:void(0)">javascript:void(0)</a></p>
+        <p><a href="javascript:void(0);">javascript:void(0);</a></p>
+        <p class="no_href"><a>no href</a></p>
+        <p><a href="fdsa#" target="_blank">含#</a></p>
+        <p><a href="#fdsa">当前页 含hash</a></p>
+        <p><a href="http://www.lufax.com#fdsa" target="_blank">新页面 含hash：http://www.lufax.com#fdsa</a></p>
+        <p><a href="?lufax_ref=123">当前页 含lufax_ref=</a></p>
+        <p><a href="http://www.baidu.com" target="_blank">新页面 含lufax_ref=</a></p>
+        <p><a href="?flag=123">当前页 含search</a></p>
+        <p><a href="http://www.baidu.com?flag=123" target="_blank">新页面 含search</a></p>
+        <p><a href="?flag=123#abcd">当前页 含search和hash</a></p>
+        <p><a href="http://www.baidu.com?flag=123#abcd" target="_blank">新页面 含search和hash</a></p>
+        <p><a href="http://www.baidu.com" target="_blank">http://www.baidu.com</a></p>
+    </div>
+
+    <div class="block">
+        <h2>data-sk-area测试：</h2>
+        <ul data-sk-area="我是关键字1" class="border-block">
+            <li><a href="javascript:;">统计区域内容1: 我是关键字1</a></li>
+            <li><a href="javascript:;">统计区域内容2</a></li>
+            <li><a href="javascript:;">统计区域内容3</a></li>
+            <li><a href="javascript:;">统计区域内容...</a></li>
+        </ul>
+        <div data-sk-area="我是关键字2" class="border-block">
+            <p><a href="javascript:;">统计区域内容1: 我是关键字2</a></p>
+            <p><a href="javascript:;">统计区域内容2</a></p>
+        </div>
+        <p><a href="javascript:;" class="btns sk-area-trigger">投 资</a></p>
+    </div>
+
+<script type="text/javascript" src="https://static.lufaxcdn.com/lufax-public/jquery/20140717.jquery.min.js"></script>
+<script type="text/javascript" src="http://static.lufaxcdn.com/lufax-public/lufax-public/20150204.lufax-public.min.js"></script>
+<!--<script type="text/javascript" src="http://static.lufaxcdn.com/lufax-public/statistic/20141111.statistic.min.js"></script>-->
+<script type="text/javascript" src="../../lufax.js"></script>
+<script type="text/javascript" src="../../util/util.js"></script>
+<script type="text/javascript" src="../../util/statistics/statistic.js"></script>
+</body>
+</html>

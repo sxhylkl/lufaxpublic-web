@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>加载中</title>
+    <link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/>
+    <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+</head>
+
+<body style="padding:20px;">
+
+    <div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 加载中</div>
+    <div class="tabs">
+        <a href="javascript:void(0)"><b>原型文档</b></a>
+        <a href="javascript:void(0)"><b>视觉稿</b></a>
+        <a href="javascript:void(0)"><b>前端代码</b></a>
+        <a href="javascript:void(0)"><b>必要样式</b></a>
+        <a href="javascript:void(0)"><b>必要脚本</b></a>
+        <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+    </div>
+    <div class="tab_cons">
+        <div class="tab_con">
+            按钮控件-原型文档
+        </div>
+        <div class="tab_con">
+            <img src="../widget_resource/images/visual_image/界面控件.png" />
+        </div>
+        <div class="tab_con">
+            <pre></pre> </div>
+
+        <div class="tab_con">	
+            <a href="#">http://static.dev.lufax.com/config/css/main_1018.css</a>
+        </div>
+        <div class="tab_con">
+            无
+        </div>
+        <div class="tab_con current">
+            <h2>加载中</h2>
+            <br>
+            <div id="test-common1" style="width:400px; height:200px; border:1px solid #cdcdcd;background-color:#f5f5f5;">
+                <h2>常规loading:200x90</h2>
+                <p>使用方法：</p>
+                <p><strong>出现</strong> tool.loading("domId");&emsp;&emsp;<strong>移除</strong> tool.loadingEnd("domId");</p>
+            </div>
+            <br>
+            <div id="test-small" class="com_loading_small" style="width:400px; height:200px; border:1px solid #cdcdcd;background-color:#f9f9f9;">
+                <h2>局部特殊小loading</h2>
+                <p>使用方法：</p>
+                <p><strong>出现</strong> tool.loading("domId",true);&emsp;&emsp;<strong>移除</strong> tool.loadingEnd("domId",true);</p>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/lufax.lib.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $(".tabs>a").each(function(i){
+            $(this).click(function(){
+                $(this).addClass("current").siblings().removeClass("current")
+                .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+            })
+
+        });
+        tool.loading("test-common1");
+        tool.loading("test-small",true);
+    });
+</script>
+</body>
+</html>
+ 

@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/staticTemp/js/lib/lufax.lib.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/: Animation.html">: Animation</a></li>
+            
+                <li><a href="../classes/Captcha.html">Captcha</a></li>
+            
+                <li><a href="../classes/Checkin.html">Checkin</a></li>
+            
+                <li><a href="../classes/Cookie.html">Cookie</a></li>
+            
+                <li><a href="../classes/countDown.html">countDown</a></li>
+            
+                <li><a href="../classes/GoTop.html">GoTop</a></li>
+            
+                <li><a href="../classes/limitText.html">limitText</a></li>
+            
+                <li><a href="../classes/loading.html">loading</a></li>
+            
+                <li><a href="../classes/Log.html">Log</a></li>
+            
+                <li><a href="../classes/numberstep.html">numberstep</a></li>
+            
+                <li><a href="../classes/NumFormat.html">NumFormat</a></li>
+            
+                <li><a href="../classes/NumSeparate.html">NumSeparate</a></li>
+            
+                <li><a href="../classes/pageCount.html">pageCount</a></li>
+            
+                <li><a href="../classes/popup.html">popup</a></li>
+            
+                <li><a href="../classes/Tabset.html">Tabset</a></li>
+            
+                <li><a href="../classes/templateMerge.html">templateMerge</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/com.html">com</a></li>
+            
+                <li><a href="../modules/lufax.html">lufax</a></li>
+            
+                <li><a href="../modules/lufax
+author: fangxiao.html">lufax
+author: fangxiao</a></li>
+            
+                <li><a href="../modules/ui.html">ui</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src/staticTemp/js/lib/lufax.lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+var LufaxSite = LufaxSite || {
+    require:function (libraryName, rootPath, callback) {
+        var ScriptRootPath;
+        var root = rootPath ? rootPath : ScriptRootPath;
+        var scripts = document.getElementsByTagName(&quot;script&quot;);
+        var libraryPath = root + libraryName + &quot;.js&quot;;
+        var loaded = false;
+        for (var elm in scripts) {
+            if (scripts[elm].src &amp;&amp; scripts[elm].src == libraryPath) {
+                loaded = true;
+                break;
+            }
+        }
+
+        var handler = function () {
+            if (callback &amp;&amp; &#x27;function&#x27; == typeof callback) {
+                // 把是否已经装在传给回调
+                callback();
+            }
+        }
+        // 如果已经装在，只执行回调函数
+        if (loaded) {
+            handler();
+            return;
+        }
+        $.ajax(
+            {
+                url:libraryPath,
+                dataType:&quot;script&quot;,
+                success:handler
+            }
+        );
+
+    }
+};
+
+LufaxSite.PageData = LufaxSite.PageData || {};
+
+LufaxSite.pageInit = function (config) {
+    var cfg = {
+        type:config.type,
+        viewId:config.view,
+        dataRef:config.data
+    };
+    var tryTimes = 5;
+
+    function fnLoad() {
+        tryTimes--;
+        if (tryTimes &lt;= 0) {
+            return;
+        }
+        LufaxSite.require(&#x27;/config/js/&#x27; + cfg.dataRef, LufaxSite.Envs.evn[&quot;static&quot;], function () {
+            var handler = eval(LufaxSite.pageInitTypes[cfg.type]);
+            handler(cfg, LufaxSite.PageData[cfg.dataRef]);
+            if (!LufaxSite.PageData[cfg.dataRef]) {
+                setTimeout(fnLoad, 10);
+            }
+        });
+    }
+
+    fnLoad();
+};
+
+LufaxSite.pageInitTypes = {
+    news:function (cfg, data) {
+        function wrap(data) {
+            var path = LufaxSite.Envs.evn.site;
+            if (!data) {
+                return;
+            }
+            if (!data.titles) {
+                return;
+            }
+            var content = [];
+            for (var i = 0; i &lt; data.titles.length; i++) {
+                var title = data.titles[i].title;
+                var location = data.titles[i].location;
+                if (cfg.viewId == &quot;content_list_faq&quot;) {
+                    if (i &lt; data.titles.length - 1) {
+                        content.push(&#x27;&lt;div class=&quot;snotice green_icon png&quot;&gt;&lt;a href=&quot;&#x27; + path + location + &#x27;&quot; title=&quot;&#x27; + title + &#x27;&quot; target=&quot;_blank&quot;&gt;&#x27; + title + &#x27;&lt;/a&gt;&lt;/div&gt;&#x27;);
+                    } else {
+                        content.push(&#x27;&lt;div class=&quot;snotice green_icon orange png&quot;&gt;&lt;a href=&quot;&#x27; + path + location + &#x27;&quot; title=&quot;&#x27; + title + &#x27;&quot; target=&quot;_blank&quot;&gt;&#x27; + title + &#x27;&lt;/a&gt;&lt;/div&gt;&#x27;);
+                    }
+                } else {
+                    content.push(&#x27;&lt;div class=&quot;snotice green_icon png&quot;&gt;&lt;a href=&quot;&#x27; + path + location + &#x27;&quot; title=&quot;&#x27; + title + &#x27;&quot; target=&quot;_blank&quot;&gt;&#x27; + title + &#x27;&lt;/a&gt;&lt;/div&gt;&#x27;);
+                }
+            }
+            return content.join(&quot;&quot;);
+        }
+
+        var wrapResult = wrap(data);
+        $(&#x27;#&#x27; + cfg.viewId).html(wrapResult);
+
+        $(&quot;#content_list .snotice:first a&quot;).css(&quot;color&quot;, &quot;#e6551d&quot;); //TODO delete this line where there is no up
+    },
+
+    help:function (cfg, data) {
+        function wrap(data) {
+            var path = LufaxSite.Envs.evn.site;
+            if (!data) {
+                return;
+            }
+            if (!data.titles) {
+                return;
+            }
+            var content = [];
+            for (var i = 0; i &lt; data.titles.length; i++) {
+                var title = data.titles[i].title;
+                var location = data.titles[i].location;
+                if (cfg.viewId == &quot;content_list_faq&quot;) {
+                    if (i &lt; data.titles.length - 1) {
+                        content.push(&#x27;&lt;div class=&quot;snotice png&quot;&gt;&lt;a href=&quot;&#x27; + path + location + &#x27;&quot; title=&quot;&#x27; + title + &#x27;&quot; target=&quot;_blank&quot;&gt;&#x27; + title + &#x27;&lt;/a&gt;&lt;/div&gt;&#x27;);
+                    } else {
+                        content.push(&#x27;&lt;div class=&quot;snotice orange png&quot;&gt;&lt;a href=&quot;&#x27; + path + location + &#x27;&quot; title=&quot;&#x27; + title + &#x27;&quot; target=&quot;_blank&quot;&gt;&#x27; + title + &#x27;&lt;/a&gt;&lt;/div&gt;&#x27;);
+                    }
+                } else {
+                    content.push(&#x27;&lt;div class=&quot;snotice png&quot;&gt;&lt;a href=&quot;&#x27; + path + location + &#x27;&quot; title=&quot;&#x27; + title + &#x27;&quot; target=&quot;_blank&quot;&gt;&#x27; + title + &#x27;&lt;/a&gt;&lt;/div&gt;&#x27;);
+                }
+            }
+            return content.join(&quot;&quot;);
+        }
+
+        var wrapResult = wrap(data);
+        $(&#x27;#&#x27; + cfg.viewId).html(wrapResult);
+    },
+
+    newHelp:function (cfg, data) {
+        function wrap(data) {
+            var path = LufaxSite.Envs.evn.site;
+            if (!data) {
+                return;
+            }
+            if (!data.titles) {
+                return;
+            }
+            var content = [];
+            for (var i = 0; i &lt; data.titles.length; i++) {
+                var title = data.titles[i].title;
+                var location = data.titles[i].location;
+                content.push(&#x27;&lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a href=&quot;&#x27; + path + location + &#x27;&quot; title=&quot;&#x27; + title + &#x27;&quot; target=&quot;_blank&quot;&gt;&#x27; + title + &#x27;&lt;/a&gt;&lt;/li&gt;&#x27;);
+            }
+            return content.join(&quot;&quot;);
+        }
+
+        var wrapResult = wrap(data);
+        $(&#x27;#&#x27; + cfg.viewId).html(wrapResult);
+    },
+
+    contents:function (cfg, data) {
+        $(&#x27;#&#x27; + cfg.viewId).html(data);
+    }
+};
+
+var LufaxUtility = (function () {
+
+    function percentageFormat(num) {
+
+        if (num === 0 || num === &quot;0&quot;) {
+            return &quot;0.00%&quot;
+        }
+
+        if (!num || isNaN(num)) {
+            return &quot;&quot;;
+        }
+
+        num = parseFloat(num);
+        num = Math.round(num * 10000) / 100 + &quot;&quot;;
+
+        if (num.indexOf(&quot;.&quot;) == -1) {
+            num += &quot;.00&quot;;
+        } else {
+            num += &quot;00&quot;
+        }
+        var numArr = num.split(&quot;.&quot;);
+        var floatNumber = numArr[1].substring(0, 2);
+
+        return numArr[0] + &quot;.&quot; + floatNumber + &quot;%&quot;;
+
+    }
+
+    function withoutPercentageFormat(num) {
+
+        if (num === 0 || num === &quot;0&quot;) {
+            return &quot;0.00%&quot;
+        }
+
+        if (!num || isNaN(num)) {
+            return &quot;&quot;;
+        }
+
+        num = parseFloat(num);
+        num = Math.round(num * 10000) / 100 + &quot;&quot;;
+
+        if (num.indexOf(&quot;.&quot;) == -1) {
+            num += &quot;.00&quot;;
+        } else {
+            num += &quot;00&quot;
+        }
+        var numArr = num.split(&quot;.&quot;);
+        var floatNumber = numArr[1].substring(0, 2);
+
+        return numArr[0] + &quot;.&quot; + floatNumber;
+
+    }
+
+    function numberFormat(nStr) {
+        var currency = &quot;￥&quot;;
+        var number = numberFormatWithoutCurrency(nStr);
+        if (number == &#x27;&#x27;) {
+            return number;
+        }
+        return currency + number;
+    }
+
+    function numberFormatWithoutCurrency(nStr) {
+        if (nStr === 0 || nStr === &quot;0&quot;) {
+            return &quot;0.00&quot;;
+        }
+
+        if (!nStr || isNaN(nStr)) {
+            return &quot;&quot;;
+        }
+
+        nStr += &#x27;&#x27;;
+        var x = nStr.split(&#x27;.&#x27;);
+        var x1 = x[0];
+        var x2 = x.length &gt; 1 ? &#x27;.&#x27; + x[1] : &#x27;.00&#x27;;
+        if (x2.length &lt; 3) {
+            x2 += &quot;00&quot;;
+        }
+        x2 = x2.substring(0, 3);
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, &#x27;$1&#x27; + &#x27;,&#x27; + &#x27;$2&#x27;);
+        }
+        return x1 + x2;
+    }
+    function intFormat(nStr) {
+        var currency = &quot;￥&quot;;
+        var number = intFormatWithoutCurrency(nStr);
+        if (number == &#x27;&#x27;) {
+            return number;
+        }
+        return currency + number;
+    }
+    function intFormatWithoutCurrency (nStr) {
+        if (nStr === 0 || nStr === &quot;0&quot;) {
+            return &quot;0&quot;;
+        }
+
+        if (!nStr || isNaN(nStr)) {
+            return &quot;&quot;;
+        }
+
+        nStr += &#x27;&#x27;;
+        var x1 = nStr;
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, &#x27;$1&#x27; + &#x27;,&#x27; + &#x27;$2&#x27;);
+        }
+        return x1;
+    };
+
+    function round(value) {
+        return Math.round(value * 100) / 100;
+    }
+
+    function formatMessage(template, args) {
+        if (!args) return template;
+        return template.replace(/\$\{(.+?)\}/g, function (m, i) {
+            return args[i];
+        });
+    }
+
+    function convertCurrency(currencyDigits, isforbidHint) {
+        //max number
+        var MAXIMUM_NUMBER = 99999999999.99;
+        //Predefine the radix characters and currency symbols for output:
+        var CN_ZERO = &quot;零&quot;;
+        var CN_ONE = &quot;壹&quot;;
+        var CN_TWO = &quot;贰&quot;;
+        var CN_THREE = &quot;叁&quot;;
+        var CN_FOUR = &quot;肆&quot;;
+        var CN_FIVE = &quot;伍&quot;;
+        var CN_SIX = &quot;陆&quot;;
+        var CN_SEVEN = &quot;柒&quot;;
+        var CN_EIGHT = &quot;捌&quot;;
+        var CN_NINE = &quot;玖&quot;;
+        var CN_TEN = &quot;拾&quot;;
+        var CN_HUNDRED = &quot;佰&quot;;
+        var CN_THOUSAND = &quot;仟&quot;;
+        var CN_TEN_THOUSAND = &quot;万&quot;;
+        var CN_HUNDRED_MILLION = &quot;亿&quot;;
+        var CN_SYMBOL = &quot;人民币&quot;;
+        var CN_DOLLAR = &quot;元&quot;;
+        var CN_TEN_CENT = &quot;角&quot;;
+        var CN_CENT = &quot;分&quot;;
+        var CN_INTEGER = &quot;整&quot;;
+
+        // Variables:
+        var integral; // Represent integral part of digit number.
+        var decimal; // Represent decimal part of digit number.
+        var outputCharacters; // The output result.
+        var parts;
+        var digits, radices, bigRadices, decimals;
+        var zeroCount;
+        var i, p, d;
+        var quotient, modulus;
+
+        // Validate input string:
+        currencyDigits = currencyDigits + &quot;&quot;;
+
+        if (currencyDigits == &quot;&quot;) {
+            if (isforbidHint) {
+                return &quot;&quot;;
+            }
+            return &quot;Empty input!&quot;;
+        }
+        if (currencyDigits.match(/[^,.\d]/) != null) {
+            if (isforbidHint) {
+                return &quot;&quot;;
+            }
+            return &quot;Invalid characters in the input string!&quot;;
+        }
+//      if ((currencyDigits).match(/^((\d{1,3}(,\d{3})*(.((\d{3},)*\d{1,3}))?)|(\d+(.\d+)?))$/) == null) {
+        if ((currencyDigits).match(/^((\d{1,3}(,\d{3})*(.\d+)?)|(\d+(.\d+)?))$/) == null) {
+            if (isforbidHint) {
+                return &quot;&quot;;
+            }
+            return &quot;Illegal format of digit number!&quot;;
+        }
+
+        // Normalize the format of input digits:
+        currencyDigits = currencyDigits.replace(/,/g, &quot;&quot;); // Remove comma delimiters.
+        currencyDigits = currencyDigits.replace(/^0+/, &quot;&quot;); // Trim zeros at the beginning.
+        // Assert the number is not greater than the maximum number.
+        if (Number(currencyDigits) &gt; MAXIMUM_NUMBER) {
+            if (isforbidHint) {
+                return &quot;&quot;;
+            }
+            return &quot;Too large a number to convert!&quot;;
+        }
+
+        // hack by wr
+        currencyDigits = parseFloat(currencyDigits);
+        currencyDigits = currencyDigits + &quot;&quot;;
+
+        // Process the coversion from currency digits to characters:
+        // Separate integral and decimal parts before processing coversion:
+        parts = currencyDigits.split(&quot;.&quot;);
+        if (parts.length &gt; 1) {
+            integral = parts[0];
+            decimal = parts[1];
+            // Cut down redundant decimal digits that are after the second.
+            decimal = decimal.substr(0, 2);
+        } else {
+            integral = parts[0];
+            decimal = &quot;&quot;;
+        }
+
+        // Prepare the characters corresponding to the digits:
+        digits = new Array(CN_ZERO, CN_ONE, CN_TWO, CN_THREE, CN_FOUR, CN_FIVE, CN_SIX, CN_SEVEN, CN_EIGHT, CN_NINE);
+        radices = new Array(&quot;&quot;, CN_TEN, CN_HUNDRED, CN_THOUSAND);
+        bigRadices = new Array(&quot;&quot;, CN_TEN_THOUSAND, CN_HUNDRED_MILLION);
+        decimals = new Array(CN_TEN_CENT, CN_CENT);
+        // Start processing:
+        outputCharacters = &quot;&quot;;
+        // Process integral part if it is larger than 0:
+        if (Number(integral) &gt; 0) {
+            zeroCount = 0;
+            for (i = 0; i &lt; integral.length; i++) {
+                p = integral.length - i - 1;
+                d = integral.substr(i, 1);
+                quotient = p / 4;
+                modulus = p % 4;
+                if (d == &quot;0&quot;) {
+                    zeroCount++;
+                } else {
+                    if (zeroCount &gt; 0) {
+                        outputCharacters += digits[0];
+                    }
+                    zeroCount = 0;
+                    outputCharacters += digits[Number(d)] + radices[modulus];
+                }
+                if (modulus == 0 &amp;&amp; zeroCount &lt; 4) {
+                    outputCharacters += bigRadices[quotient];
+                }
+            }
+            outputCharacters += CN_DOLLAR;
+        }
+
+        // Process decimal part if there is:
+        if (decimal != &quot;&quot;) {
+            for (i = 0; i &lt; decimal.length; i++) {
+                d = decimal.substr(i, 1);
+                if (d != &quot;0&quot;) {
+                    outputCharacters += digits[Number(d)] + decimals[i];
+                }
+            }
+        }
+
+        // Confirm and return the final output string:
+        if (outputCharacters == &quot;&quot;) {
+            outputCharacters = CN_ZERO + CN_DOLLAR;
+        }
+        if (decimal == &quot;&quot;) {
+            outputCharacters += CN_INTEGER;
+        }
+        return outputCharacters;
+    }
+
+    function secondsOfTrading(secondsOfTrading) {
+        secondsOfTrading = Number(secondsOfTrading);
+        var remainTime,
+            minutes,
+            hours,
+            seconds;
+
+        if (secondsOfTrading &lt;= 60) {
+            remainTime = secondsOfTrading + &#x27;秒&#x27;;
+
+        } else if (60 &lt; secondsOfTrading &amp;&amp; secondsOfTrading &lt; 3600) {
+            seconds = secondsOfTrading % 60;
+            minutes = Math.floor(secondsOfTrading / 60) % 60;
+            remainTime = minutes + &#x27;分&#x27; + seconds + &#x27;秒&#x27;;
+
+        } else if (3600 &lt;= secondsOfTrading &amp;&amp; secondsOfTrading &lt; 86400) {
+            seconds = secondsOfTrading % 60;
+            minutes = Math.floor(secondsOfTrading / 60) % 60;
+            hours = Math.floor(secondsOfTrading / 60 / 60) % 24;
+            remainTime = hours + &#x27;小时&#x27; + minutes + &#x27;分&#x27; + seconds + &#x27;秒&#x27;;
+
+        } else {
+            remainTime = &#x27;&#x27;;
+
+        }
+        return remainTime;
+    }
+
+    function numberFormatTenThousand(nStr) {
+        if (nStr === 0 || nStr === &quot;0&quot;) {
+            return &quot;0万&quot;;
+        }
+
+        if (!nStr || isNaN(nStr)) {
+            return &quot;&quot;;
+        }
+
+
+        nStr = nStr / 10000;
+        nStr += &#x27;&#x27;;
+        var x = nStr.split(&#x27;.&#x27;)[0];
+        var y = nStr.split(&#x27;.&#x27;)[1];
+        if (y) {
+            y = y.substring(0, 2);
+            return x + &#x27;.&#x27; + y + &#x27;万&#x27;;
+        } else {
+            return x + &#x27;万&#x27;;
+        }
+
+    }
+
+    function progressFormat (num) {
+        if (num === 0 || num === &quot;0&quot;) {
+            return &quot;0%&quot;
+        }
+        if (num &gt; 1 || num &gt; &quot;1&quot;) {
+            return &quot;100%&quot;
+        }
+        if (!num || isNaN(num)) {
+            return &quot;&quot;;
+        }
+        num = parseFloat(num);
+        num = (num * 10000) / 100 + &quot;&quot;;
+        var numArr = num.split(&quot;.&quot;)
+        return numArr[0] + &quot;%&quot;;
+//        if (num.indexOf(&quot;.&quot;) === -1) {
+//            return  num + &quot;%&quot;;
+//        } else {
+//            var numArr = num.split(&quot;.&quot;), secFloatNumber = numArr[1].substring(1, 2), firstFloatNumber = numArr[1].substring(0, 1), floatNumber = numArr[1].substring(0, 2);
+//            if (secFloatNumber === &quot;0&quot;) {
+//                return numArr[0] + &quot;.&quot; + firstFloatNumber + &quot;%&quot;;
+//            } else {
+//                return numArr[0] + &quot;.&quot; + floatNumber + &quot;%&quot;;
+//
+//            }
+//        }
+
+
+    }
+
+    function percentageFormatWithoutZero (num) {
+        if (num === 0 || num === &quot;0&quot;) {
+            return &quot;0%&quot;
+        }
+        if (num &gt; 1 || num &gt; &quot;1&quot;) {
+            return &quot;100%&quot;
+        }
+        if (!num || isNaN(num)) {
+            return &quot;&quot;;
+        }
+        num = parseFloat(num);
+        num = (num * 10000) / 100 + &quot;&quot;;
+        if (num.indexOf(&quot;.&quot;) === -1) {
+            return  num + &quot;%&quot;;
+        } else {
+            var numArr = num.split(&quot;.&quot;), secFloatNumber = numArr[1].substring(1, 2), firstFloatNumber = numArr[1].substring(0, 1), floatNumber = numArr[1].substring(0, 2);
+            if (secFloatNumber === &quot;0&quot;) {
+                return numArr[0] + &quot;.&quot; + firstFloatNumber + &quot;%&quot;;
+            } else {
+                return numArr[0] + &quot;.&quot; + floatNumber + &quot;%&quot;;
+
+            }
+        }
+    }
+
+
+    return {
+        percentageFormat:percentageFormat,
+        percentageFormatWithoutZero:percentageFormatWithoutZero,
+        withoutPercentageFormat:withoutPercentageFormat,
+        numberFormat:numberFormat,
+        numberFormatWithoutCurrency:numberFormatWithoutCurrency,
+        round:round,
+        formatMessage:formatMessage,
+        convertCurrency:convertCurrency,
+        secondsOfTrading:secondsOfTrading,
+        numberFormatTenThousand:numberFormatTenThousand,
+        intFormat:intFormat,
+        intFormatWithoutCurrency:intFormatWithoutCurrency,
+        progressFormat:progressFormat
+    }
+})();
+
+var tool = (function () {
+
+    tip.defaults = {
+        domId:&quot;&quot;,
+        clickDomId:[&quot;&quot;], //TODO clickDomId: [{id: &quot;&quot;, function(){} }, {id: &quot;&quot;, function(){} }]
+        cookieName:&quot;&quot;,
+        date:&quot;2020/1/1&quot;
+    };
+
+//    tool.tip({domId:&quot;&quot;,clickDomId:&quot;&quot;,cookieName:&quot;&quot;});
+
+    function tip(options) {
+        options = $.extend({}, tip.defaults, options || {});
+        var today = new Date();
+        var expireDate = new Date(options.date);
+        if (today.getTime() - expireDate.getTime() &lt; 0) {
+            if (!getCookie(options.cookieName)) {
+                $(&quot;#&quot; + options.domId).show();
+                clickToKnow(options);
+            }
+        }
+    }
+
+    function clickToKnow(options) {
+        $.each(options.clickDomId, function (index, dom) {
+            $(&quot;#&quot; + dom).click(function () {
+                $(&quot;#&quot; + options.domId).hide();
+                if (options.date) {
+                    setCookie(options.cookieName, &quot;true&quot;, options.date);
+                } else {
+                    setCookie(options.cookieName, &quot;true&quot;);
+                }
+            })
+        })
+    }
+
+    function getCookie(cookieName) {
+        if (document.cookie.length &gt; 0) {
+            var c_start = document.cookie.indexOf(cookieName + &quot;=&quot;);
+            if (c_start != -1) {
+                c_start = c_start + cookieName.length + 1;
+                var c_end = document.cookie.indexOf(&quot;;&quot;, c_start);
+                if (c_end == -1) c_end = document.cookie.length;
+                return unescape(document.cookie.substring(c_start, c_end));
+            }
+        }
+        return &quot;&quot;;
+    }
+
+    function setCookie(cookieName, value, date) {
+        if (date) {
+            var exdate = new Date(date);
+            document.cookie = cookieName + &quot;=&quot; + escape(value) + &quot;;expires=&quot; + exdate.toGMTString() + &quot;;domain=.lufax.com;path=/&quot;;
+        } else {
+            document.cookie = cookieName + &quot;=&quot; + escape(value) + &quot;;domain=.lufax.com;path=/&quot;;
+        }
+    }
+
+    function deleteCookie(cookieName) {
+        var date = new Date();
+        date.setTime(date.getTime() - 24 * 60 * 60 * 1000);
+        document.cookie = cookieName + &quot;=&quot; + &quot;;expires=&quot; + date.toGMTString() + &quot;;domain=.lufax.com;path=/&quot;;
+    }
+
+    /*domId must be unique
+     * tool.loading(&quot;domId&quot;);    //big and common loading gif
+     * tool.loading(&quot;domId&quot;,true);  //small loading gif
+     * */
+
+    loading.count = 0;
+
+    function loading(domId, isSmall) {
+        if (typeof(isSmall) == &quot;boolean&quot; &amp;&amp; isSmall) {
+            loading.content = &#x27;&lt;div class=&quot;loadingWrapper loadingSmall hidden&quot;&gt;&#x27; +
+                &#x27;&lt;i class=&quot;loadingPic&quot;&gt;&lt;/i&gt;&#x27; +
+                &#x27;&lt;/div&gt;&#x27;;
+        } else {
+            loading.content = &#x27;&lt;div class=&quot;loadingWrapper hidden&quot;&gt;&#x27; +
+                &#x27;&lt;i class=&quot;loadingPic&quot;&gt;&lt;/i&gt;&#x27; +
+                &#x27;&lt;span class=&quot;loadingTips&quot;&gt;正在处理，请稍后...&lt;/span&gt;&#x27; +
+                &#x27;&lt;/div&gt;&#x27;;
+
+            if (loading.count != 0) {
+                ++loading.count;
+                return;
+            }
+            ++loading.count;
+        }
+
+        var domIdHandler = $(&quot;#&quot; + domId);
+        domIdHandler.append(loading.content).css(&quot;position&quot;, &quot;relative&quot;);
+
+        var loadingWrap = domIdHandler.children(&quot;.loadingWrapper&quot;);
+        var loadingWidth = loadingWrap.outerWidth() / 2;
+        var loadingHeight = loadingWrap.outerHeight() / 2;
+        var parentWidth = domIdHandler.width() / 2;
+        var parentHeight = domIdHandler.height() / 2;
+        loadingWrap.css({&quot;top&quot;:parentHeight - loadingHeight, &quot;left&quot;:parentWidth - loadingWidth}).show();
+    }
+
+    function loadingEnd(domId, isSmall) {
+        if (typeof(isSmall) == &quot;boolean&quot; &amp;&amp; isSmall) {
+            $(&quot;#&quot; + domId).find(&quot;.loadingWrapper&quot;).remove();
+        } else if (--loading.count == 0) {
+            $(&quot;#&quot; + domId).find(&quot;.loadingWrapper&quot;).remove();
+        }
+    }
+
+    function IE6Notice() {
+        if (navigator.userAgent.indexOf(&quot;MSIE 6.0&quot;) &gt; 0) {
+            var popIE6 = tool.getCookie(&quot;isIE6&quot;);
+            if (!popIE6) {
+                showPopPanel();
+            } else {
+                showTopPanel();
+            }
+
+            /*hide top ie 6 panel*/
+            $(&quot;.topIE6&quot;).find(&quot;.closeBtn&quot;).live(&quot;click&quot;, function () {
+                $(&quot;.topIE6&quot;).slideUp(200);
+            });
+        }
+        /*ie6 cookie not exit,show pop panel*/
+        function showPopPanel() {
+            LufaxPopup.blankPopup({
+                content:&#x27;&lt;div class=&quot;popIE6 clearfix&quot;&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;close&quot;&gt;&lt;a class=&quot;btn graBtn_2020&quot; href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;logo&quot;&gt;&amp;nbsp;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;content&quot;&gt;&#x27; +
+                    &#x27;&lt;h2 class=&quot;title&quot;&gt;&lt;span class=&quot;emphasize&quot;&gt;IE6&lt;/span&gt;out了！您还在用么？&lt;/h2&gt;&#x27; +
+                    &#x27;&lt;p class=&quot;suggest&quot;&gt;为了最佳的浏览体验&lt;br/&gt;建议您使用以下浏览器：&lt;/p&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;availableBrowser&quot;&gt;&#x27; +
+                    &#x27;&lt;a class=&quot;browser IE7gte&quot; href=&quot;http://download.microsoft.com/download/1/6/1/16174D37-73C1-4F76-A305-902E9D32BAC9/IE8-WindowsXP-x86-CHS.exe&quot; target=&quot;_blank&quot;&gt;IE7.0以上&lt;/a&gt;&#x27; +
+                    &#x27;&lt;a class=&quot;browser firefox&quot; href=&quot;http://download.firefox.com.cn/releases/webins3.0/official/zh-CN/Firefox-latest.exe&quot; target=&quot;_blank&quot;&gt;firefox&lt;/a&gt;&#x27; +
+                    &#x27;&lt;a class=&quot;browser chrome&quot; href=&quot;https://www.google.com/intl/zh-CN/chrome/browser/index.html&quot; target=&quot;_blank&quot;&gt;chrome&lt;/a&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;div class=&quot;buttons&quot;&gt;&#x27; +
+                    &#x27;&lt;a class=&quot;btns btn_info btn_large close&quot; href=&quot;javascript:void(0);&quot;&gt;忽&amp;emsp;略&lt;/a&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27; +
+                    &#x27;&lt;/div&gt;&#x27;,
+                onConfirm:function () {
+                    tool.setCookie(&quot;isIE6&quot;, &quot;yes&quot;, &quot;2020/01/01&quot;);
+                    showTopPanel();
+                }
+            });
+        }
+
+        /*ie6 cookie exit,show top panel*/
+        function showTopPanel() {
+            $(&quot;body&quot;).prepend(&#x27;&lt;div class=&quot;topIE6 hidden clearfix&quot;&gt;&lt;div class=&quot;content&quot;&gt;&lt;div class=&quot;leftWrap&quot;&gt;&lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;您可能还在使用IE6。&lt;span class=&quot;suggest&quot;&gt;为了最佳的浏览效果，我们推荐以下浏览器供您选择：&lt;/span&gt;&lt;a class=&quot;browser IE7gte&quot; href=&quot;http://download.microsoft.com/download/1/6/1/16174D37-73C1-4F76-A305-902E9D32BAC9/IE8-WindowsXP-x86-CHS.exe&quot; target=&quot;_blank&quot;&gt;IE7.0以上&lt;/a&gt;&lt;a class=&quot;browser firefox&quot; href=&quot;http://download.firefox.com.cn/releases/webins3.0/official/zh-CN/Firefox-latest.exe&quot; target=&quot;_blank&quot;&gt;firefox&lt;/a&gt;&lt;a class=&quot;browser chrome&quot; href=&quot;https://www.google.com/intl/zh-CN/chrome/browser/index.html&quot; target=&quot;_blank&quot;&gt;chrome&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;rightWrap&quot;&gt;&lt;a class=&quot;closeBtn&quot; href=&quot;javascript:void(0);&quot;&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&#x27;);
+            $(&quot;.topIE6&quot;).slideDown(1000);
+        }
+    }
+
+    countDown.options = {
+        countDownSeconds:0,
+        doubleDigit:true,
+        secondsOnly:false,
+        callback:function () {
+            return false;
+        }
+    };
+
+    function countLoop() {
+        render(countDown.options.countDownSeconds);
+        if (countDown.options.countDownSeconds == 0) {
+            countDown.options.callback();
+        } else {
+            --countDown.options.countDownSeconds;
+            OTP_speechCountDownTime = setTimeout(countLoop, 1000);
+        }
+    }
+
+    function render(remainSeconds) {
+        var seconds;
+        if (countDown.options.secondsOnly == true) {
+            seconds = zero(remainSeconds);
+        } else {
+            seconds = zero(remainSeconds % 60);
+        }
+        var minutes = zero(Math.floor(remainSeconds / 60) % 60);
+        var hours = zero(Math.floor(remainSeconds / 60 / 60) % 24);
+        var days = zero(Math.floor(remainSeconds / 60 / 60) / 24);
+        display({days:days, seconds:seconds, minutes:minutes, hours:hours});
+    }
+
+    function zero(n) {
+        var n = parseInt(n, 10);
+        if (n &gt; 0 &amp;&amp; countDown.options.doubleDigit == true) {
+            if (n &lt;= 9) {
+                n = &quot;0&quot; + n;
+            }
+            return String(n);
+        } else if (n &gt;= 0 &amp;&amp; countDown.options.doubleDigit == false) {
+            return String(n);
+        } else {
+            return &quot;00&quot;;
+        }
+    }
+
+    function display(option) {
+        $(&quot;#countDownDay&quot;).html(option.days);
+        $(&quot;#hour&quot;).html(option.hours);
+        $(&quot;#min&quot;).html(option.minutes);
+        $(&quot;#sec&quot;).html(option.seconds);
+    }
+
+    function countDown(options) {
+        countDown.options = $.extend({}, countDown.options, options || {});
+        countLoop();
+    }
+
+    function limitText(el, limit) {
+        var text = $(el).text();
+        var text_length = text.length;
+        if (text_length &gt; limit) {
+            var new_text = text.slice(0, limit);
+            $(el).text(new_text + &quot;...&quot;);
+        }
+    }
+
+//    &lt;div class=&quot;ui_complex_pagination&quot;&gt;
+//        &lt;div class=&quot;transfer-page-wrap&quot;&gt;&lt;/div&gt;
+//        &lt;div class=&quot;pagination-info&quot;&gt;
+//            &lt;span id=&quot;$firstNum&quot;&gt;&lt;/span&gt;-&lt;span id=&quot;$lastNum&quot;&gt;&lt;/span&gt;条，共&lt;span id=&quot;$totalNum&quot;&gt;&lt;/span&gt;条
+//        &lt;/div&gt;
+//    &lt;/div&gt;
+    function pageCount(totalCount, currentPage, pageLimit, pageWrap) {
+        var firstNum = (currentPage - 1) * pageLimit;
+        var lastNum;
+        var $pageWrap = $(pageWrap);
+        for (var i = firstNum; i &lt; totalCount &amp;&amp; i &lt; pageLimit * currentPage; i++) {
+            lastNum = i;
+        }
+        firstNum += 1;
+        lastNum += 1;
+        if (totalCount === 0) {
+            $pageWrap.hide();
+        }
+        $pageWrap.find(&#x27;.first-num&#x27;).html(firstNum);
+        $pageWrap.find(&#x27;.last-num&#x27;).html(lastNum);
+        $pageWrap.find(&#x27;.total-count&#x27;).html(totalCount);
+    }
+
+    return {
+        tip:tip,
+        getCookie:getCookie,
+        setCookie:setCookie,
+        deleteCookie:deleteCookie,
+        loading:loading,
+        loadingEnd:loadingEnd,
+        IE6Notice:IE6Notice,
+        countDown:countDown,
+        limitText:limitText,
+        pageCount:pageCount
+    };
+
+})();
+
+//autoScroll
+//dom结构如下
+//&lt;div class=&quot;carousel-fade&quot;&gt;
+//&lt;ul&gt;
+// &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+// &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+// &lt;/ul&gt;
+// &lt;div class=&quot;focus_ctrl&quot;&gt;
+// &lt;a href=&quot;#&quot;&gt;•&lt;/a&gt;
+// &lt;a href=&quot;#&quot;&gt;•&lt;/a&gt;
+// &lt;/div&gt;
+// &lt;/div&gt;
+var autoScroll = (function () {
+    function _scroll(i) {
+        $(&quot;.carousel-fade&gt;ul&gt;li:visible&quot;).stop(true, true).fadeOut(800);
+        $(&quot;.carousel-fade&gt;ul&gt;li&quot;).eq(i).stop(true, true).fadeIn(800);
+    }
+
+    function _focus() {
+        var l = $(&quot;.carousel-fade&gt;ul li&quot;).length;
+        var index = $(&quot;.focus_ctrl a&quot;).index($(&quot;.current&quot;)[0]);
+        if (index == l - 1) {
+            index = -1;
+        }
+        $(&quot;.focus_ctrl a&quot;).eq(index + 1).addClass(&quot;current&quot;).siblings().removeClass(&quot;current&quot;);
+        _scroll(index + 1);
+        index++;
+        //alert(1);
+    }
+
+    function _init() {
+        var l = $(&quot;.carousel-fade&gt;ul li&quot;).length;
+        if (l === 1) {
+            $(&quot;.focus_ctrl&quot;).hide();
+            return false;
+        }
+        var img_interval = 5000;
+        $(&quot;.focus_ctrl a:eq(0)&quot;).addClass(&quot;current&quot;);
+        var fcsInt = setInterval(&#x27;autoScroll.focus()&#x27;, img_interval);
+        $(&quot;.carousel-fade&gt;ul&gt;li&quot;).eq(0).fadeIn(0);
+        $(&quot;.carousel-fade&gt;ul&quot;).hover(function () {
+            clearInterval(fcsInt)
+        }, function () {
+            fcsInt = setInterval(&#x27;autoScroll.focus()&#x27;, img_interval)
+        });
+
+        $(&quot;.focus_ctrl a&quot;).hover(function () {
+            $(this).addClass(&quot;current&quot;).siblings().removeClass(&quot;current&quot;);
+            autoScroll.scroll($(this).index());
+            clearInterval(fcsInt);
+        }, function () {
+            fcsInt = setInterval(&#x27;autoScroll.focus()&#x27;, img_interval);
+        });
+    }
+
+    return {
+        scroll:_scroll,
+        focus:_focus,
+        init:_init
+    }
+})();
+
+jQuery.fn.pagination = function (maxentries, opts) {
+    opts = jQuery.extend({
+        num_display_entries:6,
+        current_page:0,
+        num_edge_entries:2,
+        link_to:&quot;javascript:void(0)&quot;,
+        prev_text:&quot;&lt;span class=\&quot;caret\&quot;&gt;&amp;lt;&lt;/span&gt; 上一页&quot;,
+        next_text:&quot;下一页 &lt;span class=\&quot;caret\&quot;&gt;&amp;gt;&lt;/span&gt;&quot;,
+        first_text:&quot;首页&quot;,
+        last_text:&quot;尾页&quot;,
+        ellipse_text:&quot;...&quot;,
+        prev_show_always:true,
+        next_show_always:true,
+        callback:function () {
+            return false;
+        }
+    }, opts || {});
+
+    return this.each(function () {
+        /**
+         * 计算最大分页显示数目
+         */
+        function numPages() {
+            return maxentries;
+        }
+
+        /**
+         * 极端分页的起始和结束点，这取决于current_page 和 num_display_entries.
+         * @返回 {数组(Array)}
+         */
+        function getInterval() {
+            var ne_half = Math.ceil(opts.num_display_entries / 2);
+            var np = numPages();
+            var upper_limit = np - opts.num_display_entries;
+            var start = current_page &gt; ne_half ? Math.max(Math.min(current_page - ne_half, upper_limit), 0) : 0;
+            var end = current_page &gt; ne_half ? Math.min(current_page + ne_half, np) : Math.min(opts.num_display_entries, np);
+            return [start, end];
+        }
+
+        /**
+         * 分页链接事件处理函数
+         * @参数 {int} page_id 为新页码
+         */
+        function pageSelected(page_id, evt) {
+            current_page = page_id;
+            function reDraw(current_page) {
+                return function () {
+                    drawLinks(current_page);
+                }
+            }
+
+            var continuePropagation = opts.callback(page_id + 1, reDraw(current_page));
+            if (!continuePropagation) {
+                if (evt.stopPropagation) {
+                    evt.stopPropagation();
+                }
+                else {
+                    evt.cancelBubble = true;
+                }
+            }
+            return continuePropagation;
+        }
+
+        /**
+         * 此函数将分页链接插入到容器元素中
+         */
+        function drawLinks(current_page) {
+            panel.empty();
+            var interval = getInterval();
+            var np = numPages();
+            // 这个辅助函数返回一个处理函数调用有着正确page_id的pageSelected。
+            var getClickHandler = function (page_id) {
+                return function (evt) {
+                    return pageSelected(page_id, evt);
+                }
+            };
+            //辅助函数用来产生一个单链接(如果不是当前页则产生span标签)
+//            var appendItem = function (page_id, appendopts) {
+//                page_id = page_id &lt; 0 ? 0 : (page_id &lt; np ? page_id : np - 1); // 规范page id值
+//                appendopts = jQuery.extend({text:page_id + 1, classes:&quot;&quot;}, appendopts || {});
+//                if (page_id == current_page) {
+//                    var lnk = jQuery(&quot;&lt;span class=&#x27;current&#x27;&gt;&quot; + (appendopts.text) + &quot;&lt;/span&gt;&quot;);
+//                } else {
+//                    var lnk = jQuery(&quot;&lt;a&gt;&quot; + (appendopts.text) + &quot;&lt;/a&gt;&quot;)
+//                        .bind(&quot;click&quot;, getClickHandler(page_id))
+//                        .attr(&#x27;href&#x27;, opts.link_to.replace(/__id__/, page_id));
+//                }
+//                if (appendopts.classes) {
+//                    lnk.addClass(appendopts.classes);
+//                }
+//                panel.append(lnk);
+//            };
+            var appendItem = function (current, total) {
+                var lnk = &quot;&lt;p class=&#x27;pageNum&#x27;&gt;第&quot; + Number(current + 1) + &quot;页/共&quot; + total + &quot;页&lt;/p&gt;&quot;;
+                panel.append(lnk);
+            };
+
+
+            var adjustAppend = function (page_id, page, appendopts) {
+                page_id = page_id &lt; 0 ? 0 : (page_id &lt; np ? page_id : np - 1); // 规范page id值
+                appendopts = jQuery.extend({text:page_id + 1, classes:&quot;&quot;}, appendopts || {});
+                if (current_page == page) {
+                    var lnk = jQuery(&quot;&lt;span class=&#x27;btns disabled btn_page btn_small&#x27;&gt;&quot; + (appendopts.text) + &quot;&lt;/span&gt;&quot;);
+                } else {
+                    var lnk = jQuery(&quot;&lt;a class=&#x27;btns btn_page btn_small&#x27;&gt;&quot; + (appendopts.text) + &quot;&lt;/a&gt;&quot;)
+                        .bind(&quot;click&quot;, getClickHandler(page_id))
+                        .attr(&#x27;href&#x27;, opts.link_to.replace(/__id__/, page_id));
+                }
+                if (appendopts.classes) {
+                    lnk.addClass(appendopts.classes);
+                }
+                panel.append(lnk);
+            };
+
+            var appendPre = function (page_id, appendopts) {
+                adjustAppend(page_id, 0, appendopts);
+            };
+
+            var appendNext = function (page_id, appendopts) {
+                adjustAppend(page_id, maxentries - 1, appendopts);
+            };
+
+            // 产生&quot;Previous&quot;-链接
+            if (opts.prev_text &amp;&amp; (current_page &gt; 0 || opts.prev_show_always)) {
+                appendPre(0, {text:opts.first_text, classes:&quot;first&quot;});
+                appendPre(current_page - 1, {text:opts.prev_text, classes:&quot;prev&quot;});
+
+            }
+            appendItem(current_page, maxentries);
+            // 产生起始点
+//            if (interval[0] &gt; 0 &amp;&amp; opts.num_edge_entries &gt; 0) {
+//                if (maxentries &lt;= 10) {
+//                    opts.num_edge_entries = maxentries;
+//                }
+//                var end = Math.min(opts.num_edge_entries, interval[0]);
+//                for (var i = 0; i &lt; end; i++) {
+//                    appendItem(i, {classes:&quot;innerA&quot;});
+//                }
+//                if (opts.num_edge_entries &lt; interval[0] &amp;&amp; opts.ellipse_text) {
+//                    jQuery(&quot;&lt;span class=&#x27;innerA&#x27;&gt;&quot; + opts.ellipse_text + &quot;&lt;/span&gt;&quot;).appendTo(panel);
+//                }
+//            }
+//            // 产生内部的些链接
+//            for (var i = interval[0]; i &lt; interval[1]; i++) {
+//                appendItem(i, {classes:&quot;innerA&quot;});
+//            }
+//            // 产生结束点
+//            if (interval[1] &lt; np &amp;&amp; opts.num_edge_entries &gt; 0) {
+//                if (maxentries &lt;= 10) {
+//                    opts.num_edge_entries = maxentries;
+//                    if (np - opts.num_edge_entries &gt; interval[1] &amp;&amp; opts.ellipse_text) {
+//                        jQuery(&quot;&lt;span class=&#x27;innerA&#x27;&gt;&quot; + opts.ellipse_text + &quot;&lt;/span&gt;&quot;).appendTo(panel);
+//                    }
+//                    var begin = Math.max(np - opts.num_edge_entries, interval[1]);
+//                    var end = Math.min(opts.num_edge_entries, interval[0]);
+//                    for (var i = begin; i &lt; np; i++) {
+//                        appendItem(i, {classes:&quot;innerA&quot;});
+//                    }
+//                } else {
+//                    if (np - opts.num_edge_entries &gt; interval[1] &amp;&amp; opts.ellipse_text) {
+//                        jQuery(&quot;&lt;span class=&#x27;innerA&#x27;&gt;&quot; + opts.ellipse_text + &quot;&lt;/span&gt;&quot;).appendTo(panel);
+//                    }
+//                    if (np - opts.num_edge_entries &lt;= interval[1]) {
+//                        var begin = Math.max(np - opts.num_edge_entries, interval[1]);
+//                        for (var i = begin; i &lt; np; i++) {
+//                            appendItem(i, {classes:&quot;innerA&quot;});
+//                        }
+//                    }
+//                }
+//            }
+            // 产生 &quot;Next&quot;-链接
+            if (opts.next_text &amp;&amp; (current_page &lt; np - 1 || opts.next_show_always)) {
+                appendNext(current_page + 1, {text:opts.next_text, classes:&quot;next&quot;});
+                appendNext(maxentries - 1, {text:opts.last_text, classes:&quot;last&quot;});
+            }
+//            $(&quot;.innerA&quot;).wrapAll(&quot;&lt;p class=&#x27;pageNum&#x27;&gt;&lt;/p&gt;&quot;);
+
+        }
+
+        //从选项中提取current_page
+        var current_page = opts.current_page;
+        //存储DOM元素，以方便从所有的内部结构中获取
+        var panel = jQuery(this);
+        // 获得附加功能的元素
+        this.selectPage = function (page_id) {
+            pageSelected(page_id);
+        };
+        this.prevPage = function () {
+            if (current_page &gt; 0) {
+                pageSelected(current_page - 1);
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
+        this.nextPage = function () {
+            if (current_page &lt; numPages() - 1) {
+                pageSelected(current_page + 1);
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
+        // 所有初始化完成，绘制链接
+        if (maxentries &gt; 1) {
+            drawLinks(current_page);
+        } else {
+            panel.empty();
+        }
+    });
+};
+
+var LufaxPopup = (function () {
+    var options = {};
+    var defaultOptions = {};
+    var Template = {
+        simplePopupTemplate:&#x27;&lt;div class=&quot;modal-dialog timeout_safe_exit ${imgClass}&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;border&quot;&gt; &#x27; +
+            &#x27;&lt;table&gt;&#x27; +
+            &#x27;&lt;tbody&gt;&lt;tr&gt;&#x27; +
+            &#x27;&lt;td&gt;&lt;div class=&quot;logo&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;/td&gt;&#x27; +
+            &#x27;&lt;td class=&quot;detail&quot;&gt;&#x27; +
+            &#x27;&lt;p class=&quot;title&quot;&gt;${title}&lt;/p&gt;&#x27; +
+            &#x27;&lt;p class=&quot;content&quot;&gt;${content}&lt;/p&gt;&#x27; +
+            &#x27;&lt;div class=&quot;clearfix&quot;&gt;${button}&lt;/div&gt;&#x27; +
+            &#x27;&lt;/td&gt;&#x27; +
+            &#x27;&lt;/tr&gt;&#x27; +
+            &#x27;&lt;/tbody&gt;&lt;/table&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27;,
+
+        blankTemplate:&#x27;&lt;div class=&quot;modal-dialog popup_wrap blankPopup&quot;&gt;${content}&lt;/div&gt;&#x27;,
+
+        newPopupTemplate:&#x27;&lt;div class=&quot;modal-dialog popup_wrap&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-content&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-header clearfix&quot;&gt;&#x27; +
+            &#x27;${closeDisplay}&#x27; +
+            &#x27;&lt;h4 class=&quot;modal-title&quot;&gt;${popupTitleName}&lt;/h4&gt;&#x27; +
+            &#x27;&lt;/div&gt;&lt;div class=&quot;modal-body&quot;&gt;&#x27; +
+            &#x27;&lt;i class=&quot;icon ${iconClass}&quot;&gt;&lt;/i&gt;&#x27; +
+            &#x27;&lt;span class=&quot;message&quot;&gt;${message}&lt;/span&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-footer&quot;&gt;${button}&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27;,
+
+        newIconPopupTemplate:&#x27;&lt;div class=&quot;modal-dialog popup_wrap&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-content&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-header clearfix&quot;&gt;&#x27; +
+            &#x27;${closeDisplay}&#x27; +
+            &#x27;&lt;h4 class=&quot;modal-title&quot;&gt;${popupTitleName}&lt;/h4&gt;&#x27; +
+            &#x27;&lt;/div&gt;&lt;div class=&quot;modal-body&quot;&gt;&#x27; +
+            &#x27;&lt;i class=&quot;iconV2 ${iconClass}&quot;&gt;&lt;/i&gt;&#x27; +
+            &#x27;&lt;span class=&quot;message&quot;&gt;${message}&lt;/span&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-footer&quot;&gt;${button}&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27;,
+
+        popupSubtitleTemplate:&#x27;&lt;div class=&quot;modal-dialog popup_wrap popup_wrap_subtitle ${privateClass}&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-content&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-header clearfix&quot;&gt;&#x27; +
+            &#x27;${closeDisplay}&#x27; +
+            &#x27;&lt;h4 class=&quot;modal-title&quot;&gt;${popupTitleName}&lt;/h4&gt;&#x27; +
+            &#x27;&lt;/div&gt;&lt;div class=&quot;modal-body clearfix&quot;&gt;&#x27; +
+            &#x27;&lt;i class=&quot;icon ${iconClass}&quot;&gt;&lt;/i&gt;&#x27; +
+            &#x27;&lt;span class=&quot;message&quot;&gt;${subTitle}&lt;/span&gt;&#x27; +
+            &#x27;&lt;div class=&quot;content&quot;&gt;${contents}&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-footer&quot;&gt;${button}&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27;,
+
+        newIconPopupSubtitleTemplate:&#x27;&lt;div class=&quot;modal-dialog popup_wrap popup_wrap_subtitle ${privateClass}&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-content&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-header clearfix&quot;&gt;&#x27; +
+            &#x27;${closeDisplay}&#x27; +
+            &#x27;&lt;h4 class=&quot;modal-title&quot;&gt;${popupTitleName}&lt;/h4&gt;&#x27; +
+            &#x27;&lt;/div&gt;&lt;div class=&quot;modal-body clearfix&quot;&gt;&#x27; +
+            &#x27;&lt;i class=&quot;iconV2 ${iconClass}&quot;&gt;&lt;/i&gt;&#x27; +
+            &#x27;&lt;span class=&quot;message&quot;&gt;${subTitle}&lt;/span&gt;&#x27; +
+            &#x27;&lt;div class=&quot;content&quot;&gt;${contents}&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-footer&quot;&gt;${button}&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27;,
+
+        richPopupTemplate:&#x27;&lt;div class=&quot;modal-dialog popup_wrap commission_wrap ${privateClass}&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-content&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-header clearfix&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;close&quot;&gt;&lt;a class=&quot;modal-close&quot; href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;&lt;/div&gt;&#x27; +
+            &#x27;&lt;h4 class=&quot;modal-title&quot;&gt;${title}&lt;/h4&gt;&#x27; +
+            &#x27;&lt;/div&gt;&lt;div class=&quot;modal-body clearfix&quot;&gt;&#x27; +
+            &#x27;&lt;div class=&quot;affiliate-content&quot;&gt;${content}&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;div class=&quot;modal-footer&quot;&gt;${foot}&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27; +
+            &#x27;&lt;/div&gt;&#x27;
+    };
+
+    function simplePopup(options) {
+        var simplePopupOptions = $.extend(&quot;&quot;, defaultOptions, options);
+        openPopupWindow({
+                template:Template[&quot;simplePopupTemplate&quot;],
+                args:{
+                    imgClass:simplePopupOptions.imgClass,
+                    title:simplePopupOptions.title,
+                    content:simplePopupOptions.content,
+                    button:simplePopupOptions.button
+                },
+                bindings:[
+                    {selector:getConfirmButtonSelector(), func:closableBinding(simplePopupOptions.onConfirm)},
+                    {selector:getCancelButtonSelector(), func:closableBinding(simplePopupOptions.onCancel)}
+                ]
+            }
+        );
+    }
+
+    function blankPopup(options) {
+        this.options = options;
+        openPopupWindow({
+                template:Template[&quot;blankTemplate&quot;],
+                args:{
+                    content:options.content || &quot;&quot;
+                },
+                bindings:[
+                    {selector:getConfirmButtonSelector(), func:closableBinding(options.onConfirm)},
+                    {selector:getCloseButtonSelector(), func:closableBinding(options.onClose)},
+                    {selector:getCancelButtonSelector(), func:closableBinding(options.onCancel)}
+                ]
+            }
+        );
+    }
+
+    function richPopup(options) {
+        var richPopupOptions = $.extend(&quot;&quot;, defaultOptions, options);
+        openPopupWindow({
+                template:Template[&quot;richPopupTemplate&quot;],
+                args:{
+                    privateClass:richPopupOptions.privateClass,
+                    title:richPopupOptions.title,
+                    content:richPopupOptions.content,
+                    foot:richPopupOptions.foot
+                },
+                bindings:[
+                    {selector:getCancelButtonSelector(), func:closableBinding(richPopupOptions.onCancel)}
+                ]
+            }
+        );
+    }
+
+    function popup(options) {
+        this.options = options;
+        openPopupWindow({
+                template:Template[&quot;newPopupTemplate&quot;],
+                args:{
+                    popupTitleName:options.popupTitleName || &quot;&quot;,
+                    iconClass:options.iconClass,
+                    message:LufaxUtility.formatMessage(options.message, options.args) || options,
+                    button:options.button,
+                    closeDisplay:options.closeDisplay == &#x27;false&#x27; ? &#x27;&#x27; : &#x27;&lt;div class=&quot;close&quot;&gt;&lt;a class=&quot;modal-close&quot; href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;&lt;/div&gt;&#x27;
+                },
+                css:options.css,
+                bindings:([
+                    {selector:getConfirmButtonSelector(), func:closableBinding(options.onConfirm)},
+                    {selector:getCloseButtonSelector(), func:closableBinding(options.onClose)},
+                    {selector:getCancelButtonSelector(), func:closableBinding(options.onCancel)}
+                ])
+            }
+        );
+    }
+
+    function popup_subTitle(options) {
+        this.options = options;
+        openPopupWindow({
+                template:Template[&quot;popupSubtitleTemplate&quot;],
+                args:{
+                    privateClass:options.privateClass,
+                    popupTitleName:options.popupTitleName || &quot;&quot;,
+                    iconClass:options.iconClass,
+                    subTitle:LufaxUtility.formatMessage(options.subTitle, options.args) || options,
+                    contents:LufaxUtility.formatMessage(options.contents, options.args) || options,
+                    button:options.button,
+                    closeDisplay:options.closeDisplay == &#x27;false&#x27; ? &#x27;&#x27; : &#x27;&lt;div class=&quot;close&quot;&gt;&lt;a class=&quot;modal-close&quot; href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;&lt;/div&gt;&#x27;
+                },
+                css:options.css,
+                bindings:([
+                    {selector:getConfirmButtonSelector(), func:closableBinding(options.onConfirm)},
+                    {selector:getCloseButtonSelector(), func:closableBinding(options.onClose)},
+                    {selector:getCancelButtonSelector(), func:closableBinding(options.onCancel)}
+                ])
+            }
+        );
+    }
+
+    function newIconPopup(options) {
+        this.options = options;
+        openPopupWindow({
+                template:Template[&quot;newIconPopupTemplate&quot;],
+                args:{
+                    popupTitleName:options.popupTitleName || &quot;&quot;,
+                    iconClass:options.iconClass,
+                    message:LufaxUtility.formatMessage(options.message, options.args) || options,
+                    button:options.button,
+                    closeDisplay:options.closeDisplay == &#x27;false&#x27; ? &#x27;&#x27; : &#x27;&lt;div class=&quot;close&quot;&gt;&lt;a class=&quot;modal-close&quot; href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;&lt;/div&gt;&#x27;
+                },
+                css:options.css,
+                bindings:([
+                    {selector:getConfirmButtonSelector(), func:closableBinding(options.onConfirm)},
+                    {selector:getCloseButtonSelector(), func:closableBinding(options.onClose)},
+                    {selector:getCancelButtonSelector(), func:closableBinding(options.onCancel)}
+                ])
+            }
+        );
+    }
+
+    function newIconPopupSubTitle(options) {
+        this.options = options;
+        openPopupWindow({
+                template:Template[&quot;newIconPopupSubtitleTemplate&quot;],
+                args:{
+                    privateClass:options.privateClass,
+                    popupTitleName:options.popupTitleName || &quot;&quot;,
+                    iconClass:options.iconClass,
+                    subTitle:LufaxUtility.formatMessage(options.subTitle, options.args) || options,
+                    contents:LufaxUtility.formatMessage(options.contents, options.args) || options,
+                    button:options.button,
+                    closeDisplay:options.closeDisplay == &#x27;false&#x27; ? &#x27;&#x27; : &#x27;&lt;div class=&quot;close&quot;&gt;&lt;a class=&quot;modal-close&quot; href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;&lt;/div&gt;&#x27;
+                },
+                css:options.css,
+                bindings:([
+                    {selector:getConfirmButtonSelector(), func:closableBinding(options.onConfirm)},
+                    {selector:getCloseButtonSelector(), func:closableBinding(options.onClose)},
+                    {selector:getCancelButtonSelector(), func:closableBinding(options.onCancel)}
+                ])
+            }
+        );
+    }
+
+    function close() {
+        $.unblockUI();
+    }
+
+    function closableBinding(func) {
+        return function () {
+            LufaxPopup.close();
+            if (func) {
+                func();
+            }
+        }
+    }
+
+    function openPopupWindow(options) {
+
+        if (options.onClose != undefined) {
+            LufaxPopup.options = options;
+        }
+        $.blockUI({
+            message:$(LufaxUtility.formatMessage(options.template, options.args))
+        });
+        setPopupPosition();
+        $(getCloseButtonSelector()).die(&quot;click&quot;);
+        $(getCloseButtonSelector()).live(&quot;click&quot;, closableBinding(options.onCancel));
+        if (!options.bindings)  return;
+        $.each(options.bindings, function (index, binding) {
+            $(binding.selector).die(&quot;click&quot;);
+            $(binding.selector).live(&quot;click&quot;, binding.func);
+        });
+    }
+
+    function setPopupPosition() {
+        var wwidth = $(window).width();
+        var wheight = $(window).height();
+        var pop_width = $(&quot;.modal-dialog:last&quot;).outerWidth();
+        var pop_height = $(&quot;.modal-dialog:last&quot;).outerHeight();
+        if (pop_width &amp;&amp; pop_height) {
+            $(&quot;.blockMsg&quot;).css(&quot;top&quot;, (wheight - pop_height) / 2 + &#x27;px&#x27;).css(&quot;left&quot;, (wwidth - pop_width) / 2 + &#x27;px&#x27;);
+        }
+    }
+
+    function getConfirmButtonSelector() {
+        return getButtonSelector(&quot;confirmBtn&quot;);
+    }
+
+    function getCancelButtonSelector() {
+        return getButtonSelector(&quot;cancleBtn&quot;);
+    }
+
+    function getCloseButtonSelector() {
+        return getButtonSelector(&quot;close&quot;);
+    }
+
+    function getButtonSelector(buttonClass) {
+        return &quot;.&quot; + buttonClass;
+    }
+
+    return {
+        simplePopup:simplePopup,
+        close:close,
+        blankPopup:blankPopup,
+        popup:popup,
+        closableBinding:closableBinding,
+        richPopup:richPopup,
+        popup_subTitle:popup_subTitle,
+        newIconPopupSubTitle:newIconPopupSubTitle,
+        newIconPopup:newIconPopup
+    }
+
+})();
+
+var LufaxTemplate = (function () {
+    function escapeTemplate(content) {
+        return content == null ? &quot;&quot; : content.replace(/&amp;lt;/g, &quot;&lt;&quot;).replace(/&amp;gt;/g, &quot;&gt;&quot;).replace(/&amp;amp;/g, &quot;&amp;&quot;);
+    }
+
+    function stringTemplateMergeAndShow(template, data, callback) {
+        var mergedTemplate = TrimPath.parseTemplate(escapeTemplate(template), &#x27;templateId&#x27;).process({model:data});
+        if (callback)
+            callback(mergedTemplate);
+        return mergedTemplate;
+    }
+
+    function textareaTemplateMergeAndShow(templateId, data, callback) {
+        var mergedTemplate = TrimPath.processDOMTemplate(templateId, {model:data});
+        if (callback)
+            callback(mergedTemplate);
+        return mergedTemplate;
+    }
+
+    return {
+        stringTemplateMergeAndShow:stringTemplateMergeAndShow,
+        textareaTemplateMergeAndShow:textareaTemplateMergeAndShow
+    }
+})();
+//mouseTips
+(function ($) {
+    $.fn.mouseTips = function (options) {
+        var toolTipsHtml = &#x27;&lt;p class=&quot;mouseTips&quot;&gt;&lt;/p&gt;&#x27;;
+        if ($(&#x27;.mouseTips&#x27;).length &lt;= 0) {
+            $(&#x27;body&#x27;).append(toolTipsHtml);
+        }
+        return this.each(function () {
+            var defaultVal = {
+                flagInfo:$(this).attr(&quot;title&quot;),
+                bgColor:&#x27;#ffe9ad&#x27;,
+                borderColor:&#x27;#fab418&#x27;,
+                topOffset:10,
+                leftOffset:0,
+                holding:false,
+                placeStyle:&#x27;offset&#x27;,
+                tipsWidth:&#x27;&#x27;
+            };
+            var obj = $.extend(defaultVal, options);
+            var $mouseTips = $(&#x27;.mouseTips&#x27;);
+            $(this).removeAttr(&quot;title&quot;);
+
+            $(this).hover(function () {
+                showTips(this);
+                if (obj.holding == true) {
+                    $(this).append($mouseTips.clone());
+                    $(this).find(&#x27;.mouseTips&#x27;).show();
+                } else {
+                    $mouseTips.show();
+                }
+
+            }, function () {
+                if (obj.holding == true) {
+                    $(this).find(&#x27;.mouseTips&#x27;).remove();
+                } else {
+                    $mouseTips.hide();
+                }
+
+
+            });
+
+            var showTips = function (el) {
+                if (obj.placeStyle == &#x27;position&#x27;) {
+                    var _offset = $(el).position();
+                } else {
+                    var _offset = $(el).offset();
+                }
+                var _offsetTop = _offset.top;
+                var _offsetLeft = _offset.left + obj.leftOffset;
+                var elHeight = $(el).height() + obj.topOffset;
+                if (obj.tipsWidth === &#x27;&#x27;) {
+                    if (obj.flagInfo.length &gt; 30) {
+                        obj.tipsWidth = 350;
+                    } else {
+                        obj.tipsWidth = &#x27;auto&#x27;;
+                    }
+                }
+                $mouseTips.css({&#x27;left&#x27;:_offsetLeft, &#x27;top&#x27;:_offsetTop + elHeight, &#x27;background-color&#x27;:obj.bgColor, &#x27;border-color&#x27;:obj.borderColor, &#x27;width&#x27;:obj.tipsWidth}).html(obj.flagInfo);
+            };
+
+        });
+    }
+})(jQuery);
+
+//zoomTips
+(function ($) {
+    $.fn.zoomTips = function (options) {
+        var defaultVal = {
+            isCash:false
+        };
+        var obj = $.extend(defaultVal, options);
+        var tipsHtml = &#x27;&lt;div class=&quot;zoomTips&quot;&gt;&lt;/div&gt;&#x27;;
+        $(&#x27;body&#x27;).append(tipsHtml);
+        return this.each(function () {
+            $(this).blur(function () {
+                var showVal = $(this).val();
+                if (obj.isCash) {
+                    showVal = showVal;
+
+                } else {
+                    showVal = showVal.replace(/\s/g, &#x27;&#x27;).replace(/(\d{4})(?=\d)/g, &quot;$1 &quot;);
+                }
+                $(this).val(showVal);
+                tipsOut();
+            });
+            $(this).bind(&#x27;focus&#x27;, function () {
+                var showVal = $(this).val();
+                if (showVal.length == 0) {
+                    tipsOut();
+                } else {
+                    showCurVal(showVal);
+                    tipsIn(this);
+                }
+            });
+            $(this).bind(&#x27;keydown keyup&#x27;, function () {
+                var showVal = $(this).val();
+                if (obj.isCash) {
+                    showVal = showVal;
+                    $(this).next().text(LufaxUtility.convertCurrency(showVal));
+                } else {
+                    showVal = showVal.replace(/\s/g, &#x27;&#x27;).replace(/(\d{4})(?=\d)/g, &quot;$1 &quot;);
+                }
+                if (showVal.length &gt; 0) {
+                    showCurVal(showVal);
+                    tipsIn(this);
+                } else {
+                    tipsOut();
+                }
+            });
+
+            function showCurVal(val) {
+                if (obj.isCash) {
+                    $(&#x27;.zoomTips&#x27;).text(LufaxUtility.numberFormatWithoutCurrency(val));
+                } else {
+                    $(&#x27;.zoomTips&#x27;).text(val);
+                }
+
+            }
+
+            function tipsIn(el) {
+                var _offset = $(el).offset();
+                var _offsetTop = _offset.top;
+                var _offsetLeft = _offset.left;
+                var elHeight = $(el).innerHeight();
+                $(&#x27;.zoomTips&#x27;).css({&#x27;left&#x27;:_offsetLeft, &#x27;top&#x27;:_offsetTop + 30}).show();
+            }
+
+            function tipsOut() {
+                $(&#x27;.zoomTips&#x27;).hide();
+            }
+        });
+
+    }
+})(jQuery);
+
+
+/*
+ * go to top
+ * add by kika
+ * at 2013-04-24
+ * */
+(function ($) {
+    $.fn.goTop = function (options) {
+        var defaultVal = {
+            handler:$(this),
+            duration:500,
+            border:true
+        };
+        var obj = $.extend(defaultVal, options);
+        return this.each(function () {
+            $(window).scroll(function () {
+                goTop(obj.handler);
+            });
+            $(this).on(&#x27;click&#x27;, function () {
+                $(&#x27;html,body&#x27;).animate({scrollTop:0}, obj.duration);
+            });
+        });
+        function goTop(_handler) {
+            //location based on parent element
+            var parentWidth = 0;
+            obj.border ? parentWidth = $(_handler).parent().outerWidth() - 1 : parentWidth = $(_handler).parent().outerWidth();
+            $(_handler).parent().attr(&quot;style&quot;, &quot;position:relative;&quot;);
+            $(_handler).attr(&quot;style&quot;, &quot;margin-left:&quot; + parentWidth + &quot;px;&quot;);
+            //control display or hide
+            if ($(window).scrollTop() &gt; 300) {
+                $(_handler).stop(true, true).show();
+            }
+        }
+    }
+})(jQuery);
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

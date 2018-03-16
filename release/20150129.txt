@@ -1,0 +1,17 @@
+[DEP]
+    无
+
+[DB1]
+    无
+
+[DB2]
+	无
+
+[NOTIFY]
+    fangxiao483@pingan.com.cn
+    wangdongqiang334@pingan.com.cn
+    wangyaqiong553@pingan.com.cn
+
+[ADVICE]
+    WEBDEV-19 【注册+动态码】支持港澳台手机号注册
+    WEBDEV-2085 统计组件升级——referer功能去空格，支持H5

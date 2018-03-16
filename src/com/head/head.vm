@@ -1,0 +1,125 @@
+<!--header start-->
+<div class="top-wrap">
+    <div class="top-body clearfix">
+        <div class="login-status" id="login-status">
+            <ul class="top-login clearfix hidden">
+                <li class="home-icon"><a href="http://www.lufax.com/"></a></li>
+                <li>您好，<a href="https://my.lufax.com/my/account" class="user-name"></a>
+                    <span class="safe-logout-wrap">[ <a href="https://user.lufax.com/user/logout" class="safe-logout"
+                                                        id="safe-logout">安全退出</a> ]</span>
+                </li>
+            </ul>
+            <ul class="clearfix top-cookie hidden">
+                <li class="home-icon"><a href="http://www.lufax.com/"></a></li>
+                <li>您好，<a href="javascript:void(0);" class="cookie-name top-nav-login" data-sk="头部-用户名"></a> <a
+                        href="javascript:void(0);" class="cookie-login top-nav-login">登录</a></li>
+                <li><a href="https://user.lufax.com/user/register" class="cookie-register">免费注册</a></li>
+            </ul>
+            <ul class="clearfix top-noLog hidden">
+                <li class="home-icon"><a href="http://www.lufax.com/"></a></li>
+                <li>您好，欢迎来到陆金所！ <a href="javascript:void(0);" class="top-nav-login">登录</a></li>
+                <li><a href="https://user.lufax.com/user/register">免费注册</a></li>
+            </ul>
+        </div>
+        <ul class="media-link clearfix">
+            <li><a href="http://www.lufax.com/activity/app201307/index.html" target="_blank"><i class="icon-mobile"></i>手机版</a></li>
+            <li><a href="http://e.weibo.com/lufax" target="_blank"><i class="icon-weibo"></i></a></li>
+            <li class="weixin">
+                <a href="javascript:void(0);"><i class="icon-weixin"></i></a>
+                <p>
+                    <b></b>
+                    <span class="lufax-code weixin-code"></span>
+                </p>
+            </li>
+        </ul>
+        <div class="sub-nav-wrap clearfix">
+            <p class="sub-nav-left"></p>
+            <ul class="sub-nav-list clearfix">
+                <li class="my-account">
+                    <span class="my-account-title">
+                        <a href="https://my.lufax.com/my/account" target="_blank">我的账户</a>
+                        <b></b>
+                    </span>
+
+                    <div class="cover"></div>
+                    <ul class="my-account-list clearfix">
+                        <li><a href="https://my.lufax.com/my/investment-overview" target="_blank">我的投资</a></li>
+                        <li><a href="https://my.lufax.com/my/loans" target="_blank">我的借款</a></li>
+                        <li><a href="https://my.lufax.com/my/transaction-history" target="_blank">资金记录</a></li>
+                        <li><a href="https://my.lufax.com/my/bank-account" target="_blank">银行卡管理</a></li>
+                        <li><a href="https://my.lufax.com/my/user-info" target="_blank">账户安全</a></li>
+                        <li><a href="https://lumi.lufax.com/lumi/my-lumi" target="_blank">我的陆米</a></li>
+                        <li><a href="https://my.lufax.com/my/user-msg" target="_blank">我的消息</a></li>
+                        <li><a href="https://my.lufax.com/my/my-lufax-coin" target="_blank">我的陆金币</a></li>
+                        <li><a href="http://affiliate.lufax.com/recommend" target="_blank">推荐好友</a></li>
+                    </ul>
+                </li>
+                <li class="lumi-link"><a href="https://lumi.lufax.com/lumi/index" target="_blank" data-sk="陆米-陆金所通用头部-陆米世界入口">陆米世界</a><i class="icon-ani-new">&nbsp;</i></li>
+                <li><a href="http://www.lufax.com/activity/twhkmo-minisite/index.html" target="_blank" data-sk="头部-港澳台">港澳台</a></li>
+                <li><a href="http://www.lufax.com/help/" target="_blank">帮助中心</a></li>
+            </ul>
+            <p class="sub-nav-right"></p>
+        </div>
+
+    </div>
+</div>
+<div class="head-body-wrap">
+    <div class="head-body clearfix">
+        <div class="logo"><a href="http://www.lufax.com"><img
+                src="https://static.lufaxcdn.com/config/images/p2p_index/logo_festival.png" alt="陆金所"></a></div>
+        #if(${nav} != 'vip')
+            <div class="slogan"><img src="https://static.lufaxcdn.com/config/images/p2p_index/slogan.png" alt=""/></div>
+        #end
+        #if(${nav} != 'login')
+        <div class="link-logo">
+            <a href="http://www.lufax.com/about/" target="_blank" class="logo_ani">
+                <span class="t1"></span>
+                <span class="t2"></span>
+                <span class="t_pingan"></span>
+                <span class="t_tit">关于陆金所<i></i></span>
+            </a>
+        </div>
+        #end
+    </div>
+</div>
+#if(${nav} == 'vip')
+<div class="nav-wrap nav-wrap-vip">
+    <ul class="main-nav clearfix">
+        <li class="vip-index"><a href="https://list.lufax.com/list/vip">首页</a></li>
+        <li class="vip-profit"><a href="https://list.lufax.com/list/vipProfit">会员权益</a></li>
+        <li class="vip-consulting"><a href="https://list.lufax.com/list/vipConsulting">专属资讯</a></li>
+    </ul>
+</div>
+#else
+#if(${nav} != 'login')
+<div class="nav-wrap">
+    <ul class="main-nav clearfix">
+        <li><a href="http://www.lufax.com">首页</a></li>
+        <li class="invest has-sub-nav">
+            <a href="https://list.lufax.com/list/touzi" id="allP2pCounts">投资频道 <span></span> <i class="nav-arrow transition"></i></a>
+            <ul class="sub-nav-list">
+                <li id="anyingCounts"><a href="https://list.lufax.com/list/piaoju" data-sk="二级导航-稳盈-安盈"><b></b>安盈-票据<strong>1000元起</strong><span></span></a></li>
+                <li id="ayiCounts"><a href="https://list.lufax.com/list/anyi" data-sk="二级导航-稳盈-安e"><b></b>稳盈-安e<strong>1万元起</strong><span></span></a></li>
+                <li id="ayeCounts"><a href="https://list.lufax.com/list/anye" data-sk="二级导航-稳盈-安业"><b></b>稳盈-安业<strong>25万元起</strong><span></span></a></li>
+            </ul>
+        </li>
+        <li class="licai has-sub-nav">
+            <i class="icon-hot-item"></i>
+            <a href="https://list.lufax.com/list/licai"  data-sk="一级导航-理财频道" id="allLicai">理财频道 <span></span> <i class="nav-arrow transition"></i></a>
+            <ul class="sub-nav-list">
+                <li id="fyCounts"><a href="https://list.lufax.com/list/fuying" data-sk="二级导航-富盈人生"><b></b>富盈人生<strong>1000元起</strong><span></span></a></li>
+                <li id="spLiCai"><a href="https://list.lufax.com/list/zhuanxiang" data-sk="二级导航-专享理财"><b></b>专享理财<strong>2万元起</strong><span></span></a></li>
+                <li id="zhujiang"><a href="https://list.lufax.com/list/zhujiang" data-sk="二级导航-珠江"><b></b>珠江人寿<strong>100元起</strong><span></span></a></li>
+            </ul>
+        </li>
+        <li class="new-user">
+            <i class="icon-top-foot icon-fanxian">&nbsp;</i>
+            <a href="https://list.lufax.com/list/listing/xinke">新客专区 <span></span></a>
+        </li>
+        <li class="transfer"><a href="https://list.lufax.com/list/transfer">转让专区 <span></span></a></li>
+        <li class="loan-channel has-sub-nav"><a href="https://loan.lufax.com" data-sk="一级导航-借款频道">借款频道</a></li>
+    </ul>
+</div>
+#end
+#end
+<!--header end-->

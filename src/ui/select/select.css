@@ -1,0 +1,40 @@
+.lufax-ui-select,
+.lufax-ui-select .input-wrap {
+    position: relative;
+}
+
+.lufax-ui-select .input-wrap b {
+    width: 12px;
+    height: 7px;
+    display: inline-block;
+    background: url("img/select-arrow.gif") 0 0 no-repeat;
+    position: absolute;
+    z-index: 2;
+    right: 11px;
+    top: 13px;
+}
+.lufax-ui-select .select-option {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid #4d4398;
+    background: #fff;
+    left: 3px;
+    overflow-y: auto;
+    max-height: 260px;
+}
+.lufax-ui-select .select-option a {
+    display: block;
+    height: 24px;
+    padding: 1px 15px;
+    color: #333;
+    background-color: #fff;
+    text-decoration: none;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.lufax-ui-select .select-option a:hover, .lufax-ui-select .select-option a.selected {
+    color: #fff;
+    background-color: #4d4398;
+}

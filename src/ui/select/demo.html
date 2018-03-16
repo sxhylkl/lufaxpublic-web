@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>select</title>
+    <link rel="stylesheet" type="text/css" href="http://static.lufaxcdn.com/config/css/main_1018.css"/>
+    <script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="../../lufax.js"></script>
+    <script type="text/javascript" src="../ui.js"></script>
+    <script type="text/javascript" src="select.js"></script>
+    <link rel="stylesheet" type="text/css" href="select.css"/>
+</head>
+
+<body>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div id="select">
+
+</div>
+<script>
+    $(function () {
+        var selseced;
+        selseced = new lufax.ui.select($('#select'), {
+            defaultValue: 'asdasdad',
+            defaultOptions: ['111', '222', '333','111', '222', '333','111', '222', '333'],
+            callback:function(){
+                alert($('#select').find('.input').val())
+            }
+        });
+        selseced.init();
+
+
+
+
+    })
+</script>
+</body>
+</html>

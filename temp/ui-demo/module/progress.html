@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>progress</title>
+        <!--#include virtual="../includeLinks.html"-->
+<link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+<link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+</head>
+
+<body style="padding:20px;">
+<div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 进度条控件</div>
+<div class="tabs">
+	<a href="javascript:void(0)"><b>原型文档</b></a>
+	<a href="javascript:void(0)"><b>视觉稿</b></a>
+	<a href="javascript:void(0)"><b>前端代码</b></a>
+	<a href="javascript:void(0)"><b>必要样式</b></a>
+	<a href="javascript:void(0)"><b>必要脚本</b></a>
+    <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+</div>
+<div class="tab_cons">
+	<div class="tab_con">
+		进度条控件-原型文档
+	</div>
+    <div class="tab_con">
+          <img src="../widget_resource/images/visual_image/progress.png" />
+   </div>
+        <div class="tab_con">
+            <pre>
+&lt;h4&gt;第一种：&lt;/h4&gt;　　<br />            &lt;div class=&quot;nor_step_wrap clearfix&quot;&gt;<br />                &lt;div class=&quot;nor_step_sec_wrap&quot;&gt;<br />                    &lt;div class=&quot;nor&quot;&gt;&lt;a class=&quot;first previous&quot;&gt;1.输入员工邮箱&lt;/a&gt;&lt;/div&gt;<br />                    &lt;div class=&quot;nor current png&quot;&gt;&lt;a class=&quot;selected&quot;&gt;2.发送确认邮件&lt;/a&gt;&lt;/div&gt;<br />                    &lt;div class=&quot;nor&quot;&gt;&lt;a&gt;3.完成认证&lt;/a&gt;&lt;/div&gt;<br />                &lt;/div&gt;<br />            &lt;/div&gt;<br />            &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;<br />            &lt;h4&gt;第二种：&lt;/h4&gt;　　　　　　　　　　　　　　　　　　　　　　　　　　　<br />            &lt;span class=&quot;progressBar&quot;&gt;&lt;/span&gt;            
+            </pre>
+</div>
+        <div class="tab_con">	
+            <a href="../mainCss/base.css">../mainCss/base.css</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="tab_con">
+            第一种：无<br>
+            第二种：<a href="../mainJs/jquery.progressbar.js">../mainJs/jquery.progressbar.js</a>
+        </div>
+        <div class="tab_con current">
+        	<br/><br/>
+        	<h2 style="color:#6F00D2">new progress style : pure css without img. add by vincent @2012-11-26</h2>
+        	<br/><br/>
+        	<h3>第一种：</h3>
+        	<br/>
+        	<div class="com_step_wrap" style="width:900px;">
+    			<a class="step"><b></b>1.输入员工邮箱</a>
+				<a class="step current"><b></b>2.发送确认邮件</a>
+				<a class="step"><b></b>3.完成认证</a>
+				<p class="bottomLineShadow"></p>
+        	</div>
+        	<br/><br/>
+        	<h3>第二种：</h3>
+        	<br/>
+        	<span class="progressBar"></span>
+        	<br/><br/>
+        	<h3>第三种：(默认为灰色，添加split_active为红色)</h3>
+        	<br/>
+        	<div class="com_sliptLine" style="width:900px;">
+				<b></b>
+			</div>
+        	<br/><br/><br/><br/>
+
+
+        	<h2 style="color:#6F00D2">old progress</h2>
+        	<br/><br/>
+            <h4>第一种：</h4>
+			<div class="w960 mt30">
+				<div class="nor_step_wrap seperateLineRed">
+					<div class="clearfix">
+						<span class="fl pb10"><a class="previous pl30 pr30 default_word fs14">1.输入员工邮箱</a></span>
+						<span class="fl pb10 current png"><a class="selected pl30 pr30 default_word fs14">2.发送确认邮件</a></span>
+						<span class="fl pb10"><a class="last pl30 pr30 default_word fs14">3.完成认证</a></span>
+					</div>
+					<div class="bottomLineShadow"></div>
+				</div>
+			</div>
+            <br /><br /><br /><br /><br />
+            <h4>第二种：</h4>　　　　　　　　　　　　　　　　　　　　　　　　　　　
+            <span class="progressBar"></span>
+			<br /><br />
+            <h4>第三种：</h4>　　　　　　　　　　　　　　　　　　　　　　　　　　　
+            <div class="seperateLineGrayDown">
+				<p class="bottomLine"></p><i class="icon triangleGrayDownIcon ml10"></i>
+			</div>
+			<br /><br />
+            <h4>第四种：</h4>　　　　　　　　　　　　　　　　　　　　　　　　　　　
+            <div class="seperateLineGray">
+				<p class="bottomLineShadow"></p>
+			</div>
+        </div>
+</div>
+
+<script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../mainJs/jquery.progressbar.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".tabs>a").each(function(i){
+		$(this).click(function(){
+			$(this).addClass("current").siblings().removeClass("current")
+			.parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+		})
+	});
+    $(".progressBar").progressBar(85);
+})
+</script>
+<!--[if IE 6]>
+<script src="../app_js/ui30/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+    DD_belatedPNG.fix('.png');
+</script>
+<![endif]-->
+</body>
+</html>

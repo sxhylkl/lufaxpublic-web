@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>激活路金币demo - 平安陆金所</title>
+    <link rel="stylesheet" type="text/css" href="http://static.dev.lufax.com/config/css/main_1018.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.dev.lufax.com/config/css/layout.css" />
+    <script type="text/javascript">document.domain = 'lufax.com';</script>
+</head>
+
+<body>
+<div class="main-wrap">
+    <a class="active-link" href="javascript:;">激活陆金币</a>
+</div>
+
+<script type="text/javascript" src= "../../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://static.dev.lufax.com/config/js/lib/lufax.lib.js"></script>
+<script type="text/javascript" src="http://static.dev.lufax.com/config/js/lib/jquery.blockUI.js"></script>
+<script type="text/javascript" src= "../../lufax.js"></script>
+<script type="text/javascript" src= "../com.js"></script>
+<script type="text/javascript" src="activationLufaxCoin.js"></script>
+
+<script type="text/javascript">
+$(function(){
+    var activationLC = lufax.com.ActivationLufaxCoin;
+    $(".active-link").click(function(){
+        activationLC.pop();
+    });
+
+    activationLC.onSuccess = function(data){
+        if(data.LufaCoin_code){
+            alert("激活成功");
+        }
+    }
+});
+</script>
+</body>
+</html>

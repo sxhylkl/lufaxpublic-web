@@ -1,0 +1,191 @@
+/* CSS Document Author tianzs */
+ul li{list-style:none none outside;}
+list-style:none none outside;
+#main{margin:o auto;}
+#main_table{border:0;border-collapse:collapse;width:100%;height:100%;}
+#main_ctrl{width:8px;height:100%;border-right:1px solid #ccc;}
+#main_ctrl a{display:block;height:100%;background-color:#fffad2;text-decoration:none;}
+#main_ctrl a:hover{background-color:#bbd4ef;}
+
+#main_left{width:230px;height:100%;border-right:1px solid #ccc;background:#f2f2f2;vertical-align:top;overflow:hidden;}
+#main_right{height:100%;vertical-align:top;overflow:hidden;}
+.ml_head{padding:10px 0;text-align:center;}
+.ml_title{padding:10px 0;text-align:center;background:#e6551d;color:#eee;font:bold 14px SimSun;}
+
+
+
+.menu1{display:block;height:30px;margin:1px 0;}
+.menu1 a{display:block;height:100%;font:bold 14px SimSun;line-height:30px;padding:0 10px 0 30px;color:#06c;text-decoration:none;background-color:#ddd;}
+.menu1 a:hover{background-color:#ccc;text-decoration:underline;}
+.menu1 a.close{background:url(../images/tree_icon.png) 0 0 no-repeat #ddd;}
+.menu1 a.close:hover{background:url(../images/tree_icon.png) 0 -60px no-repeat #ccc;}
+.menu1 a.open{background:url(../images/tree_icon.png) 0 -30px no-repeat #ddd;}
+.menu1 a.open:hover{background:url(../images/tree_icon.png) 0 -90px no-repeat #ccc;}
+
+.ml_list ul li ul{display:none;}
+.menu2{display:block;height:25px;margin:1px 0;}
+.menu2 a{display:block;height:100%;font:normal 14px SimSun;line-height:25px;padding:0 10px 0 30px;color:#06c;text-decoration:none;border-bottom:1px solid #eaeaea;}
+.menu2 a:hover{background:#f8f8f8;text-decoration:underline;}
+
+.guide{height:30px;padding:0 10px;background:#ddd;font:bold 14px SimSun;color:#000;line-height:30px;}
+.tabs{padding:6px;padding-bottom:0;height:27px;border-bottom:1px solid #ccc;}
+.tabs a{float:left;height:26px;overflow:hidden;border:1px solid #ccc;border-bottom:0;background:#eee;margin:0 2px;text-decoration:none;}
+.tabs a:hover{background:#ddd;}
+.tabs a.current{height:27px;background:#ccc;}
+.tabs a b{padding:5px 10px;height:100%;font:bold 13px SimSun;line-height:26px;color:#06c;}
+.tabs a.current b{color:#fff;}
+
+.tab_cons .tab_con{display:none;padding:10px;}
+.tab_cons .tab_con.current{display:block;}
+
+/*								project								*/
+#project{margin:0 auto;}
+#project_table{border:0;border-collapse:collapse;width:100%;height:100%;}
+.project_list{width:200px;height:100%;border-right:1px solid #ccc;}
+.project_main{height:100%;vertical-align:top;overflow:hidden;}
+.project_list_ul{padding:20px 0;}
+.project_list_ul li{height:26px;border-bottom:1px dashed #ccc;font:normal 14px SimSun;line-height:25px;}
+.project_list_ul li a{display:block;padding:0 10px;color:#06c;text-decoration:none;}
+.project_list_ul li a.current,.project_list_ul li a:hover{background-color:#eee;text-decoration:underline;}
+
+h4{font-size: 14px;}
+h3{font-size: 16px;}
+.btn_grid{}
+.btn_grid td{text-align: center; padding: 6px;}
+.btn_grid td span{display: block;}
+.table-bordered {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-collapse: separate;
+    border-color: #DDDDDD #DDDDDD #DDDDDD -moz-use-text-color;
+    border-image: none;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px 0;
+    margin-bottom: 50px;
+}
+
+.table-bordered th, .table-bordered td {
+    border-left: 1px solid #DDDDDD;
+}
+.table th {
+    font-weight: bold;
+}
+.table th, .table td {
+    border-top: 1px solid #DDDDDD;
+    line-height: 20px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+.table thead th {
+    vertical-align: bottom;
+     border-top: 0 none;
+}
+
+.itemWrap{
+    padding: 20px 30px;
+    border: 1px solid #f5f5f5;
+}
+.itemWrap li{
+    float: left;
+    width: 300px;
+    border-left: 5px solid #f5f5f5;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    font-size: 14px;
+    margin: 0 30px 30px 0;
+}
+
+/*rich pop*//*
+.commission_wrap{
+    background-color: #fff;
+    width: 538px;
+    border: 1px solid #999;
+    color: #333;
+}
+.commission_wrap .head_wrap .head {
+    background-image: none;
+    background-color: #e6e6e6;
+    height: 50px;
+    line-height: 50px;
+}
+.commission_wrap .head_wrap .head .title{
+    float: left;
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.commission_wrap .head_wrap .head .btnsp{
+    float: right;
+    margin: 15px 15px 0 0;
+}
+.commission_wrap .content_wrap{
+    padding: 0;
+}
+.commission_wrap .content_wrap .textWrap{
+    position: relative;
+    margin: 21px auto 0;
+    width: 480px;
+    border: 1px solid #d1d1d1;
+}
+.commission_wrap .content_wrap .textWrap .textHead{
+    height: 33px;
+    line-height: 33px;
+    background: url(../images/textHeadBg_133.jpg) repeat-x 0 0;
+    border-bottom: 1px solid #d1d1d1;
+    text-align: center;
+}
+.commission_wrap .content_wrap .textWrap .textPanel{
+    box-shadow: 0 0 3px #ebebeb inset;
+    padding: 10px;
+    line-height: 24px;
+}
+.commission_wrap .content_wrap .textWrap .copyTip{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #fbf6d5;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; *//* ie8  *//*
+    filter:alpha(opacity=75);    *//* ie5-7  *//*
+    opacity: .75;
+}
+.commission_wrap .content_wrap .textWrap .copyTip .icon{
+    margin-right: 5px;
+}
+.commission_wrap .foot_wrap{
+    padding: 15px 0 22px;
+}*/
+
+.core-table td{
+    padding: 10px;
+}
+.table-border th,td{
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
+}
+
+.tip-dotted {
+    border-bottom: 1px dotted #333333;
+    cursor: pointer;
+    padding-bottom: 2px;
+}
+.linkTips{
+    background: none repeat scroll 0 0 #FFE9AD;
+    border: 1px solid #FAB418;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #bbb;
+    display: block;
+    line-height: 140%;
+    padding: 5px;
+    position: absolute;
+    z-index: 10;
+    left: -10000px;
+}

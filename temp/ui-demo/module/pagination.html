@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>分页</title>
+        <!--<link rel="stylesheet" type="text/css" href="../mainCss/main.css" />-->
+        <link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/>
+        <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+        <!--[if IE]>
+        <script type="text/javascript" src="http://static.lufax.com/config/js/lib/PIE.js"></script>
+        <![endif]-->
+    </head>
+
+    <body >
+        <div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 分页控件</div>
+        <div class="tabs">
+            <a href="javascript:void(0)"><b>原型文档</b></a>
+            <a href="javascript:void(0)"><b>视觉稿</b></a>
+            <a href="javascript:void(0)"><b>前端代码</b></a>
+            <a href="javascript:void(0)"><b>必要样式</b></a>
+            <a href="javascript:void(0)"><b>必要脚本</b></a>
+            <a class="current" href="javascript:void(0)"><b>前段输出</b></a>
+        </div>
+        <div class="tab_cons">
+            <div class="tab_con">
+                分页控件-原型文档
+            </div>
+            <div class="tab_con">
+                <img src="../widget_resource/images/visual_image/pagination.png" />
+            </div>
+            <div class="tab_con">
+                <pre>
+
+                    &lt;div class="ui_complex_pagination"&gt;
+                        &lt;a class="btns btn_page btn_small disabled" href="#">&lt;span class="caret">&lt;&lt;/span>&lt;/a>
+                    &lt;p class="pageNum"&gt;
+                            &lt;span class="current">1&lt;/span&gt;
+                    &lt;a href="javascript:void(0)">2&lt;/a&gt;
+                    &lt;a href="javascript:void(0)">3&lt;/a&gt;
+                    &lt;a href="javascript:void(0)">4&lt;/a&gt;
+                    &lt;a href="javascript:void(0)">5&lt;/a&gt;
+                    &lt;a href="javascript:void(0)">6&lt;/a&gt;
+
+                       &lt;/p&gt;
+                        &lt;a class="btns btn_page btn_small" href="#"&gt;下一页 &lt;span class="caret"&gt;&gt;&lt;/span></a>
+                    &lt;/div&gt;
+                </pre>
+            </div>
+            <div class="tab_con">
+
+                <a href="../widget_resource/css/common_layout.css">../app_css/common_layout.css</a>
+            </div>
+            <div class="tab_con">
+                无
+            </div>
+            <div class="tab_con current">
+                <h4>第一页</h4>
+                <div class="complex_pagination_wrap">
+                    <div class="ui_complex_pagination">
+                        <a class="btns btn_page btn_small disabled prev" href="#"><span class="caret">&lt;</span></a>
+                        <p class="pageNum">
+                            <span class="current">1</span>
+                            <a href="javascript:void(0)">2</a>
+                            <a href="javascript:void(0)">3</a>
+                            <a href="javascript:void(0)">4</a>
+                            <a href="javascript:void(0)">5</a>
+                            <a href="javascript:void(0)">6</a>
+
+                        </p>
+                        <a class="btns btn_page btn_small next" href="#">下一页 <span class="caret">&gt;</span></a>
+                    </div>
+                </div>
+
+                <br/><h4>最后一页</h4>
+                <div class="complex_pagination_wrap">
+                    <div class="ui_complex_pagination">
+                        <a class="btns btn_page btn_small prev" href="#"><span class="caret">&lt;</span></a>
+                        <p class="pageNum">
+                            <a href="javascript:void(0)">1</a>
+                            <a href="javascript:void(0)">2</a>
+                            <a href="javascript:void(0)">3</a>
+                            <a href="javascript:void(0)">4</a>
+                            <a href="javascript:void(0)">5</a>
+                            <span class="current">6</span>
+                        </p>
+                        <a class="btns btn_page btn_small disabled next" href="#">下一页 <span class="caret">&gt;</span></a>
+                    </div>
+                </div>
+
+<!--        
+
+                <br/><h4>大于10页 第一种样式</h4>
+                <div class="complex_pagination_wrap">
+                    <div class="ui_complex_pagination">
+                        <a class="graBtn_6027 png prev" href="#">上一页</a>
+                        <p class="pageNum">
+                            <a href="#" class="current">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">...</a>
+                        </p>
+                        <a class="disGraBtn_6027 png" href="#">下一页</a>
+                    </div>
+                </div>
+
+                <br/><h4>大于10页 第二种样式</h4>
+                <div class="complex_pagination_wrap">
+                    <div class="ui_complex_pagination">
+                        <a class="graBtn_6027 png prev" href="#">上一页</a>
+                        <p class="pageNum">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">...</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#" class="current">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">...</a>
+                        </p>
+                        <a class="disGraBtn_6027 png" href="#">下一页</a>
+                    </div>
+                </div>
+
+                <br/><h4>大于10页 第三种样式</h4>
+                <div class="complex_pagination_wrap">
+                    <div class="ui_complex_pagination">
+                        <a class="graBtn_6027 png prev" href="#">上一页</a>
+                        <p class="pageNum">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">...</a>
+                            <a href="#">14</a>
+                            <a href="#">15</a>
+                            <a href="#" class="current">16</a>
+                            <a href="#">17</a>
+                            <a href="#">18</a>
+                            <a href="#">19</a>
+                            <a href="#">20</a>
+                        </p>
+                        <a class="disGraBtn_6027 png" href="#">下一页</a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $(".tabs>a").each(function(i){
+                    $(this).click(function(){
+                        $(this).addClass("current").siblings().removeClass("current")
+                        .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+                    })
+                })
+            });
+        </script>
+    </body>
+</html>

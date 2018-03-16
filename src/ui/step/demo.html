@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>step - Lufax FE demo</title>
+    <link rel="stylesheet" type="text/css" href="http://static.dev.lufax.com/config/css/main_1018.css"/>
+    <link rel="stylesheet" type="text/css" href="numberstep.css"/>
+</head>
+<body>
+<div class="main-wrap">
+    <ul class="testDom"></ul>
+</div>
+<script type="text/javascript" src="http://static.dev.lufax.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="numberstep.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".testDom").numberstep({
+            totlewidth : 680,
+            args : [
+                {state:"finish",title:"填写金额",num:"1"},
+                {state:"active",title:"确认并已安全验证",num:"2",subStep:1/2},
+                {state:"",title:"认证中...",num:"3"},
+                {state:"",title:"认证完成",num:"4"}
+            ]
+        });
+    });
+</script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

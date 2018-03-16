@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>bank logo</title>
+    <!--#include virtual="../modules/includeCss.html"-->
+    <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+    <style type="text/css">
+        .col{height:30px line-height:30px; padding:10px 20px;}
+    </style>
+</head>
+
+<body style="padding:20px;">
+<div class="guide">当前位置：前端制作规范及用例规约 &gt; 控件用例规约 &gt; 小图标控件</div>
+<div class="tabs">
+    <a href="javascript:void(0)"><b>原型文档</b></a>
+    <a href="javascript:void(0)"><b>视觉稿</b></a>
+    <a href="javascript:void(0)"><b>前端代码</b></a>
+    <a href="javascript:void(0)"><b>必要样式</b></a>
+    <a href="javascript:void(0)"><b>必要脚本</b></a>
+    <a href="javascript:void(0)" class="current"><b>前段输出</b></a>
+</div>
+<div class="tab_cons">
+    <div class="tab_con">
+        按钮控件-原型文档
+    </div>
+    <div class="tab_con">
+        <img src="../widget_resource/images/visual_image/界面控件.png" alt="" />
+    </div>
+    <div class="tab_con">
+
+    </div>
+</div>
+<div class="tab_con">
+    <a href="#">http://static.dev.lufax.com/config/css/main_1018.css</a>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<div class="tab_con">
+    无
+</div>
+<div class="tab_con current">
+    <table style="margin-bottom: 30px;border: 1px solid #e6551d;">
+        <caption><h2>icon bank logo</h2><br/></caption>
+        <tr>
+            <td class="col"><i class="bankLogo bank_abc10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_boc10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_ccb10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_cmb10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_cmbc10833">&nbsp;</i></td>
+        </tr>
+        <tr>
+            <td class="col"><i class="bankLogo bank_cmbc10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_ecitic10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_icbc10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_paic10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_sdb10833">&nbsp;</i></td>
+        </tr>
+        <tr>
+            <td class="col"><i class="bankLogo bank_alipay10833">&nbsp;</i></td>
+            <td class="col"><i class="bankLogo bank_everbright10833">&nbsp;</i></td>
+            <td class="col"></td>
+            <td class="col"></td>
+            <td class="col"></td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".tabs>a").each(function(i){
+            $(this).click(function(){
+                $(this).addClass("current").siblings().removeClass("current")
+                        .parent().next().children(".tab_con").eq(i).slideDown('fast').siblings().hide();
+            })
+        });
+    });
+</script>
+
+</body>
+</html>

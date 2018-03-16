@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>keyboard</title>
+    <link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/>
+    <link rel="stylesheet" type="text/css" href="css/widget_base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/UEDpublic.css"/>
+    <link rel="stylesheet" type="text/css" href="../mainCss/pa_ui.css"/>
+<style>
+    table.nor{width:630px; margin:30px auto 0 auto;}
+    table tr th{width:80px; height:46px; text-align:right;}
+    table tr th.prompt{height:20px;}
+    table tr td{padding:0 0 0 10px;}
+    table tr td.btn_pos{ vertical-align:bottom; padding-top:10px;}
+    table tr td div.msg{background:#fbeee8; padding:5px 8px;}
+    table tr td div.authCode{background:red; height:26px; float:left; width:74px; margin:2px 0 0 18px; _margin:2px 0 0 0px; line-height:26px; text-align:center;}
+    table tr td div.tips{text-align:left;}
+</style>
+</head>
+
+<body >
+    <form class="form_horizontal mt20">
+        <div class="control_group">
+            <label class="control_label" for="inputDefult">默认键盘：</label>
+            <div class="controls">
+                <input type="text" id="inputDefult" placeholder="Email" class="input input_aide softkey" pa_ui_name="keyboard"/>
+                <span class="help_line">pa_ui_name="keyboard"</span>
+            </div>
+        </div>
+        <div class="control_group">
+            <label class="control_label" for="inputDefult1">长键盘：</label>
+            <div class="controls">
+                <input type="text" id="inputDefult1" placeholder="Email" class="input input_aide softkey" pa_ui_name="keyboard" pa_ui_keyboard_type="advance"/>
+                <span class="help_line">pa_ui_name="keyboard" pa_ui_keyboard_type="advance"</span>
+            </div>
+        </div>
+        <div class="control_group">
+            <label class="control_label" for="inputDefult2">数字键盘：</label>
+            <div class="controls">
+                <input type="text" id="inputDefult2" placeholder="Email" class="input input_aide softkey" pa_ui_name="keyboard" pa_ui_keyboard_type="number"/>
+                <span class="help_line">pa_ui_name="keyboard" pa_ui_keyboard_type="number"</span>
+            </div>
+        </div>
+        <div class="control_group">
+            <label class="control_label" for="inputDefult3">国际化：</label>
+            <div class="controls">
+                <input type="text" id="inputDefult3" placeholder="Email" class="input input_aide softkey" pa_ui_name="keyboard" lang="en" pa_ui_keyboard_type="advance"/>
+                <span class="help_line">lang="en"</span>
+            </div>
+        </div>
+    </form>
+	
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/form.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery-ui-1.7.1.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/pa_ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>检测大写锁定键</title>
+<link rel="stylesheet" href="http://static.lufaxcdn.com/config/css/main_1018.css" />
+<link rel="stylesheet" href="detectCapsLock.css" />
+</head> 
+
+<body>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label" for="password">密码</label>
+        <div class="controls">
+            <span class="input-wrap"><input type="password" class="inputs" id="password"></span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="mail">测试</label>
+        <div class="controls">
+            <span class="input-wrap"><input type="text" class="inputs" id="mail"></span>
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="http://static.lufaxcdn.com/config/js/lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../../lufax.js"></script>
+<script type="text/javascript" src="../ui.js"></script>
+<script type="text/javascript" src="detectCapsLock.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var DetectCapsLock = new lufax.ui.DetectCapsLock($("#password"));
+        DetectCapsLock.init();
+    })
+</script> 
+</body> 
+</html>

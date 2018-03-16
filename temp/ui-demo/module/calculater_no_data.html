@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>贷款计算器</title>
+        <link rel="stylesheet" type="text/css" href="../mainCss/main.css" />
+        <style>
+            .input {width: 110px;}
+           
+            .loan_calculater_wrap .csearch_wrap .csearch_content_wrap .scal {
+                float: left;
+                margin: 0px 45px 0 12px;
+            }
+            .faq_flaot_ad_wrap .btns {
+                padding: 3px 12px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="loan_calculater_wrap">
+
+            <div class="chead_wrap clearfix png">
+                <div class="chead_content">贷款计算器</div>
+            </div>
+            <div class="cseperate clearDiv">9</div>
+
+
+            <div class="lcontent_wrap">
+                <div class="faq_flaot_ad_wrap png">
+                    <div class="btn_pos"><a class="btns btn_info" href="#">投资收益计算器</a></div>
+                    <a href="#" class="to_top_wrap">&nbsp;</a>
+                </div>
+                <div class="csearch_wrap" style="_margin-left:308px;">
+                    <div class="csearch_content_wrap cfirst clearfix">
+                        <div class="stitle">起息日</div>
+                        <div class="scal">
+                            <div class="input_cal_div"><input type="text" class="input input_aide calendar disabled" disabled="disabled" value="2012-1-1"  readonly="readonly"/></div>
+                        </div>
+                        <div class="stitle">贷款期数</div>
+                        <div class="scal">
+                            <div class="input_nor_div"><input type="text" class="input disabled" disabled="disabled" value="8" readonly="readonly"/></div>
+                        </div>
+                    </div>
+                    <div class="error_wrap clearfix">
+                        <div class="error_left_wrap">
+                            <div class="econtent" style="display:none;">请选择起息日。</div>
+                        </div>
+                        <div class="error_right_wrap">
+                            <div class="econtent" style="display:none;">还款年利率只能为数字，且小数点后最多2位。</div>
+                        </div>
+                    </div>
+                    <div class="csearch_content_wrap clearfix">
+                        <div class="stitle">贷款本金</div>
+                        <div class="scal hunit">
+                            <div class="input_nor_div"><input type="text" class="input disabled" disabled="disabled" value="1000.00" readonly="readonly"/></div>
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="stitle">还款年利率</div>
+                        <div class="scal hunit">
+                            <div class="input_nor_div"><input type="text" class="input disabled" disabled="disabled" value="8" readonly="readonly"/></div>
+                        </div>
+                        <div class="unit">%</div>
+                    </div>
+                    <div class="error_wrap clearfix">
+                        <div class="error_left_wrap">
+                            <div class="econtent" style="display:none;">还款年利率只能为数字，且小数点后最多2位。</div>
+                        </div>
+                        <div class="error_right_wrap">
+                            <div class="econtent" style="display:none;">还款年利率只能为数字，且小数点后最多2位。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description"><div class="dcontent">计算结果</div><div class="dlink"><a href="#">怎么算?</a></div></div>
+                <div class="data_table_wrap">
+                    <div class="title_wrap">
+                        <div class="t_1">期次</div>
+                        <div class="t_2">还款日</div>
+                        <div class="t_3">应还利息（元）</div>
+                        <div class="t_4">应还本金（元）</div>
+                        <div class="t_5">应还利息（元）</div>
+                        <div class="t_6">剩余本金（元）</div>
+                    </div>
+                    <div class="content_wrap">
+                        <div class="d_1">1</div>
+                        <div class="d_2">2012-4-1</div>
+                        <div class="d_3">252.00</div>
+                        <div class="d_4">250.00</div>
+                        <div class="d_5">2.00</div>
+                        <div class="d_6">750.00</div>
+                    </div>
+                    <div class="content_wrap even">
+                        <div class="d_1">2</div>
+                        <div class="d_2">2012-7-1</div>
+                        <div class="d_3">252.00</div>
+                        <div class="d_4">250.00</div>
+                        <div class="d_5">2.00</div>
+                        <div class="d_6">500.00</div>
+                    </div>
+                    <div class="content_wrap">
+                        <div class="d_1">3</div>
+                        <div class="d_2">2012-10-1</div>
+                        <div class="d_3">252.00</div>
+                        <div class="d_4">250.00</div>
+                        <div class="d_5">2.00</div>
+                        <div class="d_6">250.00</div>
+                    </div>
+                    <div class="content_wrap even">
+                        <div class="d_1">4</div>
+                        <div class="d_2">2012-12-31</div>
+                        <div class="d_3">252.00</div>
+                        <div class="d_4">250.00</div>
+                        <div class="d_5">2.00</div>
+                        <div class="d_6">0.00</div>
+                    </div>
+                    <div class="content_wrap">
+                        <div class="a_1">合计</div>
+                        <div class="a_2">1008.00</div>
+                        <div class="a_3">1000.00</div>
+                        <div class="a_4">8.00</div>
+                        <div class="a_5"></div>
+                    </div>
+                </div>
+                <div class="bottom_description first">
+                    此计算器的计算结果仅供参考，陆金所对此结果的准确性不承担任何责任。
+                </div>
+                <div class="bottom_description last">
+                    实际数额以陆金所确认的结果为准。
+                </div>
+                <div class="clearDiv"></div>
+            </div>
+            <div class="bottom_wrap"><div class="bottom_bg png"></div></div>
+        </div>
+        <script type="text/javascript" src="../mainJs/jquery-1.7.1.js"></script>
+        <!--[if IE 6]>
+        <script src="../mainJs/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script>
+          DD_belatedPNG.fix('.png');
+          $(function(){
+                var init_top = parseInt($(".faq_flaot_ad_wrap").css("top"));
+            $(window).scroll(function(){
+                var to_top = init_top + $(window).scrollTop();
+                $(".faq_flaot_ad_wrap").animate({top: to_top},10);
+            })
+          })
+        </script>
+        <![endif]-->
+    </body>
+</html>

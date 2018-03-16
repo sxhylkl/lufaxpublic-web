@@ -1,0 +1,322 @@
+﻿/*333333333333333333333333333333333333333333333333333333333333334*/
+.btns, .btns span {
+    background-image: url(../images/button_autoAdapte.png);
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    background-position: 0 0;
+}
+
+.btns:hover {
+    text-decoration: none;
+}
+
+/*button:orange height:28px*/
+
+.btns {
+    padding-right: 10px;
+    background-position: right -248px;
+}
+
+.btns span {
+    background-position: left -62px;
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 28px;
+    line-height: 27px;
+}
+
+.btns:hover {
+    background-position: right -279px;
+    cursor: pointer;
+}
+
+.btns:hover span {
+    background-position: left -93px;
+}
+
+.btns.disabled {
+    background-position: right -341px;
+    cursor: default;
+    color: #999;
+}
+
+.btns.disabled span {
+    background-position: left -155px;
+}
+
+/*button:blue height:28px*/
+.btn_info {
+    background-position: right -186px;
+}
+
+.btn_info span {
+    background-position: left 0px;
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 28px;
+    line-height: 27px;
+}
+
+.btn_info:hover {
+    background-position: right -217px;
+    cursor: pointer;
+}
+
+.btn_info:hover span {
+    background-position: left -31px;
+}
+
+/*button:gray height:28px*/
+.btn_cancel {
+    background-position: right -310px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #333;
+}
+
+.btn_cancel span {
+    background-position: left -124px;
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 28px;
+    line-height: 27px;
+}
+
+.btn_cancel:hover {
+    background-position: right -341px;
+    cursor: pointer;
+}
+
+.btn_cancel:hover span {
+    background-position: left -155px;
+}
+
+.btn_cancel:hover {
+    background-position: right -341px;
+    cursor: pointer;
+}
+
+.btn_cancel:hover span {
+    background-position: left -155px;
+}
+
+.btns.disabled {
+    background-position: right -341px;
+    cursor: default;
+    color: #999;
+}
+
+.btns.disabled span {
+    background-position: left -155px;
+}
+
+/*pagination*/
+.prev {
+    padding: 0;
+    background: none;
+    height: 22px;
+}
+
+.prev span {
+    background-position: left -450px;
+    width: 23px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    border: none;
+}
+
+.prev:hover span {
+    background-position: left -475px;
+}
+
+.prev.disabled span {
+    background-position: left -500px;
+    cursor: default;
+}
+
+.next {
+    background-position: right -450px;
+    padding: 0 15px 0 0;
+    color: #333;
+}
+
+.next span {
+    background-position: left -375px;
+    padding: 0 0 0 5px;
+    height: 22px;
+    line-height: 21px;
+}
+
+.next:hover {
+    background-position: right -475px;
+    cursor: pointer;
+}
+
+.next:hover span {
+    background-position: left -400px;
+}
+
+.next.disabled {
+    background-position: right -500px;
+    cursor: default;
+    color: #999;
+}
+
+.next.disabled span {
+    background-position: left -425px;
+}
+
+/*button:orange height:33px*/
+.btn_large {
+    background-position: right -719px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn_large span {
+    background-position: left -539px;
+    padding-left: 30px;
+    padding-right: 20px;
+    height: 33px;
+    line-height: 32px;
+}
+
+.btn_large:hover {
+    background-position: right -755px;
+    cursor: pointer;
+}
+
+.btn_large:hover span {
+    background-position: left -575px;
+}
+
+.btn_large.disabled {
+    background-position: right -863px;
+    cursor: default;
+    color: #999;
+}
+
+.btn_large.disabled span {
+    background-position: left -683px;
+}
+
+/*button:blue height:33px*/
+.btn_info.btn_large {
+    background-position: right -791px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn_info.btn_large span {
+    background-position: left -611px;
+    padding-left: 30px;
+    padding-right: 20px;
+    height: 33px;
+    line-height: 32px;
+}
+
+.btn_info.btn_large:hover {
+    background-position: right -827px;
+    cursor: pointer;
+}
+
+.btn_info.btn_large:hover span {
+    background-position: left -647px;
+    cursor: pointer;
+}
+
+/*button:orange height:38px*/
+.btn_xlarge {
+    background-position: right -1108px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn_xlarge span {
+    background-position: left -903px;
+    padding-left: 40px;
+    padding-right: 30px;
+    height: 38px;
+    line-height: 37px;
+}
+
+.btn_xlarge:hover {
+    background-position: right -1149px;
+    cursor: pointer;
+}
+
+.btn_xlarge:hover span {
+    background-position: left -944px;
+}
+
+.btn_xlarge.disabled {
+    background-position: right -1273px;
+    cursor: default;
+    color: #999;
+}
+
+.btn_xlarge.disabled span {
+    background-position: left -1068px;
+}
+
+/*button:blue height:33px*/
+.btn_info.btn_xlarge {
+    background-position: right -1191px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn_info.btn_xlarge span {
+    background-position: left -986px;
+    padding-left: 40px;
+    padding-right: 30px;
+    height: 38px;
+    line-height: 37px;
+}
+
+.btn_info.btn_xlarge:hover {
+    background-position: right -1232px;
+    cursor: pointer;
+}
+
+.btn_info.btn_xlarge:hover span {
+    background-position: left -1027px;
+}
+
+/*fix the bug*/
+.loginSubmit span {
+    width: 138px;
+}
+
+.control_group .loginSubmit {
+    width: auto;
+}
+
+.productInfo .productDetail .cashAmount .containerBox .btns {
+    width: auto;
+}
+
+.productInfo .productDetail .cashAmount .containerBox .btns span {
+    width: 90px;
+}
+
+.containerBox .productDetail_invest_btn {
+    padding: 0;
+    padding-right: 10px;
+}
+/*new login*/
+.loginBlockInner .control_group .loginSubmit {
+    width: auto;
+    font-size: 18px;
+}

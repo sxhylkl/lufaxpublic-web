@@ -1,0 +1,2421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <title>前端制作规范及用例规约</title>
+    <!--#include virtual="../modules/includeCss.html"-->
+    <link rel="stylesheet" type="text/css" href="http://www.lufax.com/activity/app_css/layout.simple.activity-1.0.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/pa_ui.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/jQueryUI.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/component_layout.css"/>
+</head>
+
+<body class="bgColorGray">
+<!--pageWrapper-left-->
+<div class="pageWrapper-left ">
+    <div class="head mt10">
+        <h1 class="fs14 whiteWord tec ptb10 bgColorRed">前端制作规范及用例规约 </h1>
+    </div>
+    <ul>
+        <li class="list menu">
+            <ul class="subList menuItem">
+                <li><a href="#icon">小图标</a></li>
+                <li><a href="#button">按钮</a></li>
+                <li><a href="#input">输入框-new</a></li>
+                <li><a href="#datePicker">日期选择</a></li>
+                <li><a href="#font">字体</a></li>
+                <li><a href="#bank">银行logo</a></li>
+                <li><a href="#prompt">提示框</a></li>
+                <li><a href="#popup">弹出浮层 - new</a></li>
+                <li><a href="#pagination">分页</a></li>
+                <li><a href="#keyboard">软键盘</a></li>
+                <li><a href="#datagrid">表格</a></li>
+                <li><a href="#new_list">新闻列表</a></li>
+                <li><a href="#progress">进度条</a></li>
+                <li><a href="#old_pop">弹出浮层 - old</a></li>
+                <li><a href="#head">头部</a></li>
+                <li><a href="#foot">尾部</a></li>
+                <li><a href="#calculater">贷款计算器</a></li>
+                <li><a href="#phoneCode">手机动态码</a></li>
+                <li><a href="#loading">加载中</a></li>
+                <li><a href="#grid">栅格化</a></li>
+                <li><a href="#API">JS API</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--pageWrapper-right-->
+<div class="pageWrapper-right">
+    <!--小图标控件-->
+    <div class="section">
+        <h1 class="section-title" id="icon">小图标控件</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">前端代码-iconV2:　</span>&lt;i<span class="attribute"> class</span>="<span class="value">iconV2 member1Icon</span>"&gt;<span>&</span>nbsp;&lt;/i&gt;
+        <span class="code-title">前端代码-iconV1:　</span>&lt;i<span class="attribute"> class</span>="<span class="value">icon aquareGrayIcon</span>"&gt;<span>&</span>nbsp;&lt;/i&gt;
+        </code>
+        </pre>
+        </div>
+
+        <div class="share-table">
+            <h3 class="msg">icon v2</h3>
+            <table>
+                <tr>
+                    <td>
+                        <p><i class="iconV2 member1Icon">&nbsp;</i>普通会员</p>
+                        <span class="massage">.iconV2 .member1Icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 member2Icon">&nbsp;</i>黄金会员</p>
+                        <span class="massage">.iconV2 .member2Icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 member3Icon">&nbsp;</i>白金会员</p>
+                        <span class="massage">.iconV2 .member3Icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 newMessageIcon">&nbsp;</i>有消息</p>
+                        <span class="massage">.iconV2 .newMessageIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 noMessageIcon">&nbsp;</i>无消息</p>
+                        <span class="massage">.iconV2 .noMessageIcon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="iconV2 correctIcon">&nbsp;</i>正确/通过</p>
+                        <span class="massage">.iconV2 .correctIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 errorIcon">&nbsp;</i>空/错误/未通过</p>
+                        <span class="massage">.iconV2 .errorIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 transfer-icon">&nbsp;</i>转让图标</p>
+                        <span class="massage">.iconV2 .transfer-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 mobile-icon">&nbsp;</i>手机图标</p>
+                        <span class="massage">.iconV2 .mobile-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 auction-icon">&nbsp;</i>拍卖图标</p>
+                        <span class="massage">.iconV2 .auction-icon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="iconV2 new-user-icon">&nbsp;</i>新客图标</p>
+                        <span class="massage">.iconV2 .new-user-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 recommend-icon">&nbsp;</i>推荐图标</p>
+                        <span class="massage">.iconV2 .recommend-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 enjoyment-icon">&nbsp;</i>专享图标</p>
+                        <span class="massage">.iconV2 .enjoyment-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 hot-icon">&nbsp;</i>热门图标</p>
+                        <span class="massage">.iconV2 .hot-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 new-channel-icon">&nbsp;</i>新渠道图标</p>
+                        <span class="massage">.iconV2 .new-channel-icon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="iconV2 vip-icon">&nbsp;</i>vip图标</p>
+                        <span class="massage">.iconV2 .vip-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 alert-icon">&nbsp;</i>提示/警告</p>
+                        <span class="massage">.iconV2 .alert-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 lucion-icon">&nbsp;</i>陆金币</p>
+                        <span class="massage">.iconV2 .lucion-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 clock-icon">&nbsp;</i>进行中/处理中</p>
+                        <span class="massage">.iconV2 .clock-icon</span>
+                    </td>
+                    <td>
+                        <p><i class="iconV2 integral-icon">&nbsp;</i>积分</p>
+                        <span class="massage">.iconV2 .integral-icon</span>
+                    </td>
+                </tr>
+            </table>
+            <h3 class="msg">icon v1</h3>
+            <table style="margin-bottom: 30px;border: 1px solid #ddd;">
+                <tr>
+                    <td>
+                        <p><i class="icon aquareGrayIcon"></i>1&nbsp;&nbsp;列表类</p>
+                        <span class="massage">.icon .aquareGrayIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon triangleRedLeftIcon"></i>2&nbsp;&nbsp;公告、新闻类</p>
+                        <span class="massage">.icon .triangleRedLeftIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon triangleGrayLeftIcon">&nbsp;</i>3</p>
+                        <span class="massage">.icon .triangleGrayLeftIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon moreThanRedLeftIcon">&nbsp;</i>4</p>
+                        <span class="massage">.icon .moreThanRedLeftIcon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="icon triangleRedDownIcon">&nbsp;</i>5</p>
+                        <span class="massage">.icon .triangleRedDownIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon dotBlackIcon">&nbsp;</i>6</p>
+                        <span class="massage">.icon .dotBlackIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon dotGreenIcon">&nbsp;</i>7</p>
+                        <span class="massage">.icon .dotGreenIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon triangleLitterGreenLeftIcon">&nbsp;</i>8&nbsp;&nbsp;帮助类，如常见问题等</p>
+                        <span class="massage">.icon .triangleLitterGreenLeftIcon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="icon triangleLittleGrayLeftIcon">&nbsp;</i>9</p>
+                        <span class="massage">.icon .triangleLittleGrayLeftIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon triangleLittleWhiteLeftIcon">&nbsp;</i>10</p>
+                        <span class="massage">.icon .triangleLittleWhiteLeftIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon failureRedIcon">&nbsp;</i>11</p>
+                        <span class="massage">.icon .failureRedIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon correctGreenIcon">&nbsp;</i>12</p>
+                        <span class="massage">.icon .correctGreenIcon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="icon triangleRedLeftLittleIcon">&nbsp;</i>2-2</p>
+                        <span class="massage">.icon .triangleRedLeftLittleIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon exclamationCircleIcon">&nbsp;</i>13</p>
+                        <span class="massage">.icon .exclamationCircleIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon rotateIcon">&nbsp;</i>14</p>
+                        <span class="massage">.icon .rotateIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon interrogationGreenIcon">&nbsp;</i>15</p>
+                        <span class="massage">.icon .interrogationGreenIcon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="icon interrogationWhiteIcon">&nbsp;</i>16</p>
+                        <span class="massage">.icon .interrogationWhiteIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon interrogationYellowIcon">&nbsp;</i>17</p>
+                        <span class="massage">.icon .interrogationYellowIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon minusRedIcon">&nbsp;</i>18</p>
+                        <span class="massage">.icon .minusRedIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon plusRedIcon">&nbsp;</i>19</p>
+                        <span class="massage">.icon .plusRedIcon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="icon failureCircleIcon">&nbsp;</i>20</p>
+                        <span class="massage">.icon .failureCircleIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon correctCircleIcon">&nbsp;</i>21</p>
+                        <span class="massage">.icon .correctCircleIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon minusCircleIcon">&nbsp;</i>22</p>
+                        <span class="massage">.icon .minusCircleIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon threeCircleOrangeIcon">&nbsp;</i>23</p>
+                        <span class="massage">.icon .threeCircleOrangeIcon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="icon threeRectangleListOrangeIcon">&nbsp;</i>24</p>
+                        <span class="massage">.icon .threeRectangleListOrangeIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon twoRectangleListOrangeIcon">&nbsp;</i>25</p>
+                        <span class="massage">.icon .twoRectangleListOrangeIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon correctRedIcon">&nbsp;</i>26</p>
+                        <span class="massage">.icon .correctRedIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon rectangleGreenIcon">&nbsp;</i>27</p>
+                        <span class="massage">.icon .rectangleGreenIcon</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i class="icon rectangleYellowIcon">&nbsp;</i>28</p>
+                        <span class="massage">.icon .rectangleYellowIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon rectangleWhiteIcon">&nbsp;</i>29</p>
+                        <span class="massage">.icon .rectangleWhiteIcon</span>
+                    </td>
+                    <td>
+                        <p><i class="icon wordFuIcon">&nbsp;</i>30</p>
+                        <span class="massage">.icon .wordFuIcon</span>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--button 控件-->
+    <div class="section">
+        <h1 class="section-title" id="button">按钮</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">前端代码:　</span>&lt;a<span class="attribute"> class</span>="<span class="value">btns</span>"&nbsp;<span class="attribute"> href</span>="<span class="value">#</span>"&gt;Default&lt;/a&gt;
+        </code>
+        </pre>
+        </div>
+        <h3 class="msg">常用按钮，无特别说明的情况下使用。高：28px，字体大小：12px，字体加粗：bold</h3>
+        <div class="share-table">
+            <table>
+                <tbody>
+                <tr>
+                    <td><a class="btns" href="#">Default</a></td>
+                    <td><span class="massage"><code>.btns</code></span></td>
+                    <td>全站默认按钮</td>
+                </tr>
+                <tr>
+                    <td><a class="btns btn_info" href="#">Info</a></td>
+                    <td><span class="massage"><code>.btns .btn_info</code></span></td>
+                    <td>全站辅助信息按钮</td>
+                </tr>
+                <tr>
+                    <td><a class="btns btn_cancel" href="#">Cancel</a></td>
+                    <td><span class="massage"><code>.btns .btn_cancel</code></span></td>
+                    <td>全站事件取消按钮</td>
+                </tr>
+                <tr>
+                    <td><a class="btns disabled" href="#">Cancel</a></td>
+                    <td><span class="massage"><code>.btns .disabled</code></span></td>
+                    <td>全站disable状态按钮</td>
+                </tr>
+                </tbody>
+            </table>
+            <h3 class="msg">特殊尺寸按钮，有特别说明的情况下使用。高：34px，字体大小：14px，字体加粗：bold</h3>
+            <table>
+                <tbody>
+                <tr>
+                    <td><a class="btns btn_large" href="#">Default</a></td>
+                    <td><span class="massage"><code>.btns .btn_large</code></span></td>
+                    <td>全站默认按钮（大）</td>
+                </tr>
+                <tr>
+                    <td><a class="btns btn_info btn_large" href="#">Info</a></td>
+                    <td><span class="massage"><code>.btns .btn_info .btn_large</code></span></td>
+                    <td>全站辅助信息按钮（大）</td>
+                </tr>
+                <tr>
+                    <td><a class="btns btn_cancel btn_large" href="#">Cancel</a></td>
+                    <td><span class="massage"><code>.btns .btn_cancel .btn_large</code></span></td>
+                    <td>全站事件取消按钮（大）</td>
+                </tr>
+                <tr>
+                    <td><a class="btns disabled btn_large" href="#">Cancel</a></td>
+                    <td><span class="massage"><code>.btns .disabled .btn_large</code></span></td>
+                    <td>全站disable状态按钮（大）</td>
+                </tr>
+                </tbody>
+            </table>
+            <h3 class="msg">特殊尺寸按钮，有特别说明的情况下使用。高：38px，字体大小：14px，字体加粗：bold</h3>
+            <table>
+                <tbody>
+                <tr>
+                    <td><a class="btns btn_xlarge" href="#">Default</a></td>
+                    <td><span class="massage"><code>.btns .btn_xlarge</code></span></td>
+                    <td>全站默认按钮（特大）</td>
+                </tr>
+                <tr>
+                    <td><a class="btns btn_info btn_xlarge" href="#">Info</a></td>
+                    <td><span class="massage"><code>.btns .btn_info .btn_xlarge</code></span></td>
+                    <td>全站辅助信息按钮（特大）</td>
+                </tr>
+                <tr>
+                    <td><a class="btns btn_cancel btn_xlarge" href="#">Cancel</a></td>
+                    <td><span class="massage"><code>.btns .btn_cancel .btn_xlarge</code></span></td>
+                    <td>全站事件取消按钮（特大）</td>
+                </tr>
+                <tr>
+                    <td><a class="btns disabled btn_xlarge" href="#">Cancel</a></td>
+                    <td><span class="massage"><code>.btns .disabled .btn_xlarge</code></span></td>
+                    <td>全站disable状态按钮（特大）</td>
+                </tr>
+                </tbody>
+            </table>
+            <h3 class="msg">简版翻页，高：22px，字体大小：12px，字体加粗：normal</h3>
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><a class="btns btn_page btn_small prev" href="#"><span class="caret">&lt;</span></a></td>
+                    <td><span class="massage"><code>.btns .btn_page .btn_small .prev</code></span></td>
+                    <td>用于翻页按钮</td>
+                </tr>
+                <tr>
+                    <td><a class="btns btn_page btn_small next" href="#">上一页 <span class="caret">&gt;</span></a></td>
+                    <td><span class="massage"><code>.btns .btn_page .btn_small .next</code></span></td>
+                    <td>用于翻页按钮</td>
+                </tr>
+                <tr>
+                    <td> <a class="btns btn_page disabled btn_small prev" href="#"><span class="caret">&lt;</span></a></td>
+                    <td><span class="massage"><code>.btns .disabled .btn_small .prev</code></span></td>
+                    <td>用于翻页按钮（disable状态）</td>
+                </tr>
+                <tr>
+                    <td><a class="btns btn_page disabled btn_small next" href="#">上一页 <span class="caret">&gt;</span></a></td>
+                    <td><span class="massage"><code>.btns .disabled .btn_small .next</code></span></td>
+                    <td>用于翻页按钮（disable状态）</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h3 class="msg">特殊的按钮，少量存在于网站中，不能做统一规范，今后将慢慢去除（除关闭按钮）</h3>
+            <table>
+                <tr>
+                    <td> <a class="btnsp btnsp_invest" href="#">&nbsp;</a></td>
+                    <td><span class="massage">.btnsp .btnsp_invest</span></td>
+                    <td>我要投资</td>
+                </tr>
+                <tr>
+                    <td><a class="btnsp btnsp_investLarge" href="#">&nbsp;</a></td>
+                    <td><span class="massage">.btnsp .btnsp_investLarge</span></td>
+                    <td>我要投资(大)</td>
+                </tr>
+                <tr>
+                    <td> <a class="btnsp btnsp_question" href="#">&nbsp;</a></td>
+                    <td><span class="massage">.btnsp .btnsp_question</span></td>
+                    <td>提交问题</td>
+                </tr>
+                <tr>
+                    <td><a class="btnsp btnsp_loan" href="#">我要借款</a></td>
+                    <td><span class="massage">.btnsp .btnsp_loan</span></td>
+                    <td>我要借款（多出现在table中）</td>
+                </tr>
+                <tr>
+                    <td><a class="btnsp btnsp_investSmall" href="#">我要投资</a></td>
+                    <td><span class="massage">.btnsp .btnsp_investSmall</span></td>
+                    <td>我要投资（多出现在table中）</td>
+                </tr>
+                <tr>
+                    <td><a class="btnsp btnsp_claims" href="#">理赔中</a></td>
+                    <td><span class="massage">.btnsp .btnsp_claims</span></td>
+                    <td>理赔中</td>
+                </tr>
+                <tr>
+                    <td><a class="btnsp btnsp_close" href="#">&nbsp;</a></td>
+                    <td><span class="massage">.btnsp .btnsp_close</span></td>
+                    <td>关闭按钮</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="btn_stateTip"><span class="stateTip bRFix">逾期</span></span>
+                    </td>
+                    <td><span class="massage">.btn_stateTip .stateTip .bRFix</span></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--登录注册输入框控件-->
+    <div class="section">
+        <h1 class="section-title" id="input">登录注册输入框控件</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">必要脚本:　</span>
+        &lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/form.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="../assets/js/componentLibrary.js"&gt;&lt;/script&gt;
+        <span class="code-title">前端代码－输入框：</span>
+        &lt;form class="form-horizontal"&gt;
+            &lt;div class="control-group"&gt;
+                &lt;label class="control-label" for="username"&gt;用户名&lt;/label&gt;
+                &lt;div class="controls"&gt;
+                    &lt;span class="input-wrap icon-wrap"&gt;&lt;i class="input-icon user"&gt;&nbsp;&lt;/i&gt;&lt;input type="text" class="inputs input-small" id="username"/&gt;&lt;/span&gt;
+                    &lt;span class="replenish-hor"&gt; 6~16位字符，至少包含数字、字母（区分大小写）&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        <span class="code-title">前端代码－radio：</span>
+        &lt;form class="form-horizontal"&gt;
+            &lt;div class="control-group radio-group"&gt;
+                &lt;label class="control-label"&gt;&lt;/label&gt;
+                &lt;div class="controls clearfix"&gt;
+                    &lt;div class="form_radio ullh"&gt;&lt;input type="radio" name="sex"/&gt;&lt;label&gt;男&lt;/label&gt;&lt;/div&gt;
+                    &lt;div class="form_radio ullh"&gt;&lt;input type="radio" name="sex"/&gt;&lt;label&gt;女&lt;/label&gt;&lt;/div&gt;
+                    &lt;span class="replenish-hor"&gt;.form_radio .ullh&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        </code>
+        </pre>
+        </div>
+
+
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="username">用户名</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs input-small" id="username"/></span>
+                    <span class="help-line">.input-wrap.icon-wrap .input-small<br/><span class="orange_word">width:110px</span></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="username1">用户名</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs input-medium" id="username1"/></span>
+                    <span class="help-line">.input-wrap.icon-wrap .input-medium<br/><span class="orange_word">width:170px;</span></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="username2">用户名</label>
+
+                <div class="controls error">
+                    <span class="input-wrap icon-wrap"><i class="input-icon user">&nbsp;</i><input type="text" class="inputs" id="username2"/></span>
+                    <span class="help-line">.input-wrap.icon-wrap<br/><span class="orange_word">width:220px;</span></span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="username3">用户名</label>
+
+                <div class="controls">
+                    <span class="input-wrap"><input type="text" class="inputs input-small" id="username3"/></span>
+                    <span class="help-line">.input-wrap .input-small<br/><span class="orange_word">width:110px</span></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="username4">用户名</label>
+
+                <div class="controls">
+                    <span class="input-wrap"><input type="text" class="inputs input-medium" id="username4"/></span>
+                    <span class="help-line">.input-wrap .input-medium<br/><span class="orange_word">width:170px;</span></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="username5">用户名</label>
+
+                <div class="controls">
+                    <span class="input-wrap"><input type="text" class="inputs" id="username5"/></span>
+                    <span class="help-line">.input-wrap<br/><span class="orange_word">width:220px;</span></span>
+                </div>
+            </div>
+
+            <div class="control-group radio-group">
+                <label class="control-label"></label>
+                <div class="controls clearfix">
+                    <div class="form_radio ullh"><input type="radio" name="sex"/><label>男</label></div>
+                    <div class="form_radio ullh"><input type="radio" name="sex"/><label>女</label></div>
+                    <span class="replenish-hor">.form_radio .ullh</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label"></label>
+                <div class="controls clearfix">
+                    <div class="form_radio ullh">
+                        <a class="checked disabled">&nbsp;</a><input type="radio" name="sex"/><label>选中且不可取消</label>
+                        <span class="replenish-hor">&lt;a class="checked disabled"&gt;&nbsp;&lt;/a&gt;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="userEmail">常用邮箱</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap error"><i class="input-icon mail">&nbsp;</i><input type="text" class="inputs" id="userEmail"/></span>
+                    <span class="help-line">.input-wrap .icon-wrap .input-icon .mail</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="password">登录密码</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon password">&nbsp;</i><input type="password" class="inputs" id="password"/></span>
+                    <span class="help-line">6~16位字符，至少包含数字、字母（区分大小写）、符号中的<br/>2种。</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="ensurePassword">确认密码</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon password">&nbsp;</i><input type="password" class="inputs" id="ensurePassword"/></span>
+                    <span class="help-line">.input-wrap .icon-wrap .input-icon .password</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="phoneNum">手机号码</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap"><i class="input-icon mobile">&nbsp;</i><input type="text" class="inputs" id="phoneNum"/></span>
+                    <span class="help-line">请填写您“本人合法获得且真实有效并处于您有效掌控”的手机号码，然后点击“免费获取”验证您的手机。</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label"><span class="orange_word">* </span>留言类型:</label>
+                <div class="controls clearfix">
+                    <div class="form_select ullh">
+                        <select>
+                            <option>咨询</option>
+                            <option>建议</option>
+                            <option>投诉</option>
+                            <option>其他</option>
+                        </select>
+                    </div>
+                    <!--<span class="replenish-hor">&nbsp;</span>-->
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="phoneValidCode">验证码</label>
+
+                <div class="controls">
+                    <span class="input-wrap icon-wrap validate-input"><i class="input-icon validate">&nbsp;</i><input type="text" class="inputs input-small" id="validCode" maxlength="4"/><i class="icon validIcon">&nbsp;</i></span>
+                    <span class="validateImg"><img src="https://user.lufax.com/user/captcha/captcha.jpg?source=login&_=1373939382405" alt="验证码" width="100" height="38"/></span>
+                </div>
+            </div>
+            <div class="control-group error">
+                <label for="phoneValidCode" class="control-label">手机动态码</label>
+                <div class="controls">
+                    <span class="input-wrap icon-wrap validate-input error"><i class="input-icon validate">&nbsp;</i><input type="text" maxlength="7" id="phoneValidCode" class="inputs phoneValideNum"/><i class="icon validIcon failureCircleIcon">&nbsp;</i></span>
+                    <a class="btns btn_info btn_valid obtainBtn">免费获取</a>
+                </div>
+            </div>
+
+            <div class="control-group error">
+                <label for="phoneValidCode" class="control-label">&nbsp;</label>
+                <div class="controls">
+                    <div class="form_checkbox ullh">
+                        <a>&nbsp;</a>
+                        <input type="checkbox" />
+                        <label>我已阅读并同意</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="control-group error">
+                <label for="phoneValidCode" class="control-label">&nbsp;</label>
+                <div class="controls">
+                    <div class="form_checkbox ullh checked disabled">
+                        <a>&nbsp;</a>
+                        <input type="checkbox" />
+                        <label>选中且不可取消</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="userMessage"><span class="orange_word">* </span>留言内容:</label>
+                <div class="controls">
+                    <span class="input-wrap"><textarea id="userMessage" class="textareas" placeholder="欢迎留言...">&nbsp;</textarea></span>
+                    <span class="replenish-hor">欢迎留言</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">&nbsp;</label>
+                <div class="controls"><a href="javascript:;" class="btns btn_xlarge ensureSubmit close">确&emsp;认</a></div>
+            </div>
+
+        </form>
+
+        <br/>
+        <table class="core-table">
+            <caption style="font-size: 16px;font-weight:bold;color: #2f3e46;line-height: 2em;">普通输入框 </caption>
+            <tr>
+                <td>小 input-wrap .input.input-small：</td>
+                <td>
+                    <form class="form-horizontal">
+                        <span class="input-wrap"><input type="text" class="input input-small input-error"/></span>
+                        <span class="errorPanel"><b class="arrow left">&nbsp;</b><span class="errorContent"></span></span>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>默认 input-wrap .input：</td>
+                <td>
+                    <form class="form-horizontal">
+                        <span class="input-wrap"><input type="text" class="input"/></span>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>不可输入 .input-wrap.disabled：</td>
+                <td>
+                    <form class="form-horizontal">
+                        <span class="input-wrap disabled"><input type="text" class="input" disabled="disabled"/></span>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>.form_select.ullh.normal</td>
+                <td>
+                    <div class="form_select ullh normal">
+                        <select>
+                            <option>全部</option>
+                            <option>最近三个月</option>
+                            <option>最近一个月</option>
+                            <option>最近7天</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>小 .form_select.ullh.normal.small</td>
+                <td>
+                    <div class="form_select ullh normal small">
+                        <select>
+                            <option>全部</option>
+                            <option>最近三个月</option>
+                            <option>最近一个月</option>
+                            <option>最近7天</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!--dataPicker-->
+    <div class="section">
+        <h1 class="section-title" id="datePicker">日期选择</h1>
+        <div class="highlight">
+            <pre>
+            <code>
+            <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+            <span class="code-title">必要脚本:　</span>
+            &lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/form.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery.ui.custom.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../assets/js/componentLibrary.js"&gt;&lt;/script&gt;
+            <span class="code-title">前端代码:　</span>
+            &lt;form class="form-horizontal"&gt;
+                &lt;div class="control-group clearfix"&gt;
+                    &lt;label class="control-label" for="calendar"&gt;日期：&lt;/label&gt;
+                    &lt;div class="controls"&gt;
+                    &lt;span class="input-wrap icon-wrap"&gt;
+                        &lt;input  type="text" id="calendar" placeholder="" class="input input-small calendar calendar-error" readonly="readonly" value="2012-12-31" /&gt;
+                    &lt;/span&gt;
+                    &lt;span class="replenish-hor"&gt;
+                        &lt;a class="btns" href="javascript:;"&gt;测算&lt;/a&gt;
+                    &lt;/span&gt;
+                        &lt;span class="errorPanel multipleLine"&gt;&lt;b class="arrow left"&gt; &lt;/b&gt;&lt;span class="errorContent"&gt;&lt;/span&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+            </code>
+            </pre>
+        </div>
+        <form class="form-horizontal">
+            <div class="control-group clearfix">
+                <label class="control-label" for="calendar">日期：</label>
+                <div class="controls">
+                        <span class="input-wrap icon-wrap">
+                            <input  type="text" id="calendar" placeholder="" class="input input-small calendar calendar-error" readonly="readonly" value="2012-12-31" />
+                        </span>
+                        <span class="replenish-hor">
+                            <a class="btns" href="javascript:;">测算</a>
+                        </span>
+                    <span class="errorPanel multipleLine"><b class="arrow left"> </b><span class="errorContent"></span></span>
+                </div>
+            </div>
+        </form>
+
+        <div id="datepicker" class="receivables-calendar "></div>
+        <div class="receivablesInfo">
+            <p>预计下一收款日：2013-08-12</p>
+
+            <p>预计下一收款额：4,000.00元（<a href="#">2</a>笔）</p>
+        </div>
+    </div>
+
+    <!--font-->
+    <div class="section fs16">
+        <h1 class="section-title" id="font">字体</h1>
+        <p>常规字体&nbsp;&nbsp;<span>333333</span></p>
+        <p>链接字体&nbsp;&nbsp;<a href="#">2438cd</a></p>
+        <p>绿色字体&nbsp;&nbsp;<span class="sp-green">106f00</span></p>
+        <p>橙色字体&nbsp;&nbsp;<span class="sp-orange">e6551d</span></p>
+        <p>浅蓝字体&nbsp;&nbsp;<span class="sp-lightBlue">4d4398</span></p>
+    </div>
+
+    <!--icon bank logo-->
+    <div class="section">
+        <h1 class="section-title" id="bank">银行logo</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">前端代码:　</span>&lt;i class="bankLogo bank_abc10833"&gt;&nbsp;&lt;/i&gt;</code>
+        </pre>
+        </div>
+        <div class="share-table">
+            <table>
+                <tr>
+                    <td>
+                        <i class="bankLogo bank_abc10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_abc10833</span>
+                    </td>
+                    <td>
+                        <i class="bankLogo bank_boc10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_boc10833</span>
+                    </td>
+                    <td>
+                        <i class="bankLogo bank_ccb10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_ccb10833</span>
+                    </td>
+                    <td>
+                        <i class="bankLogo bank_cmb10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_cmb10833</span>
+                    </td>
+                    <td>
+                        <i class="bankLogo bank_cmbc10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_cmbc10833</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="bankLogo bank_cmbc10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_cmbc10833</span>
+                    </td>
+                    <td>
+                        <i class="bankLogo bank_ecitic10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_ecitic10833</span>
+                    </td>
+                    <td>
+                        <i class="bankLogo bank_icbc10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_icbc10833</span>
+                    </td>
+                    <td>
+                        <i class="bankLogo bank_paic10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_paic10833</span>
+                    </td>
+                    <td>
+                        <i class="bankLogo bank_sdb10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_sdb10833</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="bankLogo bank_alipay10833">&nbsp;</i><br/>
+                        <span class="massage">.bankLogo .bank_alipay10833</span>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--提示框-->
+    <div class="section">
+        <h1 class="section-title" id="prompt">提示框</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">前端代码-prompt : normal-成功:</span>
+        &lt;div class="vw_prompt_wrap"&gt;
+            &lt;div class="prompt_container"&gt;
+                &lt;div class="prompt_state"&gt;&lt;i class="icon correctGreenCircleWhiteIcon"&gt;&lt;/i&gt;&lt;span class="prompt_title"&gt;投资成功&lt;/span&gt;&lt;/div&gt;
+                &lt;div class="prompt_content"&gt;
+                    &lt;p class="prompt_item"&gt;&lt;i class="icon aquareGrayIcon"&gt;&lt;/i&gt;您投资的该笔金额已被冻结，请耐心等待借款人确认合同。&lt;/p&gt;
+                    &lt;p class="prompt_item"&gt;&lt;i class="icon aquareGrayIcon"&gt;&lt;/i&gt;如果3天后未确认，您的投资款项将解冻退还到您的陆金所帐户。&lt;/p&gt;
+                    &lt;p class="prompt_item"&gt;&lt;i class="icon aquareGrayIcon"&gt;&lt;/i&gt;有木有发现，今天，天气很好~~~~&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="prompt_tips"&gt;您现在可以&ensp;&lt;a href="#"&gt;查看该投资申请&lt;/a&gt;&ensp;或&ensp;&lt;a href="#"&gt;浏览更多投资项目&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        <span class="code-title">前端代码-prompt : normal-失败:</span>
+        &lt;div class="vw_prompt_wrap"&gt;
+            &lt;div class="prompt_container"&gt;
+                &lt;div class="prompt_state"&gt;&lt;i class="icon exclamationOrangeCircleWhiteIcon"&gt;&nbsp;&lt;/i&gt;&lt;span class="prompt_title orange_word"&gt;投资失败&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="prompt_tips"&gt;您现在可以&ensp;&lt;a href="#"&gt;查看该投资申请&lt;/a&gt;&ensp;或&ensp;&lt;a href="#"&gt;浏览更多投资项目&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        <span class="code-title">前端代码-prompt : complex-成功:</span>
+        &lt;div class="vw_prompt_wrap complex"&gt;
+            &lt;div class="prompt_container"&gt;
+                &lt;div class="prompt_state"&gt;
+                    &lt;i class="icon correctGreenCircleWhiteIcon"&gt;&nbsp;&lt;/i&gt;&lt;span class="prompt_title"&gt;恭喜您,飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦（PHILIPS） DCM1130 台式微型音响的电子券兑换成功&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="prompt_content"&gt;
+                    &lt;p class="prompt_item"&gt;&lt;i class="icon aquareGrayIcon"&gt;&nbsp;&lt;/i&gt;电子券码：&lt;span class="orange-word"&gt;ZCBHFGSL129483724347&lt;/span&gt; 已经发送至您的认证手机137***0031，请注意查收。&lt;/p&gt;
+                    &lt;p class="prompt_item"&gt;&lt;i class="icon aquareGrayIcon"&gt;&nbsp;&lt;/i&gt;如果没有收到，您可至我的帐户-&gt;我的积分-&gt;我的兑换商品商品列表中，重新发送券码。&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="prompt_tips"&gt;
+                    &lt;a href="#"&gt;继续逛逛&lt;/a&gt;&lt;a class="ml20" href="#"&gt;我的兑换商品&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        <span class="code-title">前端代码-prompt : complex-失败:</span>
+        &lt;div class="vw_prompt_wrap complex"&gt;
+            &lt;div class="prompt_container"&gt;
+                &lt;div class="prompt_state"&gt;
+                    &lt;i class="icon exclamationOrangeCircleWhiteIcon"&gt;&nbsp;&lt;/i&gt;&lt;span class="prompt_title"&gt;投资失败&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="prompt_tips"&gt;
+                    &lt;a href="#"&gt;继续逛逛&lt;/a&gt;&lt;a class="ml20" href="#"&gt;我的兑换商品&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </code>
+        </pre>
+        </div>
+        <h3 style="text-align: center">prompt : normal</h3>
+        <br/>
+        <div class="vw_prompt_wrap">
+            <div class="prompt_container">
+                <div class="prompt_state"><i class="icon correctGreenCircleWhiteIcon">&nbsp;</i><span class="prompt_title">投资成功</span>
+                </div>
+                <div class="prompt_content">
+                    <p class="prompt_item"><i class="icon aquareGrayIcon">&nbsp;</i>您投资的该笔金额已被冻结，请耐心等待借款人确认合同。</p>
+                    <p class="prompt_item"><i class="icon aquareGrayIcon">&nbsp;</i>如果3天后未确认，您的投资款项将解冻退还到您的陆金所帐户。</p>
+                    <p class="prompt_item"><i class="icon aquareGrayIcon">&nbsp;</i>有木有发现，今天，天气很好~~~~</p>
+                </div>
+                <div class="prompt_tips">您现在可以&ensp;<a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="vw_prompt_wrap">
+            <div class="prompt_container">
+                <div class="prompt_state"><i class="icon correctGreenCircleWhiteIcon">&nbsp;</i><span class="prompt_title">投资成功</span>
+                </div>
+                <div class="prompt_tips">您现在可以&ensp;<a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="vw_prompt_wrap">
+            <div class="prompt_container">
+                <div class="prompt_state"><i class="icon exclamationOrangeCircleWhiteIcon">&nbsp;</i><span class="prompt_title orange_word">投资失败</span>
+                </div>
+                <div class="prompt_tips">您现在可以&ensp;<a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="vw_prompt_wrap">
+            <div class="prompt_container">
+                <div class="prompt_state"><i class="ajax_loading">&nbsp;</i><span class="prompt_title default_word">正在处理</span>
+                </div>
+                <div class="prompt_content">
+                    <p class="taC">请稍候在投资申请中查看申请结果</p>
+                </div>
+                <div class="prompt_tips">您现在可以&ensp;<a href="#">查看该投资申请</a>&ensp;或&ensp;<a href="#">浏览更多投资项目</a>
+                </div>
+            </div>
+        </div>
+
+        <br/><br/><br/>
+        <h3 style="text-align: center">prompt : complex</h3>
+        <br/>
+        <div class="vw_prompt_wrap complex">
+            <div class="prompt_container">
+                <div class="prompt_state">
+                    <i class="icon correctGreenCircleWhiteIcon">&nbsp;</i><span class="prompt_title">恭喜您,飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦飞利浦（PHILIPS） DCM1130 台式微型音响的电子券兑换成功</span>
+                </div>
+                <div class="prompt_content">
+                    <p class="prompt_item"><i class="icon aquareGrayIcon">&nbsp;</i>电子券码：<span class="orange-word">ZCBHFGSL129483724347</span> 已经发送至您的认证手机137***0031，请注意查收。</p>
+                    <p class="prompt_item"><i class="icon aquareGrayIcon">&nbsp;</i>如果没有收到，您可至我的帐户->我的积分->我的兑换商品商品列表中，重新发送券码。</p>
+                </div>
+                <div class="prompt_tips">
+                    <a href="#">继续逛逛</a><a class="ml20" href="#">我的兑换商品</a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="vw_prompt_wrap complex">
+            <div class="prompt_container">
+                <div class="prompt_state"><i class="icon correctGreenCircleWhiteIcon">&nbsp;</i><span class="prompt_title">投资成功</span>
+                </div>
+                <div class="prompt_tips">
+                    <a href="#">继续逛逛</a><a class="ml20" href="#">我的兑换商品</a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="vw_prompt_wrap complex">
+            <div class="prompt_container">
+                <div class="prompt_state">
+                    <i class="icon exclamationOrangeCircleWhiteIcon">&nbsp;</i><span class="prompt_title">投资失败</span>
+                </div>
+                <div class="prompt_tips">
+                    <a href="#">继续逛逛</a><a class="ml20" href="#">我的兑换商品</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pagination-->
+    <div class="section">
+        <h1 class="section-title" id="pagination">分页</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">前端代码:　</span>
+        &lt;div class="ui_complex_pagination"&gt;
+            &lt;a class="btns btn_page btn_small disabled" href="#">&lt;span class="caret">&lt;&lt;/span>&lt;/a>
+            &lt;p class="pageNum"&gt;
+                &lt;span class="current">1&lt;/span&gt;
+                &lt;a href="javascript:void(0)">2&lt;/a&gt;
+                &lt;a href="javascript:void(0)">3&lt;/a&gt;
+                &lt;a href="javascript:void(0)">4&lt;/a&gt;
+                &lt;a href="javascript:void(0)">5&lt;/a&gt;
+                &lt;a href="javascript:void(0)">6&lt;/a&gt;
+            &lt;/p&gt;
+            &lt;a class="btns btn_page btn_small" href="#"&gt;下一页 &lt;span class="caret"&gt;&gt;&lt;/span>
+        &lt;/div&gt;
+        </code>
+        </pre>
+        </div>
+        <h4>第一页</h4>
+        <div class="complex_pagination_wrap">
+            <div class="ui_complex_pagination">
+                <a class="btns btn_page btn_small disabled prev" href="#"><span class="caret">&lt;</span></a>
+                <p class="pageNum">
+                    <span class="current">1</span>
+                    <a href="javascript:void(0)">2</a>
+                    <a href="javascript:void(0)">3</a>
+                    <a href="javascript:void(0)">4</a>
+                    <a href="javascript:void(0)">5</a>
+                    <a href="javascript:void(0)">6</a>
+
+                </p>
+                <a class="btns btn_page btn_small next" href="#">下一页 <span class="caret">&gt;</span></a>
+            </div>
+        </div>
+
+        <br/><h4>最后一页</h4>
+        <div class="complex_pagination_wrap">
+            <div class="ui_complex_pagination">
+                <a class="btns btn_page btn_small prev" href="#"><span class="caret">&lt;</span></a>
+                <p class="pageNum">
+                    <a href="javascript:void(0)">1</a>
+                    <a href="javascript:void(0)">2</a>
+                    <a href="javascript:void(0)">3</a>
+                    <a href="javascript:void(0)">4</a>
+                    <a href="javascript:void(0)">5</a>
+                    <span class="current">6</span>
+                </p>
+                <a class="btns btn_page btn_small disabled next" href="#">下一页 <span class="caret">&gt;</span></a>
+            </div>
+        </div>
+
+        <!--
+
+                        <br/><h4>大于10页 第一种样式</h4>
+                        <div class="complex_pagination_wrap">
+                            <div class="ui_complex_pagination">
+                                <a class="graBtn_6027 png prev" href="#">上一页</a>
+                                <p class="pageNum">
+                                    <a href="#" class="current">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">7</a>
+                                    <a href="#">8</a>
+                                    <a href="#">9</a>
+                                    <a href="#">...</a>
+                                </p>
+                                <a class="disGraBtn_6027 png" href="#">下一页</a>
+                            </div>
+                        </div>
+
+                        <br/><h4>大于10页 第二种样式</h4>
+                        <div class="complex_pagination_wrap">
+                            <div class="ui_complex_pagination">
+                                <a class="graBtn_6027 png prev" href="#">上一页</a>
+                                <p class="pageNum">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">...</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#" class="current">6</a>
+                                    <a href="#">7</a>
+                                    <a href="#">8</a>
+                                    <a href="#">9</a>
+                                    <a href="#">...</a>
+                                </p>
+                                <a class="disGraBtn_6027 png" href="#">下一页</a>
+                            </div>
+                        </div>
+
+                        <br/><h4>大于10页 第三种样式</h4>
+                        <div class="complex_pagination_wrap">
+                            <div class="ui_complex_pagination">
+                                <a class="graBtn_6027 png prev" href="#">上一页</a>
+                                <p class="pageNum">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">...</a>
+                                    <a href="#">14</a>
+                                    <a href="#">15</a>
+                                    <a href="#" class="current">16</a>
+                                    <a href="#">17</a>
+                                    <a href="#">18</a>
+                                    <a href="#">19</a>
+                                    <a href="#">20</a>
+                                </p>
+                                <a class="disGraBtn_6027 png" href="#">下一页</a>
+                            </div>
+                        </div>-->
+    </div>
+
+    <!--popup-->
+    <div class="section">
+        <h1 class="section-title" id="popup">弹出浮层 - new</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">必要脚本:　</span>&lt;script type="text/javascript" src="../assets/js/componentLibrary.js""&gt;&lt;/script&gt;
+        <span class="code-title">前端代码:　</span>
+        simplePopup / 异地登录    class="simplePopup diffLanding"
+        simplePopup / 安全退出    class="simplePopup safeExit"
+        simplePopup / 登录超时    class="simplePopup timeout"
+        blankPopup / 空白弹出层   class="blankPopup"
+        blankPopup / 正在处理     class="blankPopup processing"
+        popup / 重要提示          class="popup"
+        popup_subTitle / 信息确认 class="popup_subTitle"
+        richPopup / 复制链接      class="richPopup"
+        </code>
+        </pre>
+        </div>
+
+        <div>
+            <ul class="itemWrap clearfix">
+                <li class="simplePopup diffLanding">
+                    <a href="javascript:;">simplePopup / 异地登录</a>
+                </li>
+                <li class="simplePopup safeExit">
+                    <a href="javascript:;">simplePopup / 安全退出</a>
+                    <!--pop panel start:safe exit-->
+                    <!-- <div class="popup_wrap timeout_safe_exit safeExit">
+                        <div class="border">
+                            <table>
+                            <tr>
+                                <td><div class="logo">&nbsp;</div></td>
+                                <td class="detail">
+                                    <p class="title">您即将安全退出</p>
+                                    <div class="buttons">
+                                        <a class="btns btn_large btn_info " href="#"><span>安全退出</span></a>
+                                        <a class="btns btn_large btn_cancel ml20 close" href="#"><span>取&nbsp;消</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div> -->
+                    <!--pop panel end-->
+                </li>
+                <li class="simplePopup timeout">
+                    <a href="javascript:;">simplePopup / 登录超时</a>
+                    <!--pop panel start:timeout exit-->
+                    <!-- <div class="popup_wrap timeout_safe_exit timeout">
+                        <div class="border">
+                            <table>
+                                <tr>
+                                    <td><div class="logo">&nbsp;</div></td>
+                                    <td class="detail">
+                                        <p class="title">抱歉，您登录已超时。</p>
+                                        <div class="operation">请&ensp;<a href="#">重新登录</a><span class="countDown"><span id="sec"></span>秒后返回首页</span></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div> -->
+                    <!--pop panel end-->
+                </li>
+                <li class="blankPopup">
+                    <a href="javascript:;">blankPopup / 空白弹出层</a>
+                </li>
+                <li class="blankPopup processing">
+                    <a href="javascript:;">blankPopup / 正在处理</a>
+                </li>
+                <li class="popup">
+                    <a href="javascript:;">popup / 重要提示</a>
+                </li>
+                <li class="popup_subTitle">
+                    <a href="javascript:;">popup_subTitle / 信息确认</a>
+                </li>
+                <li class="richPopup">
+                    <a href="javascript:;">richPopup / 复制链接</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--软键盘-->
+    <div class="section">
+        <h1 class="section-title" id="keyboard">软键盘</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>
+        &lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        &lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/pa_ui.css" /&gt;
+        <span class="code-title">必要脚本:　</span>
+        &lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/form.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/pa_ui.js"&gt;&lt;/script&gt;
+
+        <span class="code-title">css</span>
+        .tradCodeWrap{
+        position: relative;
+        z-index: 100;
+        }
+        #kbp{
+        position: absolute;
+        left: 120px;
+        }
+        <span class="code-title">前端代码:　</span>
+        &lt;form class="form-horizontal"&gt;
+            &lt;div class="control-group tradCodeWrap"&gt;
+                &lt;label class="control-label control_label_title"&gt;默认键盘：&lt;/label&gt;
+                &lt;div class="controls"&gt;
+                                &lt;span class="input-wrap"&gt;
+                                    &lt;input type="password"  class="inputs input_aide softkey" pa_ui_name="keyboard" pa_ui_keyboard_position="kbp"/&gt;
+                                &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div id="kbp"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        </code>
+        </pre>
+        </div>
+        <form class="form-horizontal">
+            <table class="share-table">
+                <tr>
+                    <td>
+                        <div class="control-group tradCodeWrap">
+                            <label class="control-label control_label_title">默认键盘：</label>
+                            <div class="controls">
+                                    <span class="input-wrap">
+                                        <input type="password"  class="inputs input_aide softkey" pa_ui_name="keyboard" pa_ui_keyboard_position="kbp"/>
+                                    </span>
+                            </div>
+                            <div id="kbp"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="control-group tradCodeWrap">
+                            <label class="control-label control_label_title">长键盘：</label>
+                            <div class="controls">
+                                    <span class="input-wrap">
+                                        <input type="password"  class="inputs input_aide softkey" pa_ui_name="keyboard" pa_ui_keyboard_type="advance" pa_ui_keyboard_position="kbp1"/>
+                                    </span>
+                            </div>
+                            <div id="kbp1"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>pa_ui_name="keyboard" <br/>pa_ui_keyboard_position="kbp"</td>
+                    <td><br/>pa_ui_name="keyboard" <br/>pa_ui_keyboard_type="advance"<br/>pa_ui_keyboard_position="kbp1"<br/><br/><br/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="control-group tradCodeWrap">
+                            <label class="control-label control_label_title">数字键盘：</label>
+                            <div class="controls">
+                                    <span class="input-wrap">
+                                        <input type="password"  class="inputs input_aide softkey" pa_ui_name="keyboard" pa_ui_keyboard_type="number" pa_ui_keyboard_position="kbp2"/>
+                                    </span>
+                            </div>
+                            <div id="kbp2"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="control-group tradCodeWrap">
+                            <label class="control-label control_label_title">国际化：</label>
+                            <div class="controls">
+                                    <span class="input-wrap">
+                                        <input type="password"  class="inputs input_aide softkey" pa_ui_name="keyboard" lang="en" pa_ui_keyboard_type="advance" pa_ui_keyboard_position="kbp3"/>
+                                    </span>
+                            </div>
+                            <div id="kbp3"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br/>pa_ui_name="keyboard" <br/>pa_ui_keyboard_type="number" <br/>pa_ui_keyboard_position="kbp2"</td>
+                    <td><br/>pa_ui_name="keyboard" <br/>pa_ui_keyboard_type="advance" <br/>lang="en" <br/>pa_ui_keyboard_position="kbp3"</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!--表格-->
+    <div class="section">
+        <h1 class="section-title" id="datagrid">表格</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>
+        &lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        &lt;link rel="stylesheet" type="text/css" href="../assets/css/component.css"/&gt;
+        <span class="code-title">前端代码:　</span>
+        &lt;div class="grid12 main-account datagrid-wrap"&gt;
+            &lt;div class="tab-content-wrap-account"&gt;
+                &lt;!--table template 有数据 --&gt;
+                &lt;table class="list-table"&gt;
+                    &lt;caption class="summarise clearfix"&gt;
+                        &lt;a class="linkMore" href="javascript:;"&gt;查看未来收款明细&lt;/a&gt;
+                        项目共15笔&emsp;投资金额：&lt;span class="orange_word"&gt;90,000.00&lt;/span&gt; 元
+                    &lt;/caption&gt;
+                    &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th class="productName"&gt;项目名称 | 编号&lt;/th&gt;
+                        &lt;th&gt;&lt;a class="sort" href="javascript:;"&gt;起息日&lt;i class="icon-sort"&gt;&nbsp;&lt;/i&gt;&lt;/a&gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;a class="sort" href="javascript:;"&gt;到期日&lt;i class="icon-sort up"&gt;&nbsp;&lt;/i&gt;&lt;/a&gt;&lt;/th&gt;
+                        &lt;th class="cashName"&gt;投资金额（元）&lt;/th&gt;
+                        &lt;th&gt;转让&lt;/th&gt;
+                        &lt;th&gt;查看详情&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td class="productNameData" title="稳盈-安e贷二期13111300937"&gt;
+                            &lt;a class="product-name" href="#"&gt;稳盈-安e贷二期13111300937&lt;/a&gt;
+                            &lt;span class="btn_stateTip"&gt;&lt;span class="stateTip bRFix"&gt;逾期&lt;/span&gt;&lt;/span&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;2013-09-01&lt;/td&gt;
+                        &lt;td&gt;2016-09-01&lt;/td&gt;
+                        &lt;td class="cashData"&gt;1000.00&lt;/td&gt;
+                        &lt;td class="light-word"&gt;2013-11-01&lt;br/&gt;可转让&lt;/td&gt;
+                        &lt;td&gt;&lt;a class="icon-detail" href="#" target="_blank"&gt;&nbsp;&lt;/a&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr class="even"&gt;
+                        &lt;td class="productNameData" title="金盈通 13012344321"&gt;
+                            &lt;a class="product-name" href="#"&gt;金盈通 13012344321&lt;/a&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;2013-09-01&lt;/td&gt;
+                        &lt;td&gt;2016-09-01&lt;/td&gt;
+                        &lt;td class="cashData"&gt;1000.00&lt;/td&gt;
+                        &lt;td class="light-word"&gt;&lt;a class="btns" href="#" target="_blank"&gt;申请转让&lt;/a&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;a class="icon-detail disabled" href="javascript:;"&gt;&nbsp;&lt;/a&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td class="productNameData" title="稳盈-安e贷 13012344321稳盈-安e贷 13012344321"&gt;
+                            &lt;a class="product-name" href="#"&gt;稳盈-安e贷 13012344321稳盈-安e贷 13012344321&lt;/a&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;2013-09-01&lt;/td&gt;
+                        &lt;td&gt;2016-09-01&lt;/td&gt;
+                        &lt;td class="cashData"&gt;1000.00&lt;/td&gt;
+                        &lt;td class="light-word"&gt;--&lt;/td&gt;
+                        &lt;td&gt;&lt;a class="icon-detail disabled" href="javascript:;"&gt;&nbsp;&lt;/a&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr class="even"&gt;
+                        &lt;td class="productNameData" title="金盈通 13012344321"&gt;
+                            &lt;a class="product-name" href="#"&gt;金盈通 13012344321&lt;/a&gt;
+                            &lt;span class="btn_stateTip"&gt;&lt;span class="stateTip bRFix"&gt;逾期&lt;/span&gt;&lt;/span&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;2013-09-01&lt;/td&gt;
+                        &lt;td&gt;2016-09-01&lt;/td&gt;
+                        &lt;td class="cashData"&gt;1000.00&lt;/td&gt;
+                        &lt;td class="light-word"&gt;&lt;span title="了解转让规则，请 &lt;a href='fdsfdsfdsfdsfdsfdsafsdafdsfsdafsdafsafdsfasfsafds'&gt;点击&lt;/a&gt;" class="tip-dotted-datagrid"&gt;暂不可转&lt;/span&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;a class="icon-detail" href="#" target="_blank"&gt;&nbsp;&lt;/a&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </code>
+        </pre>
+        </div>
+
+        <div class="grid12 main-account datagrid-wrap">
+            <div class="tab-content-wrap-account">
+                <!--table template 有数据 -->
+                <table class="list-table">
+                    <caption class="summarise clearfix">
+                        <a class="linkMore" href="javascript:;">查看未来收款明细</a>
+                        项目共15笔&emsp;投资金额：<span class="orange_word">90,000.00</span> 元
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th class="productName">项目名称 | 编号</th>
+                        <th><a class="sort" href="javascript:;">起息日<i class="icon-sort">&nbsp;</i></a></th>
+                        <th><a class="sort" href="javascript:;">到期日<i class="icon-sort up">&nbsp;</i></a></th>
+                        <th class="cashName">投资金额（元）</th>
+                        <th>转让</th>
+                        <th>查看详情</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="productNameData" title="稳盈-安e贷二期13111300937">
+                            <a class="product-name" href="#">稳盈-安e贷二期13111300937</a>
+                            <span class="btn_stateTip"><span class="stateTip bRFix">逾期</span></span>
+                        </td>
+                        <td>2013-09-01</td>
+                        <td>2016-09-01</td>
+                        <td class="cashData">1000.00</td>
+                        <td class="light-word">2013-11-01<br/>可转让</td>
+                        <td><a class="icon-detail" href="#" target="_blank">&nbsp;</a></td>
+                    </tr>
+                    <tr class="even">
+                        <td class="productNameData" title="金盈通 13012344321">
+                            <a class="product-name" href="#">金盈通 13012344321</a>
+                        </td>
+                        <td>2013-09-01</td>
+                        <td>2016-09-01</td>
+                        <td class="cashData">1000.00</td>
+                        <td class="light-word"><a class="btns" href="#" target="_blank">申请转让</a></td>
+                        <td><a class="icon-detail disabled" href="javascript:;">&nbsp;</a></td>
+                    </tr>
+                    <tr>
+                        <td class="productNameData" title="稳盈-安e贷 13012344321稳盈-安e贷 13012344321">
+                            <a class="product-name" href="#">稳盈-安e贷 13012344321稳盈-安e贷 13012344321</a>
+                        </td>
+                        <td>2013-09-01</td>
+                        <td>2016-09-01</td>
+                        <td class="cashData">1000.00</td>
+                        <td class="light-word">--</td>
+                        <td><a class="icon-detail disabled" href="javascript:;">&nbsp;</a></td>
+                    </tr>
+                    <tr class="even">
+                        <td class="productNameData" title="金盈通 13012344321">
+                            <a class="product-name" href="#">金盈通 13012344321</a>
+                            <span class="btn_stateTip"><span class="stateTip bRFix">逾期</span></span>
+                        </td>
+                        <td>2013-09-01</td>
+                        <td>2016-09-01</td>
+                        <td class="cashData">1000.00</td>
+                        <td class="light-word"><span title="了解转让规则，请 <a href='fdsfdsfdsfdsfdsfdsafsdafdsfsdafsdafsafdsfasfsafds'>点击</a>" class="tip-dotted-datagrid">暂不可转</span></td>
+                        <td><a class="icon-detail" href="#" target="_blank">&nbsp;</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <!--隐藏 class="hidden"-->
+                <div id="template-pagination">
+                    <div class="tFooter clearfix">
+                        <div class="download-wrap"><i class="icon_account download">&nbsp;</i><a class="downloadLink" href="#">下载Excel文件</a></div>
+                        <div class="ui_complex_pagination"></div>
+                        <div class="pagination-info"><span class="first-num"></span>-<span class="last-num"></span>条，共<span class="total-count"></span>条</div>
+                    </div>
+                </div>
+
+                <!--无数据 class="hidden"-->
+                <div id="template-noRecord">
+                    <div class="no-project"><i class="icon minusCircleIcon">&nbsp;</i><span class="tips">没有找到符合条件的记录</span></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div><br/><br/>
+
+        <h4>第一种：<span>产品列表，有排序的效果，例：用在SME及金盈通首页产品中</span></h4><br/>
+        <div class="grid_yellow_sort_wrap">
+            <table class="ui_grid_yellow_sort">
+                <tr>
+                    <th>项目名称</th>
+                    <th><a href="javascript:;"><span>投资起点（元）</span></a></th>
+                    <th width="90"><a href="javascript:;"><span>期限（天）</span></a></th>
+                    <th><a href="javascript:;" class="asc selected"><span>预期年化收益率</span></a></th>
+                    <th width="96">预约状态</th>
+                    <th width="140"><a href="javascript:;"><span>剩余可投资金额（元）</span></a></th>
+                </tr>
+                <tr>
+                    <td><a href="#">万穗12期</a></td>
+                    <td>10,000.00</td>
+                    <td>180</td>
+                    <td class="orange_word">8%</td>
+                    <td class="orange_word">正在接受预约</td>
+                    <td>96,000.00</td>
+                </tr>
+                <tr class="even">
+                    <td><a href="#">万穗2期</a></td>
+                    <td>10,000.00</td>
+                    <td>180</td>
+                    <td class="green_word">8%</td>
+                    <td class="green_word">正在接受预约</td>
+                    <td>96,000.00</td>
+                </tr>
+                <tr class="disabled">
+                    <td><a href="#" class="disabled">万穗15期</a></td>
+                    <td>10,000.00</td>
+                    <td>180</td>
+                    <td>8%</td>
+                    <td>已结束</td>
+                    <td>0</td>
+                </tr>
+                <tr class="even disabled">
+                    <td><a href="#" class="disabled">万穗15期</a></td>
+                    <td>10,000.00</td>
+                    <td>180</td>
+                    <td>8%</td>
+                    <td>已结束</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+        <h4>第二种：<span>内容介绍及购买流程中使用，灰色表格为常见表格</span></h4><br/>
+        <div class="grid_gray_wrap">
+            <table class="ui_grid_gray">
+                <tr class="first">
+                    <th width="74">示例</th>
+                    <th width="140">借款人确认合同时间</th>
+                    <th width="100">借款发放之日</th>
+                    <th width="90">起息日</th>
+                    <th width="94">结息日</th>
+                    <th width="">还款期限</th>
+                </tr>
+                <tr>
+                    <td>示例一</td>
+                    <td>2012-3-7</td>
+                    <td>2012-3-7</td>
+                    <td>2012-3-10</td>
+                    <td>每个月9日</td>
+                    <td>2012年3月7日—2014年3月9日</td>
+                </tr>
+                <tr>
+                    <td>示例二</td>
+                    <td>2012-8-16</td>
+                    <td>2012-8-16</td>
+                    <td>2012-8-19</td>
+                    <td>每个月18日</td>
+                    <td>2012年8月16日—2014年8月18日</td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+
+        <h4>第三种：<span>内容介绍中出现两级层级时使用</span></h4><br/>
+        <div class="grid_yellow_wrap">
+            <table class="ui_grid_yellow">
+                <tr>
+                    <th width="130">全额提前还款</th>
+                    <th colspan="4">赵先生（出借人）</th>
+                </tr>
+                <tr>
+                    <td class="title">逾期还款</td>
+                    <td class="title" colspan="2">本息收入（元）</td>
+                    <td class="title" colspan="2">罚息（元）</td>
+                </tr>
+                <tr>
+                    <td>2012年3月5日<br>（0-5个月提前还款）</td>
+                    <td>73885.37</td>
+                    <td>573.23*5/30=95.54</td>
+                    <td>73885.37*1.5%=1108.28</td>
+                    <td>75089.19</td>
+                </tr>
+                <tr>
+                    <td>2012年9月5日<br>（6-11个月提前还款）</td>
+                    <td>54964.03</td>
+                    <td>426.43*6/30=85.29</td>
+                    <td>54964.03*1%=549.64</td>
+                    <td>55598.96</td>
+                </tr>
+                <tr>
+                    <td>2013年3月5日<br>（12-23个月提前还款）</td>
+                    <td>35144.65</td>
+                    <td>272.66*5/30=45.44</td>
+                    <td>35144.65*0.5%=175.72</td>
+                    <td>35365.82</td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+
+        <h4>第四种：<span>首页产品列表，有排序效果，无详情产品中使用，例：稳盈-安e 贷</span></h4><br/>
+        <div class="grid_gray_wrap">
+            <table class="ui_grid_gray">
+                <tr class="first">
+                    <th width="120"><span>项目编号</span></th>
+                    <th width="110"><a href="javascript:;"><span>投资金额</span></a></th>
+                    <th width="86"><a href="javascript:;"><span>还款期限</span></a></th>
+                    <th width="90"><a href="javascript:;"><span>年化利率</span></a></th>
+                    <th><a href="javascript:;"><span>发布时间</span></a></th>
+                    <th width="180"><span>操作</span></th>
+                </tr>
+                <tr>
+                    <td>12042400001</td>
+                    <td>60,000.00 元</td>
+                    <td>36个月</td>
+                    <td class="orange_word">9.5%</td>
+                    <td>2012-11-21</td>
+                    <td class="grid_datagrid">
+                        <a href="#" class="income_link">查看收益</a>
+                        <a class="darkGrayBtn_7028 grid_datagrid_btn" href="#">投资</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12042400001</td>
+                    <td>60,000.00 元</td>
+                    <td>36个月</td>
+                    <td class="orange_word">9.5%</td>
+                    <td>2012-11-21</td>
+                    <td class="grid_datagrid">
+                        <a href="#" class="income_link">查看收益</a>
+                        <a class="darkGrayBtn_7028 grid_datagrid_btn" href="#">投资</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+
+        <h4>第五种：<span>在我的账户中的综合产品列表中使用,翻页按钮为专用。不使用通用的样式</span></h4><br/>
+        <div class="grid_account_grid_wrap">
+            <div class="ui_grid_account_head_wrap clearfix">
+                <div class="anyidai_title">&nbsp;</div>
+                <div class="amount">(<span class="spe_word">4</span>)</div>
+                <div class="ppagination">
+                    <span class="pspan">1/1</span>
+                                                <span class="pspan_btn">
+                                                    <a class="disGraBtn_2322 png" href="#">&nbsp;</a>&nbsp;
+                        <a class="disGraBtn_6121 png" href="#">下一页</a>
+                                                </span>
+                </div>
+            </div>
+            <table class="ui_grid_account">
+                <tr class="title">
+                    <th class="h38">申请时间</th>
+                    <th>申请号</th>
+                    <th class="amount">投资金额（元）</th>
+                    <th>预期年化利率</th>
+                    <th width="110" class="amount">预期收益（元）</th>
+                    <th>状态</th>
+                </tr>
+                <tr class="first">
+                    <td class="h50">2011-1 19:00</td>
+                    <td><a href="#">1111071231230002</a></td>
+                    <td class="amount">30,000.00</td>
+                    <td>9.70%</td>
+                    <td class="amount">32,800.00</td>
+                    <td>等待合同确认</td>
+                </tr>
+                <tr>
+                    <td class="h50">2011-1 19:00</td>
+                    <td><a href="#">1111071231230002</a></td>
+                    <td class="amount">30,000.00</td>
+                    <td>9.70%</td>
+                    <td class="amount">32,800.00</td>
+                    <td>等待合同确认</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="clearfix"></div><br/><br/>
+    <!--新闻列表-->
+    <div class="section">
+        <h1 class="section-title" id="new_list">新闻列表</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">前端代码-用于单品详情页和account页 右侧:</span>
+        &lt;div class="noticeQuestion"&gt;
+            &lt;div class="head clearfix"&gt;
+                &lt;h3 class="title"&gt;常见问题&lt;/h3&gt;
+                    &lt;span class="more"&gt;
+                        &lt;a target="_blank" href="http://www.lufax.com/help"&gt;更多&lt;/a&gt;&lt;span&gt;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;ul class="contentList"&gt;
+                &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="成功投资后什么时候可以开始计息？" href="http://www.lufax.com/help/help_issue_datagrider_answer_12.html"&gt;成功投资后什么时候可以开始计息？&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="我投资的收益是否可以得到保障？" href="http://www.lufax.com/help/help_issue_datagrider_answer_08.html"&gt;我投资的收益是否可以得到保障？我投资的收益是否可以得到保障？&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="我可以投资吗？" href="http://www.lufax.com/help/help_issue_datagrider_answer_02.html"&gt;我可以投资吗？&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="保证期间起算日是怎么规定的？" href="http://www.lufax.com/help/help_project_anyidai_answer_05.html"&gt;保证期间起算日是怎么规定的？&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="我能否提前收回我的投资？" href="http://www.lufax.com/help/help_issue_datagrider_answer_14.html"&gt;我能否提前收回我的投资？&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div>
+
+        <span class="code-title">前端代码-account页尾部:</span>
+        &lt;div class="noticeQuestion_horizontal_wrap"&gt;
+            &lt;div class="noticeQuestion noticeQuestion_horizontal"&gt;
+                &lt;div class="head clearfix"&gt;
+                    &lt;h3 class="title"&gt;常见问题&lt;/h3&gt;
+                    &lt;span class="more"&gt;
+                        &lt;a target="_blank" href="http://www.lufax.com/help"&gt;更多&lt;/a&gt;&lt;span&gt;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;ul class="contentList"&gt;
+                    &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="成功投资后什么时候可以开始计息？" href="http://www.lufax.com/help/help_issue_datagrider_answer_12.html"&gt;成功投资后什么时候可以开始计息？&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="我投资的收益是否可以得到保障？" href="http://www.lufax.com/help/help_issue_datagrider_answer_08.html"&gt;我投资的收益是否可以得到保障？我投资的收益是否可以得到保障？&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="我可以投资吗？" href="http://www.lufax.com/help/help_issue_datagrider_answer_02.html"&gt;我可以投资吗？我可以投资吗？我可以投资吗？&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="保证期间起算日是怎么规定的？" href="http://www.lufax.com/help/help_project_anyidai_answer_05.html"&gt;保证期间起算日是怎么规定的？&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="我能否提前收回我的投资？" href="http://www.lufax.com/help/help_issue_datagrider_answer_14.html"&gt;我能否提前收回我的投资？&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="我能否提前收回我的投资？" href="http://www.lufax.com/help/help_issue_datagrider_answer_14.html"&gt;我能否提前收回我的投资？&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;&lt;/b&gt;&lt;a target="_blank" title="我能否提前收回我的投资？" href="http://www.lufax.com/help/help_issue_datagrider_answer_14.html"&gt;我能否提前收回我的投资？&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="noticeQuestion_horizontal_ad"&gt;
+                &lt;a title="" href="#"&gt;&lt;img alt="" src="../assets/images/ad_260110.jpg" /&gt;&nbsp;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </code>
+        </pre>
+        </div>
+        <h2>用于单品详情页和account页 右侧</h2>
+        <br>
+        <div class="noticeQuestion" style="width: 250px">
+            <div class="head clearfix">
+                <h3 class="title">常见问题</h3>
+                        <span class="more">
+                            <a target="_blank" href="http://www.lufax.com/help">更多</a><span>&gt;</span>
+                        </span>
+            </div>
+            <ul class="contentList">
+                <li><b>&nbsp;</b><a target="_blank" title="成功投资后什么时候可以开始计息？" href="http://www.lufax.com/help/help_issue_datagrider_answer_12.html">成功投资后什么时候可以开始计息？</a></li>
+                <li><b>&nbsp;</b><a target="_blank" title="我投资的收益是否可以得到保障？" href="http://www.lufax.com/help/help_issue_datagrider_answer_08.html">我投资的收益是否可以得到保障？我投资的收益是否可以得到保障？</a></li>
+                <li><b>&nbsp;</b><a target="_blank" title="我可以投资吗？" href="http://www.lufax.com/help/help_issue_datagrider_answer_02.html">我可以投资吗？</a></li>
+                <li><b>&nbsp;</b><a target="_blank" title="保证期间起算日是怎么规定的？" href="http://www.lufax.com/help/help_project_anyidai_answer_05.html">保证期间起算日是怎么规定的？</a></li>
+                <li><b>&nbsp;</b><a target="_blank" title="我能否提前收回我的投资？" href="http://www.lufax.com/help/help_issue_datagrider_answer_14.html">我能否提前收回我的投资？</a></li>
+            </ul>
+        </div>
+        <h2>account页尾部</h2>
+        <br>
+        <div class="noticeQuestion_horizontal_wrap">
+            <div class="noticeQuestion noticeQuestion_horizontal">
+                <div class="head clearfix">
+                    <h3 class="title">常见问题</h3>
+                                        <span class="more">
+                                            <a target="_blank" href="http://www.lufax.com/help">更多</a><span>&gt;</span>
+                                        </span>
+                </div>
+                <ul class="contentList">
+                    <li><b>&nbsp;</b><a target="_blank" title="成功投资后什么时候可以开始计息？" href="http://www.lufax.com/help/help_issue_datagrider_answer_12.html">成功投资后什么时候可以开始计息？</a></li>
+                    <li><b>&nbsp;</b><a target="_blank" title="我投资的收益是否可以得到保障？" href="http://www.lufax.com/help/help_issue_datagrider_answer_08.html">我投资的收益是否可以得到保障？我投资的收益是否可以得到保障？</a></li>
+                    <li><b>&nbsp;</b><a target="_blank" title="我可以投资吗？" href="http://www.lufax.com/help/help_issue_datagrider_answer_02.html">我可以投资吗？我可以投资吗？我可以投资吗？</a></li>
+                    <li><b>&nbsp;</b><a target="_blank" title="保证期间起算日是怎么规定的？" href="http://www.lufax.com/help/help_project_anyidai_answer_05.html">保证期间起算日是怎么规定的？</a></li>
+                    <li><b>&nbsp;</b><a target="_blank" title="我能否提前收回我的投资？" href="http://www.lufax.com/help/help_issue_datagrider_answer_14.html">我能否提前收回我的投资？</a></li>
+                    <li><b>&nbsp;</b><a target="_blank" title="我能否提前收回我的投资？" href="http://www.lufax.com/help/help_issue_datagrider_answer_14.html">我能否提前收回我的投资？</a></li>
+                    <li><b>&nbsp;</b><a target="_blank" title="我能否提前收回我的投资？" href="http://www.lufax.com/help/help_issue_datagrider_answer_14.html">我能否提前收回我的投资？</a></li>
+                </ul>
+            </div>
+            <div class="noticeQuestion_horizontal_ad">
+                <a title="" href="#"><img alt="" src="assets/images/ad_260110.jpg" />&nbsp;</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div><br/><br/>
+    <!--progress-->
+    <div class="section">
+        <h1 class="section-title" id="progress">进度条</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+
+        <span class="code-title">前端代码:　</span>
+        第一种：
+        &lt;div class="com_step_wrap"&gt;
+            &lt;a class="step"&gt;&lt;b&gt;&lt;/b&gt;1.输入员工邮箱&lt;/a&gt;
+            &lt;a class="step current"&gt;&lt;b&gt;&lt;/b&gt;2.发送确认邮件&lt;/a&gt;
+            &lt;a class="step"&gt;&lt;b&gt;&lt;/b&gt;3.完成认证&lt;/a&gt;
+            &lt;p class="bottomLineShadow"&gt;&lt;/p&gt;
+        &lt;/div&gt;
+
+        第二种：
+        <span class="code-title">必要脚本:　</span>&lt;script type="text/javascript" src="../assets/js/jquery.progressbar.js""&gt;&lt;/script&gt;
+        &lt;span class="progressBar"&gt;&lt;/span&gt;
+
+        第三种：(默认为灰色，添加split_active为红色)
+        &lt;div class="com_sliptLine"&gt;
+            &lt;b&gt;&lt;/b&gt;
+        &lt;/div&gt;
+        </code>
+        </pre>
+        </div>
+
+        <h3>第一种：</h3>
+        <br/>
+        <div class="com_step_wrap" style="width:900px;">
+            <a class="step"><b>&nbsp;</b>1.输入员工邮箱</a>
+            <a class="step current"><b>&nbsp;</b>2.发送确认邮件</a>
+            <a class="step"><b>&nbsp;</b>3.完成认证</a>
+            <p class="bottomLineShadow"></p>
+        </div>
+        <br/><br/>
+        <h3>第二种：</h3>
+        <br/>
+        <span class="progressBar"></span>
+        <br/><br/>
+        <h3>第三种：(默认为灰色，添加split_active为红色)</h3>
+        <br/>
+        <div class="com_sliptLine" style="width:900px;">
+            <b>&nbsp;</b>
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div><br/><br/>
+    <!--弹出浮层 - old-->
+    <div class="section">
+        <h1 class="section-title" id="old_pop">弹出浮层 - old</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="../assets/css/component.css"/&gt;
+        <span class="code-title">前端代码:　</span>
+        &lt;div class="commission_wrap"&gt;
+            &lt;div class="head_wrap"&gt;
+                &lt;div class="head"&gt;&lt;/div&gt;
+                &lt;div class="head_sep"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="content_wrap"&gt;
+                &lt;div class="grid-pop"&gt;
+                    &lt;div class="title_wrap"&gt;授权委托书&lt;/div&gt;
+                    &lt;div class="content_wrap"&gt;
+                        &lt;p&gt;
+                            &nbsp;&nbsp;本人（陆金所账户qaloaner417）授权上海陆家嘴国际金融资产交易市场有限公司（“陆金所”）根据本次指令从本人的中国建设银行6222 2222 8888 8888 账户代扣人民币10,000.00元（含第三方需收的手续费（如有））， 用于向本人在陆金所平台开立的陆金所账户充值（“此项服务”）。本人知晓并确认该等指令不可撤销，且受银行业仅在工作日进行资金划转的现状及可能的账户冻结等各种原因所限，陆金所不对此项服务的资金到账时间做任何承诺。 本人知晓陆金所根据本授权委托书所采取的全部行动和措施的法律后果均归属于本人。
+                        &lt;/p&gt;
+                        &lt;div class="btn_pos"&gt;
+                            &lt;a class="btns" href="#"&gt;同意&lt;/a&gt; &nbsp;&nbsp;&nbsp;&nbsp;  &lt;a class="btns btn_cancel" href="#"&gt;不同意&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="foot_wrap"&gt;版权所有 © 上海陆家嘴国际金融资产交易市场股份有限公司&lt;/div&gt;
+        &lt;/div&gt;
+        </code>
+        </pre>
+        </div>
+
+        <div class="commission_wrap">
+            <div class="head_wrap">
+                <div class="head"></div>
+                <div class="head_sep"></div>
+            </div>
+            <div class="content_wrap">
+                <div class="grid-pop">
+                    <div class="title_wrap">授权委托书</div>
+                    <div class="content_wrap">
+                        <p>
+                            &nbsp;&nbsp;本人（陆金所账户qaloaner417）授权上海陆家嘴国际金融资产交易市场有限公司（“陆金所”）根据本次指令从本人的中国建设银行6222 2222 8888 8888 账户代扣人民币10,000.00元（含第三方需收的手续费（如有））， 用于向本人在陆金所平台开立的陆金所账户充值（“此项服务”）。本人知晓并确认该等指令不可撤销，且受银行业仅在工作日进行资金划转的现状及可能的账户冻结等各种原因所限，陆金所不对此项服务的资金到账时间做任何承诺。 本人知晓陆金所根据本授权委托书所采取的全部行动和措施的法律后果均归属于本人。
+                        </p>
+                        <div class="btn_pos">
+                            <a class="btns" href="#">同意</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a class="btns btn_cancel" href="#">不同意</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot_wrap">版权所有 © 上海陆家嘴国际金融资产交易市场股份有限公司</div>
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div><br/><br/>
+    <!--head-->
+    <div class="section">
+        <h1 class="section-title" id="head">head</h1>
+
+        <div class="highlight">
+            <pre>
+            <code>
+            <span class="fs16">网站页面头部</span>
+            <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+            <span class="code-title">必要脚本:　</span>&lt;script rel="stylesheet" type="text/css" href="http://static.lufax.com/config/js/lib/layout.p2p.js&gt;&lt;/script&gt;
+            <span class="code-title">前端代码:　</span>&lt;div class="head-wrap clearfix"&gt;&lt;/div&gt;
+            <span class="fs16">登录页面头部</span>
+            <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/layout.css"/&gt;
+            <span class="code-title">必要脚本:　</span>
+            &lt;script type="text/javascript" src="https://static.lufax.com/config/js/lib/env.config.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="https://static.lufax.com/config/js/lib/layout.simply.js"&gt;&lt;/script&gt;
+            <span class="code-title">前端代码:　</span>&lt;div class="simple-head-wrap"&gt;&lt;/div&gt;
+            <span class="sp-green">ps:layout.simple.activity-1.0.css和layout.css不能同时出现</span>
+            </code>
+            </pre>
+        </div>
+        <h3>网站页面头部</h3>
+        <div class="head-wrap clearfix"></div>
+        <br/>
+        <h3>登录页面头部</h3>
+        <div class="tec"><img src="assets/images/img_head.jpg" alt=""/></div>
+    </div>
+
+    <div class="clearfix"></div><br/><br/>
+    <!--foot-->
+    <div class="section">
+        <h1 class="section-title" id="foot">尾部</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="fs16">网站页面尾部</span>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">必要脚本:</span>&lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/layout.p2p.js"&gt;&lt;/script&gt;
+        <span class="code-title">前端代码:</span>&lt;div class="foot-wrap clearfix"&gt;&lt;/div&gt;
+        <span class="fs16">登录页面尾部</span>
+        <span class="code-title">必要样式:　</span>&lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/layout.css"/&gt;
+        <span class="code-title">必要脚本:</span>
+        &lt;script type="text/javascript" src="https://static.lufax.com/config/js/lib/env.config.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="https://static.lufax.com/config/js/lib/layout.simply.js"&gt;&lt;/script&gt;
+        <span class="code-title">前端代码:　</span>&lt;div class="simple-foot-wrap"&gt;&lt;/div&gt;
+        <span class="sp-green">ps:layout.simply.js和layout.p2p.js不能同时出现</span>
+        <span class="fs16">活动页面头部　尾部: </span>
+        <span class="code-title">必要样式: </span> &lt;link rel="stylesheet" type="text/css" href="http://www.lufax.com/activity/app_css/layout.simple.activity-1.0.css"/&gt;
+        <span class="code-title">必要脚本: </span> &lt;script type="text/javascript" src="http://www.lufax.com/activity/js/layout.simple.activity-1.0.js"&gt;&lt;/script&gt;
+        <span class="code-title">前端代码: </span>
+        &lt;div class="header"&gt;&lt;/div&gt;
+        &lt;div class="footer"&gt;&lt;/div&gt;
+        </code>
+        </pre>
+        </div>
+        <h3>网站页面尾部</h3>
+        <div class="foot-wrap clearfix"></div>
+        <br/>
+        <h3>登录页面尾部</h3>
+        <div class="tec"><img src="assets/images/img_foot.jpg" alt="" /></div>
+        <br/>
+        <h3>活动页面头部</h3>
+        <div class="header"></div>
+        <br/>
+        <h3>活动页面尾部</h3>
+        <div class="footer"></div>
+    </div>
+
+    <div class="clearfix"></div><br/><br/>
+    <!--贷款计算器-->
+    <div class="section">
+        <h1 class="section-title" id="calculater">贷款计算器</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span>
+        &lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        &lt;link rel="stylesheet" type="text/css" href="../assets/css/component.css"/&gt;
+        <span class="code-title">必要脚本:　</span>
+        &lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/form.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery.ui.custom.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="../assets/js/componentLibrary.js"&gt;&lt;/script&gt;
+        <span class="code-title">前端代码:　</span>
+        &lt;div class="loan-calculater-wrap"&gt;
+            &lt;div class="csearch-wrap"&gt;
+                &lt;form class="form-horizontal"&gt;
+                    &lt;div class="clearfix"&gt;
+                        &lt;div class="control-group calculater-inputwarp"&gt;
+                            &lt;label class="control-label" for="calendar"&gt;日期&lt;/label&gt;
+                            &lt;div class="controls"&gt;
+                            &lt;span class="input-wrap"&gt;
+                                &lt;input  type="text" id="calendar-02" placeholder="" class="input input-small calendar calendar-error" readonly="readonly" value="2012-12-31" /&gt;
+                            &lt;/span&gt;
+                                &lt;span class="errorPanel multipleLine"&gt;&lt;b class="arrow left"&gt; &lt;/b&gt;&lt;span class="errorContent"&gt;&lt;/span&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="control-group calculater-inputwarp"&gt;
+                            &lt;label class="control-label"  for="loanTerm"&gt;贷款期数&lt;/label&gt;
+                            &lt;div class="controls"&gt;
+                                &lt;span class="input-wrap"&gt;&lt;input type="text" class="inputs input-small" id="loanTerm"/&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="clearfix"&gt;
+                        &lt;div class="control-group calculater-inputwarp"&gt;
+                            &lt;label class="control-label"  for="loanPrincipal"&gt;贷款本金&lt;/label&gt;
+                            &lt;div class="controls"&gt;
+                                &lt;span class="input-wrap"&gt;&lt;input type="text" class="inputs input-small" id="loanPrincipal"/&gt;&lt;/span&gt;
+                                &lt;span class="replenish-hor"&gt;元&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="control-group calculater-inputwarp"&gt;
+                            &lt;label class="control-label"  for="annualInterestRate"&gt;年化利率&lt;/label&gt;
+                            &lt;div class="controls"&gt;
+                                &lt;span class="input-wrap"&gt;&lt;input type="text" class="inputs input-small" id="annualInterestRate"/&gt;&lt;/span&gt;
+                                &lt;span class="replenish-hor"&gt;%&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="control-group calculater-btn"&gt;
+                            &lt;a class="btns"  href="#"&gt;计算&lt;/a&gt;
+                            &lt;a class="btns btn_cancel"  href="#"&gt;重置&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+                &lt;div class="description"&gt;&lt;div class="dcontent"&gt;计算结果&lt;/div&gt;&lt;div class="dlink"&gt;&lt;a href="#"&gt;怎么算?&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;div class="calculater-yellow-wrap"&gt;
+                    &lt;table class="calculater-yellow-table"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;&lt;span&gt;期次&lt;/span&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;span&gt;还款日&lt;/span&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;span&gt;应还利息（元）&lt;/span&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;span&gt;应还本金（元）&lt;/span&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;span&gt;应还利息（元）&lt;/span&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;span&gt;剩余本金（元）&lt;/span&gt;&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;1&lt;/td&gt;
+                            &lt;td&gt;2012-4-1&lt;/td&gt;
+                            &lt;td class="sum"&gt;252.00&lt;/td&gt;
+                            &lt;td class="sum"&gt;250.00&lt;/td&gt;
+                            &lt;td class="sum"&gt;2.00&lt;/td&gt;
+                            &lt;td class="sum"&gt;750.00&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr class="even"&gt;
+                            &lt;td&gt;2&lt;/td&gt;
+                            &lt;td&gt;2012-7-1&lt;/td&gt;
+                            &lt;td class="sum"&gt;258.00&lt;/td&gt;
+                            &lt;td class="sum"&gt;750.00&lt;/td&gt;
+                            &lt;td class="sum"&gt;2.00&lt;/td&gt;
+                            &lt;td class="sum"&gt;500.00&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr class="orange-word"&gt;
+                            &lt;td colspan="2"&gt;合计&lt;/td&gt;
+                            &lt;td class="sum"&gt;1008.00&lt;/td&gt;
+                            &lt;td class="sum"&gt;1000.00&lt;/td&gt;
+                            &lt;td class="sum"&gt;8.00&lt;/td&gt;
+                            &lt;td&gt;&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    &lt;div class="bottom_description first"&gt;
+                        此计算器的计算结果仅供参考，陆金所对此结果的准确性不承担任何责任。
+                    &lt;/div&gt;
+                    &lt;div class="bottom_description last"&gt;
+                        实际数额以陆金所确认的结果为准。
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;    
+        </code>
+        </pre>
+        </div>
+
+        <div class="loan-calculater-wrap">
+            <div class="csearch-wrap">
+                <form class="form-horizontal">
+                    <div class="clearfix">
+                        <div class="control-group calculater-inputwarp">
+                            <label class="control-label" for="calendar">日期</label>
+                            <div class="controls">
+                                <span class="input-wrap">
+                                    <input  type="text" id="calendar-02" placeholder="" class="input input-small calendar calendar-error" readonly="readonly" value="2012-12-31" />
+                                </span>
+                                <span class="errorPanel multipleLine"><b class="arrow left"> </b><span class="errorContent"></span></span>
+                            </div>
+                        </div>
+                        <div class="control-group calculater-inputwarp">
+                            <label class="control-label"  for="loanTerm">贷款期数</label>
+                            <div class="controls">
+                                <span class="input-wrap"><input type="text" class="inputs input-small" id="loanTerm"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="control-group calculater-inputwarp">
+                            <label class="control-label"  for="loanPrincipal">贷款本金</label>
+                            <div class="controls">
+                                <span class="input-wrap"><input type="text" class="inputs input-small" id="loanPrincipal"/></span>
+                                <span class="replenish-hor">元</span>
+                            </div>
+                        </div>
+                        <div class="control-group calculater-inputwarp">
+                            <label class="control-label"  for="annualInterestRate">年化利率</label>
+                            <div class="controls">
+                                <span class="input-wrap"><input type="text" class="inputs input-small" id="annualInterestRate"/></span>
+                                <span class="replenish-hor">%</span>
+                            </div>
+                        </div>
+                        <div class="control-group calculater-btn">
+                            <a class="btns"  href="#">计算</a>
+                            <a class="btns btn_cancel"  href="#">重置</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="description"><div class="dcontent">计算结果</div><div class="dlink"><a href="#">怎么算?</a></div></div>
+                <div class="calculater-yellow-wrap">
+                    <table class="calculater-yellow-table">
+                        <tr>
+                            <th><span>期次</span></th>
+                            <th><span>还款日</span></th>
+                            <th><span>应还利息（元）</span></th>
+                            <th><span>应还本金（元）</span></th>
+                            <th><span>应还利息（元）</span></th>
+                            <th><span>剩余本金（元）</span></th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2012-4-1</td>
+                            <td class="sum">252.00</td>
+                            <td class="sum">250.00</td>
+                            <td class="sum">2.00</td>
+                            <td class="sum">750.00</td>
+                        </tr>
+                        <tr class="even">
+                            <td>2</td>
+                            <td>2012-7-1</td>
+                            <td class="sum">258.00</td>
+                            <td class="sum">750.00</td>
+                            <td class="sum">2.00</td>
+                            <td class="sum">500.00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2012-10-1</td>
+                            <td class="sum">252.00</td>
+                            <td class="sum">250.00</td>
+                            <td class="sum">2.00</td>
+                            <td class="sum">750.00</td>
+                        </tr>
+                        <tr class="even">
+                            <td>4</td>
+                            <td>2013-1-1</td>
+                            <td class="sum">258.00</td>
+                            <td class="sum">750.00</td>
+                            <td class="sum">2.00</td>
+                            <td class="sum">500.00</td>
+                        </tr>
+                        <tr class="orange-word">
+                            <td colspan="2">合计</td>
+                            <td class="sum">1008.00</td>
+                            <td class="sum">1000.00</td>
+                            <td class="sum">8.00</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    <div class="bottom_description first">
+                        此计算器的计算结果仅供参考，陆金所对此结果的准确性不承担任何责任。
+                    </div>
+                    <div class="bottom_description last">
+                        实际数额以陆金所确认的结果为准。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div><br/><br/>
+    <!--phoneCode-->
+    <div class="section">
+        <h1 class="section-title" id="phoneCode">手机动态码</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span> &lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">必要脚本:　</span>&lt;script type="text/javascript" src="../assets/js/componentLibrary.js"&gt;&lt;/script&gt;
+        <span class="code-title">前端代码:　</span>
+        &lt;form class="form-horizontal"&gt;
+            &lt;div class="control-group error"&gt;
+                &lt;label for="phoneValidCode02" class="control-label"&gt;手机动态码&lt;/label&gt;
+                &lt;div class="controls"&gt;
+                    &lt;span class="input-wrap icon-wrap validate-input error"&gt;&lt;i class="input-icon validate"&gt;&nbsp;&lt;/i&gt;&lt;input type="text" maxlength="7" id="phoneValidCode02" class="inputs phoneValideNum"/&gt;&lt;i class="icon validIcon failureCircleIcon"&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;a class="btns btn_info btn_valid obtainBtn"&gt;免费获取&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form>
+        </code>
+        </pre>
+        </div>
+    
+        <form class="form-horizontal">
+            <div id="otp-mod"></div>
+        </form>
+    </div>
+
+
+    <div class="clearfix"></div><br/><br/>
+    <!--加载中-->
+    <div class="section">
+        <h1 class="section-title" id="loading">加载中</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span> &lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">必要脚本:　</span>&lt;script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery-1.7.1.js"&gt;&lt;/script&gt;
+        <span class="code-title">前端代码:　</span>
+        常规loading:200x90       id="test-common1"
+        局部特殊小loading        id="test-small"
+        </code>
+        </pre>
+        </div>
+        <br>
+        <div id="test-common1" class="loading-warp">
+            <h2>常规loading:200x90</h2>
+            <p><strong>出现</strong> tool.loading("domId");&emsp;&emsp;<br/><strong>移除</strong> tool.loadingEnd("domId");</p>
+        </div>
+        <br>
+        <div id="test-small" class="com_loading_small loading-warp">
+            <h2>局部特殊小loading</h2>
+            <p><strong>出现</strong> tool.loading("domId",true);&emsp;&emsp;<br/><strong>移除</strong> tool.loadingEnd("domId",true);</p>
+        </div>
+    </div>
+
+    <div class="clearfix"></div><br/><br/>
+    <!--栅格化-->
+    <div class="section">
+        <h1 class="section-title" id="grid">栅格化</h1>
+
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">栅格规则</span>
+        公式：pageWidth = (W &plus; R) &times; N &minus; R
+        当前规格：
+        W=50px;
+        R=20px;
+        N=14;
+        pageWidth=960px;
+
+        基于以上规则，计算某一个grid的宽度。
+        公式：gridN = (W + R) x N &minus; R
+        例：grid3 = (50 + 20) x 3 &minus; 20 = 190px
+        <span class="code-title">优点：</span>
+        完美切合960px，充分使用可用空间
+        和lufax.com系列页面吻合度较好
+        <span class="code-title">缺点：</span>
+        灵活度受限：最右侧的grid必须额外添加class="last"，清掉margin-right:20px;属性
+        </code>
+        </pre>
+        </div>
+        <div class="activityWrap clearfix">
+            <div class="clearfix">
+                <div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1">grid1</div>
+                    <div class="grid grid1 last">grid1</div>
+                </div>
+                <div>
+                    <div class="grid grid2">grid2</div>
+                    <div class="grid grid2">grid2</div>
+                    <div class="grid grid2">grid2</div>
+                    <div class="grid grid2">grid2</div>
+                    <div class="grid grid2">grid2</div>
+                    <div class="grid grid2">grid2</div>
+                    <div class="grid grid2 last">grid2</div>
+                </div>
+
+                <div>
+                    <div class="grid grid3">grid3</div>
+                    <div class="grid grid3">grid3</div>
+                    <div class="grid grid3">grid3</div>
+                    <div class="grid grid3">grid3</div>
+                    <div class="grid grid2 last">grid2</div>
+                </div>
+
+                <div>
+                    <div class="grid grid4">grid4</div>
+                    <div class="grid grid4">grid4</div>
+                    <div class="grid grid4">grid4</div>
+                    <div class="grid grid2 last">grid2</div>
+                </div>
+
+                <div>
+                    <div class="grid grid5">grid5</div>
+                    <div class="grid grid5">grid5</div>
+                    <div class="grid grid4 last">grid4</div>
+                </div>
+
+                <div>
+                    <div class="grid grid6">grid6</div>
+                    <div class="grid grid6">grid6</div>
+                    <div class="grid grid2 last">grid2</div>
+                </div>
+
+                <div>
+                    <div class="grid grid7">grid7</div>
+                    <div class="grid grid7 last">grid7</div>
+                </div>
+
+                <div>
+                    <div class="grid grid8">grid8</div>
+                    <div class="grid grid6 last">grid6</div>
+                </div>
+
+                <div>
+                    <div class="grid grid9">grid9</div>
+                    <div class="grid grid5 last">grid5</div>
+                </div>
+
+                <div>
+                    <div class="grid grid10">grid10</div>
+                    <div class="grid grid4 last">grid4</div>
+                </div>
+
+                <div>
+                    <div class="grid grid11">grid11</div>
+                    <div class="grid grid3 last">grid3</div>
+                </div>
+
+                <div>
+                    <div class="grid grid12">grid12</div>
+                    <div class="grid grid2 last">grid2</div>
+                </div>
+
+                <div>
+                    <div class="grid grid13">grid13</div>
+                    <div class="grid grid1 last">grid1</div>
+                </div>
+
+                <div>
+                    <div class="grid grid14">grid14</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 20px 0; border-top: 2px solid #e6551d" class="clearfix">
+                <h2>常用组合</h2>
+                <p>小规律：</p>
+                <p class="tips">grid14= grid2 + grid12  (grid12 + grid2);</p>
+                <p class="tips">grid14= grid3 + grid11  (grid11 + grid3);</p>
+                <p class="tips">grid14= grid4 + grid10  (grid10 + grid4);</p>
+                <p class="tips">grid14= grid3 + grid7 + grid4;</p>
+                <p class="tips">grid14= grid2 + grid8 + grid4;</p>
+
+                <div>
+                    <div class="grid grid2">grid2</div>
+                    <div class="grid grid12 last">grid12</div>
+                </div>
+                <div>
+                    <div class="grid grid3">grid3</div>
+                    <div class="grid grid11 last">grid11</div>
+                </div>
+                <div>
+                    <div class="grid grid11">grid11</div>
+                    <div class="grid grid3 last">grid3</div>
+                </div>
+
+                <div>
+                    <div class="grid grid4">grid4</div>
+                    <div class="grid grid10 last">grid10</div>
+                </div>
+                <div>
+                    <div class="grid grid10">grid10</div>
+                    <div class="grid grid4 last">grid4</div>
+                </div>
+
+                <div>
+                    <div class="grid grid3">grid3</div>
+                    <div class="grid grid7">grid7</div>
+                    <div class="grid grid4 last">grid4</div>
+                </div>
+
+                <div>
+                    <div class="grid grid2">grid2</div>
+                    <div class="grid grid8">grid8</div>
+                    <div class="grid grid4 last">grid4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div><br/><br/>
+    <!--JS API-->
+    <div class="section">
+        <h1 class="section-title" id="API">JS API</h1>
+        <div class="highlight">
+        <pre>
+        <code>
+        <span class="code-title">必要样式:　</span> &lt;link rel="stylesheet" type="text/css" href="http://static.lufax.com/config/css/main_1018.css"/&gt;
+        <span class="code-title">必要脚本:　</span>&lt;script type="text/javascript" src="../assets/js/componentLibrary.js"&gt;&lt;/script&gt;
+        <span class="code-title">前端代码:　</span>
+        &lt;div class="tip-dotted t1" data-link="&lt;a href='http://www.lufax.com' target='_blank'&gt;查看《定向委托投资管理协议》​&lt;/a&gt;" data-width="400"&gt;委托成功&lt;/div&gt;
+        &lt;div class="tip-dotted t2" data-link="查看《定向委托投资管理协议》​"&gt;委托成功&lt;/div&gt;
+        </code>
+        </pre>
+        </div>
+        <table class="table-border">
+            <tr>
+                <th>方法</th>
+                <th>示例</th>
+                <th>备注</th>
+            </tr>
+            <tr>
+                <td>$('.tip-dotted').linkTip();</td>
+                <td>
+                    <div class="tip-dotted t1" data-link="<a href='http://www.lufax.com' target='_blank'>查看《定向委托投资管理协议》​</a>" data-width="400">委托成功</div>
+                    <br/>
+                    <br/>
+                    <div class="tip-dotted t2" data-link="查看《定向委托投资管理协议》​">委托成功</div>
+                </td>
+                <td>在浮层上显示带link的数据，数据写在data-link中，支持任意数据。<br/>显示框宽度不限，支持传参设置，宽度写在data-width</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+<!--#include virtual="../modules/includeJs.html"-->
+<!--base lib end-->
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery-ui-1.7.1.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/pa_ui.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/jquery.ui.custom.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/lufax.lib.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/mod.otp.js"></script>
+<script type="text/javascript" src="http://www.lufax.com/activity/js/layout.simple.activity-1.0.js"></script>
+<script type="text/javascript" src="http://static.lufax.com/config/js/lib/layout.simply.js"></script>
+<!--<script type="text/javascript" src="http://static.lufax.com/config/js/lib/layout.p2p.js"></script>-->
+<script type="text/javascript" src="assets/js/init.js"></script>
+<script type="text/javascript" src="assets/js/jquery.progressbar.js"></script>
+<script type="text/javascript" src="assets/js/componentLibrary.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/*-------------------popup css*/
+/*can not del for user unique_bankCard*/
+.popup_wrap,
+.popup_wrap_subtitle {
+    display: none;
+}
+
+/*can not del for user unique_bankCard*/
+.popup_wrap_subtitle .content {
+    margin: 18px 0 0;
+    padding: 16px 28px;
+    border: #e0e0e0 solid 1px;
+    background: #f3f3f3;
+}
+/*can not del for user unique_bankCard*/
+
+
+
+/*table*/
+.popup_wrap_subtitle table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.popup_wrap_subtitle table tr th {
+    width: 80px;
+    height: 36px;
+    text-align: right;
+}
+
+/*new modal-dialog update by huangjunyan873@pingan.com*/
+.modal-dialog {
+    border: 6px solid #aeb0b4;
+}
+
+.modal-content {
+    width: 526px;
+    border: 1px solid #999;
+    border-top: 3px solid #4d4398;
+    position: relative;
+}
+
+.modal-header {
+    margin: 20px 30px 0 30px;
+
+}
+
+.modal-header h4 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header .close {
+    position: absolute;
+    right: 15px;
+}
+
+.modal-body {
+    padding: 25px 50px;
+}
+
+.modal-body .message {
+    font-size: 14px;
+    line-height: 22px;
+    width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.modal-body .icon,
+.modal-body .iconV2 {
+    vertical-align: top;
+    margin: 4px 5px 0 0;
+}
+
+.modal-close {
+    background: url(img/modal-close.png) no-repeat 0 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.modal-close:hover {
+    background-position: 0 -20px;
+}
+
+.modal-footer {
+    margin: 0 30px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+
+
+/*time out and exit*/
+.timeout_safe_exit {
+    /*background-color: #aeb0b4;*/
+    /*padding: 6px;*/
+}
+
+.timeout_safe_exit .border {
+    background-color: #fff;
+    opacity: 1;
+    padding: 50px 0 45px;
+    border: 1px solid #999;
+}
+
+.timeout_safe_exit .logo {
+    background: url(img/timeout_exit.jpg) no-repeat 0 0;
+    margin: 0px 40px 0 50px;
+}
+
+.timeout_safe_exit.timeout .logo {
+    width: 78px;
+    height: 72px;
+    background-position: -15px -92px;
+}
+
+.timeout_safe_exit.safeExit .logo {
+    width: 85px;
+    height: 75px;
+    background-position: -5px 0;
+}
+
+.timeout_safe_exit .detail {
+    width: 300px;
+}
+
+.timeout_safe_exit .detail .title {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #4d4398;
+}
+
+.timeout_safe_exit .detail .content {
+    font-size: 14px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+.timeout_safe_exit .operation {
+    font-size: 14px;
+}
+
+.timeout_safe_exit .countDown {
+    color: #999;
+    padding-right: 10px;
+}
